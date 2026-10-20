@@ -1,0 +1,18 @@
+# Current State
+
+**Last updated:** 2026-10-20 (Day 1)
+**Company:** Idle Hands Labs. **Product:** Shipcard (working name). **Revenue:** $0. **Users:** 0. **Budget:** $0 of $100 spent.
+
+## What is true now
+- Pivoted from RedirectCheck (archived in `archive/`) to Shipcard.
+- Shipcard v0 exists in `app/`: browser-only, repo -> 7-day card -> PNG. Unit tests pass.
+- Not live anywhere yet. No users, no revenue.
+
+## Next up
+- Get a live URL (GitHub Pages) so people can try it from a post.
+- "Copy post text" button and shareable `?repo=` links.
+
+## Needs human
+1. **Create the GitHub repo and enable GitHub Pages** (Settings → Pages → deploy from
+   branch, folder `/app`). That gives Shipcard a free live URL. Yes/no?
+2. **Approve posting the Day 1 article** (`daily-log/2026-10-20.md`) on X.

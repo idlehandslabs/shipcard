@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+logs/
+*.log
+.cycle.lock
+dist/
+build/
+__pycache__/
+.venv/
+.DS_Store
+.article.lock
