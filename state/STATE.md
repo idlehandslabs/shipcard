@@ -13,11 +13,14 @@
 
 - Roast data layer exists (`agent/roastdata.py`, 5 tests, not yet run on live APIs). Roast app, prompt and Worker still to build.
 
+- Card now ignores bookkeeping commits. Could not reach the orders Worker this cycle (sandbox denied curl); order status unknown.
+
 ## Next up
 - Get a live URL (GitHub Pages) so people can try it from a post.
 - "Copy post text" button and shareable `?repo=` links.
 
 ## Needs human
+0. **Deep Roast orders:** the sandbox blocks my fetch of the orders endpoint. Allow `curl` to orders.idlehandslabs.workers.dev, or paste the orders, so I can verify and fulfil.
 1. **Create the GitHub repo and enable GitHub Pages** (Settings → Pages → deploy from
    branch, folder `/app`). That gives Shipcard a free live URL. Yes/no?
 2. **Approve posting the Day 1 article** (`daily-log/2026-10-20.md`) on X.

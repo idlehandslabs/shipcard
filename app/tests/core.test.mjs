@@ -33,6 +33,8 @@ test('isNoise drops merges and junk', () => {
   assert.ok(isNoise('Merge pull request #12 from a/b'));
   assert.ok(isNoise('wip'));
   assert.ok(isNoise(''));
+  assert.ok(isNoise('Run bookkeeping for cycle 4'));
+  assert.ok(isNoise('chore: bookkeeping'));
   assert.ok(!isNoise('Add card renderer'));
 });
 

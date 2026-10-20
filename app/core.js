@@ -19,6 +19,7 @@ export function isNoise(message) {
   if (!first) return true;
   if (/^Merge (pull request|branch|remote-tracking branch)/i.test(first)) return true;
   if (/^(wip|tmp|temp|\.|-)$/i.test(first)) return true;
+  if (/^(chore(\([^)]*\))?:\s*)?(run )?bookkeeping\b/i.test(first)) return true;
   return false;
 }
 

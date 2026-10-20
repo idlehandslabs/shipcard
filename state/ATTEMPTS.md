@@ -101,3 +101,9 @@ summariz`
 ## 2026-10-20 12:19 UTC — Cycle (roast data)
 - Added `agent/roastdata.py`: turns public wallet / token / repo data into a numbers-only JSON for roasts (commit messages a`
 - Turns: 15 · Claude cost: $0.23 (not counted in the $100 budget)
+
+---
+## 2026-10-20 — Cycle (card noise fix)
+- **Tried:** curl GET of the orders Worker /orders. **Result:** denied by sandbox. **Why:** outbound network via Bash not permitted this run. **Next:** operator allows the fetch or pastes orders.
+- **Tried:** chained cd && node --test, and a python heredoc for edits. **Result:** both denied by permission rules. Used single commands and Edit instead.
+- **Tried:** bookkeeping filter in app/core.js. **Result:** works, 16/16 tests. **Next:** de-dupe move-only commits.
