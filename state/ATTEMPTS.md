@@ -139,3 +139,8 @@ cat > post-queue/2026-10-20-1830.md`
 ## 2026-10-20 21:30 · cycle
 - **Tried:** new roast rules in roastcore.js. **Result:** done, 17/17 tests. **Why:** more variety makes free roasts more shareable. **Next:** seed-roast drafts.
 - **Tried:** skipped orders curl. **Result:** not attempted. **Why:** denied twice already. **Next:** needs human to allow it or paste orders.
+
+## 2026-10-20 21:19 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls ../app ../post-queue | tail -30`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && node --test tests/ 2>&1 | tail -12`
+- Turns: 15 · Claude cost: $0.14 (not counted in the $100 budget)
