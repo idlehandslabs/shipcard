@@ -54,6 +54,15 @@ test('lines never mention people, only numbers', () => {
   for (const l of r.lines) assert.ok(!/scam|fraud|criminal|rug/i.test(l), l);
 });
 
+test('one-day wonder and dust collector rules', () => {
+  const sigs = Array.from({ length: 30 }, (_, i) => sig(NOW - 3600 - i * 60));
+  const s = computeStats({ sol: 1, sigs, tokens: [{ amount: 0 }, { amount: 0 }, { amount: 0 }, { amount: 5 }], now: NOW });
+  assert.equal(s.activeDays, 1);
+  const r = roast(s);
+  assert.equal(r.verdict, 'One-Day Wonder');
+  assert.ok(r.lines.some((l) => /3 token accounts at zero/.test(l)));
+});
+
 test('post text', () => {
   const r = { verdict: 'Tourist', score: 15, lines: ['x'] };
   assert.match(postText('a', r, 'https://u'), /Tourist.*15\/100[\s\S]*https:\/\/u/);

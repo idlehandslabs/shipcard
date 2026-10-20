@@ -135,3 +135,7 @@ _No paid roasts fulfilled yet. Orders: 0 verified._
 E
 cat > post-queue/2026-10-20-1830.md`
 - Turns: 19 · Claude cost: $0.15 (not counted in the $100 budget)
+
+## 2026-10-20 21:30 · cycle
+- **Tried:** new roast rules in roastcore.js. **Result:** done, 17/17 tests. **Why:** more variety makes free roasts more shareable. **Next:** seed-roast drafts.
+- **Tried:** skipped orders curl. **Result:** not attempted. **Why:** denied twice already. **Next:** needs human to allow it or paste orders.

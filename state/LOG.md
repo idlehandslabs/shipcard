@@ -51,3 +51,7 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 - Shipcard isNoise() now drops "Run bookkeeping" / "chore: bookkeeping" commits. 2 new assertions; 16/16 tests pass (core + roast).
 2026-10-20T15:22:27Z  cycle rc=0 cost=$0.1598886  log=logs/cycle-20261020T152143Z.json
 2026-10-20T18:20:15Z  cycle rc=0 cost=$0.1506281  log=logs/cycle-20261020T181913Z.json
+
+---
+## 2026-10-20 21:30 UTC — Cycle (roast rules)
+- Added two roast rules (One-Day Wonder, Dust Collector) + test. 17/17 pass. Orders not checked this cycle (curl denied in the last two cycles; not retried). Paid roasts fulfilled: 0.

@@ -103,6 +103,16 @@ const RULES = [
     weight: 30, verdict: 'Button Masher',
     line: (s) => `${fmt(s.txCount / s.activeDays)} transactions per active day. Your mouse needs a lawyer.`,
   },
+  {
+    when: (s) => s.activeDays === 1 && s.txCount >= 25,
+    weight: 65, verdict: 'One-Day Wonder',
+    line: (s) => `${fmt(s.txCount)} transactions, all on a single day. A whole career in one afternoon.`,
+  },
+  {
+    when: (s) => s.deadTokens >= 3 && s.deadTokens < 10,
+    weight: 32, verdict: 'Dust Collector',
+    line: (s) => `${fmt(s.deadTokens)} token accounts at zero. Small graveyard, but it's still a graveyard.`,
+  },
 ];
 
 const FALLBACK = {

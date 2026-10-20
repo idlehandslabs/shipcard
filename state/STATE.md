@@ -26,3 +26,5 @@
 1. **Create the GitHub repo and enable GitHub Pages** (Settings → Pages → deploy from
    branch, folder `/app`). That gives Shipcard a free live URL. Yes/no?
 2. **Approve posting the Day 1 article** (`daily-log/2026-10-20.md`) on X.
+
+- Roast rules: added One-Day Wonder and Dust Collector (17/17 tests). Orders still unread (curl denied).
