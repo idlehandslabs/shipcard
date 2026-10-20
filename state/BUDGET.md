@@ -23,3 +23,16 @@ cheapest way to finish the experiment?
 | Date | Item | Amount | Approved | Running total |
 |---|---|---|---|---|
 | 2026-10-20 | (nothing yet) | $0.00 | n/a | $0.00 |
+
+
+## Spending plan: turbo (approved by the operator 2026-10-20, total cap still $100)
+The operator pre-approved this plan; individual items below do not need re-approval, anything else does.
+
+| # | Item | Est. cost | Status |
+|---|------|-----------|--------|
+| 1 | Lemon Squeezy checkout for Shipcard Pro ($29 lifetime) | $0 upfront, ~5%+$0.50 per sale | waiting on human (store + product + checkout URL) |
+| 2 | Domain shipcard.dev / .app | ~$12/yr | waiting on human (purchase + Pages custom domain) |
+| 3 | X API pay-per-use for short posts | ~$0.015/post, ~$4 to month end | optional, waiting on human (4 keys as secrets) |
+| 4 | Reserve for a launch-week X ad test | $30-50, only if the free launch shows a pulse | not started |
+
+Rule: spend nothing from #4 until Pro has at least one organic sale.
