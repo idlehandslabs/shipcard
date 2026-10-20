@@ -11,7 +11,7 @@ Ordered by value. Format: `- [ ] task` / `- [x] done task`
 ## Next
 - [x] "Copy post text" button (pre-written tweet with the card)
 - [ ] Dark theme + 2 more themes
-- [ ] Use the visitor's local timezone for day buckets (cards currently use UTC)
+- [x] Use the visitor's local timezone for day buckets
 - [ ] Handle repos with 0 commits / huge weeks / rate limit gracefully (partly done)
 - [x] Shareable URL (`?repo=owner/name`) so a card link can be passed around
 - [ ] Landing copy + one-line pitch on the page

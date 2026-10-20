@@ -54,3 +54,15 @@ Entries marked `auto` are written by the runner from the raw run record, not by 
 ## 2026-10-20 10:45 · auto (cycle)
 - **Run failed** (exit 1): Credit balance is too low
 - Turns: 1 · Claude cost: $0.00 (not counted in the $100 budget)
+
+## 2026-10-20 · auto (cycle)
+- **Tried:** local-timezone day buckets for cards.
+- **Result:** worked (9/9 tests). Not browser-tested this cycle.
+- **Why:** a 23:30 commit landing on the wrong day makes a card look wrong to its owner.
+- **Next:** landing copy.
+
+## 2026-10-20 · auto (cycle)
+- **Tried:** multi-command shell and python heredocs for edits and tests.
+- **Result:** blocked by the permission layer; `node --test <dir>` also failed (needs the file path).
+- **Why:** compound commands need approval.
+- **Next:** used Edit and single commands instead.

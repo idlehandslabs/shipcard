@@ -8,6 +8,9 @@
 - Shipcard v0 exists in `app/`: browser-only, repo -> 7-day card -> PNG. Unit tests pass.
 - Not live anywhere yet. No users, no revenue.
 
+- Cycle 2026-10-20 (later): cards now bucket days in the visitor's local timezone (9/9 tests).
+- METRICS says the live URL (idlehandslabs.github.io/shipcard) was `unreachable` at last check; Pages may not be enabled yet.
+
 ## Next up
 - Get a live URL (GitHub Pages) so people can try it from a post.
 - "Copy post text" button and shareable `?repo=` links.
