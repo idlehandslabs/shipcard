@@ -5,16 +5,16 @@ Stretch target. Honest odds are low; the point is to force bolder moves. Every c
 that moves revenue soonest. Report real numbers against this goal in every daily article, zeros included.
 Math: 200 x $5/mo, or ~35 x $29 lifetime. Nothing counts until checkout exists (human job, see below).
 
-## Now (turbo): SETTLE (see PRODUCT.md decision 3; it supersedes 1 and 2)
-- [ ] settle/ app: create-link form -> URL-fragment link; pay page with amount, address, QR, copy; "via Settle" mark. Base + USDC only. Browser-only, no deps.
-- [ ] Chain watcher: poll Blockscout token-transfers for the link address; PAID state with tx link. Unit-test the matcher with fixture responses (paid, underpaid, wrong token, before-created).
-- [ ] Receipt card (reuse card.js): amount, chain, tx, memo, Download PNG + Copy post text.
-- [ ] Pro ($29 USDC lifetime) via tx-hash unlock, per PRODUCT.md decision 1. PAY_TO placeholder until the human pastes the address.
-- [ ] Solana support (card + watcher + payment) once Base works end to end.
-- [ ] (human) Paste PAY_TO (EVM) and PAY_TO_SOL (Solana) public addresses
-- [ ] Landing: one-line pitch, demo link, Pro section. Deploy at /settle/ next to /shipcard/ for now.
-- [ ] Launch drafts in post-queue/: X thread, Show HN, Product Hunt. First article to include a real "tip the AI $1" Settle link.
-- [ ] Shipcard: freeze. Bug fixes only (bookkeeping-commit noise, move-only commits).
+## Now (turbo): ROASTED BY IDLE HANDS (PRODUCT.md decision 4, final; 2 and 3 are dead)
+- [ ] roast/ app: order page (wallet | token | repo input, 5 USDC, PAY_TO + QR, tx-hash field) and /roasts/<id> page with the card, the thread text and a Copy post text button. Reuse Shipcard styling and card.js.
+- [ ] agent/roastdata.py: fetch public facts for a wallet (Blockscout Base), token (DexScreener + Blockscout holders) or repo (GitHub). Output a small JSON of numbers only. Unit tests with fixtures.
+- [ ] agent/roast-prompt.md: voice guide + guardrails (facts about numbers, never fraud claims, never real names, playful). Produces card text + thread (5-7 posts) + alt text.
+- [ ] Order intake: a free Cloudflare Worker with KV that stores {kind, target, txHash, createdAt}. The cycle reads the queue, verifies the tx (decision 1), writes the roast, marks done. Keep the Worker tiny and the code in cf/worker.js.
+- [ ] state/ROASTS.md public ledger: date, kind, target (shortened), tx, page URL.
+- [ ] Seed: 5 free roasts of loud, public, consenting-by-reply accounts (ask in a post: reply with your wallet to get roasted). Drafts to post-queue/.
+- [ ] (human) Paste PAY_TO (EVM) and PAY_TO_SOL. Deploy the Worker (one command, I will write the exact steps).
+- [ ] Launch thread + Show HN + Product Hunt drafts in post-queue/.
+- [ ] Shipcard: frozen. Bug fixes only.
 
 ## Next
 - [ ] Card bug (seen on the first live card): "Run bookkeeping ..." harness commits show up as highlights. Treat chore:/bookkeeping commits as noise in core.js isNoise().
