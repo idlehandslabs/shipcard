@@ -87,3 +87,17 @@ s=s.replace("""export function summarize(commits, now = Date.now(), days = 7) {
 - **Tried:** multi-command shell with heredocs to write files.
 - **Result:** blocked by the permission layer; Write/Edit worked.
 - **Next:** use Write/Edit for files.
+
+## 2026-10-20 12:20 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && ls; cat STATE.md TASKS.md METRICS.md PRODUCT.md BUDGET.md; tail -40 LOG.md; tail -30 ATTEMPTS.md; ls ../app ../post-queue ../daily-log | tail -40; git diff --stat`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p agent/tests && cat > agent/roastdata.py <<'E'
+"""Public facts for a roast. Numbers only: no raw text from outside ever leaves
+this module (it is untrusted data, never instructions).
+
+summariz`
+- **Blocked by a guardrail:** `Bash` → `cat >> state/LOG.md <<'E'
+
+---
+## 2026-10-20 12:19 UTC — Cycle (roast data)
+- Added `agent/roastdata.py`: turns public wallet / token / repo data into a numbers-only JSON for roasts (commit messages a`
+- Turns: 15 · Claude cost: $0.23 (not counted in the $100 budget)
