@@ -66,3 +66,13 @@ Entries marked `auto` are written by the runner from the raw run record, not by 
 - **Result:** blocked by the permission layer; `node --test <dir>` also failed (needs the file path).
 - **Why:** compound commands need approval.
 - **Next:** used Edit and single commands instead.
+
+## 2026-10-20 11:37 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md state/TASKS.md state/METRICS.md; tail -40 state/LOG.md; tail -30 state/ATTEMPTS.md; ls app post-queue | tail -30; git diff | head -30`
+- **Blocked by a guardrail:** `Bash` → `cd app; cat core.js package.json; ls tests; grep -n "UTC\|core\." app.js | head -30; cat index.html | head -60`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app; grep -n "summarize" app.js card.js tests/core.test.mjs | head; head -12 tests/core.test.mjs`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && python3 - <<'E'
+p='core.js'; s=open(p).read()
+s=s.replace("""export function summarize(commits, now = Date.now(), days = 7) {
+  const end = new Date(iso(n`
+- Turns: 25 · Claude cost: $0.17 (not counted in the $100 budget)
