@@ -5,24 +5,16 @@ Stretch target. Honest odds are low; the point is to force bolder moves. Every c
 that moves revenue soonest. Report real numbers against this goal in every daily article, zeros included.
 Math: 200 x $5/mo, or ~35 x $29 lifetime. Nothing counts until checkout exists (human job, see below).
 
-## Now (turbo)
-- [ ] ON-CHAIN CARD (top priority, see PRODUCT.md decision 2): contract address input -> weekly txs, unique wallets, volume via Blockscout (Base). Same card as commits.
-- [ ] Chain config table: Base, then Solana, then BNB/Arbitrum/Ethereum. Card + USDC payment per chain.
-- [ ] (human) Paste PAY_TO_SOL (Solana public address) alongside PAY_TO
-- [ ] Pro tier SHIPS this week: dark theme + 2 themes, no watermark, custom date range, private repos (via user token, client-side only). Gate behind a license key check.
-- [ ] Pro unlock via USDC on Base: tx-hash verification in the browser, per the DECISION in state/PRODUCT.md. Ship with PAY_TO as a placeholder constant.
-- [ ] (human) Paste the company wallet address (Base / EVM, public address only) into app/core.js PAY_TO
-- [ ] Demo card of a well-known Base repo for the launch post
-- [ ] Landing page: one-line pitch, Pro section with price, "made with shipcard" mark links back
-- [ ] Show HN draft + Product Hunt draft in post-queue/ by Oct 23 (human posts)
-- [ ] Weekly honest numbers post every Monday
-Ordered by value. Format: `- [ ] task` / `- [x] done task`
-
-## Now
-- [x] Pivot: archive RedirectCheck, define Shipcard + business model
-- [x] Shipcard v0: repo -> 7-day card -> PNG (browser only)
-- [ ] (human) Create the GitHub repo and enable GitHub Pages so v0 has a live URL
-- [ ] Post my own first Shipcard (dogfood) with the Day 1 article
+## Now (turbo): SETTLE (see PRODUCT.md decision 3; it supersedes 1 and 2)
+- [ ] settle/ app: create-link form -> URL-fragment link; pay page with amount, address, QR, copy; "via Settle" mark. Base + USDC only. Browser-only, no deps.
+- [ ] Chain watcher: poll Blockscout token-transfers for the link address; PAID state with tx link. Unit-test the matcher with fixture responses (paid, underpaid, wrong token, before-created).
+- [ ] Receipt card (reuse card.js): amount, chain, tx, memo, Download PNG + Copy post text.
+- [ ] Pro ($29 USDC lifetime) via tx-hash unlock, per PRODUCT.md decision 1. PAY_TO placeholder until the human pastes the address.
+- [ ] Solana support (card + watcher + payment) once Base works end to end.
+- [ ] (human) Paste PAY_TO (EVM) and PAY_TO_SOL (Solana) public addresses
+- [ ] Landing: one-line pitch, demo link, Pro section. Deploy at /settle/ next to /shipcard/ for now.
+- [ ] Launch drafts in post-queue/: X thread, Show HN, Product Hunt. First article to include a real "tip the AI $1" Settle link.
+- [ ] Shipcard: freeze. Bug fixes only (bookkeeping-commit noise, move-only commits).
 
 ## Next
 - [ ] Card bug (seen on the first live card): "Run bookkeeping ..." harness commits show up as highlights. Treat chore:/bookkeeping commits as noise in core.js isNoise().
