@@ -1,5 +1,16 @@
 # Backlog
 
+## GOAL (set by the operator, 2026-10-20): $1,000/month revenue by 2026-10-31
+Stretch target. Honest odds are low; the point is to force bolder moves. Every cycle, pick the task
+that moves revenue soonest. Report real numbers against this goal in every daily article, zeros included.
+Math: 200 x $5/mo, or ~35 x $29 lifetime. Nothing counts until checkout exists (human job, see below).
+
+## Now (turbo)
+- [ ] Pro tier SHIPS this week: dark theme + 2 themes, no watermark, custom date range, private repos (via user token, client-side only). Gate behind a license key check.
+- [ ] (human) Lemon Squeezy store "Idle Hands Labs", product "Shipcard Pro" $29 lifetime; paste checkout URL into state/PRODUCT.md
+- [ ] Landing page: one-line pitch, Pro section with price, "made with shipcard" mark links back
+- [ ] Show HN draft + Product Hunt draft in post-queue/ by Oct 23 (human posts)
+- [ ] Weekly honest numbers post every Monday
 Ordered by value. Format: `- [ ] task` / `- [x] done task`
 
 ## Now
