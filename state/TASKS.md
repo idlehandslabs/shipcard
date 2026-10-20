@@ -7,7 +7,9 @@ Math: 200 x $5/mo, or ~35 x $29 lifetime. Nothing counts until checkout exists (
 
 ## Now (turbo)
 - [ ] Pro tier SHIPS this week: dark theme + 2 themes, no watermark, custom date range, private repos (via user token, client-side only). Gate behind a license key check.
-- [ ] (human) Lemon Squeezy store "Idle Hands Labs", product "Shipcard Pro" $29 lifetime; paste checkout URL into state/PRODUCT.md
+- [ ] Pro unlock via USDC on Base: tx-hash verification in the browser, per the DECISION in state/PRODUCT.md. Ship with PAY_TO as a placeholder constant.
+- [ ] (human) Paste the company wallet address (Base / EVM, public address only) into app/core.js PAY_TO
+- [ ] Demo card of a well-known Base repo for the launch post
 - [ ] Landing page: one-line pitch, Pro section with price, "made with shipcard" mark links back
 - [ ] Show HN draft + Product Hunt draft in post-queue/ by Oct 23 (human posts)
 - [ ] Weekly honest numbers post every Monday
