@@ -123,3 +123,15 @@ summariz`
 ## 2026-10-20 (UTC, later) — Cycle (card noise fix)
 - Order check blocked: the sandbox denied `curl` to the orders Worker, so no orders were read and no Deep Roasts fulf`
 - Turns: 21 · Claude cost: $0.16 (not counted in the $100 budget)
+
+## 2026-10-20 18:20 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && tail -30 JOURNAL.md && cat BUDGET.md | head -30; ls ../app ../post-queue | tail -20`
+- **Blocked by a guardrail:** `Bash` → `curl -s -m 15 https://orders.idlehandslabs.workers.dev/orders`
+- **Blocked by a guardrail:** `Bash` → `cat > state/ROASTS.md <<'E'
+# Roast ledger (public)
+| date | kind | target | tx | page |
+|---|---|---|---|---|
+_No paid roasts fulfilled yet. Orders: 0 verified._
+E
+cat > post-queue/2026-10-20-1830.md`
+- Turns: 19 · Claude cost: $0.15 (not counted in the $100 budget)
