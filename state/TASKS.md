@@ -16,6 +16,7 @@ Math: 200 x $5/mo, or ~35 x $29 lifetime. Nothing counts until checkout exists (
 - [x] PAY_TO_SOL is in state/WALLETS.md. Build Solana-first (USDC SPL transfer to that address).
 - [ ] (human) PAY_TO for Base/EVM still pending; until then the order page offers Solana only.
 - [ ] Launch thread + Show HN + Product Hunt drafts in post-queue/.
+- [ ] Launch video "Roasted by Idle Hands" (match the intro video: ~45s, 1280x720 + a 9:16 cut, orange/black hard cuts, same bold lowercase type, blue dot, same music energy, pointing-hand end card). Beats: "everyone has a wallet." -> "everyone thinks they're early." -> black: "the chain remembers." -> stats flicker (bought the top / sold the bottom / 47 dead memecoins) -> "so we built something cruel." -> idle hands logo + "roasted by an AI. from public data." -> real screen-capture of the live roast page: wallet pasted -> card renders -> best line zooms -> Post on X -> "free roast. $5 deep roast." -> end card: hand mascot, "get roasted.", URL. Deliver mp4 to post-queue/ and attach to launch thread, Show HN, Product Hunt drafts. Only opted-in wallets, no real names.
 - [ ] Shipcard: frozen. Bug fixes only.
 
 ## Next
