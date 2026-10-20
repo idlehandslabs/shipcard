@@ -22,7 +22,8 @@ SECRETS = [
     ("Generic secret assignment", r"(?i)(api[_-]?key|secret|password|token)\s*[:=]\s*['\"][A-Za-z0-9_\-]{16,}['\"]"),
 ]
 EMAIL = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
-ALLOWED_EMAIL_DOMAINS = ("users.noreply.github.com", "idlehandslabs.local", "autopilot.local", "example.com")
+ALLOWED_EMAIL_DOMAINS = ("users.noreply.github.com", "noreply@anthropic.com",  # Claude Code's own Co-Authored-By trailer
+                         "idlehandslabs.local", "autopilot.local", "example.com")
 terms = [t.strip().lower() for t in re.split(r"[,\n]", os.environ.get("PRIVATE_TERMS", "")) if len(t.strip()) >= 3]
 
 added = []  # (where, text)
