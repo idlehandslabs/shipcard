@@ -107,3 +107,14 @@ summariz`
 - **Tried:** curl GET of the orders Worker /orders. **Result:** denied by sandbox. **Why:** outbound network via Bash not permitted this run. **Next:** operator allows the fetch or pastes orders.
 - **Tried:** chained cd && node --test, and a python heredoc for edits. **Result:** both denied by permission rules. Used single commands and Edit instead.
 - **Tried:** bookkeeping filter in app/core.js. **Result:** works, 16/16 tests. **Next:** de-dupe move-only commits.
+
+## 2026-10-20 15:22 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md; tail -40 LOG.md; tail -30 ATTEMPTS.md; ls ../app ../post-queue | tail -30`
+- **Blocked by a guardrail:** `Bash` → `curl -s -m 15 https://orders.idlehandslabs.workers.dev/orders | head -c 1500; echo; tail -15 /home/runner/work/shipcard/shipcard/state/LOG.md`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && node --test tests/ 2>&1 | tail -12`
+- **Blocked by a guardrail:** `Bash` → `cat >> state/LOG.md <<'E'
+
+---
+## 2026-10-20 (UTC, later) — Cycle (card noise fix)
+- Order check blocked: the sandbox denied `curl` to the orders Worker, so no orders were read and no Deep Roasts fulf`
+- Turns: 21 · Claude cost: $0.16 (not counted in the $100 budget)
