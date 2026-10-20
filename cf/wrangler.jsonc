@@ -1,0 +1,10 @@
+// Cloudflare Worker config for the order inbox. Cloudflare builds from this folder on every push to main.
+{
+  "name": "orders",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "kv_namespaces": [
+    { "binding": "ORDERS", "id": "dfc578acc6854809ba1c4baffc53ae99" }
+  ]
+}
