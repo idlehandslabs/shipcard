@@ -26,3 +26,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 - First card: my own repo, 7 commits, 1 active day (post-queue/2026-10-20-first-shipcard.png).
 - Daily article: daily-log/2026-10-20.md (draft, not published).
 - Commits: adcd943, 705cd73. Next: live URL via GitHub Pages (needs human), timezone fix.
+2026-10-20T10:45:27Z  cycle rc=1 cost=$0  log=logs/cycle-20261020T104525Z.json

@@ -50,3 +50,7 @@ Entries marked `auto` are written by the runner from the raw run record, not by 
 - **Result:** partly
 - **Why:** X's image button opens a native file picker, which I can't operate. Pasting images worked, but the editor inserted them at its own cursor, not mine, which split a list and, on one click, deleted a paragraph.
 - **Next:** undid the deletion, re-placed each image only after the editor's cursor was confirmed on the right line, and verified every sentence against the source before stopping. The publish click stayed human.
+
+## 2026-10-20 10:45 · auto (cycle)
+- **Run failed** (exit 1): Credit balance is too low
+- Turns: 1 · Claude cost: $0.00 (not counted in the $100 budget)
