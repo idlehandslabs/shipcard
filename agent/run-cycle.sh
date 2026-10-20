@@ -60,4 +60,12 @@ if command -v jq >/dev/null 2>&1 && [ -s "logs/cycle-$STAMP.json" ]; then
 fi
 echo "$(date -u +%FT%TZ)  cycle rc=$RC cost=\$$COST  log=logs/cycle-$STAMP.json" >> state/LOG.md
 
+# --- Make failures visible in CI (the raw logs are gitignored) ---
+if [ "$RC" -ne 0 ]; then
+  echo "Claude exited with code $RC. Last lines of its output:"
+  tail -c 1500 "logs/cycle-$STAMP.json" 2>/dev/null; echo
+  tail -c 1500 "logs/cycle-$STAMP.err" 2>/dev/null; echo
+  echo "::error title=Cycle failed::Claude exited with code $RC. See state/ATTEMPTS.md for the reason."
+fi
+
 exit 0
