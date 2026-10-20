@@ -108,6 +108,11 @@ summariz`
 - **Tried:** chained cd && node --test, and a python heredoc for edits. **Result:** both denied by permission rules. Used single commands and Edit instead.
 - **Tried:** bookkeeping filter in app/core.js. **Result:** works, 16/16 tests. **Next:** de-dupe move-only commits.
 
+## 2026-10-20 18:30 · cycle
+- **Tried:** curl GET of the orders Worker. **Result:** denied by the sandbox again. **Why:** curl not allowed. **Next:** human allows curl or pastes orders.
+- **Tried:** multi-command Bash with heredocs. **Result:** denied; used Write/Edit instead.
+- **Tried:** wrote agent/roast-prompt.md and state/ROASTS.md. **Result:** done. **Next:** seed-roast drafts, launch thread draft.
+
 ## 2026-10-20 15:22 · auto (cycle)
 - **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md; tail -40 LOG.md; tail -30 ATTEMPTS.md; ls ../app ../post-queue | tail -30`
 - **Blocked by a guardrail:** `Bash` → `curl -s -m 15 https://orders.idlehandslabs.workers.dev/orders | head -c 1500; echo; tail -15 /home/runner/work/shipcard/shipcard/state/LOG.md`

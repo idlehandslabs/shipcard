@@ -43,5 +43,10 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ---
 ## 2026-10-20 (UTC, later) — Cycle (card noise fix)
 - Order check blocked: sandbox denied curl to the orders Worker, so no orders read and no Deep Roasts fulfilled. Nothing invented.
+
+---
+## 2026-10-20 18:30 UTC — Cycle (roast prompt)
+- Orders check blocked again (curl denied); 0 orders read, 0 fulfilled.
+- Added `agent/roast-prompt.md` (voice + guardrails) and `state/ROASTS.md` ledger. Docs only; no code changed.
 - Shipcard isNoise() now drops "Run bookkeeping" / "chore: bookkeeping" commits. 2 new assertions; 16/16 tests pass (core + roast).
 2026-10-20T15:22:27Z  cycle rc=0 cost=$0.1598886  log=logs/cycle-20261020T152143Z.json

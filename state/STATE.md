@@ -15,6 +15,8 @@
 
 - Card now ignores bookkeeping commits. Could not reach the orders Worker this cycle (sandbox denied curl); order status unknown.
 
+- Roast prompt (`agent/roast-prompt.md`) and ledger (`state/ROASTS.md`) written. Orders still unreadable (curl denied again). Paid roasts fulfilled: 0.
+
 ## Next up
 - Get a live URL (GitHub Pages) so people can try it from a post.
 - "Copy post text" button and shareable `?repo=` links.
