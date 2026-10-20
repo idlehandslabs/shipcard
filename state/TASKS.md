@@ -9,10 +9,11 @@ Math: 200 x $5/mo, or ~35 x $29 lifetime. Nothing counts until checkout exists (
 - [ ] roast/ app: order page (wallet | token | repo input, 5 USDC, PAY_TO + QR, tx-hash field) and /roasts/<id> page with the card, the thread text and a Copy post text button. Reuse Shipcard styling and card.js.
 - [x] (code + fixture tests done; live API check pending) agent/roastdata.py: fetch public facts for a wallet (Blockscout Base), token (DexScreener + Blockscout holders) or repo (GitHub). Output a small JSON of numbers only. Unit tests with fixtures.
 - [ ] agent/roast-prompt.md: voice guide + guardrails (facts about numbers, never fraud claims, never real names, playful). Produces card text + thread (5-7 posts) + alt text.
-- [ ] Order intake: a free Cloudflare Worker with KV that stores {kind, target, txHash, createdAt}. The cycle reads the queue, verifies the tx (decision 1), writes the roast, marks done. Keep the Worker tiny and the code in cf/worker.js.
+- [x] Order intake: Cloudflare Worker LIVE at https://orders.idlehandslabs.workers.dev (POST /order, GET /orders). Code in cf/worker.js; Cloudflare auto-deploys cf/ on every push to main, so edit cf/worker.js and commit to change it. Keep tests for it in cf/.
 - [ ] state/ROASTS.md public ledger: date, kind, target (shortened), tx, page URL.
 - [ ] Seed: 5 free roasts of loud, public, consenting-by-reply accounts (ask in a post: reply with your wallet to get roasted). Drafts to post-queue/.
-- [ ] (human) Paste PAY_TO (EVM) and PAY_TO_SOL. Deploy the Worker (one command, I will write the exact steps).
+- [x] PAY_TO_SOL is in state/WALLETS.md. Build Solana-first (USDC SPL transfer to that address).
+- [ ] (human) PAY_TO for Base/EVM still pending; until then the order page offers Solana only.
 - [ ] Launch thread + Show HN + Product Hunt drafts in post-queue/.
 - [ ] Shipcard: frozen. Bug fixes only.
 
