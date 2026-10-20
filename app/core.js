@@ -41,8 +41,11 @@ const iso = (d) => new Date(d).toISOString().slice(0, 10);
  * Summarise GitHub commit objects over the `days` days ending at `now` (UTC days).
  * commits: [{ sha, commit: { message, author: { date } } }]
  */
-export function summarize(commits, now = Date.now(), days = 7) {
-  const end = new Date(iso(now) + 'T00:00:00Z').getTime() + DAY; // end of today, UTC
+export function summarize(commits, now = Date.now(), days = 7, tzOffsetMin = 0) {
+  // Work in "shifted" time (UTC + offset, minutes east) so UTC day math yields local days.
+  const off = tzOffsetMin * 60000;
+  now += off;
+  const end = new Date(iso(now) + 'T00:00:00Z').getTime() + DAY; // end of today
   const start = end - days * DAY;
   const buckets = [];
   for (let i = 0; i < days; i++) buckets.push({ date: iso(start + i * DAY), count: 0 });
@@ -50,7 +53,7 @@ export function summarize(commits, now = Date.now(), days = 7) {
   const kept = [];
   for (const c of commits || []) {
     const msg = c?.commit?.message ?? '';
-    const t = Date.parse(c?.commit?.author?.date ?? c?.commit?.committer?.date ?? '');
+    const t = Date.parse(c?.commit?.author?.date ?? c?.commit?.committer?.date ?? '') + off;
     if (!Number.isFinite(t) || t < start || t >= end) continue;
     if (isNoise(msg)) continue;
     const idx = Math.floor((t - start) / DAY);

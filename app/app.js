@@ -27,8 +27,9 @@ async function make(raw) {
   msg.textContent = 'Reading the last 7 days…'; form.querySelector('button').disabled = true;
   try {
     const now = Date.now();
-    const since = new Date(new Date(new Date(now).toISOString().slice(0, 10) + 'T00:00:00Z').getTime() - 6 * DAY).toISOString();
-    const s = summarize(await fetchCommits(p.owner, p.repo, since), now);
+    const tz = -new Date(now).getTimezoneOffset(); // minutes east of UTC
+    const since = new Date(now - 8 * DAY).toISOString(); // generous; summarize trims to local days
+    const s = summarize(await fetchCommits(p.owner, p.repo, since), now, 7, tz);
     const label = `${p.owner}/${p.repo}`;
     const svg = renderCard(label, s);
     current = { label, s, svg };

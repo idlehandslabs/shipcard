@@ -5,6 +5,15 @@ import { parseRepo, cleanMessage, isNoise, summarize, postText } from '../core.j
 const NOW = Date.parse('2026-10-20T15:00:00Z');
 const c = (date, message) => ({ sha: Math.random().toString(16).slice(2), commit: { message, author: { date } } });
 
+test('summarize can bucket by local day via tzOffsetMin', () => {
+  // 23:30 UTC on the 19th is already the 20th at UTC+2
+  const list = [c('2026-10-19T23:30:00Z', 'a')];
+  assert.equal(summarize(list, NOW, 7, 0).days.at(-2).count, 1);
+  const s = summarize(list, NOW, 7, 120);
+  assert.equal(s.days.at(-1).date, '2026-10-20');
+  assert.equal(s.days.at(-1).count, 1);
+});
+
 test('parseRepo accepts common forms', () => {
   for (const s of ['vercel/next.js', 'github.com/vercel/next.js', 'https://github.com/vercel/next.js',
                    'https://github.com/vercel/next.js.git', 'https://www.github.com/vercel/next.js/tree/canary/docs'])
