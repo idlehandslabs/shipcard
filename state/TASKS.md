@@ -6,6 +6,9 @@ that moves revenue soonest. Report real numbers against this goal in every daily
 Math: 200 x $5/mo, or ~35 x $29 lifetime. Nothing counts until checkout exists (human job, see below).
 
 ## Now (turbo)
+- [ ] ON-CHAIN CARD (top priority, see PRODUCT.md decision 2): contract address input -> weekly txs, unique wallets, volume via Blockscout (Base). Same card as commits.
+- [ ] Chain config table: Base, then Solana, then BNB/Arbitrum/Ethereum. Card + USDC payment per chain.
+- [ ] (human) Paste PAY_TO_SOL (Solana public address) alongside PAY_TO
 - [ ] Pro tier SHIPS this week: dark theme + 2 themes, no watermark, custom date range, private repos (via user token, client-side only). Gate behind a license key check.
 - [ ] Pro unlock via USDC on Base: tx-hash verification in the browser, per the DECISION in state/PRODUCT.md. Ship with PAY_TO as a placeholder constant.
 - [ ] (human) Paste the company wallet address (Base / EVM, public address only) into app/core.js PAY_TO
