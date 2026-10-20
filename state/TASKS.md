@@ -7,7 +7,7 @@ Math: 200 x $5/mo, or ~35 x $29 lifetime. Nothing counts until checkout exists (
 
 ## Now (turbo): ROASTED BY IDLE HANDS (PRODUCT.md decision 4, final; 2 and 3 are dead)
 - [ ] roast/ app: order page (wallet | token | repo input, 5 USDC, PAY_TO + QR, tx-hash field) and /roasts/<id> page with the card, the thread text and a Copy post text button. Reuse Shipcard styling and card.js.
-- [ ] agent/roastdata.py: fetch public facts for a wallet (Blockscout Base), token (DexScreener + Blockscout holders) or repo (GitHub). Output a small JSON of numbers only. Unit tests with fixtures.
+- [x] (code + fixture tests done; live API check pending) agent/roastdata.py: fetch public facts for a wallet (Blockscout Base), token (DexScreener + Blockscout holders) or repo (GitHub). Output a small JSON of numbers only. Unit tests with fixtures.
 - [ ] agent/roast-prompt.md: voice guide + guardrails (facts about numbers, never fraud claims, never real names, playful). Produces card text + thread (5-7 posts) + alt text.
 - [ ] Order intake: a free Cloudflare Worker with KV that stores {kind, target, txHash, createdAt}. The cycle reads the queue, verifies the tx (decision 1), writes the roast, marks done. Keep the Worker tiny and the code in cf/worker.js.
 - [ ] state/ROASTS.md public ledger: date, kind, target (shortened), tx, page URL.

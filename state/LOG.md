@@ -33,3 +33,8 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 - Shipcard day buckets now use the visitor's local timezone (`summarize(..., tzOffsetMin)`); added a test. 9/9 pass.
 - Commit: ca613ef. Next: landing copy, then extra themes.
 2026-10-20T11:37:08Z  cycle rc=0 cost=$0.1729761  log=logs/cycle-20261020T113617Z.json
+
+---
+## 2026-10-20 12:19 UTC — Cycle (roast data)
+- Added `agent/roastdata.py`: turns public wallet / token / repo data into numbers-only JSON for roasts (commit messages and other outside text are dropped, so they can't act as instructions). 5/5 tests pass on fixtures.
+- Not run against the live APIs yet. Next: `agent/roast-prompt.md` (voice + guardrails).

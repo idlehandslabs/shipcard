@@ -76,3 +76,14 @@ p='core.js'; s=open(p).read()
 s=s.replace("""export function summarize(commits, now = Date.now(), days = 7) {
   const end = new Date(iso(n`
 - Turns: 25 · Claude cost: $0.17 (not counted in the $100 budget)
+
+## 2026-10-20 12:19 · auto (cycle)
+- **Tried:** build agent/roastdata.py + fixture tests (first roast task).
+- **Result:** worked, 5/5 tests. Live API response shapes come from docs, unverified.
+- **Why:** roasts need real numbers and a wall between outside text and the prompt.
+- **Next:** roast-prompt.md; verify on live APIs.
+
+## 2026-10-20 12:19 · auto (cycle)
+- **Tried:** multi-command shell with heredocs to write files.
+- **Result:** blocked by the permission layer; Write/Edit worked.
+- **Next:** use Write/Edit for files.
