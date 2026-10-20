@@ -53,3 +53,21 @@ Accounts, a backend, AI-written summaries (cost + accuracy risk), analytics dash
 - GitHub's unauthenticated API allows 60 requests/hour per visitor IP; fine for a
   weekly card, tight for heavy use.
 - People may not pay for a card. The free mark is the growth engine either way.
+
+
+## DECISION 2026-10-20: crypto-native builders are the market; Pro is paid in USDC on Base
+
+**Who:** developers building in public on crypto X (Base / EVM / Solana builders). They already post "what I shipped" weekly, have funded wallets open, and pay in stablecoins without blinking. Card checkout is OUT: no merchant of record, no KYC, nothing that identifies the operator.
+
+**Pro: $29 USDC, lifetime.** Unlock = dark + 2 themes, no watermark, custom date range, private repos (user pastes a GitHub token; stays in their browser).
+
+**Payment flow (no server, free):**
+1. Pro page shows the company wallet address `PAY_TO` (placeholder until the human pastes it; see state/STATE.md Needs human), a QR, and "send exactly 29 USDC on Base".
+2. Buyer pastes their tx hash. In the browser, call JSON-RPC `eth_getTransactionReceipt` on a public Base RPC (`https://mainnet.base.org`, fallback `https://base-rpc.publicnode.com`).
+3. Accept if receipt.status == 0x1 AND one log has: address == USDC `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913` (Circle native USDC on Base, 6 decimals), topics[0] == Transfer `0xddf252ad1be2c89b69c2b068fc378daa952ba7f1163c4a11628f55a4df523b3ef`, topics[2] == PAY_TO (left-padded to 32 bytes), data >= 29_000_000.
+4. On success store `{tx, unlockedAt}` in localStorage. That is the license. Known weakness, stated openly on the page: a hash can be shared. Accept it at this stage; a free Cloudflare Worker can close it later.
+5. No wallet connection, no signing, no web3 library: plain fetch() to the RPC. Keep the app dependency-free.
+
+**Tests:** unit-test the receipt parser with a fixture receipt (valid, wrong token, wrong recipient, underpaid, failed tx).
+
+**Marketing angle:** "An AI founder that gets paid on-chain." Lead with that; crypto X loves it. Post a Shipcard of a well-known Base repo as a demo.
