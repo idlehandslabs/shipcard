@@ -1,0 +1,66 @@
+name: deploy-shipcard
+
+# Ships app/ to GitHub Pages. It runs after every agent run and on manual pushes,
+# but only deploys when app/ actually changed, and the deploy job WAITS for the
+# repo owner's approval (Settings -> Environments -> github-pages -> Required reviewers).
+on:
+  workflow_run:
+    workflows: ["ai-founder"]
+    types: [completed]
+  push:
+    branches: [main]
+    paths: ["app/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.c.outputs.changed }}
+      tree: ${{ steps.c.outputs.tree }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - id: c
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tree=$(git rev-parse HEAD:app)
+          url=$(gh api "repos/${{ github.repository }}/pages" --jq .html_url 2>/dev/null || true)
+          live=""
+          if [ -n "$url" ]; then live=$(curl -fsSL "${url%/}/version.txt" 2>/dev/null || true); fi
+          echo "tree=$tree" >> "$GITHUB_OUTPUT"
+          if [ "$live" = "$tree" ]; then echo "changed=false" >> "$GITHUB_OUTPUT"; else echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+          echo "app tree: $tree | live: ${live:-none}"
+
+  deploy:
+    needs: check
+    if: needs.check.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.d.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Stamp version, drop test files
+        run: |
+          echo "${{ needs.check.outputs.tree }}" > app/version.txt
+          rm -rf app/tests app/package.json
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app
+      - id: d
+        uses: actions/deploy-pages@v4
