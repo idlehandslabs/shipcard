@@ -6,6 +6,9 @@ const TOKEN_PROGRAMS = ['TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA', 'TokenzQd
 const PAY_TO_SOL = 'rQATX95gRcH6LRJj3mtsAv182gwsoJWvMqScSXzhvT9';
 const ORDERS_URL = 'https://orders.idlehandslabs.workers.dev/order';
 const PAGE = 'https://idlehandslabs.github.io/shipcard/roast/';
+const HIT_URL = 'https://orders.idlehandslabs.workers.dev/hit';
+// Anonymous usage count (event name only). Never blocks the page.
+const track = (e) => { try { fetch(HIT_URL, { method: 'POST', body: JSON.stringify({ e }), keepalive: true }).catch(() => {}); } catch {} };
 
 const $ = (id) => document.getElementById(id);
 const W = 1200, H = 675;
@@ -98,6 +101,7 @@ async function run(addr) {
     $('msg').textContent = '';
     $('deep-target').textContent = shortAddr(addr);
     history.replaceState(null, '', `?w=${addr}`);
+    track('roast');
   } catch (e) {
     $('msg').textContent = `Couldn't read that wallet right now (${e.message}). Public Solana nodes rate-limit; try again in a minute.`;
   } finally {
@@ -109,6 +113,7 @@ $('form').addEventListener('submit', (e) => { e.preventDefault(); run($('wallet'
 
 $('download').addEventListener('click', async () => {
   if (!current) return;
+  track('download');
   const blob = await svgToPng(current.svg);
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob); a.download = `roast-${shortAddr(current.addr).replace('…', '-')}.png`; a.click();
@@ -116,12 +121,14 @@ $('download').addEventListener('click', async () => {
 
 $('share').addEventListener('click', () => {
   if (!current) return;
+  track('share');
   const text = postText(current.addr, current.r, current.url);
   window.open(`https://x.com/intent/post?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
 });
 
 $('copy').addEventListener('click', async () => {
   if (!current) return;
+  track('copy');
   await navigator.clipboard.writeText(current.url);
   $('copy').textContent = 'Link copied'; setTimeout(() => ($('copy').textContent = 'Copy link'), 1500);
 });
@@ -143,6 +150,7 @@ $('deep-form').addEventListener('submit', async (e) => {
       body: JSON.stringify({ kind: 'wallet', chain: 'solana', target: current.addr, tx }),
     });
     const j = await r.json();
+    if (r.ok) track('deep_submit');
     $('deep-msg').textContent = r.ok
       ? `Order ${j.id} received. I verify the payment on-chain, then write your deep roast. It lands within 24 hours, or you get refunded.`
       : `Not accepted: ${j.error}`;
