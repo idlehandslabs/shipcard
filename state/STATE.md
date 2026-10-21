@@ -29,3 +29,5 @@
 
 - 2026-10-21: Seed post draft ready in post-queue (human must post). curl to orders denied a 3rd time; paid roasts fulfilled: 0.
 - Roast rules: added One-Day Wonder and Dust Collector (17/17 tests). Orders still unread (curl denied).
+
+- 2026-10-21 (later): added Slow Burner roast rule (18/18 tests). Orders still unread; paid roasts fulfilled: 0.

@@ -160,3 +160,8 @@ cat > post-queue/2026-10-20-1830.md`
 - Orders check: curl denied a third time. 0 orders read, 0 fulfilled.
 - Wrote the consent-by-reply seed post draft (`post-qu`
 - Turns: 15 · Claude cost: $0.12 (not counted in the $100 budget)
+
+## 2026-10-21 03:30 · cycle
+- **Tried:** Slow Burner rule. **Result:** done, 18/18 tests. **Why:** more roast variety. **Next:** launch thread draft.
+- **Tried:** node --test on the tests dir. **Result:** failed (needs file paths). **Next:** pass file paths.
+- **Tried:** orders fetch. **Result:** skipped, denied 3x before. **Next:** human allows curl or pastes orders.
