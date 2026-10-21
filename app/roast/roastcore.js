@@ -137,6 +137,11 @@ const RULES = [
     weight: 44, verdict: 'Binge Trader',
     line: (s) => `${fmt(s.txCount)} transactions across just ${fmt(s.activeDays)} active day${s.activeDays === 1 ? '' : 's'}. That's not a strategy, that's a weekend bender with a wallet.`,
   },
+  {
+    when: (s) => s.sol >= 1000,
+    weight: 48, verdict: 'Whale With Free Time',
+    line: (s) => `${fmt(s.sol)} SOL. You could buy a small island and you're here asking an AI to be mean to you.`,
+  },
 ];
 
 const FALLBACK = {

@@ -93,6 +93,11 @@ test('binge trader rule', () => {
   assert.ok(roast(s).lines.some((l) => /active day/.test(l)));
 });
 
+test('whale rule', () => {
+  const s = computeStats({ sol: 2500, sigs: [sig(NOW - 100)], tokens: [], now: NOW });
+  assert.ok(roast(s).lines.some((l) => /small island/.test(l)));
+});
+
 test('post text', () => {
   const r = { verdict: 'Tourist', score: 15, lines: ['x'] };
   assert.match(postText('a', r, 'https://u'), /Tourist.*15\/100[\s\S]*https:\/\/u/);
