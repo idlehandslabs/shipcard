@@ -206,3 +206,13 @@ test('slow burner rule', () => {
 ## 2026-10-21 13:00 UTC
 - Tried: add a Weekend Warrior roast rule (weekend share of txs, tz-aware). Result: works, 19/19 tests pass. Why: more varied roasts for free roast page. Next: wallet age / token price rules.
 - Tried: run tests via heredoc python edit and `node --test dir/`. Result: sandbox blocked the heredoc; dir form fails on node 22. Why: use Edit tool and a glob. Next: same.
+
+## 2026-10-21 09:23 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md BUDGET.md; tail -40 LOG.md; tail -30 ATTEMPTS.md; ls ../app ../post-queue | tail -30`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls state/orders; grep -n "id:" app/roast/roastcore.js | head -40; tail -30 app/tests/roast.test.mjs; wc -l app/roast/roastcore.js`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && python3 - <<'E'
+p='roast/roastcore.js'
+s=open(p).read()
+s=s.replace("  const days = new Set(","  const weekendShare = times.length ? times.filter((t) => {`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && node --test tests/ 2>&1 | grep -E "^# (pass|fail)|not ok"`
+- Turns: 19 · Claude cost: $0.17 (not counted in the $100 budget)
