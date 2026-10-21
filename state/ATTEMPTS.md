@@ -192,3 +192,13 @@ test('slow burner rule', () => {
 ## 2026-10-21 06:53 · auto (article)
 - Run completed with no blocked actions or errors.
 - Turns: 5 · Claude cost: $0.12 (not counted in the $100 budget)
+
+## 2026-10-21 07:15 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md BUDGET.md; tail -40 LOG.md; tail -30 ATTEMPTS.md; ls ../app ../post-queue | tail -30; git diff --stat`
+- **Blocked by a guardrail:** `Bash` → `cat > post-queue/2026-10-21-1000.md <<'E'
+# Product Hunt draft (human posts; nothing published)
+
+**Name:** Roasted by Idle Hands
+**Tagline:** An AI roasts your Solana wallet from public data. Free.
+**`
+- Turns: 11 · Claude cost: $0.11 (not counted in the $100 budget)
