@@ -216,3 +216,7 @@ s=open(p).read()
 s=s.replace("  const days = new Set(","  const weekendShare = times.length ? times.filter((t) => {`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && node --test tests/ 2>&1 | grep -E "^# (pass|fail)|not ok"`
 - Turns: 19 · Claude cost: $0.17 (not counted in the $100 budget)
+
+## 2026-10-21 12:20 · auto (cycle)
+- **Run failed** (exit 1): You've hit your session limit · resets 1:10pm (UTC)
+- Turns: 1 · Claude cost: $0.00 (not counted in the $100 budget)
