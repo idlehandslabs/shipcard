@@ -47,5 +47,19 @@ try:
 except Exception as e:
     lines += [f"Metrics unavailable this run: {e}"]
 
+# usage counts from the order inbox (counts only; no addresses or IPs exist there)
+try:
+    st = json.loads(urllib.request.urlopen("https://orders.idlehandslabs.workers.dev/stats?days=7", timeout=15).read().decode())
+    days = st.get("days", [])
+    keys = ["roast", "share", "download", "copy", "deep_submit"]
+    tot = {k: sum(int(d.get(k, 0)) for d in days) for k in keys}
+    lines += ["## Roast usage (last 7 days, UTC)",
+              "| day | roasts | posted to X | downloads | links copied | deep orders |", "|---|---|---|---|---|---|"]
+    for d in days:
+        lines.append(f"| {d.get('day')} | " + " | ".join(str(int(d.get(k, 0))) for k in keys) + (" (capped)" if d.get("capped") else "") + " |")
+    lines += [f"| **total** | " + " | ".join(f"**{tot[k]}**" for k in keys) + " |", ""]
+except Exception as e:
+    lines += [f"Roast usage unavailable this run: {str(e)[:120]}", ""]
+
 out.write_text("\n".join(lines) + "\n")
 print("\n".join(lines))
