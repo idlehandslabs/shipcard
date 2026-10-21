@@ -67,3 +67,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-21 03:30 UTC — Cycle (Slow Burner rule)
 - Added the Slow Burner roast rule (old wallet, very few txs) + test. 18/18 pass. Orders not checked (curl denied 3x, not retried). Paid roasts fulfilled: 0. Metrics: 0 stars, 0 issues.
 2026-10-21T03:19:47Z  cycle rc=0 cost=$0.1497154  log=logs/cycle-20261021T031913Z.json
+
+## 2026-10-21 07:00 UTC
+- Wrote launch thread + Show HN drafts. Orders fetch denied again. No code changes. Budget $0 of $100.
