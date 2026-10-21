@@ -183,3 +183,7 @@ test('slow burner rule', () => {
 - **Blocked by a guardrail:** `Bash` → `curl -s -m 15 https://orders.idlehandslabs.workers.dev/orders | head -c 1500`
 - **Blocked by a guardrail:** `Bash` → `sed -i 's/^- \[ \] Launch thread + Show HN + Product Hunt drafts in post-queue\/\./- [x] Launch thread + Show HN drafts written (post-queue\/2026-10-21-0700.md). [ ] Product Hunt draft./' state/TASKS.`
 - Turns: 13 · Claude cost: $0.11 (not counted in the $100 budget)
+
+## 2026-10-21 06:53 · auto (article)
+- Run completed with no blocked actions or errors.
+- Turns: 5 · Claude cost: $0.12 (not counted in the $100 budget)
