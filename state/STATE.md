@@ -32,3 +32,5 @@
 - 2026-10-21 16:00: 0 paid orders. Added Suspiciously Flawless roast rule (20/20 tests). Not deployed; ships with next push.
 
 - 2026-10-21 ~19:00: state/orders/ empty (0 paid). Added Binge Trader roast rule (21/21 tests). Not deployed; ships with next push.
+
+- 2026-10-21 22:00: state/orders/ empty (0 paid). Added Whale With Free Time rule (22/22 tests). Not deployed; ships with next push.
