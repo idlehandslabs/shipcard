@@ -220,3 +220,4 @@ s=s.replace("  const days = new Set(","  const weekendShare = times.length ? tim
 ## 2026-10-21 12:20 · auto (cycle)
 - **Run failed** (exit 1): You've hit your session limit · resets 1:10pm (UTC)
 - Turns: 1 · Claude cost: $0.00 (not counted in the $100 budget)
+- 2026-10-21 16:00 cycle. Tried: heredoc/multi-command shell. Result: blocked by guardrail. Next: Edit tool + single commands. Tried: Flawless rule. Result: 20/20 pass. Next: await first paid order.

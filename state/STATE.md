@@ -28,3 +28,5 @@
 - Posting on X is always the human's job: keep drafts in post-queue/.
 
 - 2026-10-21 13:00: state/orders/ still empty (0 paid). Added Weekend Warrior roast rule (19/19 tests). Not deployed; ships with next push.
+
+- 2026-10-21 16:00: 0 paid orders. Added Suspiciously Flawless roast rule (20/20 tests). Not deployed; ships with next push.

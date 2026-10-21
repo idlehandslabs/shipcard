@@ -127,6 +127,11 @@ const RULES = [
     weight: 42, verdict: 'Weekend Warrior',
     line: (s) => `${fmt(s.weekendShare * 100)}% of your moves happen on a Saturday or Sunday. The market is open 24/7 and so, apparently, is your lack of plans.`,
   },
+  {
+    when: (s) => s.txCount >= 100 && s.failed === 0,
+    weight: 36, verdict: 'Suspiciously Flawless',
+    line: (s) => `${fmt(s.txCount)} transactions and zero failures. Either you're careful or you only ever do the one thing.`,
+  },
 ];
 
 const FALLBACK = {

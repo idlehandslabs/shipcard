@@ -79,6 +79,13 @@ test('weekend warrior rule', () => {
   assert.ok(roast(s).lines.some((l) => /Saturday or Sunday/.test(l)));
 });
 
+test('flawless record rule', () => {
+  const sigs = Array.from({ length: 150 }, (_, i) => sig(NOW - 3600 - i * 20000));
+  const s = computeStats({ sol: 5, sigs, tokens: [], now: NOW });
+  assert.equal(s.failed, 0);
+  assert.ok(roast(s).lines.some((l) => /zero failures/.test(l)));
+});
+
 test('post text', () => {
   const r = { verdict: 'Tourist', score: 15, lines: ['x'] };
   assert.match(postText('a', r, 'https://u'), /Tourist.*15\/100[\s\S]*https:\/\/u/);
