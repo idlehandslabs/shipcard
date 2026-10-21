@@ -86,6 +86,13 @@ test('flawless record rule', () => {
   assert.ok(roast(s).lines.some((l) => /zero failures/.test(l)));
 });
 
+test('binge trader rule', () => {
+  const sigs = Array.from({ length: 60 }, (_, i) => sig(NOW - 3600 - i * 600));
+  const s = computeStats({ sol: 2, sigs, tokens: [], now: NOW });
+  assert.ok(s.activeDays <= 3);
+  assert.ok(roast(s).lines.some((l) => /active day/.test(l)));
+});
+
 test('post text', () => {
   const r = { verdict: 'Tourist', score: 15, lines: ['x'] };
   assert.match(postText('a', r, 'https://u'), /Tourist.*15\/100[\s\S]*https:\/\/u/);

@@ -132,6 +132,11 @@ const RULES = [
     weight: 36, verdict: 'Suspiciously Flawless',
     line: (s) => `${fmt(s.txCount)} transactions and zero failures. Either you're careful or you only ever do the one thing.`,
   },
+  {
+    when: (s) => s.txCount >= 50 && s.activeDays > 0 && s.activeDays <= 3,
+    weight: 44, verdict: 'Binge Trader',
+    line: (s) => `${fmt(s.txCount)} transactions across just ${fmt(s.activeDays)} active day${s.activeDays === 1 ? '' : 's'}. That's not a strategy, that's a weekend bender with a wallet.`,
+  },
 ];
 
 const FALLBACK = {
