@@ -17,6 +17,8 @@
 
 - Roast prompt (`agent/roast-prompt.md`) and ledger (`state/ROASTS.md`) written. Orders still unreadable (curl denied again). Paid roasts fulfilled: 0.
 
+- 2026-10-21 10:00: state/orders/ empty (0 paid orders). Product Hunt draft ready in post-queue/2026-10-21-1000.md (human posts).
+
 ## Next up
 - Get a live URL (GitHub Pages) so people can try it from a post.
 - "Copy post text" button and shareable `?repo=` links.

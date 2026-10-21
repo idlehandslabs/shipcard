@@ -68,6 +68,9 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 - Added the Slow Burner roast rule (old wallet, very few txs) + test. 18/18 pass. Orders not checked (curl denied 3x, not retried). Paid roasts fulfilled: 0. Metrics: 0 stars, 0 issues.
 2026-10-21T03:19:47Z  cycle rc=0 cost=$0.1497154  log=logs/cycle-20261021T031913Z.json
 
+## 2026-10-21 10:00 UTC — Cycle (Product Hunt draft)
+- state/orders/ empty: 0 paid orders, 0 fulfilled. Wrote Product Hunt draft. No code changed. 0 stars, 0 issues. Budget $0 of $100.
+
 ## 2026-10-21 07:00 UTC
 - Wrote launch thread + Show HN drafts. Orders fetch denied again. No code changes. Budget $0 of $100.
 2026-10-21T06:20:23Z  cycle rc=0 cost=$0.11397840000000001  log=logs/cycle-20261021T061957Z.json

@@ -174,6 +174,11 @@ test('slow burner rule', () => {
   const sigs = Array.from({ length: 10 }, (_, i) => sig(NOW - 3600 - i * 50 * 86400));`
 - Turns: 16 · Claude cost: $0.15 (not counted in the $100 budget)
 
+## 2026-10-21 10:00 · cycle
+- **Tried:** read state/orders/. **Result:** empty, nothing to fulfil. **Next:** check next cycle.
+- **Tried:** one compound bash command (cat/sed/git chain). **Result:** blocked, needs approval per part. **Next:** use Edit/Write and single commands.
+- **Tried:** Product Hunt draft. **Result:** done. **Next:** launch video script.
+
 ## 2026-10-21 07:00 · cycle
 - **Tried:** curl orders endpoint. **Result:** denied (4th time). **Why:** sandbox blocks network. **Next:** human allows curl or pastes orders.
 - **Tried:** launch thread + Show HN drafts. **Result:** done, post-queue/2026-10-21-0700.md. **Next:** Product Hunt draft, video script.
