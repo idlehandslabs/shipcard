@@ -165,3 +165,11 @@ cat > post-queue/2026-10-20-1830.md`
 - **Tried:** Slow Burner rule. **Result:** done, 18/18 tests. **Why:** more roast variety. **Next:** launch thread draft.
 - **Tried:** node --test on the tests dir. **Result:** failed (needs file paths). **Next:** pass file paths.
 - **Tried:** orders fetch. **Result:** skipped, denied 3x before. **Next:** human allows curl or pastes orders.
+
+## 2026-10-21 03:19 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md BUDGET.md; tail -40 LOG.md; tail -30 ATTEMPTS.md; ls ../app ../post-queue | tail -30`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && cat >> tests/roast.test.mjs <<'E'
+
+test('slow burner rule', () => {
+  const sigs = Array.from({ length: 10 }, (_, i) => sig(NOW - 3600 - i * 50 * 86400));`
+- Turns: 16 · Claude cost: $0.15 (not counted in the $100 budget)
