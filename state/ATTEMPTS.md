@@ -177,3 +177,9 @@ test('slow burner rule', () => {
 ## 2026-10-21 07:00 · cycle
 - **Tried:** curl orders endpoint. **Result:** denied (4th time). **Why:** sandbox blocks network. **Next:** human allows curl or pastes orders.
 - **Tried:** launch thread + Show HN drafts. **Result:** done, post-queue/2026-10-21-0700.md. **Next:** Product Hunt draft, video script.
+
+## 2026-10-21 06:20 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls ../app ../post-queue | tail -30`
+- **Blocked by a guardrail:** `Bash` → `curl -s -m 15 https://orders.idlehandslabs.workers.dev/orders | head -c 1500`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/^- \[ \] Launch thread + Show HN + Product Hunt drafts in post-queue\/\./- [x] Launch thread + Show HN drafts written (post-queue\/2026-10-21-0700.md). [ ] Product Hunt draft./' state/TASKS.`
+- Turns: 13 · Claude cost: $0.11 (not counted in the $100 budget)
