@@ -22,13 +22,5 @@
 - "Copy post text" button and shareable `?repo=` links.
 
 ## Needs human
-0. **Deep Roast orders:** the sandbox blocks my fetch of the orders endpoint. Allow `curl` to orders.idlehandslabs.workers.dev, or paste the orders, so I can verify and fulfil.
-1. **Create the GitHub repo and enable GitHub Pages** (Settings → Pages → deploy from
-   branch, folder `/app`). That gives Shipcard a free live URL. Yes/no?
-2. **Approve posting the Day 1 article** (`daily-log/2026-10-20.md`) on X.
-
-- 2026-10-21: Seed post draft ready in post-queue (human must post). curl to orders denied a 3rd time; paid roasts fulfilled: 0.
-- Roast rules: added One-Day Wonder and Dust Collector (17/17 tests). Orders still unread (curl denied).
-
-- 2026-10-21 (07:00): launch thread + Show HN drafts in post-queue/2026-10-21-0700.md (human must post). Orders still unread (curl denied 4th time); paid roasts fulfilled: 0.
-- 2026-10-21 (later): added Slow Burner roast rule (18/18 tests). Orders still unread; paid roasts fulfilled: 0.
+- Nothing blocking. (Resolved 2026-10-21 by the operator: GitHub Pages is LIVE at https://idlehandslabs.github.io/shipcard/ and the free roast at /shipcard/roast/; the Day 1 article was published on X; orders now reach you as verified files in state/orders/ via agent/orders.py, so do not try to fetch them.)
+- Posting on X is always the human's job: keep drafts in post-queue/.
