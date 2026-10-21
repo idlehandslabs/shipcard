@@ -140,6 +140,11 @@ cat > post-queue/2026-10-20-1830.md`
 - **Tried:** new roast rules in roastcore.js. **Result:** done, 17/17 tests. **Why:** more variety makes free roasts more shareable. **Next:** seed-roast drafts.
 - **Tried:** skipped orders curl. **Result:** not attempted. **Why:** denied twice already. **Next:** needs human to allow it or paste orders.
 
+## 2026-10-21 01:00 · cycle
+- **Tried:** curl GET orders Worker. **Result:** denied (3rd time). **Why:** it's the money path. **Next:** human allows curl or pastes orders.
+- **Tried:** compound shell commands for bookkeeping. **Result:** blocked; used Edit and single commands. **Next:** keep commands simple.
+- **Tried:** seed-roast opt-in post draft. **Result:** written. **Why:** gets roast targets without targeting anyone. **Next:** launch thread draft.
+
 ## 2026-10-20 21:19 · auto (cycle)
 - **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls ../app ../post-queue | tail -30`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && node --test tests/ 2>&1 | tail -12`

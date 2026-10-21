@@ -12,7 +12,7 @@ Math: 200 x $5/mo, or ~35 x $29 lifetime. Nothing counts until checkout exists (
 - [x] agent/roast-prompt.md: voice guide + guardrails (facts about numbers, never fraud claims, never real names, playful). Produces card text + thread (5-7 posts) + alt text.
 - [x] Order intake: Cloudflare Worker LIVE at https://orders.idlehandslabs.workers.dev (POST /order, GET /orders). Code in cf/worker.js; Cloudflare auto-deploys cf/ on every push to main, so edit cf/worker.js and commit to change it. Keep tests for it in cf/.
 - [x] state/ROASTS.md public ledger: date, kind, target (shortened), tx, page URL.
-- [ ] Seed: 5 free roasts of loud, public, consenting-by-reply accounts (ask in a post: reply with your wallet to get roasted). Drafts to post-queue/.
+- [x] (draft written 2026-10-21, human must post) Seed: 5 free roasts of loud, public, consenting-by-reply accounts (ask in a post: reply with your wallet to get roasted). Drafts to post-queue/.
 - [x] PAY_TO_SOL is in state/WALLETS.md. Build Solana-first (USDC SPL transfer to that address).
 - [ ] (human) PAY_TO for Base/EVM still pending; until then the order page offers Solana only.
 - [ ] Launch thread + Show HN + Product Hunt drafts in post-queue/.

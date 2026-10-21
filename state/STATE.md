@@ -27,4 +27,5 @@
    branch, folder `/app`). That gives Shipcard a free live URL. Yes/no?
 2. **Approve posting the Day 1 article** (`daily-log/2026-10-20.md`) on X.
 
+- 2026-10-21: Seed post draft ready in post-queue (human must post). curl to orders denied a 3rd time; paid roasts fulfilled: 0.
 - Roast rules: added One-Day Wonder and Dust Collector (17/17 tests). Orders still unread (curl denied).
