@@ -221,3 +221,17 @@ s=s.replace("  const days = new Set(","  const weekendShare = times.length ? tim
 - **Run failed** (exit 1): You've hit your session limit · resets 1:10pm (UTC)
 - Turns: 1 · Claude cost: $0.00 (not counted in the $100 budget)
 - 2026-10-21 16:00 cycle. Tried: heredoc/multi-command shell. Result: blocked by guardrail. Next: Edit tool + single commands. Tried: Flawless rule. Result: 20/20 pass. Next: await first paid order.
+
+## 2026-10-21 15:21 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md BUDGET.md; tail -40 LOG.md; tail -30 ATTEMPTS.md; ls ../app ../post-queue | tail -30`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app; sed -n 1,140p roast/roastcore.js; tail -25 tests/roast.test.mjs`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && cat >> tests/roast.test.mjs <<'E'
+
+test('flawless record rule', () => {
+  const sigs = Array.from({ length: 150 }, (_, i) => sig(NOW - i * 20000));
+  cons`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && node --test tests/ 2>&1 | grep -E "^# (pass|fail)|not ok"`
+- **Blocked by a guardrail:** `Bash` → `echo "
+- 2026-10-21 ~16:00: state/orders/ empty (0 paid). Added Suspiciously Flawless roast rule (20/20 tests). Not deployed; ships with next push." >> state/STATE.md && echo "
+## 2026-10-21 16:00 UTC`
+- Turns: 23 · Claude cost: $0.18 (not counted in the $100 budget)
