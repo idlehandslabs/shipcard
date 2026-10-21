@@ -63,6 +63,13 @@ test('one-day wonder and dust collector rules', () => {
   assert.ok(r.lines.some((l) => /3 token accounts at zero/.test(l)));
 });
 
+test('slow burner rule', () => {
+  const sigs = Array.from({ length: 10 }, (_, i) => sig(NOW - 3600 - i * 50 * 86400));
+  const r = roast(computeStats({ sol: 1, sigs, tokens: [], now: NOW }));
+  assert.equal(r.verdict, 'Slow Burner');
+  assert.match(r.lines[0], /10 transactions over/);
+});
+
 test('post text', () => {
   const r = { verdict: 'Tourist', score: 15, lines: ['x'] };
   assert.match(postText('a', r, 'https://u'), /Tourist.*15\/100[\s\S]*https:\/\/u/);

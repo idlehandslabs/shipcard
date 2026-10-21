@@ -113,6 +113,11 @@ const RULES = [
     weight: 32, verdict: 'Dust Collector',
     line: (s) => `${fmt(s.deadTokens)} token accounts at zero. Small graveyard, but it's still a graveyard.`,
   },
+  {
+    when: (s) => !s.capped && s.spanDays >= 365 && s.txCount > 0 && s.txCount < 60,
+    weight: 38, verdict: 'Slow Burner',
+    line: (s) => `${fmt(s.txCount)} transactions over ${fmt(s.spanDays)} days. That's one move every ${fmt(s.spanDays / s.txCount)} days. Glacial, but at least you're consistent.`,
+  },
 ];
 
 const FALLBACK = {
