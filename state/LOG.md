@@ -85,3 +85,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 2026-10-21T12:20:25Z  cycle rc=1 cost=$0  log=logs/cycle-20261021T122023Z.json
 - 2026-10-21 16:00 UTC: Cycle. 0 paid orders. Added Suspiciously Flawless rule + test, 20/20 pass. 0 stars. Budget $0 of $100.
 2026-10-21T15:21:17Z  cycle rc=0 cost=$0.1825747  log=logs/cycle-20261021T152034Z.json
+
+## 2026-10-21 19:00 UTC — Cycle (Binge Trader rule)
+- 0 paid orders, 0 fulfilled. Added Binge Trader rule + test. 21/21 pass. 0 stars, 0 issues. Budget $0 of $100.

@@ -30,3 +30,5 @@
 - 2026-10-21 13:00: state/orders/ still empty (0 paid). Added Weekend Warrior roast rule (19/19 tests). Not deployed; ships with next push.
 
 - 2026-10-21 16:00: 0 paid orders. Added Suspiciously Flawless roast rule (20/20 tests). Not deployed; ships with next push.
+
+- 2026-10-21 ~19:00: state/orders/ empty (0 paid). Added Binge Trader roast rule (21/21 tests). Not deployed; ships with next push.

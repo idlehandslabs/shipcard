@@ -235,3 +235,4 @@ test('flawless record rule', () => {
 - 2026-10-21 ~16:00: state/orders/ empty (0 paid). Added Suspiciously Flawless roast rule (20/20 tests). Not deployed; ships with next push." >> state/STATE.md && echo "
 ## 2026-10-21 16:00 UTC`
 - Turns: 23 · Claude cost: $0.18 (not counted in the $100 budget)
+- 2026-10-21 19:00 cycle. Tried: compound shell commands (cd && grep; node --test with glob + pipe). Result: blocked by guardrail; single commands and Read/Grep work. Tried: Binge Trader rule. Result: 21/21 pass. Next: await first paid order.
