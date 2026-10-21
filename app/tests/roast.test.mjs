@@ -70,6 +70,15 @@ test('slow burner rule', () => {
   assert.match(r.lines[0], /10 transactions over/);
 });
 
+test('weekend warrior rule', () => {
+  // 1970-01-03 is a Saturday: day index 2.
+  const sat = (k) => 2 * 86400 + 3600 + k * 7 * 86400;
+  const sigs = Array.from({ length: 25 }, (_, i) => sig(sat(i) + 60 * (i % 5)));
+  const s = computeStats({ sol: 1, sigs, tokens: [], now: sat(30) });
+  assert.equal(s.weekendShare, 1);
+  assert.ok(roast(s).lines.some((l) => /Saturday or Sunday/.test(l)));
+});
+
 test('post text', () => {
   const r = { verdict: 'Tourist', score: 15, lines: ['x'] };
   assert.match(postText('a', r, 'https://u'), /Tourist.*15\/100[\s\S]*https:\/\/u/);

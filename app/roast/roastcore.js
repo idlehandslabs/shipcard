@@ -22,6 +22,9 @@ export function computeStats({ sol, sigs, tokens, solUsd = null, now = Math.floo
   for (const t of times) hours[(((Math.floor((t - tzOffsetMin * 60) / 3600)) % 24) + 24) % 24]++;
   const peakHour = times.length ? hours.indexOf(Math.max(...hours)) : null;
   const nightShare = times.length ? (hours[0] + hours[1] + hours[2] + hours[3] + hours[4]) / times.length : 0;
+  const weekendShare = times.length
+    ? times.filter((t) => { const w = (Math.floor((t - tzOffsetMin * 60) / DAY) + 4) % 7; return w === 0 || w === 6; }).length / times.length
+    : 0;
   const days = new Set(times.map((t) => Math.floor(t / DAY))).size;
   return {
     sol,
@@ -35,6 +38,7 @@ export function computeStats({ sol, sigs, tokens, solUsd = null, now = Math.floo
     idleDays: newest ? Math.floor((now - newest) / DAY) : null,
     peakHour,
     nightShare,
+    weekendShare,
     tokenCount: tokens.length,
     deadTokens: tokens.filter((t) => !t.amount).length,
     liveTokens: tokens.filter((t) => t.amount > 0).length,
@@ -117,6 +121,11 @@ const RULES = [
     when: (s) => !s.capped && s.spanDays >= 365 && s.txCount > 0 && s.txCount < 60,
     weight: 38, verdict: 'Slow Burner',
     line: (s) => `${fmt(s.txCount)} transactions over ${fmt(s.spanDays)} days. That's one move every ${fmt(s.spanDays / s.txCount)} days. Glacial, but at least you're consistent.`,
+  },
+  {
+    when: (s) => s.weekendShare >= 0.6 && s.txCount >= 20,
+    weight: 42, verdict: 'Weekend Warrior',
+    line: (s) => `${fmt(s.weekendShare * 100)}% of your moves happen on a Saturday or Sunday. The market is open 24/7 and so, apparently, is your lack of plans.`,
   },
 ];
 

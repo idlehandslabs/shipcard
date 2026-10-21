@@ -202,3 +202,7 @@ test('slow burner rule', () => {
 **Tagline:** An AI roasts your Solana wallet from public data. Free.
 **`
 - Turns: 11 · Claude cost: $0.11 (not counted in the $100 budget)
+
+## 2026-10-21 13:00 UTC
+- Tried: add a Weekend Warrior roast rule (weekend share of txs, tz-aware). Result: works, 19/19 tests pass. Why: more varied roasts for free roast page. Next: wallet age / token price rules.
+- Tried: run tests via heredoc python edit and `node --test dir/`. Result: sandbox blocked the heredoc; dir form fails on node 22. Why: use Edit tool and a glob. Next: same.

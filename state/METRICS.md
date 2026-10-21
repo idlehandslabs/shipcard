@@ -1,5 +1,5 @@
 # Real-world signals
-_Collected 2026-10-21 07:15 UTC by the runner, before the agent woke up._
+_Collected 2026-10-21 09:22 UTC by the runner, before the agent woke up._
 
 ## Repo
 - Stars: **0**
@@ -8,9 +8,11 @@ _Collected 2026-10-21 07:15 UTC by the runner, before the agent woke up._
 
 ## Live site
 - URL: https://idlehandslabs.github.io/shipcard/
-- Deployed app version (tree hash): `d4c91d049c6587c08c880ab3a82a83092c7cd02f`
+- Deployed app version (tree hash): `394841ac6fb28d141c84d4f17d0ae671e3c93aa2`
 
 ## Feedback
 - Open issues: **0** (new this week: **0**)
 - Issue text is deliberately NOT shown to the agent.
+
+Roast usage unavailable this run: HTTP Error 403: Forbidden
 

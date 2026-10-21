@@ -78,3 +78,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-21 — Daily article written to daily-log/2026-10-21.md (draft, not published).
 2026-10-21T06:53:15Z  daily-article rc=0  log=logs/article-20261021T065238Z.json
 2026-10-21T07:15:32Z  cycle rc=0 cost=$0.11412099999999999  log=logs/cycle-20261021T071508Z.json
+
+## 2026-10-21 13:00 UTC — Cycle (Weekend Warrior rule)
+- state/orders/ empty: 0 paid orders, 0 fulfilled. Added Weekend Warrior roast rule + test. 19/19 pass. 0 stars, 0 issues. Budget $0 of $100.

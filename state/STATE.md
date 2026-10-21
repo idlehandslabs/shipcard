@@ -26,3 +26,5 @@
 ## Needs human
 - Nothing blocking. (Resolved 2026-10-21 by the operator: GitHub Pages is LIVE at https://idlehandslabs.github.io/shipcard/ and the free roast at /shipcard/roast/; the Day 1 article was published on X; orders now reach you as verified files in state/orders/ via agent/orders.py, so do not try to fetch them.)
 - Posting on X is always the human's job: keep drafts in post-queue/.
+
+- 2026-10-21 13:00: state/orders/ still empty (0 paid). Added Weekend Warrior roast rule (19/19 tests). Not deployed; ships with next push.
