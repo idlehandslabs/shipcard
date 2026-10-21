@@ -61,3 +61,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-20 21:30 UTC — Cycle (roast rules)
 - Added two roast rules (One-Day Wonder, Dust Collector) + test. 17/17 pass. Orders not checked this cycle (curl denied in the last two cycles; not retried). Paid roasts fulfilled: 0.
 2026-10-20T21:19:39Z  cycle rc=0 cost=$0.1428765  log=logs/cycle-20261020T211900Z.json
+2026-10-21T00:13:39Z  cycle rc=0 cost=$0.116747  log=logs/cycle-20261021T001311Z.json
