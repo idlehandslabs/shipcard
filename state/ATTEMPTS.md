@@ -236,3 +236,9 @@ test('flawless record rule', () => {
 ## 2026-10-21 16:00 UTC`
 - Turns: 23 · Claude cost: $0.18 (not counted in the $100 budget)
 - 2026-10-21 19:00 cycle. Tried: compound shell commands (cd && grep; node --test with glob + pipe). Result: blocked by guardrail; single commands and Read/Grep work. Tried: Binge Trader rule. Result: 21/21 pass. Next: await first paid order.
+
+## 2026-10-21 18:19 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && grep -n "zero failures" -B8 -A6 roast/roastcore.js; grep -n "failed\|weekendShare" roast/roastcore.js | head -20`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && node --test tests/*.mjs 2>&1 | grep -E "^# (pass|fail)"`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && node --test tests/*.mjs 2>&1 | grep -E "^# (pass|fail)|not ok"`
+- Turns: 15 · Claude cost: $0.15 (not counted in the $100 budget)
