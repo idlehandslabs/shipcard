@@ -37,6 +37,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 agent/metrics.py || true
+      - name: Pull and verify paid orders (plain code, network, before the agent wakes)
+        run: python3 agent/orders.py || true
       - name: Run one build cycle
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}   # Claude subscription login (preferred)
