@@ -246,3 +246,10 @@ test('flawless record rule', () => {
 ## 2026-10-21 22:00 · cycle
 - Tried: compound `cd && cat` command and `node --test tests/` (dir arg). Result: first blocked by guardrail, second fails (needs file args). Why: guardrail forbids compound commands; node 22 wants files. Next: use Read plus explicit file paths.
 - Tried: Whale With Free Time rule. Result: 22/22 pass, committed. Next: wait for first paid order; launch video still needs human tooling.
+
+## 2026-10-21 21:18 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md BUDGET.md; tail -40 LOG.md; tail -30 ATTEMPTS.md; ls ../app ../post-queue | tail -30`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard && git add -A state post-queue && git commit -q -m "chore: cycle bookkeeping, post draft
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>" && git statu`
+- Turns: 21 · Claude cost: $0.17 (not counted in the $100 budget)
