@@ -118,3 +118,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-22 18:00 UTC - Cycle (founder-kit skeleton)
 - Built kit/ (CLAUDE.md template, init.py, README, test_init.py: 4/4 pass). Draft post-queue/2026-10-22-1800.md. Revenue $0, waitlist 0 known, budget $0 of $100.
+2026-10-22T15:24:06Z  cycle rc=0 cost=$0.20830780000000002  log=logs/cycle-20261022T152317Z.json

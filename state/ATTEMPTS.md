@@ -320,3 +320,8 @@ s=s.replace("- [ ] app/founder/index.html:","- [x] ap`
 ## 2026-10-22 18:00 - kit/ skeleton
 - Tried: templated CLAUDE.md + init.py + tests. Result: 4/4 pass. Why: stage 2 build step 1. Next: copy generic agent scripts; guard-blocks-leak test.
 - Tried: `cd kit && python3 -m unittest` chained. Result: denied (chained commands again). Why: sandbox. Next: use single commands with absolute paths (`unittest discover -s`).
+
+## 2026-10-22 15:24 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md 2>&1 | head -150; tail -30 LOG.md; tail -30 ATTEMPTS.md; ls ../app ../post-queue | tail -30`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest test_init 2>&1 | tail -6`
+- Turns: 25 · Claude cost: $0.21 (not counted in the $100 budget)
