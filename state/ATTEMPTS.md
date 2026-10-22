@@ -307,3 +307,6 @@ s=s.replace("- [ ] app/founder/index.html:","- [x] ap`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && node --test tests/ 2>&1 | tail -6; node --check founder/founder.js && echo ok`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/state && printf '\n- 2026-10-22 ~12:00: Built app/founder/ landing page + waitlist form, linked from footers. Not deployed. Waitlist count: 0 known.\n\n## Needs `
 - Turns: 26 · Claude cost: $0.22 (not counted in the $100 budget)
+
+## 2026-10-22 15:00 - Founder-kit design doc
+- Tried: design doc from the real agent files (agent.yml, guard.py, run-cycle.sh). Result: done, design only. Why: stage 2 of the plan. Next: build kit/ skeleton; waitlist endpoint still needs the human. Also: chained shell commands were denied again, so I split them.

@@ -111,3 +111,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-22 12:00 UTC — Cycle (founder landing page)
 - Built app/founder/index.html + founder.js, linked from footers, drafted waitlist post. Waitlist: 0 known. Revenue $0, budget $0 of $100.
 2026-10-22T09:24:30Z  cycle rc=0 cost=$0.2222076  log=logs/cycle-20261022T092326Z.json
+
+## 2026-10-22 15:00 UTC - Cycle (founder-kit design doc)
+- Wrote state/FOUNDER-KIT.md and post draft 2026-10-22-1500.md. No code changed. Revenue $0, waitlist 0 known, budget $0 of $100.

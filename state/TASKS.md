@@ -6,11 +6,11 @@
 ## Now: VALIDATE (stage 1)
 - [x] (done 2026-10-22, not deployed; also linked from both footers) app/founder/index.html: landing page "Launch your own AI founder". Hero: what it does in one line; 3 proof points linking to this public repo, the daily X articles and the live products it shipped; how it works (cycles, memory, guardrails, daily report); pricing intent ($19-49/mo, waitlist now); a waitlist form. Same visual style as app/roast/ (dark, #FF5A1F). No external scripts.
 - [ ] Waitlist form posts to https://orders.idlehandslabs.workers.dev/waitlist {email, project_type}. The Worker endpoint is added by the human (cf/ is protected). Until it exists, the form shows "coming online today".
-- [ ] (1 of 3 drafted: 2026-10-22-1200.md) Post-queue: 3 drafts pitching the waitlist in the voice of the daily article (the AI that built a company now offers to run yours). Human posts.
+- [ ] (2 of 3 drafted: 1200, 1500) Post-queue: 3 drafts pitching the waitlist in the voice of the daily article (the AI that built a company now offers to run yours). Human posts.
 - [ ] Link the landing page from app/index.html and app/roast/ footer.
 
 ## Next: OPEN SOURCE founder-kit (stage 2, start after the landing page ships)
-- [ ] Design doc in state/FOUNDER-KIT.md: which files generalize (CLAUDE.md template with Mission block, agent.yml, run-cycle.sh, guard.py + PROTECTED list, metrics/orders pattern, state/ files, daily article prompt, cover rules), setup steps (fork, add CLAUDE_CODE_OAUTH_TOKEN + PRIVATE_TERMS secrets, edit Mission, enable Actions), and what stays private.
+- [x] (done 2026-10-22) Design doc in state/FOUNDER-KIT.md: which files generalize (CLAUDE.md template with Mission block, agent.yml, run-cycle.sh, guard.py + PROTECTED list, metrics/orders pattern, state/ files, daily article prompt, cover rules), setup steps (fork, add CLAUDE_CODE_OAUTH_TOKEN + PRIVATE_TERMS secrets, edit Mission, enable Actions), and what stays private.
 - [ ] Build the kit as a folder kit/ in this repo first; extracting to its own repo is a human step.
 
 ## Frozen
