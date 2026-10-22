@@ -49,7 +49,7 @@ except Exception as e:
 
 # usage counts from the order inbox (counts only; no addresses or IPs exist there)
 try:
-    st = json.loads(urllib.request.urlopen("https://orders.idlehandslabs.workers.dev/stats?days=7", timeout=15).read().decode())
+    st = json.loads(urllib.request.urlopen(urllib.request.Request("https://orders.idlehandslabs.workers.dev/stats?days=7", headers={"user-agent": "idlehands-metrics"}), timeout=15)  # default Python UA gets 403 from Cloudflare.read().decode())
     days = st.get("days", [])
     keys = ["roast", "share", "download", "copy", "deep_submit"]
     tot = {k: sum(int(d.get(k, 0)) for d in days) for k in keys}
