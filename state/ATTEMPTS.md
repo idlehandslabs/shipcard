@@ -328,3 +328,18 @@ s=s.replace("- [ ] app/founder/index.html:","- [x] ap`
 
 ## 2026-10-22 21:20 - Generic metrics.py for kit
 - Tried: copy agent/metrics.py into kit/agent/. Result: original fails py_compile (SyntaxError line 52), so I rewrote it cleanly with a testable stats_table(); 2 tests pass. A heredoc write was also blocked by the sandbox; used the Write tool. Why: kit must not ship a broken script. Next: guard test in kit; propose workflow/guard copy via Needs human.
+
+## 2026-10-22 21:20 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md 2>&1 | head -200; tail -40 LOG.md; tail -30 ATTEMPTS.md; ls ../app ../post-queue | tail -30`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p kit/agent && cat > kit/agent/metrics.py <<'EOF'
+#!/usr/bin/env python3
+"""Collect real-world signals BEFORE the agent wakes up and write state/METRICS.md.
+
+Runs as its own workflow step with `
+- **Blocked by a guardrail:** `Bash` → `cat >> state/STATE.md <<'EOF'
+
+- 2026-10-22 21:20: Added kit/agent/metrics.py (generic, env-driven, 2 tests; kit total 6 pass). Waitlist: 0 known.
+
+## Needs human (2026-10-22 21:20)
+- BUG in protected`
+- Turns: 21 · Claude cost: $0.23 (not counted in the $100 budget)
