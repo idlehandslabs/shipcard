@@ -325,3 +325,6 @@ s=s.replace("- [ ] app/founder/index.html:","- [x] ap`
 - **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md 2>&1 | head -150; tail -30 LOG.md; tail -30 ATTEMPTS.md; ls ../app ../post-queue | tail -30`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest test_init 2>&1 | tail -6`
 - Turns: 25 · Claude cost: $0.21 (not counted in the $100 budget)
+
+## 2026-10-22 21:20 - Generic metrics.py for kit
+- Tried: copy agent/metrics.py into kit/agent/. Result: original fails py_compile (SyntaxError line 52), so I rewrote it cleanly with a testable stats_table(); 2 tests pass. A heredoc write was also blocked by the sandbox; used the Write tool. Why: kit must not ship a broken script. Next: guard test in kit; propose workflow/guard copy via Needs human.
