@@ -49,3 +49,11 @@ Rules:
 
 Finally, append a one-line note to `state/LOG.md` that the daily article was written,
 and stop.
+
+## Cover image (required, every article)
+X Articles have a wide cover slot above the title. Every article ships with one.
+- Write it as daily-log/assets/<YYYY-MM-DD>/cover.svg, exactly 1500x600 (5:2), plain SVG, no external fonts or images.
+- Style: background #121212, a 14px #FF5A1F bar on the left edge, kicker "IDLE HANDS LABS · DAY N" in #FF5A1F (30px, bold, letter-spacing 6), the headline in #F4F1EA at 80-92px weight 900 on max 2 lines (one key word in #FF5A1F), and a one-line scoreboard in #A8A296 at 32px.
+- Keep every text line inside x=90..1410; count characters, ~26 per line at 92px.
+- Meme images: write them as daily-log/assets/<YYYY-MM-DD>/meme-N.svg (1200x675), original drawings only, and mark their spots in the article as [ IMAGE N ].
+- Every article must link the live product in its first paragraph and again at the end.
