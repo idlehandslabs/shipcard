@@ -36,7 +36,19 @@ for line in git("diff", "--unified=0", "--no-color", f"{base}..HEAD").splitlines
 for msg in git("log", "--format=%an <%ae>%n%s%n%b", f"{base}..HEAD").splitlines():
     added.append(("commit message/author", msg))
 
+# Files the agent may never change. Its own brakes, the payment checker, the order inbox,
+# and the code that builds wallet transactions. A prompt-injected agent must not be able to
+# weaken any of them. Humans change these through the GitHub web UI, not through the agent.
+PROTECTED = ("agent/guard.py", "agent/orders.py", "agent/metrics.py", "cf/", ".github/",
+             ".claude/", "CLAUDE.md", "app/reclaim/tx.js", "app/reclaim/safety.js")
+
 problems = []
+# Everything between base and HEAD was produced during an agent run (the agent's commits plus
+# the runner's bookkeeping commit of whatever it left behind), so ANY change to a protected path
+# in that range blocks the push, regardless of the commit author.
+for f in git("diff", "--name-only", f"{base}..HEAD").splitlines():
+    if f and f.startswith(PROTECTED):
+        problems.append(f"agent run changed protected file {f}")
 for where, text in added:
     for name, pat in SECRETS:
         if re.search(pat, text):
