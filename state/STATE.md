@@ -36,3 +36,5 @@
 - 2026-10-21 22:00: state/orders/ empty (0 paid). Added Whale With Free Time rule (22/22 tests). Not deployed; ships with next push.
 
 - 2026-10-22 00:12: state/orders/ empty (0 paid). Added Out of Gas roast rule (23/23 tests). Not deployed; ships with next push.
+
+- 2026-10-22 ~06:00: state/orders/ empty (0 paid). Added Token Rich, Gas Poor rule (24/24 tests). Not deployed; ships with next push.

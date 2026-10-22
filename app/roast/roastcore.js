@@ -147,6 +147,11 @@ const RULES = [
     weight: 52, verdict: 'Out of Gas',
     line: () => 'Exactly 0 SOL. You can\'t even pay the fee to leave. The chain has you now.',
   },
+  {
+    when: (s) => s.liveTokens >= 15 && s.sol > 0 && s.sol < 0.5,
+    weight: 46, verdict: 'Token Rich, Gas Poor',
+    line: (s) => `${fmt(s.liveTokens)} different tokens and ${fmt(s.sol, 3)} SOL. A full trophy shelf in a house with no electricity.`,
+  },
 ];
 
 const FALLBACK = {

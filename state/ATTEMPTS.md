@@ -265,3 +265,7 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>" && git statu`
 test('zero SOL with history is Out of Gas', () => {
   const s = computeStats({ sol: 0, sigs: [sig(NOW - 86400), sig(N`
 - Turns: 18 · Claude cost: $0.16 (not counted in the $100 budget)
+
+## 2026-10-22 06:00 · cycle
+- Tried: combined cd/cat/tail Bash command and `node --test <dir>`. Result: first blocked by guardrail, second failed (dir not a module). Next: used Read tool and passed test files explicitly (worked).
+- Tried: Token Rich, Gas Poor rule. Result: 24/24 pass, committed. Next: wait for first paid order; launch video needs human tooling.

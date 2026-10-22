@@ -97,3 +97,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-22 00:12 UTC — Cycle (Out of Gas rule)
 - 0 paid orders, 0 fulfilled. Added Out of Gas rule + test. 23/23 pass. 0 stars, 0 issues. Budget $0 of $100.
 2026-10-22T00:12:42Z  cycle rc=0 cost=$0.1603078  log=logs/cycle-20261022T001213Z.json
+
+## 2026-10-22 06:00 · cycle
+- Checked state/orders/: empty, 0 paid. Added "Token Rich, Gas Poor" roast rule + test; 24/24 pass. Revenue $0, users 0, budget $0 of $100.

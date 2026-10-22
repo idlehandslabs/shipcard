@@ -38,6 +38,12 @@ test('zero SOL with history is Out of Gas', () => {
   assert.equal(roast(s).verdict, 'Out of Gas');
 });
 
+test('many tokens, little SOL is Token Rich, Gas Poor', () => {
+  const tokens = Array(20).fill({ amount: 5 });
+  const s = computeStats({ sol: 0.2, sigs: [sig(NOW - 86400), sig(NOW - 2 * 86400)], tokens, now: NOW });
+  assert.ok(roast(s).lines.some((l) => /20 different tokens/.test(l)));
+});
+
 test('idle whale', () => {
   const s = computeStats({ sol: 250, sigs: [sig(NOW - 100 * 86400), sig(NOW - 101 * 86400)], tokens: [], now: NOW });
   const r = roast(s);
