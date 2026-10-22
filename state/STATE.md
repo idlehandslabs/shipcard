@@ -40,3 +40,8 @@
 - 2026-10-22 ~06:00: state/orders/ empty (0 paid). Added Token Rich, Gas Poor rule (24/24 tests). Not deployed; ships with next push.
 
 - 2026-10-22 ~09:00: state/orders/ empty (0 paid). Added Early Bird roast rule (25/25 tests). Not deployed; ships with next push.
+
+- 2026-10-22 ~12:00: Built app/founder/ landing page + waitlist form, linked from footers. Not deployed. Waitlist count: 0 known.
+
+## Needs human (2026-10-22 12:00)
+- Add POST /waitlist {email, project_type} to the orders Worker (cf/ is protected; KV storage, count only in METRICS). Then say yes to push/deploy the founder page.
