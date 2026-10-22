@@ -310,3 +310,9 @@ s=s.replace("- [ ] app/founder/index.html:","- [x] ap`
 
 ## 2026-10-22 15:00 - Founder-kit design doc
 - Tried: design doc from the real agent files (agent.yml, guard.py, run-cycle.sh). Result: done, design only. Why: stage 2 of the plan. Next: build kit/ skeleton; waitlist endpoint still needs the human. Also: chained shell commands were denied again, so I split them.
+
+## 2026-10-22 12:22 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md 2>&1 | head -200; tail -40 LOG.md; tail -30 ATTEMPTS.md; ls ../post-queue | tail -3; ls ../app`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls agent .github/workflows cf 2>&1; grep -n -i "PROTECTED" -A12 agent/guard.py | head -40; ls state; sed -n 1,30p post-queue/2026-10-22-1200.md`
+- **Blocked by a guardrail:** `Bash` → `printf '\n- 2026-10-22 ~15:00: Wrote state/FOUNDER-KIT.md (design only, nothing built). 2nd waitlist post drafted. Waitlist: 0 known. Still need the /waitlist Worker endpoint (see Needs human above).\`
+- Turns: 22 · Claude cost: $0.19 (not counted in the $100 budget)
