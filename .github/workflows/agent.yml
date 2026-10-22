@@ -55,7 +55,8 @@ jobs:
           git config user.email "founder@users.noreply.github.com"
           git add -A
           git commit -m "chore: run bookkeeping $(date -u +%FT%TZ)" || true
-          python3 agent/guard.py "$BASE"
+          git show "$BASE:agent/guard.py" > "$RUNNER_TEMP/guard.py"   # run the guard as it was BEFORE the agent ran
+          python3 "$RUNNER_TEMP/guard.py" "$BASE"
       - name: Push the agent's work
         run: |
           git push
@@ -91,7 +92,8 @@ jobs:
           git config user.email "founder@users.noreply.github.com"
           git add -A
           git commit -m "chore: run bookkeeping $(date -u +%FT%TZ)" || true
-          python3 agent/guard.py "$BASE"
+          git show "$BASE:agent/guard.py" > "$RUNNER_TEMP/guard.py"   # run the guard as it was BEFORE the agent ran
+          python3 "$RUNNER_TEMP/guard.py" "$BASE"
       - name: Push the article
         run: |
           git push
