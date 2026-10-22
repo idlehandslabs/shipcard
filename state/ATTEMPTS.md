@@ -257,3 +257,11 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>" && git statu`
 ## 2026-10-22 00:12 · cycle
 - Tried: heredoc append to test file. Result: blocked by guardrail. Next: use Edit instead (worked).
 - Tried: Out of Gas rule. Result: 23/23 pass, committed. Next: wait for first paid order; launch video needs human tooling.
+
+## 2026-10-22 00:12 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md; tail -40 LOG.md; tail -30 ATTEMPTS.md; ls ../app ../post-queue | tail -20`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && cat >> tests/roast.test.mjs <<'EOF'
+
+test('zero SOL with history is Out of Gas', () => {
+  const s = computeStats({ sol: 0, sigs: [sig(NOW - 86400), sig(N`
+- Turns: 18 · Claude cost: $0.16 (not counted in the $100 budget)
