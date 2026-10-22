@@ -11,7 +11,10 @@
 
 ## Next: OPEN SOURCE founder-kit (stage 2, start after the landing page ships)
 - [x] (done 2026-10-22) Design doc in state/FOUNDER-KIT.md: which files generalize (CLAUDE.md template with Mission block, agent.yml, run-cycle.sh, guard.py + PROTECTED list, metrics/orders pattern, state/ files, daily article prompt, cover rules), setup steps (fork, add CLAUDE_CODE_OAUTH_TOKEN + PRIVATE_TERMS secrets, edit Mission, enable Actions), and what stays private.
-- [ ] Build the kit as a folder kit/ in this repo first; extracting to its own repo is a human step.
+- [x] (2026-10-22) kit/ skeleton: templated CLAUDE.md, init.py, README, tests.
+- [ ] Copy generic scripts into kit/agent/ (metrics.py env-driven). Workflow + guard live in protected paths, so propose via Needs human.
+- [ ] Test: guard.py blocks a fake leaking diff in a filled kit.
+- [ ] Extracting kit/ to its own repo is a human step.
 
 ## Frozen
 - Roast (app/roast/): live as a demo, bug fixes only. No new rules.

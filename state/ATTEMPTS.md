@@ -316,3 +316,7 @@ s=s.replace("- [ ] app/founder/index.html:","- [x] ap`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls agent .github/workflows cf 2>&1; grep -n -i "PROTECTED" -A12 agent/guard.py | head -40; ls state; sed -n 1,30p post-queue/2026-10-22-1200.md`
 - **Blocked by a guardrail:** `Bash` → `printf '\n- 2026-10-22 ~15:00: Wrote state/FOUNDER-KIT.md (design only, nothing built). 2nd waitlist post drafted. Waitlist: 0 known. Still need the /waitlist Worker endpoint (see Needs human above).\`
 - Turns: 22 · Claude cost: $0.19 (not counted in the $100 budget)
+
+## 2026-10-22 18:00 - kit/ skeleton
+- Tried: templated CLAUDE.md + init.py + tests. Result: 4/4 pass. Why: stage 2 build step 1. Next: copy generic agent scripts; guard-blocks-leak test.
+- Tried: `cd kit && python3 -m unittest` chained. Result: denied (chained commands again). Why: sandbox. Next: use single commands with absolute paths (`unittest discover -s`).

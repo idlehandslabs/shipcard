@@ -45,5 +45,7 @@
 
 - 2026-10-22 ~15:00: Wrote state/FOUNDER-KIT.md (design only, nothing built). 2nd waitlist post drafted. Waitlist: 0 known.
 
+- 2026-10-22 ~18:00: Built kit/ skeleton (templated CLAUDE.md, init.py fills Mission + state skeletons, README, 4 tests pass). Agent scripts/workflow not yet copied. Waitlist: 0 known.
+
 ## Needs human (2026-10-22 12:00)
 - Add POST /waitlist {email, project_type} to the orders Worker (cf/ is protected; KV storage, count only in METRICS). Then say yes to push/deploy the founder page.
