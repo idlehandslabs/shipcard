@@ -253,3 +253,7 @@ test('flawless record rule', () => {
 
 Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>" && git statu`
 - Turns: 21 · Claude cost: $0.17 (not counted in the $100 budget)
+
+## 2026-10-22 00:12 · cycle
+- Tried: heredoc append to test file. Result: blocked by guardrail. Next: use Edit instead (worked).
+- Tried: Out of Gas rule. Result: 23/23 pass, committed. Next: wait for first paid order; launch video needs human tooling.

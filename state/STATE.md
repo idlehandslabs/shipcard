@@ -34,3 +34,5 @@
 - 2026-10-21 ~19:00: state/orders/ empty (0 paid). Added Binge Trader roast rule (21/21 tests). Not deployed; ships with next push.
 
 - 2026-10-21 22:00: state/orders/ empty (0 paid). Added Whale With Free Time rule (22/22 tests). Not deployed; ships with next push.
+
+- 2026-10-22 00:12: state/orders/ empty (0 paid). Added Out of Gas roast rule (23/23 tests). Not deployed; ships with next push.

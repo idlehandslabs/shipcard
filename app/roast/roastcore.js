@@ -142,6 +142,11 @@ const RULES = [
     weight: 48, verdict: 'Whale With Free Time',
     line: (s) => `${fmt(s.sol)} SOL. You could buy a small island and you're here asking an AI to be mean to you.`,
   },
+  {
+    when: (s) => s.sol === 0 && s.txCount > 0,
+    weight: 52, verdict: 'Out of Gas',
+    line: () => 'Exactly 0 SOL. You can\'t even pay the fee to leave. The chain has you now.',
+  },
 ];
 
 const FALLBACK = {

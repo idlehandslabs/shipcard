@@ -33,6 +33,11 @@ test('degen: 1000 txs in 3 days, many failures, dead tokens', () => {
   assert.match(statLine(s), /1,000\+ txs/);
 });
 
+test('zero SOL with history is Out of Gas', () => {
+  const s = computeStats({ sol: 0, sigs: [sig(NOW - 86400), sig(NOW - 2 * 86400)], tokens: [], now: NOW });
+  assert.equal(roast(s).verdict, 'Out of Gas');
+});
+
 test('idle whale', () => {
   const s = computeStats({ sol: 250, sigs: [sig(NOW - 100 * 86400), sig(NOW - 101 * 86400)], tokens: [], now: NOW });
   const r = roast(s);
