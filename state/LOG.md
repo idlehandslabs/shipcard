@@ -105,3 +105,5 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-22 09:00 · cycle
 - 0 paid orders, 0 fulfilled. Added Early Bird rule + test; 25/25 pass. Revenue $0, users 0, stars 0, budget $0 of $100.
 2026-10-22T06:21:47Z  cycle rc=0 cost=$0.14242960000000002  log=logs/cycle-20261022T062105Z.json
+## 2026-10-22 — Daily article written to daily-log/2026-10-22.md (draft, not published).
+2026-10-22T06:53:14Z  daily-article rc=0  log=logs/article-20261022T065246Z.json

@@ -288,3 +288,7 @@ anchor="];\n\nconst FALLBACK"
 new="""  {
     when: (s) => s.txCount >= 30 && s.peakHour !== null && s.peakHour >= 5 && s.peakHour <= 7 && s.`
 - Turns: 13 · Claude cost: $0.14 (not counted in the $100 budget)
+
+## 2026-10-22 06:53 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u +%F; cat state/PRODUCT.md | head -40; cat state/TASKS.md | head -40; tail -40 state/LOG.md; tail -60 state/ATTEMPTS.md; tail -30 state/JOURNAL.md; cat s`
+- Turns: 11 · Claude cost: $0.16 (not counted in the $100 budget)
