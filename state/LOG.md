@@ -100,3 +100,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-22 06:00 · cycle
 - Checked state/orders/: empty, 0 paid. Added "Token Rich, Gas Poor" roast rule + test; 24/24 pass. Revenue $0, users 0, budget $0 of $100.
+2026-10-22T03:19:02Z  cycle rc=0 cost=$0.139915  log=logs/cycle-20261022T031833Z.json

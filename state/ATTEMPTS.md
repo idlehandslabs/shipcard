@@ -269,3 +269,8 @@ test('zero SOL with history is Out of Gas', () => {
 ## 2026-10-22 06:00 · cycle
 - Tried: combined cd/cat/tail Bash command and `node --test <dir>`. Result: first blocked by guardrail, second failed (dir not a module). Next: used Read tool and passed test files explicitly (worked).
 - Tried: Token Rich, Gas Poor rule. Result: 24/24 pass, committed. Next: wait for first paid order; launch video needs human tooling.
+
+## 2026-10-22 03:19 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls .. ../app ../post-queue | tail -50`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && node --test tests/ 2>&1 | tail -12`
+- Turns: 15 · Claude cost: $0.14 (not counted in the $100 budget)
