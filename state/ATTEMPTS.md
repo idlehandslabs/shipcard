@@ -278,3 +278,13 @@ test('zero SOL with history is Out of Gas', () => {
 ## 2026-10-22 09:00 · cycle
 - Tried: python heredoc via Bash for edits. Result: blocked by guardrail. Why: stdin code can't be analyzed. Next: used Edit tool (worked).
 - Tried: Early Bird roast rule. Result: 25/25 pass, committed. Next: wait for first paid order; more rules have diminishing returns, distribution is the bottleneck (human posting).
+
+## 2026-10-22 06:21 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls .. ../app ../post-queue | tail -50`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'E'
+p='app/roast/roastcore.js'
+t=open(p).read()
+anchor="];\n\nconst FALLBACK"
+new="""  {
+    when: (s) => s.txCount >= 30 && s.peakHour !== null && s.peakHour >= 5 && s.peakHour <= 7 && s.`
+- Turns: 13 · Claude cost: $0.14 (not counted in the $100 budget)
