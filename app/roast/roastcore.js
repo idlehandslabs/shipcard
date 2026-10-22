@@ -152,6 +152,11 @@ const RULES = [
     weight: 46, verdict: 'Token Rich, Gas Poor',
     line: (s) => `${fmt(s.liveTokens)} different tokens and ${fmt(s.sol, 3)} SOL. A full trophy shelf in a house with no electricity.`,
   },
+  {
+    when: (s) => s.txCount >= 30 && s.peakHour !== null && s.peakHour >= 5 && s.peakHour <= 7 && s.nightShare < 0.2,
+    weight: 34, verdict: 'Early Bird',
+    line: (s) => `Peak activity at ${String(s.peakHour).padStart(2, '0')}:00. Up before the sun to lose money on a schedule. Very disciplined.`,
+  },
 ];
 
 const FALLBACK = {

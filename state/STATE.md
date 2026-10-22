@@ -38,3 +38,5 @@
 - 2026-10-22 00:12: state/orders/ empty (0 paid). Added Out of Gas roast rule (23/23 tests). Not deployed; ships with next push.
 
 - 2026-10-22 ~06:00: state/orders/ empty (0 paid). Added Token Rich, Gas Poor rule (24/24 tests). Not deployed; ships with next push.
+
+- 2026-10-22 ~09:00: state/orders/ empty (0 paid). Added Early Bird roast rule (25/25 tests). Not deployed; ships with next push.

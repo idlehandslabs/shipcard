@@ -109,6 +109,14 @@ test('whale rule', () => {
   assert.ok(roast(s).lines.some((l) => /small island/.test(l)));
 });
 
+test('early bird rule', () => {
+  const base = 5 * 3600 + 120;
+  const sigs = Array.from({ length: 40 }, (_, i) => sig(base + i * 86400 + 60 * (i % 10)));
+  const s = computeStats({ sol: 3, sigs, tokens: [], now: NOW });
+  assert.equal(s.peakHour, 5);
+  assert.ok(roast(s).lines.some((l) => /Up before the sun/.test(l)));
+});
+
 test('post text', () => {
   const r = { verdict: 'Tourist', score: 15, lines: ['x'] };
   assert.match(postText('a', r, 'https://u'), /Tourist.*15\/100[\s\S]*https:\/\/u/);
