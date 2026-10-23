@@ -7,6 +7,8 @@
 //   GET  /orders  -> last 200 orders, newest first
 //   POST /hit     {"e":"roast|share|download|copy|deep_submit"}  -> counts only
 //   GET  /stats?days=7 -> daily counts
+//   POST /waitlist {"email":"...","project_type":"side-project|saas|open-source|content|other"}
+//   GET  /waitlist/count -> {total, by_type}   (counts only; emails are never returned by any endpoint)
 //   GET  /health  -> ok
 
 const ALLOW_ORIGIN = "https://idlehandslabs.github.io";
@@ -15,6 +17,15 @@ const MAX_PER_IP_PER_HOUR = 10;
 // traffic spike can never use up the free KV write quota (1,000/day) that orders rely on.
 const EVENTS = ["roast", "share", "download", "copy", "deep_submit"];
 const DAILY_COUNT_CAP = 500;
+// Waitlist: emails are personal data. They live only in KV (key wl:<sha256>), readable by the
+// human in the Cloudflare dashboard. No endpoint ever returns them; the agent sees counts only.
+const WL_TYPES = ["side-project", "saas", "open-source", "content", "other"];
+const WL_PER_IP_PER_HOUR = 5;
+const EMAIL_RX = /^[^\s@<>()",;:]{1,64}@[A-Za-z0-9.-]{1,180}\.[A-Za-z]{2,24}$/;
+async function sha256(t) {
+  const b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t));
+  return [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, "0")).join("");
+}
 
 const RX = {
   evmAddr: /^0x[0-9a-fA-F]{40}$/,
@@ -79,6 +90,33 @@ export default {
         out.push({ day: d, ...Object.fromEntries(EVENTS.map((k) => [k, c[k] || 0])), capped: (c._w || 0) >= DAILY_COUNT_CAP });
       }
       return json({ days: out });
+    }
+
+    // --- waitlist ---
+    if (url.pathname === "/waitlist" && request.method === "POST") {
+      const ip = request.headers.get("cf-connecting-ip") || "unknown";
+      const ipKey = `wlip:${ip}:${Math.floor(Date.now() / 3600000)}`;
+      const used = parseInt((await env.ORDERS.get(ipKey)) || "0", 10);
+      if (used >= WL_PER_IP_PER_HOUR) return json({ error: "too many signups, try later" }, 429);
+      let b;
+      try { b = await request.json(); } catch { return json({ error: "body must be JSON" }, 400); }
+      const email = typeof b?.email === "string" ? b.email.trim().toLowerCase() : "";
+      const type = typeof b?.project_type === "string" ? b.project_type : "";
+      if (email.length > 254 || !EMAIL_RX.test(email)) return json({ error: "that email doesn't look right" }, 400);
+      if (!WL_TYPES.includes(type)) return json({ error: "unknown project type" }, 400);
+      await env.ORDERS.put(ipKey, String(used + 1), { expirationTtl: 3600 });
+      const key = `wl:${await sha256(email)}`;
+      if (await env.ORDERS.get(key)) return json({ ok: true }); // already on the list: same answer
+      await env.ORDERS.put(key, JSON.stringify({ email, type, at: new Date().toISOString() }));
+      const st = (await env.ORDERS.get("wlstats", "json")) || { total: 0, by_type: {} };
+      st.total += 1; st.by_type[type] = (st.by_type[type] || 0) + 1;
+      await env.ORDERS.put("wlstats", JSON.stringify(st));
+      return json({ ok: true });
+    }
+
+    if (url.pathname === "/waitlist/count" && request.method === "GET") {
+      const st = (await env.ORDERS.get("wlstats", "json")) || { total: 0, by_type: {} };
+      return json({ total: st.total, by_type: st.by_type });
     }
 
     if (url.pathname === "/orders" && request.method === "GET") {
