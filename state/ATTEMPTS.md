@@ -369,3 +369,6 @@ GUARD = pathlib.Path(__file__).parent / "guard.py`
 - **Blocked by a guardrail:** `Bash` → `printf '\n- 2026-10-23: Copied guard.py into kit/agent/ and added test_guard.py (5 tests: clean, secret, email, private term, protected file; kit total 11 pass). agent/metrics.py now compiles (operato`
 - **Blocked by a guardrail:** `Bash` → `sed -i 's/^- \[ \] Test: guard.py blocks a fake leaking diff in a filled kit./- [x] (2026-10-23) Test: guard blocks fake leaking diffs (kit\/agent\/test_guard.py)./' state/TASKS.md`
 - Turns: 18 · Claude cost: $0.19 (not counted in the $100 budget)
+
+## 2026-10-23 21:30 kit runners
+- Tried: copy runner scripts + prompts into kit/agent/. Result: done, 11 tests pass. Inline heredoc/chained bash was blocked by the sandbox; redone with Write/Edit. Why: kit must be self-contained. Next: propose kit workflow via Needs human, then extract repo.

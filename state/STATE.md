@@ -52,6 +52,8 @@
 ## Needs human (2026-10-22 21:20)
 - BUG in protected file: `agent/metrics.py` line 52 has a SyntaxError (a `# comment` swallowed `.read().decode())` of the stats call). METRICS.md cannot regenerate, so counts are stale. Fix: move the comment off that line. I can't edit it (protected).
 
+- 2026-10-23 ~21:30: Copied runners (run-cycle, daily-article, loop, capture) + generic prompts into kit/agent/; test_scripts.py (11 kit agent tests pass). Workflow (protected path) still to propose. Waitlist: 0 known.
+
 ## Needs human (2026-10-22 12:00)
 - Add POST /waitlist {email, project_type} to the orders Worker (cf/ is protected; KV storage, count only in METRICS). Then say yes to push/deploy the founder page.
 
