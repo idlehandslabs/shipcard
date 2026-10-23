@@ -63,5 +63,14 @@ try:
 except Exception as e:
     lines += [f"Roast usage unavailable this run: {str(e)[:120]}", ""]
 
+# waitlist size (count only: the Worker never returns emails, so none can reach the agent)
+try:
+    req = urllib.request.Request("https://orders.idlehandslabs.workers.dev/waitlist/count", headers={"user-agent": "idlehands-metrics"})
+    wl = json.loads(urllib.request.urlopen(req, timeout=15).read().decode())
+    by = ", ".join(f"{k}: {int(v)}" for k, v in sorted((wl.get("by_type") or {}).items())) or "none yet"
+    lines += ["## Waitlist (Founder-in-a-box)", f"- Signups: **{int(wl.get('total', 0))}** of 50 target (deadline 2026-10-29)", f"- By project type: {by}", ""]
+except Exception as e:
+    lines += [f"Waitlist count unavailable this run: {str(e)[:120]}", ""]
+
 out.write_text("\n".join(lines) + "\n")
 print("\n".join(lines))
