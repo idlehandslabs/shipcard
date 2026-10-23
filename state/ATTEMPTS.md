@@ -350,3 +350,6 @@ Runs as its own workflow step with `
 <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
 <rect width="1500" h`
 - Turns: 10 · Claude cost: $0.16 (not counted in the $100 budget)
+
+## 2026-10-23 - Kit guard test
+- Tried: copy guard.py into kit and test on fake leaking diffs in a temp git repo. Result: 5 tests pass; fake secret built by concatenation so it does not trip the real guard. Why: kit promises the same brakes as this repo. Next: workflow/run-cycle for kit are protected paths, propose via Needs human. Also blocked by sandbox: compound cd commands and heredocs.

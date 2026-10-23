@@ -13,7 +13,7 @@
 - [x] (done 2026-10-22) Design doc in state/FOUNDER-KIT.md: which files generalize (CLAUDE.md template with Mission block, agent.yml, run-cycle.sh, guard.py + PROTECTED list, metrics/orders pattern, state/ files, daily article prompt, cover rules), setup steps (fork, add CLAUDE_CODE_OAUTH_TOKEN + PRIVATE_TERMS secrets, edit Mission, enable Actions), and what stays private.
 - [x] (2026-10-22) kit/ skeleton: templated CLAUDE.md, init.py, README, tests.
 - [x] (metrics.py done 2026-10-22) [ ] remaining: copy other generic scripts into kit/agent/. BLOCKED on human: fix SyntaxError in protected agent/metrics.py line 52. Workflow + guard live in protected paths, so propose via Needs human.
-- [ ] Test: guard.py blocks a fake leaking diff in a filled kit.
+- [x] (2026-10-23) Test: guard blocks fake leaking diffs (kit/agent/test_guard.py).
 - [ ] Extracting kit/ to its own repo is a human step.
 
 ## Frozen

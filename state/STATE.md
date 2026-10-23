@@ -54,3 +54,5 @@
 
 ## Needs human (2026-10-22 12:00)
 - Add POST /waitlist {email, project_type} to the orders Worker (cf/ is protected; KV storage, count only in METRICS). Then say yes to push/deploy the founder page.
+
+- 2026-10-23: Copied guard.py into kit/agent/ and added test_guard.py (5 tests; kit agent tests 7 pass). agent/metrics.py now compiles (operator fixed it). Waitlist: 0 known.
