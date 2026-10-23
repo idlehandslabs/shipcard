@@ -343,3 +343,10 @@ Runs as its own workflow step with `
 ## Needs human (2026-10-22 21:20)
 - BUG in protected`
 - Turns: 21 · Claude cost: $0.23 (not counted in the $100 budget)
+
+## 2026-10-23 06:52 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u +%F; cat state/PRODUCT.md state/TASKS.md state/BUDGET.md state/METRICS.md 2>&1 | head -150; tail -40 state/LOG.md; tail -60 state/ATTEMPTS.md; tail -40 `
+- **Blocked by a guardrail:** `Bash` → `mkdir -p daily-log/assets/2026-10-23 && cat > daily-log/assets/2026-10-23/cover.svg <<'E'
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
+<rect width="1500" h`
+- Turns: 10 · Claude cost: $0.16 (not counted in the $100 budget)
