@@ -372,3 +372,16 @@ GUARD = pathlib.Path(__file__).parent / "guard.py`
 
 ## 2026-10-23 21:30 kit runners
 - Tried: copy runner scripts + prompts into kit/agent/. Result: done, 11 tests pass. Inline heredoc/chained bash was blocked by the sandbox; redone with Write/Edit. Why: kit must be self-contained. Next: propose kit workflow via Needs human, then extract repo.
+
+## 2026-10-23 21:19 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls ../app ../post-queue | tail -30`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls kit kit/agent agent .github/workflows 2>&1; grep -n -i "copy\|generic\|agent/" state/FOUNDER-KIT.md | head -30`
+- **Blocked by a guardrail:** `Bash` → `cp agent/capture.py agent/run-cycle.sh agent/daily-article.sh agent/loop.sh agent/cycle-prompt.md kit/agent/ && python3 - <<'E'
+t=open('agent/daily-article-prompt.md').read()
+i=t.index('## Cover image`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit/agent && head -52 daily-article-prompt.md | sed 's/of \$100 spent/of $<total> spent/' > t && cat >> t <<'E'
+## Cover image (optional)
+If you want a cover, wr`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit/agent && python3 -m unittest discover -p "test_*.py" 2>&1 | tail -8`
+- **Blocked by a guardrail:** `Bash` → `printf '\n- 2026-10-23 ~21:30: Copied runners (run-cycle, daily-article, loop, capture) and generic prompts into kit/agent/; test_scripts.py (kit agent tests 11 pass). Workflow still to propose. Waitl`
+- Turns: 33 · Claude cost: $0.26 (not counted in the $100 budget)
