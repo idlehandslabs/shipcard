@@ -22,6 +22,7 @@ export function isNoise(message) {
   if (/^(chore(\([^)]*\))?:\s*)?(run )?bookkeeping\b/i.test(first)) return true;
   if (/^(chore(\([^)]*\))?(\([^)]*\))?:\s*)?bump \S+ from \S+ to \S+/i.test(first)) return true;
   if (/^(update|create|delete|rename) [\w./-]+\.(md|txt)$/i.test(first)) return true;
+  if (/^initial commit$/i.test(first)) return true;
   return false;
 }
 

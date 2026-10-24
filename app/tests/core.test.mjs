@@ -2,6 +2,11 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { parseRepo, cleanMessage, isNoise, summarize, postText } from '../core.js';
 
+test('isNoise skips the initial commit', () => {
+  assert.equal(isNoise('Initial commit'), true);
+  assert.equal(isNoise('feat: initial commit flow'), false);
+});
+
 const NOW = Date.parse('2026-10-20T15:00:00Z');
 const c = (date, message) => ({ sha: Math.random().toString(16).slice(2), commit: { message, author: { date } } });
 
