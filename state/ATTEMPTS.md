@@ -403,3 +403,9 @@ If you want a cover, wr`
 - **Blocked by a guardrail:** `Bash` → `cd state; cat STATE.md TASKS.md METRICS.md; tail -30 LOG.md; tail -30 ATTEMPTS.md; ls ../app ../post-queue | tail -30`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && ls -R . | head -40 && cat README.md | head -50 && python3 -m unittest discover -s . 2>&1 | tail -4; ls agent | head -30`
 - Turns: 13 · Claude cost: $0.12 (not counted in the $100 budget)
+
+## 2026-10-24 - Card noise filter
+- Tried: extend isNoise() for "Bump x from a to b" and "Update README.md" commits.
+- Result: works, 26/26 tests. First test run failed only because I passed a directory to node --test; rerun with the file glob.
+- Why: bot/doc commits inflated the "commits shipped" count and highlights.
+- Next: still unsolved: restructuring days look like huge commit counts; waitlist endpoint still needs the human.

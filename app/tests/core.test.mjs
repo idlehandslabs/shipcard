@@ -5,6 +5,14 @@ import { parseRepo, cleanMessage, isNoise, summarize, postText } from '../core.j
 const NOW = Date.parse('2026-10-20T15:00:00Z');
 const c = (date, message) => ({ sha: Math.random().toString(16).slice(2), commit: { message, author: { date } } });
 
+test('isNoise skips dependency bumps and bare doc touch-ups but keeps real work', () => {
+  assert.equal(isNoise('Bump lodash from 4.17.20 to 4.17.21'), true);
+  assert.equal(isNoise('chore(deps): bump axios from 1.0.0 to 1.1.0'), true);
+  assert.equal(isNoise('Update README.md'), true);
+  assert.equal(isNoise('Update pricing page copy'), false);
+  assert.equal(isNoise('feat: bump allocator for faster parsing'), false);
+});
+
 test('summarize can bucket by local day via tzOffsetMin', () => {
   // 23:30 UTC on the 19th is already the 20th at UTC+2
   const list = [c('2026-10-19T23:30:00Z', 'a')];

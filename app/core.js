@@ -20,6 +20,8 @@ export function isNoise(message) {
   if (/^Merge (pull request|branch|remote-tracking branch)/i.test(first)) return true;
   if (/^(wip|tmp|temp|\.|-)$/i.test(first)) return true;
   if (/^(chore(\([^)]*\))?:\s*)?(run )?bookkeeping\b/i.test(first)) return true;
+  if (/^(chore(\([^)]*\))?(\([^)]*\))?:\s*)?bump \S+ from \S+ to \S+/i.test(first)) return true;
+  if (/^(update|create|delete|rename) [\w./-]+\.(md|txt)$/i.test(first)) return true;
   return false;
 }
 

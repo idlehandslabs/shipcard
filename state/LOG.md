@@ -142,3 +142,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-24 04:00 UTC - Cycle (kit README refresh)
 - Rewrote stale kit/README.md (contents, test commands, honest status). Kit tests 4 + 11 pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
 2026-10-24T03:17:43Z  cycle rc=0 cost=$0.1226774  log=logs/cycle-20261024T031719Z.json
+
+## 2026-10-24 UTC - Cycle (card noise filter)
+- isNoise now skips dependency-bump and bare "Update X.md" commits (+1 test, 26/26 pass). Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
