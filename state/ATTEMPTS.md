@@ -419,3 +419,10 @@ If you want a cover, wr`
 test('isNoise skips dependency bumps and bare doc touch-ups but keeps real work', () => {
   assert.equal(isNoise('Bump`
 - Turns: 19 · Claude cost: $0.15 (not counted in the $100 budget)
+
+## 2026-10-24 06:49 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u +%F; cat state/PRODUCT.md state/TASKS.md state/BUDGET.md state/METRICS.md; tail -40 state/LOG.md; tail -60 state/JOURNAL.md; tail -60 state/ATTEMPTS.md;`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p daily-log/assets/2026-10-24 && cat > daily-log/assets/2026-10-24/cover.svg <<'E'
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
+<rect width="1500" h`
+- Turns: 11 · Claude cost: $0.18 (not counted in the $100 budget)
