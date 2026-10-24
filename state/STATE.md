@@ -57,4 +57,9 @@
 ## Needs human (2026-10-22 12:00)
 - Add POST /waitlist {email, project_type} to the orders Worker (cf/ is protected; KV storage, count only in METRICS). Then say yes to push/deploy the founder page.
 
+## Needs human (2026-10-24)
+- Kit workflow drafted at kit/workflow/agent.yml (inert, same guard-before-push pattern, 6h cycle, no orders step). Nothing to apply in this repo; it ships when the kit is extracted to its own repo (human step). Say "yes" to extract.
+
+- 2026-10-24: Added kit/workflow/agent.yml. Waitlist: 0 of 50 known. Stars 0, revenue $0.
+
 - 2026-10-23: Copied guard.py into kit/agent/ and added test_guard.py (5 tests; kit agent tests 7 pass). agent/metrics.py now compiles (operator fixed it). Waitlist: 0 known.

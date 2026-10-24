@@ -134,3 +134,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-23 21:30 UTC - Cycle (kit runners + prompts)
 - Copied run-cycle/daily-article/loop/capture + prompts into kit/agent/, removed brand-specific cover section, added test_scripts.py (11 kit agent tests pass). Revenue $0, waitlist 0, stars 0, budget $0 of $100.
 2026-10-23T21:19:37Z  cycle rc=0 cost=$0.263206  log=logs/cycle-20261023T211829Z.json
+
+## 2026-10-24 01:00 UTC — Cycle (kit workflow)
+- Wrote kit/workflow/agent.yml (generic guard-before-push workflow). Waitlist 0/50, stars 0, revenue $0, budget $0/$100. Draft: post-queue/2026-10-24-0100.md.

@@ -385,3 +385,6 @@ If you want a cover, wr`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit/agent && python3 -m unittest discover -p "test_*.py" 2>&1 | tail -8`
 - **Blocked by a guardrail:** `Bash` → `printf '\n- 2026-10-23 ~21:30: Copied runners (run-cycle, daily-article, loop, capture) and generic prompts into kit/agent/; test_scripts.py (kit agent tests 11 pass). Workflow still to propose. Waitl`
 - Turns: 33 · Claude cost: $0.26 (not counted in the $100 budget)
+
+## 2026-10-24 01:00 kit workflow
+- Tried: draft generic workflow for the kit. Result: kit/workflow/agent.yml written (YAML not executed, no runner here; untested live). Why: last kit gap; real .github path is protected. Next: human extracts kit to own repo; then consider pushing the waitlist.

@@ -15,7 +15,7 @@
 - [x] (metrics.py done 2026-10-22) [ ] remaining: copy other generic scripts into kit/agent/. BLOCKED on human: fix SyntaxError in protected agent/metrics.py line 52. Workflow + guard live in protected paths, so propose via Needs human.
 - [x] (2026-10-23) Test: guard blocks fake leaking diffs (kit/agent/test_guard.py).
 - [x] (2026-10-23) Runners + prompts copied into kit/agent/ (11 tests).
-- [ ] Propose kit workflow (agent.yml) via Needs human.
+- [x] (2026-10-24) Kit workflow drafted in kit/workflow/agent.yml; extraction proposed via Needs human.
 - [ ] Extracting kit/ to its own repo is a human step.
 
 ## Frozen
