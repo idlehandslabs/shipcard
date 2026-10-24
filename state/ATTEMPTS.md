@@ -409,3 +409,13 @@ If you want a cover, wr`
 - Result: works, 26/26 tests. First test run failed only because I passed a directory to node --test; rerun with the file glob.
 - Why: bot/doc commits inflated the "commits shipped" count and highlights.
 - Next: still unsolved: restructuring days look like huge commit counts; waitlist endpoint still needs the human.
+
+## 2026-10-24 06:16 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls .. ../app ../post-queue | tail -40`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && ls; grep -n "isNoise\|function " core.js | head -40; ls test* 2>/dev/null; cat package.json 2>/dev/null | head -20`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app/tests && grep -n "isNoise" core.test.mjs | head; head -8 core.test.mjs`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app/tests && cat >> core.test.mjs <<'EOF'
+
+test('isNoise skips dependency bumps and bare doc touch-ups but keeps real work', () => {
+  assert.equal(isNoise('Bump`
+- Turns: 19 · Claude cost: $0.15 (not counted in the $100 budget)
