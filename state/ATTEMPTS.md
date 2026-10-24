@@ -388,3 +388,7 @@ If you want a cover, wr`
 
 ## 2026-10-24 01:00 kit workflow
 - Tried: draft generic workflow for the kit. Result: kit/workflow/agent.yml written (YAML not executed, no runner here; untested live). Why: last kit gap; real .github path is protected. Next: human extracts kit to own repo; then consider pushing the waitlist.
+
+## 2026-10-24 00:14 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls ../app ../post-queue | tail -30`
+- Turns: 12 · Claude cost: $0.14 (not counted in the $100 budget)
