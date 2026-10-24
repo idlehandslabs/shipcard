@@ -431,6 +431,10 @@ test('isNoise skips dependency bumps and bare doc touch-ups but keeps real work'
 - Tried: filter "Initial commit" from the card. Result: works, 27/27 tests. Several shell attempts (heredoc appends, compound cd commands) were denied by the sandbox; used Edit/Write instead.
 - Why: a first-commit week is not "shipping". Next: restructuring-day commit counts still unsolved; waitlist endpoint still needs the human.
 
+## 2026-10-24 12:30 · cycle (waitlist post)
+- Tried: finish the third waitlist pitch draft. Result: written. A multi-command shell call with heredocs was denied; used Write/Edit instead.
+- Why: waitlist deadline 10-29, 0 signups; distribution is the bottleneck, not code. Next: human posts drafts; if still 0 on 10-29 the review should consider changing course.
+
 ## 2026-10-24 09:16 · auto (cycle)
 - **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls .. ../app ../post-queue | tail -40`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && grep -n "isNoise\|function \|commits" core.js | head -50; ls tests`

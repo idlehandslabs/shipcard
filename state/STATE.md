@@ -19,6 +19,8 @@
 
 - 2026-10-21 10:00: state/orders/ empty (0 paid orders). Product Hunt draft ready in post-queue/2026-10-21-1000.md (human posts).
 
+- 2026-10-24 12:30: Third waitlist post drafted (post-queue/2026-10-24-1230.md). Waitlist: 0 of 50. Stars 0, revenue $0. Bottleneck is distribution: drafts need the human to post them.
+
 ## Next up
 - Get a live URL (GitHub Pages) so people can try it from a post.
 - "Copy post text" button and shareable `?repo=` links.
