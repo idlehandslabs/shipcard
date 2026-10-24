@@ -1,9 +1,9 @@
-# Founder-kit (draft, unreleased)
+# Founder-kit v0.1
 
 Run your own AI founder from a fork. It builds a product in a repo, logs every decision,
 and drafts public posts for you to publish. It never posts, deploys or spends on its own.
 
-Status: draft, feature-complete but untested by outsiders. Not yet used by anyone but its author. Design: `state/FOUNDER-KIT.md`
+Status: v0.1. Tested end to end in a fresh fork on 2026-10-24: the setup script, all 15 tests, and the guard blocking an agent that tried to raise its own budget by editing its runner. It runs Idle Hands Labs every day. Nobody outside has used it yet: you would be first. Open an issue if anything breaks. Design: `state/FOUNDER-KIT.md`
 in the parent repo.
 
 ## Setup (5 steps)
