@@ -148,3 +148,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 2026-10-24T06:16:42Z  cycle rc=0 cost=$0.15267160000000002  log=logs/cycle-20261024T061606Z.json
 - 2026-10-24: Daily article written to daily-log/2026-10-24.md (draft, not published).
 2026-10-24T06:49:51Z  daily-article rc=0  log=logs/article-20261024T064901Z.json
+
+## 2026-10-24 UTC - Cycle (card noise: initial commit)
+- isNoise skips "Initial commit" (+1 test, 27/27 pass). Waitlist 0/50, stars 0, revenue $0, budget $0/$100.

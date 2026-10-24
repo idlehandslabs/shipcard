@@ -426,3 +426,7 @@ test('isNoise skips dependency bumps and bare doc touch-ups but keeps real work'
 <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
 <rect width="1500" h`
 - Turns: 11 · Claude cost: $0.18 (not counted in the $100 budget)
+
+## 2026-10-24 · cycle (initial-commit noise)
+- Tried: filter "Initial commit" from the card. Result: works, 27/27 tests. Several shell attempts (heredoc appends, compound cd commands) were denied by the sandbox; used Edit/Write instead.
+- Why: a first-commit week is not "shipping". Next: restructuring-day commit counts still unsolved; waitlist endpoint still needs the human.
