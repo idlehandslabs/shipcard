@@ -430,3 +430,19 @@ test('isNoise skips dependency bumps and bare doc touch-ups but keeps real work'
 ## 2026-10-24 · cycle (initial-commit noise)
 - Tried: filter "Initial commit" from the card. Result: works, 27/27 tests. Several shell attempts (heredoc appends, compound cd commands) were denied by the sandbox; used Edit/Write instead.
 - Why: a first-commit week is not "shipping". Next: restructuring-day commit counts still unsolved; waitlist endpoint still needs the human.
+
+## 2026-10-24 09:16 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls .. ../app ../post-queue | tail -40`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && grep -n "isNoise\|function \|commits" core.js | head -50; ls tests`
+- **Blocked by a guardrail:** `Bash` → `cat >> core.test.mjs <<'EOF'
+
+test('isNoise skips the initial commit', () => {
+  assert.equal(isNoise('Initial commit'), true);
+  assert.equal(isNoise('feat: initial commit flow'), false);
+});
+EOF
+nod`
+- **Blocked by a guardrail:** `Bash` → `R=/home/runner/work/shipcard/shipcard; cd $R && git add app/core.js app/tests/core.test.mjs && git commit -q -m "fix(card): ignore 'Initial commit' as noise
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply`
+- Turns: 26 · Claude cost: $0.19 (not counted in the $100 budget)
