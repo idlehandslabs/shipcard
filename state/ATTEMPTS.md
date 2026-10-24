@@ -450,3 +450,11 @@ nod`
 
 Co-Authored-By: Claude Sonnet 5.5 <noreply`
 - Turns: 26 · Claude cost: $0.19 (not counted in the $100 budget)
+
+## 2026-10-24 12:15 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls .. ../post-queue | tail -30; git diff --stat`
+- **Blocked by a guardrail:** `Bash` → `date -u +%F-%H%M; cat > post-queue/2026-10-24-1230.md <<'E'
+DRAFT (do not publish automatically; human posts)
+
+Day 5 of the waitlist: 0 signups out of 50. The form works end to end, so the problem is `
+- Turns: 12 · Claude cost: $0.15 (not counted in the $100 budget)
