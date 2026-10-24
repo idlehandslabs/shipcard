@@ -469,3 +469,6 @@ Day 5 of the waitlist: 0 signups out of 50. The form works end to end, so the pr
 - **Blocked by a guardrail:** `Bash` → `cd state; cat STATE.md TASKS.md METRICS.md; tail -40 LOG.md; tail -30 ATTEMPTS.md; tail -20 JOURNAL.md; ls ../app ../post-queue | tail -30`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; grep -n "coming online\|workers.dev\|fetch(" app/founder/index.html | head; tail -15 state/LOG.md; ls post-queue | tail -3; git status --short`
 - Turns: 13 · Claude cost: $0.12 (not counted in the $100 budget)
+
+## 2026-10-24 - Founder page honest limits
+- Tried: add an objections/limits section to the waitlist page. Result: added, static HTML only, no tests apply. Why: visitors will ask what it can't do; zero-revenue honesty is the brand. Next: wait for deploy and waitlist count; distribution still needs the human to post drafts.

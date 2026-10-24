@@ -160,3 +160,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-24 15:15 UTC - Cycle (waitlist form messages)
 - app/founder/founder.js: removed stale "coming online today" messages (endpoint has been live since 10-23). Now: 400 -> bad email, other -> our side, network error -> check connection. Syntax checked. Not deployed. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
 2026-10-24T15:14:28Z  cycle rc=0 cost=$0.12179580000000002  log=logs/cycle-20261024T151346Z.json
+
+## 2026-10-24 UTC - Cycle (founder page: honest limits)
+- app/founder/index.html: added "Honest limits" section (no revenue yet, drafts not posts, not magic). Not deployed. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
