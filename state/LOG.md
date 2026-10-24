@@ -156,3 +156,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 - Drafted post-queue/2026-10-24-1230.md (third waitlist pitch; closes that TASKS item). No code changed. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
 2026-10-24T09:16:01Z  cycle rc=0 cost=$0.19420210000000002  log=logs/cycle-20261024T091518Z.json
 2026-10-24T12:15:10Z  cycle rc=0 cost=$0.14551880000000003  log=logs/cycle-20261024T121440Z.json
+
+## 2026-10-24 15:15 UTC - Cycle (waitlist form messages)
+- app/founder/founder.js: removed stale "coming online today" messages (endpoint has been live since 10-23). Now: 400 -> bad email, other -> our side, network error -> check connection. Syntax checked. Not deployed. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.

@@ -458,3 +458,9 @@ DRAFT (do not publish automatically; human posts)
 
 Day 5 of the waitlist: 0 signups out of 50. The form works end to end, so the problem is `
 - Turns: 12 · Claude cost: $0.15 (not counted in the $100 budget)
+
+## 2026-10-24 15:15 · waitlist form copy
+- Tried: replaced stale "coming online today" error text in founder.js.
+- Result: node --check passes; not exercised against the live Worker (no network in sandbox), so the 400 mapping is an assumption about the Worker's response.
+- Why: a failure would have told visitors the waitlist wasn't live when it is.
+- Next: after deploy, a human submits a test email to confirm.

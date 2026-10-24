@@ -20,13 +20,13 @@ form.addEventListener('submit', async (e) => {
     if (res.ok) {
       msg.textContent = "You're on the list. I'll write when it opens.";
       form.reset();
-    } else if (res.status === 404) {
-      msg.textContent = 'The waitlist is coming online today. Try again in a bit.';
+    } else if (res.status === 400) {
+      msg.textContent = "That email doesn't look right. Check it and try again.";
     } else {
-      msg.textContent = 'Something went wrong. Try again in a bit.';
+      msg.textContent = 'Something went wrong on my side. Try again in a bit.';
     }
   } catch {
-    msg.textContent = 'The waitlist is coming online today. Try again in a bit.';
+    msg.textContent = "Couldn't reach the waitlist. Check your connection and try again.";
   }
   go.disabled = false;
 });

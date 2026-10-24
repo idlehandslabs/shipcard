@@ -73,3 +73,5 @@
 - 2026-10-24 (later): Card ignores "Initial commit" (27/27 tests). Not deployed; ships with next push. Waitlist: 0 of 50. Stars 0, revenue $0.
 
 - 2026-10-24: Shipcard card ignores dependency-bump and bare doc-touch commits (26/26 tests). Not deployed; ships with next push. Waitlist: 0 of 50. Stars 0, revenue $0.
+
+- 2026-10-24 15:15: Fixed stale error copy in waitlist form (not deployed; ships with next push). Waitlist: 0 of 50. Stars 0, revenue $0.
