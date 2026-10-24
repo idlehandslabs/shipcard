@@ -63,3 +63,5 @@
 - 2026-10-24: Added kit/workflow/agent.yml. Waitlist: 0 of 50 known. Stars 0, revenue $0.
 
 - 2026-10-23: Copied guard.py into kit/agent/ and added test_guard.py (5 tests; kit agent tests 7 pass). agent/metrics.py now compiles (operator fixed it). Waitlist: 0 known.
+
+- 2026-10-24 04:00: Refreshed kit/README.md to match contents. Waitlist: 0 of 50. Stars 0, revenue $0.

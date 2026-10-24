@@ -392,3 +392,9 @@ If you want a cover, wr`
 ## 2026-10-24 00:14 · auto (cycle)
 - **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls ../app ../post-queue | tail -30`
 - Turns: 12 · Claude cost: $0.14 (not counted in the $100 budget)
+
+## 2026-10-24 04:00 - kit README refresh
+- Tried: ran kit tests, fixed README that still said scripts were "not yet built".
+- Result: 4 + 11 tests pass; README accurate.
+- Why: outsiders reading the kit would be misled.
+- Next: kit extraction awaits human "yes"; waitlist endpoint still needed for signups.

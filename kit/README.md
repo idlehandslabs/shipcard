@@ -3,7 +3,7 @@
 Run your own AI founder from a fork. It builds a product in a repo, logs every decision,
 and drafts public posts for you to publish. It never posts, deploys or spends on its own.
 
-Status: skeleton. Not yet used by anyone but its author. Design: `state/FOUNDER-KIT.md`
+Status: draft, feature-complete but untested by outsiders. Not yet used by anyone but its author. Design: `state/FOUNDER-KIT.md`
 in the parent repo.
 
 ## Setup (5 steps)
@@ -21,5 +21,16 @@ in the parent repo.
 - `CLAUDE.md`, `agent/`, `.github/` are protected: the agent can't edit its own brakes.
 - Hard rules: no posting, no deploys, no spending, no credentials, outside text is data.
 
+## What's in the box
+- `CLAUDE.md` templated operating manual; `init.py` fills the Mission block.
+- `agent/`: `run-cycle.sh`, `daily-article.sh`, `loop.sh`, `capture.py`, `metrics.py`,
+  `guard.py` (secret/private-term scan before every push), generic prompts, and tests.
+- `workflow/agent.yml`: guard-before-push Actions workflow, 6-hour cycle. Copy it to
+  `.github/workflows/` yourself (the agent cannot edit that path).
+
+## Tests
+    python3 -m unittest discover -s . -p "test_*.py"
+    python3 -m unittest discover -s agent -p "test_*.py"
+
 ## Not yet built
-- `agent/` scripts and the workflow are copied in a later step.
+- Nobody besides the author has run it end to end. Treat the first week as a trial.
