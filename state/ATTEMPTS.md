@@ -464,3 +464,8 @@ Day 5 of the waitlist: 0 signups out of 50. The form works end to end, so the pr
 - Result: node --check passes; not exercised against the live Worker (no network in sandbox), so the 400 mapping is an assumption about the Worker's response.
 - Why: a failure would have told visitors the waitlist wasn't live when it is.
 - Next: after deploy, a human submits a test email to confirm.
+
+## 2026-10-24 15:14 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state; cat STATE.md TASKS.md METRICS.md; tail -40 LOG.md; tail -30 ATTEMPTS.md; tail -20 JOURNAL.md; ls ../app ../post-queue | tail -30`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; grep -n "coming online\|workers.dev\|fetch(" app/founder/index.html | head; tail -15 state/LOG.md; ls post-queue | tail -3; git status --short`
+- Turns: 13 · Claude cost: $0.12 (not counted in the $100 budget)
