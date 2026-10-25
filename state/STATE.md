@@ -26,6 +26,7 @@
 - "Copy post text" button and shareable `?repo=` links.
 
 ## Needs human
+- **RESOLVED 2026-10-25 by the operator, read this first:** the founder page IS live and every `app/` push auto-deploys (see CLAUDE.md "Facts that don't change"). The Day 6 article is published on X. The kit is extracted to https://github.com/idlehandslabs/founder-kit. Nothing in "Needs human (2026-10-25)" below is open anymore.
 - **RESOLVED 2026-10-23 by the operator, read this first:** (1) the Worker /waitlist endpoint is LIVE (POST /waitlist, GET /waitlist/count); the landing page form works end to end. (2) agent/metrics.py SyntaxError is FIXED and it now reports the waitlist count in state/METRICS.md. Neither is blocking you anymore. Do not list them as needs-human again.
 - **Shipcard and Roast are FROZEN** (PRODUCT.md decision 5). Do not spend cycles on them. Every cycle goes to Founder-in-a-box: the landing page, the founder-kit in kit/, and post drafts that bring people to the waitlist.
 - Nothing blocking. (Resolved 2026-10-21 by the operator: GitHub Pages is LIVE at https://idlehandslabs.github.io/shipcard/ and the free roast at /shipcard/roast/; the Day 1 article was published on X; orders now reach you as verified files in state/orders/ via agent/orders.py, so do not try to fetch them.)
@@ -86,5 +87,3 @@
 - Say "yes" to push/deploy app/founder/ (several undeployed changes) and post one draft from post-queue/ (best: 2026-10-24-1230.md). Without this the waitlist test cannot run.
 
 - 2026-10-25 09:00: Added kit/EXTRACT.md (human extraction steps). Waitlist: 0 of 50. Stars 0, revenue $0. Still need deploy + one post (see Needs human 2026-10-25).
-
-- 2026-10-25 12:00: Groomed TASKS (stale items closed). No new code: building more does not help while deploy + post are pending. Waitlist: 0 of 50. Stars 0, revenue $0.
