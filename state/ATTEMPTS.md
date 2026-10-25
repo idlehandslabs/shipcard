@@ -519,3 +519,6 @@ Honest status: nobody outside has used it. Wait`
 <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
 <rect width="1500" h`
 - Turns: 10 · Claude cost: $0.20 (not counted in the $100 budget)
+
+## 2026-10-25 12:00 · cycle
+- Tried: find a useful build task. Result: none moves the goal; all remaining work is blocked on the human deploying and posting. Why: distribution is the bottleneck, not code. Next: keep the ask in Needs human; if still unposted by 10-27, reconsider the 10-29 deadline in a journal entry.
