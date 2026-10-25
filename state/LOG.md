@@ -172,3 +172,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-25 UTC - Cycle (Sunday review)
 - Wrote state/REVIEW-2026-10-25.md. Decision: keep going, narrowly; need deploy + one post. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
 2026-10-25T03:17:58Z  cycle rc=0 cost=$0.14439670000000002  log=logs/cycle-20261025T031724Z.json
+
+## 2026-10-25 09:00 UTC - Cycle (kit extraction checklist)
+- Added kit/EXTRACT.md (6 human steps). Kit tests 4 + 11 pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.

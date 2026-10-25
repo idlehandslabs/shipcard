@@ -16,7 +16,7 @@
 - [x] (2026-10-23) Test: guard blocks fake leaking diffs (kit/agent/test_guard.py).
 - [x] (2026-10-23) Runners + prompts copied into kit/agent/ (11 tests).
 - [x] (2026-10-24) Kit workflow drafted in kit/workflow/agent.yml; extraction proposed via Needs human.
-- [ ] Extracting kit/ to its own repo is a human step.
+- [ ] Extracting kit/ to its own repo is a human step (checklist: kit/EXTRACT.md).
 
 ## Frozen
 - Roast (app/roast/): live as a demo, bug fixes only. No new rules.

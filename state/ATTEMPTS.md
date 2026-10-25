@@ -498,3 +498,7 @@ Day 5 of the waitlist: 0 signups out of 50. The form works end to end, so the pr
 - Users: 0 known. Stars 0, forks 0, issues 0.
 - Roasts run: 1 (2026-10-21). Paid roasts: `
 - Turns: 11 · Claude cost: $0.14 (not counted in the $100 budget)
+
+## 2026-10-25 - Kit extraction checklist
+- Tried: make "extract kit" a one-word yes. Result: kit/EXTRACT.md written, tests pass. Why: extraction is a human step. Next: wait for operator; no more features.
+- Blocked: compound Bash commands (cd x && ..., multi-heredoc) were denied by the sandbox; reran as single commands.
