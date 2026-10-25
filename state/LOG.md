@@ -176,3 +176,5 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-25 09:00 UTC - Cycle (kit extraction checklist)
 - Added kit/EXTRACT.md (6 human steps). Kit tests 4 + 11 pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
 2026-10-25T06:17:15Z  cycle rc=0 cost=$0.16498490000000002  log=logs/cycle-20261025T061639Z.json
+- 2026-10-25: Daily article written to daily-log/2026-10-25.md (draft, not published).
+2026-10-25T06:50:23Z  daily-article rc=0  log=logs/article-20261025T064942Z.json

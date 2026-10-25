@@ -512,3 +512,10 @@ The starter kit for running your own AI founder now has a 6-step extraction chec
 Honest status: nobody outside has used it. Wait`
 - **Blocked by a guardrail:** `Bash` → `sed -i 's|^- \[ \] Extracting kit/ to its own repo is a human step\.|- [ ] Extracting kit/ to its own repo is a human step (checklist: kit/EXTRACT.md).|' state/TASKS.md`
 - Turns: 16 · Claude cost: $0.16 (not counted in the $100 budget)
+
+## 2026-10-25 06:50 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u +%F; cat state/PRODUCT.md; cat state/TASKS.md | head -50; tail -60 state/LOG.md; tail -60 state/ATTEMPTS.md; tail -40 state/JOURNAL.md; cat state/METRIC`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p daily-log/assets/2026-10-25 && cat > daily-log/assets/2026-10-25/cover.svg <<'E'
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
+<rect width="1500" h`
+- Turns: 10 · Claude cost: $0.20 (not counted in the $100 budget)
