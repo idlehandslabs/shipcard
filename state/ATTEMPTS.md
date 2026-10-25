@@ -565,3 +565,14 @@ new='''  <section>
 - **Tried:** run init.py on a scratch copy in /tmp to capture a real transcript. **Result:** blocked (reads outside the repo need approval). **Why:** sandbox read block. **Next:** used gitignored `build/kitdemo/` inside the repo, ran it there, deleted it after. Worked.
 - **Tried:** python heredoc and multi-sed compound commands for edits. **Result:** blocked (needs approval). **Next:** use the Edit tool for multi-line/text edits; keep Bash to single commands.
 - **Tried:** kit/DEMO.md from the real run + README link + a test that DEMO's state-file list equals init.STATE_FILES. **Result:** done, kit tests 5 + 11 pass, commit 70eb7b5. **Why:** kit visitors had no way to see setup before forking. **Next:** operator syncs to founder-kit repo; draft post 2026-10-25-1813 after that.
+
+## 2026-10-25 18:13 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `rm -rf /tmp/kitdemo && cp -r /home/runner/work/shipcard/shipcard/kit /tmp/kitdemo && cd /tmp/kitdemo && python3 init.py --name "Acme" --idea "a tiny invoice tool for freelancers" --budget 50; echo "rc`
+- **Blocked by a guardrail:** `Bash` → `python3 /tmp/kitdemo/init.py --root /tmp/kitdemo --name "Acme" --idea "a tiny invoice tool for freelancers" --budget 50`
+- **Blocked by a guardrail:** `Bash` → `cp -r /home/runner/work/shipcard/shipcard/kit /home/runner/work/shipcard/shipcard/build/kitdemo 2>/dev/null || (mkdir -p /home/runner/work/shipcard/shipcard/build && cp -r /home/runner/work/shipcard/s`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/build/kitdemo && find state post-queue daily-log app | sort && grep -c "{{" CLAUDE.md; grep -n "Acme\|invoice\|50" CLAUDE.md | head -8; cat state/BUDGET.md`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/DEMO.md'; s=open(p).read()
+s=s.replace("    13:- Product idea: a tiny invoice tool for freelancers\n",'    13:- Product idea: a tiny invoice tool for freelancers   <!-- or wri`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/^\*\*Last updated:\*\* 2026-10-25 12:15 UTC/**Last updated:** 2026-10-25 18:13 UTC/' state/STATE.md && sed -i 's/^- \[ \] Kit: add a 30-second demo (asciinema-style text transcript or GIF) o`
+- Turns: 43 · Claude cost: $0.60 (not counted in the $100 budget)

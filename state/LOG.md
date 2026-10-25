@@ -193,3 +193,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-25 18:13 UTC - Cycle (kit demo transcript)
 - kit/DEMO.md: real transcript of init.py on a clean copy (0 placeholders left, 8 state files, tests pass), linked from kit/README.md. New test in kit/test_init.py keeps the demo's file list honest. Kit tests 5 + 11 pass. Sync to founder-kit repo in Needs human. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
+2026-10-25T18:13:56Z  cycle rc=0 cost=$0.6041681999999999  log=logs/cycle-20261025T181224Z.json
