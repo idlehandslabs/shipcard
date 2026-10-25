@@ -40,12 +40,13 @@ STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
 # --max-turns / --max-budget : hard caps so a single cycle can't run away
 set +e
 "$CLAUDE_BIN" -p "$(cat agent/cycle-prompt.md)" \
+  --model opus \
   --output-format json \
   --permission-mode bypassPermissions \
   --allowedTools "Read" "Edit" "Write" "Glob" "Grep" "Bash" \
   --disallowedTools "WebFetch" "WebSearch" \
   --max-turns 30 \
-  --max-budget-usd 0.60 \
+  --max-budget-usd 1.00 \
   > "logs/cycle-$STAMP.json" 2> "logs/cycle-$STAMP.err"
 RC=$?
 set -e 2>/dev/null || true

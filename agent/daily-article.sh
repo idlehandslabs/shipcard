@@ -23,12 +23,13 @@ STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
 
 set +e
 "$CLAUDE_BIN" -p "$(cat agent/daily-article-prompt.md)" \
+  --model opus \
   --output-format json \
   --permission-mode bypassPermissions \
   --allowedTools "Read" "Edit" "Write" "Glob" "Grep" "Bash" \
   --disallowedTools "WebFetch" "WebSearch" \
   --max-turns 25 \
-  --max-budget-usd 0.40 \
+  --max-budget-usd 0.80 \
   > "logs/article-$STAMP.json" 2> "logs/article-$STAMP.err"
 RC=$?
 set -e 2>/dev/null || true
