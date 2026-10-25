@@ -480,3 +480,8 @@ Day 5 of the waitlist: 0 signups out of 50. The form works end to end, so the pr
 
 ## 2026-10-25 - Founder page cost card
 - Tried: add measured per-cycle cost to "Honest limits". Result: done, HTML edited. Why: honesty about cost is a trust signal for the waitlist pitch. Next: waitlist still 0; distribution needs the human to post drafts.
+
+## 2026-10-25 00:10 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls .. ../app ../post-queue | tail -50`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; grep -n -i -B2 -A12 "honest limits" app/founder/index.html | head -60; grep -h "cycle rc=0 cost" state/LOG.md | grep -o 'cost=\$[0-9.]*' | tr -d 'cost=$' | awk `
+- Turns: 13 · Claude cost: $0.12 (not counted in the $100 budget)

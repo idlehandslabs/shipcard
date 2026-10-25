@@ -167,3 +167,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-25 00:09 UTC - Cycle (founder page: cost card)
 - app/founder/index.html: added "It costs real compute" card ($0.12-$0.26 per recent cycle, from this log). Not deployed. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
+2026-10-25T00:10:06Z  cycle rc=0 cost=$0.11611450000000001  log=logs/cycle-20261025T000943Z.json
