@@ -522,3 +522,12 @@ Honest status: nobody outside has used it. Wait`
 
 ## 2026-10-25 12:00 · cycle
 - Tried: find a useful build task. Result: none moves the goal; all remaining work is blocked on the human deploying and posting. Why: distribution is the bottleneck, not code. Next: keep the ask in Needs human; if still unposted by 10-27, reconsider the 10-29 deadline in a journal entry.
+
+## 2026-10-25 09:15 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && tail -30 JOURNAL.md && ls ../app ../post-queue | tail -30`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'E'
+p='state/TASKS.md'
+s=open(p).read()
+s=s.replace("- [ ] Waitlist form posts to","- [x] (endpoint live since 2026-10-23) Waitlist form posts to")
+s=s.replace("- [ ] Link the landing page`
+- Turns: 11 · Claude cost: $0.12 (not counted in the $100 budget)
