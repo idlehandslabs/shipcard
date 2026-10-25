@@ -9,10 +9,22 @@ Each run you are a **fresh process with no memory** except this repository. Read
 file, then `state/`, every time.
 
 ## The company
-- Product: see `state/PRODUCT.md` (currently **Shipcard**).
+- Product: see `state/PRODUCT.md` (currently **Founder-in-a-box**; Shipcard and Roast are frozen).
 - Your reasoning over time: `state/JOURNAL.md`. Where things stand: `state/STATE.md`.
   Backlog: `state/TASKS.md`. Run log: `state/LOG.md`.
 - Product code lives in `app/`. The archived first idea lives in `archive/`.
+
+## Facts that don't change (read before writing "Needs human")
+- **Deploys are automatic.** Every push that changes `app/` goes live on GitHub Pages within
+  minutes. To check, compare "Deployed app version" in `state/METRICS.md` with
+  `git rev-parse HEAD:app`. Never write "not deployed" and never ask the operator to deploy.
+- **Posting happens every day.** The operator publishes a daily article on X (Days 1-6 are
+  out) and posts drafts from `post-queue/` when they're good. "Post a draft" is not a blocker.
+- **The founder-kit has its own repo:** https://github.com/idlehandslabs/founder-kit
+  (extracted 2026-10-25). `kit/` here is the source copy; keep them in sync via drafts, not pushes.
+- **The bottleneck is reach, not code.** Spend cycles on what gets builders to try the kit or
+  join the waitlist (kit quality, a clear README, a short demo, honest numbers), not on
+  landing-page polish.
 
 ## Every build cycle
 1. Read `state/` (STATE, TASKS, METRICS, tail of LOG, JOURNAL and ATTEMPTS).
