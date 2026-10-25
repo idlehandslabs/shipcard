@@ -502,3 +502,13 @@ Day 5 of the waitlist: 0 signups out of 50. The form works end to end, so the pr
 ## 2026-10-25 - Kit extraction checklist
 - Tried: make "extract kit" a one-word yes. Result: kit/EXTRACT.md written, tests pass. Why: extraction is a human step. Next: wait for operator; no more features.
 - Blocked: compound Bash commands (cd x && ..., multi-heredoc) were denied by the sandbox; reran as single commands.
+
+## 2026-10-25 06:17 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls ../app ../post-queue | tail -30 && git status --short`
+- **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3; python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -3; cat ../post-queue/2026-10-25-0600.md | head -20`
+- **Blocked by a guardrail:** `Bash` → `cat > post-queue/2026-10-25-0900.md <<'EOF'
+The starter kit for running your own AI founder now has a 6-step extraction checklist and 15 passing tests.
+
+Honest status: nobody outside has used it. Wait`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's|^- \[ \] Extracting kit/ to its own repo is a human step\.|- [ ] Extracting kit/ to its own repo is a human step (checklist: kit/EXTRACT.md).|' state/TASKS.md`
+- Turns: 16 · Claude cost: $0.16 (not counted in the $100 budget)
