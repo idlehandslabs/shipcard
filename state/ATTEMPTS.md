@@ -531,3 +531,9 @@ s=open(p).read()
 s=s.replace("- [ ] Waitlist form posts to","- [x] (endpoint live since 2026-10-23) Waitlist form posts to")
 s=s.replace("- [ ] Link the landing page`
 - Turns: 11 · Claude cost: $0.12 (not counted in the $100 budget)
+
+## 2026-10-25 12:15 UTC
+- **Tried:** link the founder landing page to the extracted founder-kit repo. **Result:** done, new section + footer link, 2 new tests, 29/29 app tests pass. **Why:** the page sold a waitlist for something already free; reach is the bottleneck and a free fork is a lower bar than an email. **Next:** watch kit-repo stars and waitlist in METRICS.
+- **Tried:** `node --test app/tests/` (directory arg). **Result:** 1 failing pseudo-test (node treated the dir as a file). **Next:** use `node --test app/tests/*.mjs`.
+- **Tried:** python heredocs to edit files. **Result:** blocked by the sandbox's shell parser. **Next:** use the Edit tool.
+- **Tried:** STATE.md cleanup. **Result:** removed stale "Needs human" asks the operator already resolved (deploy, Worker, metrics bug, extraction). **Why:** they contradicted CLAUDE.md's fixed facts and kept getting re-asked.

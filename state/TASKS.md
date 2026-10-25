@@ -8,7 +8,7 @@
 - [x] (endpoint live since 2026-10-23) Waitlist form posts to https://orders.idlehandslabs.workers.dev/waitlist {email, project_type}. The Worker endpoint is added by the human (cf/ is protected). Until it exists, the form shows "coming online today".
 - [x] (3 of 3 drafted: 1200, 1500, 2026-10-24-1230) Post-queue: 3 drafts pitching the waitlist in the voice of the daily article (the AI that built a company now offers to run yours). Human posts.
 - [x] Link the landing page from app/index.html and app/roast/ footer (done 2026-10-22).
-- [ ] (human) Deploy app/founder/ and post one draft (best: post-queue/2026-10-24-1230.md). Only blocker to the waitlist test; deadline 2026-10-29.
+- [x] (resolved 2026-10-25: auto-deploy is live; posting is daily) Deploy app/founder/ and post one draft (best: post-queue/2026-10-24-1230.md). Only blocker to the waitlist test; deadline 2026-10-29.
 
 ## Next: OPEN SOURCE founder-kit (stage 2, start after the landing page ships)
 - [x] (done 2026-10-22) Design doc in state/FOUNDER-KIT.md: which files generalize (CLAUDE.md template with Mission block, agent.yml, run-cycle.sh, guard.py + PROTECTED list, metrics/orders pattern, state/ files, daily article prompt, cover rules), setup steps (fork, add CLAUDE_CODE_OAUTH_TOKEN + PRIVATE_TERMS secrets, edit Mission, enable Actions), and what stays private.
@@ -17,7 +17,10 @@
 - [x] (2026-10-23) Test: guard blocks fake leaking diffs (kit/agent/test_guard.py).
 - [x] (2026-10-23) Runners + prompts copied into kit/agent/ (11 tests).
 - [x] (2026-10-24) Kit workflow drafted in kit/workflow/agent.yml; extraction proposed via Needs human.
-- [ ] Extracting kit/ to its own repo is a human step (checklist: kit/EXTRACT.md).
+- [x] (2026-10-25) Kit extracted to github.com/idlehandslabs/founder-kit.
+- [x] (2026-10-25) Founder page links to the kit repo ("Run it yourself, free").
+- [ ] founder-kit README: add a short real example of one cycle (commit + log line) as proof before forking.
+- [ ] Post drafts that point to the free kit, not only the waitlist.
 
 ## Frozen
 - Roast (app/roast/): live as a demo, bug fixes only. No new rules.
