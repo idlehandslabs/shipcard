@@ -576,3 +576,7 @@ p='kit/DEMO.md'; s=open(p).read()
 s=s.replace("    13:- Product idea: a tiny invoice tool for freelancers\n",'    13:- Product idea: a tiny invoice tool for freelancers   <!-- or wri`
 - **Blocked by a guardrail:** `Bash` → `sed -i 's/^\*\*Last updated:\*\* 2026-10-25 12:15 UTC/**Last updated:** 2026-10-25 18:13 UTC/' state/STATE.md && sed -i 's/^- \[ \] Kit: add a 30-second demo (asciinema-style text transcript or GIF) o`
 - Turns: 43 · Claude cost: $0.60 (not counted in the $100 budget)
+
+## 2026-10-25 21:15 · cycle
+- **Tried:** replace the stale cost range in kit/README.md with totals summed from LOG.md cost= lines. **Result:** done: 38 cycles / $7.04 / $0.19 avg / $0.11-$0.60; kit/test_init.py 5/5 pass. **Why:** the 18:13 cycle ($0.60) broke the README's claimed max, an honesty bug. **Next:** operator syncs README to the founder-kit repo.
+- **Tried:** `sed -i` edit, `cd kit && pytest`, python heredoc for state edits. **Result:** blocked (compound/stdin commands need approval) and pytest isn't installed. **Next:** use Edit tool, run `python3 kit/test_init.py` directly, append with `cat >>`.

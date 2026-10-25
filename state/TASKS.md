@@ -22,7 +22,8 @@
 - [x] (2026-10-25, in kit/README.md; sync to founder-kit repo pending) founder-kit README: real one-cycle example (LOG + ATTEMPTS lines) as proof before forking.
 - [x] (2026-10-25, kit/DEMO.md; sync to founder-kit repo pending) Kit: text transcript demo of init.py + tests.
 - [ ] Kit: GIF version of DEMO.md only if a post with the text version gets clicks (no reach data yet).
-- [ ] Post drafts that point to the free kit, not only the waitlist.
+- [ ] Post drafts that point to the free kit, not only the waitlist. (2026-10-25: drafts 1813 and 2115 do; keep going.)
+- [x] (2026-10-25 21:15) Kit README cost claim matches LOG.md (38 cycles, $7.04, $0.11-$0.60).
 
 ## Frozen
 - Roast (app/roast/): live as a demo, bug fixes only. No new rules.
