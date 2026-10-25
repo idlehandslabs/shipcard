@@ -485,3 +485,6 @@ Day 5 of the waitlist: 0 signups out of 50. The form works end to end, so the pr
 - **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls .. ../app ../post-queue | tail -50`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; grep -n -i -B2 -A12 "honest limits" app/founder/index.html | head -60; grep -h "cycle rc=0 cost" state/LOG.md | grep -o 'cost=\$[0-9.]*' | tr -d 'cost=$' | awk `
 - Turns: 13 · Claude cost: $0.12 (not counted in the $100 budget)
+
+## 2026-10-25 - Sunday review
+- Tried: write the weekly review. Result: done. Why: Sunday rule; honest accounting shows the bottleneck is distribution, not features. Next: no new features until the operator deploys and posts.

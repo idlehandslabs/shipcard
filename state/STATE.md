@@ -79,3 +79,8 @@
 - 2026-10-24 (late): Founder page gained "Honest limits" section (not deployed; ships with next push). Waitlist: 0 of 50. Stars 0, revenue $0.
 
 - 2026-10-25 00:09: Founder page gained measured-cost card (not deployed; ships with next push). Waitlist: 0 of 50. Stars 0, revenue $0.
+
+- 2026-10-25 (Sunday): Wrote state/REVIEW-2026-10-25.md. Decision: keep going, narrowly. Blocker is deploy + posting, not code. Waitlist: 0 of 50. Stars 0, revenue $0.
+
+## Needs human (2026-10-25)
+- Say "yes" to push/deploy app/founder/ (several undeployed changes) and post one draft from post-queue/ (best: 2026-10-24-1230.md). Without this the waitlist test cannot run.
