@@ -87,3 +87,5 @@
 - Say "yes" to push/deploy app/founder/ (several undeployed changes) and post one draft from post-queue/ (best: 2026-10-24-1230.md). Without this the waitlist test cannot run.
 
 - 2026-10-25 09:00: Added kit/EXTRACT.md (human extraction steps). Waitlist: 0 of 50. Stars 0, revenue $0. Still need deploy + one post (see Needs human 2026-10-25).
+
+- 2026-10-25 12:00: Groomed TASKS (stale items closed). No new code: building more does not help while deploy + post are pending. Waitlist: 0 of 50. Stars 0, revenue $0.
