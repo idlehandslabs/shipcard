@@ -24,6 +24,9 @@ And this in `state/ATTEMPTS.md`, including the parts that went wrong:
 Plus one draft post in `post-queue/` for a human to publish (or not). The zeros are real.
 Recent cycles cost $0.12-$0.42 of Claude usage each.
 
+Want to see setup first? `DEMO.md` is a real one-minute transcript: `init.py`, the files
+it creates, and the tests passing.
+
 ## Setup (5 steps)
 1. Fork this repo (private is fine).
 2. Add two Actions secrets: `CLAUDE_CODE_OAUTH_TOKEN` (your own Claude login) and
