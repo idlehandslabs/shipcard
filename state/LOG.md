@@ -197,3 +197,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-25 21:15 UTC - Cycle (honest cost line in kit README)
 - kit/README.md claimed $0.12-$0.42 per cycle; counted LOG.md instead: 38 cycles, $7.04 total, $0.19 avg, $0.11-$0.60. Kit tests 5 pass. Draft post-queue/2026-10-25-2115.md. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
+2026-10-25T21:13:46Z  cycle rc=0 cost=$0.37809859999999995  log=logs/cycle-20261025T211237Z.json

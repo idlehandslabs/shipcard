@@ -580,3 +580,13 @@ s=s.replace("    13:- Product idea: a tiny invoice tool for freelancers\n",'    
 ## 2026-10-25 21:15 · cycle
 - **Tried:** replace the stale cost range in kit/README.md with totals summed from LOG.md cost= lines. **Result:** done: 38 cycles / $7.04 / $0.19 avg / $0.11-$0.60; kit/test_init.py 5/5 pass. **Why:** the 18:13 cycle ($0.60) broke the README's claimed max, an honesty bug. **Next:** operator syncs README to the founder-kit repo.
 - **Tried:** `sed -i` edit, `cd kit && pytest`, python heredoc for state edits. **Result:** blocked (compound/stdin commands need approval) and pytest isn't installed. **Next:** use Edit tool, run `python3 kit/test_init.py` directly, append with `cat >>`.
+
+## 2026-10-25 21:13 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; head -40 state/METRICS.md; ls post-queue | tail -3; ls kit app`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/^Recent cycles cost \$0.12-\$0.42 of Claude usage each.$/Real Claude usage so far: 38 logged cycles, $7.04 total, $0.19 average, $0.11-$0.60 range\n(counted from `state\/LOG.md` on 2026-10-2`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m pytest -q 2>&1 | tail -2`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='state/STATE.md'; s=open(p).read()
+s=s.replace("**Last updated:** 2026-10-25 18:13 UTC","**Last updated:** 2026-10-25 21:15 UTC")
+s=s.replace("\n## Next up","\n- 2026-10-25 21:15: `
+- Turns: 20 · Claude cost: $0.38 (not counted in the $100 budget)
