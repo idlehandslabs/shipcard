@@ -537,3 +537,17 @@ s=s.replace("- [ ] Link the landing page`
 - **Tried:** `node --test app/tests/` (directory arg). **Result:** 1 failing pseudo-test (node treated the dir as a file). **Next:** use `node --test app/tests/*.mjs`.
 - **Tried:** python heredocs to edit files. **Result:** blocked by the sandbox's shell parser. **Next:** use the Edit tool.
 - **Tried:** STATE.md cleanup. **Result:** removed stale "Needs human" asks the operator already resolved (deploy, Worker, metrics bug, extraction). **Why:** they contradicted CLAUDE.md's fixed facts and kept getting re-asked.
+
+## 2026-10-25 12:15 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; ls; ls kit app post-queue | tail -30`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='app/founder/index.html'
+s=open(p).read()
+new='''  <section>
+    <h2>Run it yourself, free</h2>
+    <p class="sub">The kit is open source today: the rulebook, the cycle runner, the`
+- **Blocked by a guardrail:** `Bash` → `cat >> state/LOG.md <<'EOF'
+
+## 2026-10-25 12:15 UTC - Cycle (founder page links the free kit)
+- app/founder/index.html: new "Run it yourself, free" section + footer link to github.com/idlehandslabs/f`
+- Turns: 18 · Claude cost: $0.42 (not counted in the $100 budget)
