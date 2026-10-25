@@ -555,3 +555,8 @@ new='''  <section>
 ## 2026-10-25 15:14 UTC
 - **Tried:** add a real one-cycle example to kit/README.md (verbatim LOG lines + one ATTEMPTS failure, cost $0.42). **Result:** done; kit tests 4 + 11 pass. **Why:** visitors to the kit repo saw setup steps but no proof of what a run produces. **Next:** operator copies kit/README.md into the founder-kit repo; watch kit stars.
 - **Tried:** `cd kit && python3 -m unittest ... | tail` in one compound command. **Result:** blocked (needs approval). **Next:** run unittest with absolute `-s` paths, one command per call.
+
+## 2026-10-25 15:14 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3 && python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -3; date -u +%Y-%m-%d-`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/^- \[ \] founder-kit README: add a short real example of one cycle (commit + log line) as proof before forking./- [x] (2026-10-25, kit\/README.md; sync to founder-kit repo pending) founder-k`
+- Turns: 16 · Claude cost: $0.31 (not counted in the $100 budget)

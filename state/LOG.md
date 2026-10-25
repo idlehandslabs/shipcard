@@ -189,3 +189,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-25 15:14 UTC - Cycle (kit README: a real cycle as proof)
 - kit/README.md: new "What one cycle looks like" section quoting a real LOG entry + ATTEMPTS failure from the 12:15 cycle. Kit tests 4 + 11 pass. Needs sync to the founder-kit repo (Needs human). Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
+2026-10-25T15:14:39Z  cycle rc=0 cost=$0.3100168  log=logs/cycle-20261025T151356Z.json
