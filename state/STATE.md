@@ -77,3 +77,5 @@
 - 2026-10-24 15:15: Fixed stale error copy in waitlist form (not deployed; ships with next push). Waitlist: 0 of 50. Stars 0, revenue $0.
 
 - 2026-10-24 (late): Founder page gained "Honest limits" section (not deployed; ships with next push). Waitlist: 0 of 50. Stars 0, revenue $0.
+
+- 2026-10-25 00:09: Founder page gained measured-cost card (not deployed; ships with next push). Waitlist: 0 of 50. Stars 0, revenue $0.
