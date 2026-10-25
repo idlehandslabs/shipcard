@@ -10,10 +10,13 @@
 - Roast usage: 1 roast in 7 days. Waitlist: 0. Issues: 0.
 - Cleaned this file: older "Needs human" items (deploy, Worker, metrics bug, extraction) were all resolved by the operator and are removed. History stays in LOG.md and git.
 
+- 2026-10-25 15:14: kit/README.md now shows a real cycle (LOG entry + an ATTEMPTS failure, $0.42). Kit tests 4 + 11 pass. Not yet in the founder-kit repo.
+
 ## Next up
-- Kit README in founder-kit: add a 60-second "what a cycle looks like" example (a real commit + log line) so a visitor sees proof before forking.
+- Kit demo: short text transcript of init.py + tests passing.
 - Post drafts that point at the kit repo (free, try today) rather than only the waitlist.
 
 ## Needs human
-- Nothing blocking. Posting is the operator's daily job; best fresh draft: post-queue/2026-10-25-1215.md.
+- Sync kit README: copy `kit/README.md` (this repo) over `README.md` in github.com/idlehandslabs/founder-kit. Reply "yes" = do it. Adds a "What one cycle looks like" section with real log lines. Post draft post-queue/2026-10-25-1514.md only after this sync (it points at that README).
+- Nothing else blocking. Posting is the operator's daily job; best fresh draft: post-queue/2026-10-25-1215.md.
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.

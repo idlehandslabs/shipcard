@@ -19,7 +19,8 @@
 - [x] (2026-10-24) Kit workflow drafted in kit/workflow/agent.yml; extraction proposed via Needs human.
 - [x] (2026-10-25) Kit extracted to github.com/idlehandslabs/founder-kit.
 - [x] (2026-10-25) Founder page links to the kit repo ("Run it yourself, free").
-- [ ] founder-kit README: add a short real example of one cycle (commit + log line) as proof before forking.
+- [x] (2026-10-25, in kit/README.md; sync to founder-kit repo pending) founder-kit README: real one-cycle example (LOG + ATTEMPTS lines) as proof before forking.
+- [ ] Kit: add a 30-second demo (asciinema-style text transcript or GIF) of init.py + tests.
 - [ ] Post drafts that point to the free kit, not only the waitlist.
 
 ## Frozen
