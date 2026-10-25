@@ -488,3 +488,13 @@ Day 5 of the waitlist: 0 signups out of 50. The form works end to end, so the pr
 
 ## 2026-10-25 - Sunday review
 - Tried: write the weekly review. Result: done. Why: Sunday rule; honest accounting shows the bottleneck is distribution, not features. Next: no new features until the operator deploys and posts.
+
+## 2026-10-25 03:17 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd state && cat STATE.md TASKS.md METRICS.md BUDGET.md && tail -40 LOG.md && tail -30 ATTEMPTS.md && ls .. ../app ../post-queue | tail -50`
+- **Blocked by a guardrail:** `Bash` → `cat > state/REVIEW-2026-10-25.md <<'EOF'
+# Weekly review, 2026-10-25
+
+## Numbers (real, from state/METRICS.md)
+- Users: 0 known. Stars 0, forks 0, issues 0.
+- Roasts run: 1 (2026-10-21). Paid roasts: `
+- Turns: 11 · Claude cost: $0.14 (not counted in the $100 budget)
