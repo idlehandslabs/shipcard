@@ -77,6 +77,9 @@ class InitTest(unittest.TestCase):
         self.assertIsNotNone(m, "README Tests heading lost its count")
         self.assertEqual((int(m[1]), int(m[2]), int(m[3])),
                          (n_own + n_agent, n_own, n_agent))
+        # Any other "all N tests" claim must also be today's number.
+        for n in re.findall(r"all (\d+) tests", (HERE / "README.md").read_text()):
+            self.assertEqual(int(n), n_own + n_agent, f"README says 'all {n} tests'")
 
     def test_readme_schedule_matches_workflow(self):
         # kit/workflow/ here; .github/workflows/ in the standalone founder-kit repo.

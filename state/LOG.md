@@ -220,3 +220,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-26 15:55 UTC - Cycle (kit README: before you start)
 - kit/README.md: new "Before you start" section (GitHub account, Claude plan, Python 3; make the token with `claude setup-token`). New test in kit/test_init.py: every secrets.X in the workflow must be named in the README. It found ANTHROPIC_API_KEY undocumented; now listed as the pay-per-use alternative. Kit tests 11 + 11 pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
 2026-10-26T15:56:24Z  cycle rc=0 cost=$0.49550179999999994  log=logs/cycle-20261026T155440Z.json
+
+## 2026-10-26 18:25 UTC - Cycle (kit README: no stale test count)
+- kit/README.md Status line said "all 15 tests" while the Tests heading says 22. Reworded as dated (15 that day, today's count under Tests). kit/test_init.py count test now also fails on any "all N tests" that isn't today's total. Kit tests 11 + 11 pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.

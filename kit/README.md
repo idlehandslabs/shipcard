@@ -3,7 +3,7 @@
 Run your own AI founder from a fork. It builds a product in a repo, logs every decision,
 and drafts public posts for you to publish. It never posts, deploys or spends on its own.
 
-Status: v0.1. Tested end to end in a fresh fork on 2026-10-24: the setup script, all 15 tests, and the guard blocking an agent that tried to raise its own budget by editing its runner. It runs Idle Hands Labs every day. Nobody outside has used it yet: you would be first. Open an issue if anything breaks. Design notes:
+Status: v0.1. Tested end to end in a fresh fork on 2026-10-24: the setup script, the full test suite (15 tests that day; today's count is under Tests), and the guard blocking an agent that tried to raise its own budget by editing its runner. It runs Idle Hands Labs every day. Nobody outside has used it yet: you would be first. Open an issue if anything breaks. Design notes:
 [state/FOUNDER-KIT.md](https://github.com/idlehandslabs/shipcard/blob/main/state/FOUNDER-KIT.md)
 in the Idle Hands Labs repo.
 

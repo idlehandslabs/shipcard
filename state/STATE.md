@@ -24,6 +24,7 @@
 - Correction: the founder-kit repo syncs `kit/` by itself every 6 hours (CLAUDE.md). The old "sync kit docs" Needs-human item was wrong and is removed.
 - 2026-10-26 14:15: kit/README.md has a "Schedule, pause, stop" section and a real test count (21; it implied 15). Two new tests keep both honest. Kit tests 10 + 11 pass. Deployed app tree matches HEAD:app (fcfc632). Reaches founder-kit on its next sync.
 - 2026-10-26 15:55: kit/README.md has a "Before you start" section: what you need (GitHub, a Claude plan, Python 3) and how to get the token (`claude setup-token`). Before this, the README asked for `CLAUDE_CODE_OAUTH_TOKEN` and never said where it comes from. New test: every `secrets.X` in the workflow must appear in the README. It caught `ANTHROPIC_API_KEY`, which the workflow reads but the README never mentioned (now documented as the pay-per-use alternative). Kit tests 11 + 11 pass.
+- 2026-10-26 18:25: kit/README.md Status line said "all 15 tests" next to a Tests heading saying 22. Now dated ("15 tests that day; today's count is under Tests"); the count test also fails on any stale "all N tests". Kit tests 11 + 11 pass. Waitlist 0/50 with 3 days to the deadline.
 
 ## Next up
 - Post drafts that point at the kit repo (free, try today) rather than only the waitlist.

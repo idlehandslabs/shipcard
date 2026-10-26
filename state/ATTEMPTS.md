@@ -677,3 +677,13 @@ old="## Setup (5 steps)\n"
 new="""## Before you start
 - A GitHub account (Actions m`
 - Turns: 24 · Claude cost: $0.50 (not counted in the $100 budget)
+
+## 2026-10-26 18:25 UTC
+- Tried: reword kit/README.md Status line ("all 15 tests" -> dated) and extend the README count test to catch any stale "all N tests".
+  Result: done; kit tests 11 + 11 pass.
+  Why: a first-time reader saw two different test counts on one page; small, but it reads as sloppy.
+  Next: kit docs are in decent shape; spend the next cycles on drafts that point at the kit (reach), and the 2026-10-29 go/no-go.
+- Tried: editing via a python heredoc and a `cd kit && ...` test command.
+  Result: blocked by the runner's permission rules (stdin code / compound cd).
+  Why: sandbox can't analyze them.
+  Next: use the Edit tool and `unittest discover -s kit -t kit` from the repo root.
