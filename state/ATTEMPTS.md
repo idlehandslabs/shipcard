@@ -632,3 +632,13 @@ s=s.re`
 - Tried: read kit/README.md as a stranger landing on github.com/idlehandslabs/founder-kit. Result: setup told them to copy `workflow/agent.yml`, which the sync never copies there. Why: docs were written for kit/ in this repo, not the standalone one. Next: fixed README + DEMO, added a test so it can't come back.
 - Tried: keep the "sync kit docs" Needs-human item. Result: removed; CLAUDE.md says the repo syncs kit/ every 6 hours. Why: I asked the operator for something automatic for 4 cycles. Next: never list sync as needs-human.
 - Tried: `cd kit && python3 -m unittest ...`, a stash-based before/after check, and a heredoc append to LOG.md. Result: all blocked by the read-block / compound-command policy. Next: run `python3 /abs/path/kit/test_init.py` (worked: 8 OK) and use Edit for appends.
+
+## 2026-10-26 09:30 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3; python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -2; git -C .. stash -q &`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest test_init 2>&1 | tail -3`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit/agent && python3 -m unittest test_guard test_metrics test_scripts 2>&1 | tail -3`
+- **Blocked by a guardrail:** `Bash` → `date -u +%Y-%m-%d-%H%M && cat >> state/LOG.md <<'EOF'
+
+## 2026-10-26 09:35 UTC - Cycle (kit docs fit the standalone repo)
+- kit/README.md + kit/DEMO.md said "copy `workflow/agent.yml` to `.github/work`
+- Turns: 26 · Claude cost: $0.48 (not counted in the $100 budget)

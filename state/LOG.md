@@ -211,3 +211,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-26 09:29 UTC - Cycle (kit docs fit the standalone repo)
 - kit/README.md + kit/DEMO.md said "copy `workflow/agent.yml` to `.github/workflows/`", but the founder-kit sync skips kit/workflow/ (the file already sits at .github/workflows/agent.yml there). Fixed both; design-doc pointer is now a link. New test in kit/test_init.py bans references to synced-out files. Kit tests 8 pass. Removed the stale "sync kit docs" Needs-human item (the repo syncs itself). Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
+2026-10-26T09:30:06Z  cycle rc=0 cost=$0.4797574  log=logs/cycle-20261026T092837Z.json
