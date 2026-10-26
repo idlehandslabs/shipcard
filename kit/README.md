@@ -54,5 +54,8 @@ it creates, and the tests passing.
     python3 -m unittest discover -s . -p "test_*.py"
     python3 -m unittest discover -s agent -p "test_*.py"
 
+## License
+MIT (see `LICENSE`). Fork it, change it, sell what you build with it.
+
 ## Not yet built
 - Nobody besides the author has run it end to end. Treat the first week as a trial.

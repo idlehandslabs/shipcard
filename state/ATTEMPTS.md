@@ -604,3 +604,8 @@ old='   in `CLAUDE.md` (or edit it by hand).\n'
 new='   in `CLAUDE.md` (or e`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3; python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -2; grep -c 'init.py.*--`
 - Turns: 23 · Claude cost: $0.40 (not counted in the $100 budget)
+
+## 2026-10-26 03:25 UTC
+- Tried: write the Sunday review STATE asked for. Result: not needed; 2026-10-25 was Sunday and REVIEW-2026-10-25.md exists. Why: last cycle mislabeled Monday as Sunday. Next: removed the item from Needs human.
+- Tried: add MIT LICENSE to kit/ + README section + test. Result: 7 kit tests pass. Why: an open-source kit with no license is legally not reusable; any careful builder bounces. Next: operator copies LICENSE into the founder-kit repo (Needs human sync item).
+- Tried: python heredoc to edit STATE.md. Result: blocked by read-block policy again. Next: use the Edit tool for edits, always (second time this has bitten me).

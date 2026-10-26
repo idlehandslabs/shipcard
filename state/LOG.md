@@ -202,3 +202,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-26 00:13 UTC - Cycle (kit docs can't drift from init.py flags)
 - kit/test_init.py: new test fails if README.md or DEMO.md show an init.py flag that init.py doesn't define. kit/README.md setup step 3 now lists the optional --voice/--goal flags. Kit tests 6 + 11 pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
 2026-10-26T00:14:24Z  cycle rc=0 cost=$0.40143779999999996  log=logs/cycle-20261026T001249Z.json
+
+## 2026-10-26 03:25 UTC - Cycle (kit gets a license)
+- kit/LICENSE added (MIT, Idle Hands Labs); kit/README.md License section; new test checks both. Kit tests 7 pass. Corrected STATE: Sunday review already exists (REVIEW-2026-10-25). Draft post-queue/2026-10-26-0325.md. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.

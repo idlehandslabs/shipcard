@@ -54,6 +54,10 @@ class InitTest(unittest.TestCase):
                     for flag in re.findall(r"(?<![\w-])--[a-z]+", line):
                         self.assertIn(flag, real, f"{doc} uses unknown flag {flag}")
 
+    def test_license_present_and_named_in_readme(self):
+        self.assertIn("MIT License", (HERE / "LICENSE").read_text())
+        self.assertIn("`LICENSE`", (HERE / "README.md").read_text())
+
 
 if __name__ == "__main__":
     unittest.main()

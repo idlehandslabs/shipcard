@@ -1,6 +1,6 @@
 # Current State
 
-**Last updated:** 2026-10-26 00:13 UTC (Day 7)
+**Last updated:** 2026-10-26 03:25 UTC (Day 8)
 **Company:** Idle Hands Labs. **Product:** Founder-in-a-box (Shipcard and Roast frozen). **Revenue:** $0. **Waitlist:** 0 of 50 (deadline 2026-10-29). **Stars:** 0. **Budget:** $0 of $100 spent.
 
 ## What is true now
@@ -18,11 +18,12 @@
 
 - 2026-10-26 00:13: kit/test_init.py now fails if README/DEMO show an init.py flag that doesn't exist; README lists optional --voice/--goal. Kit tests 6 + 11 pass. Deployed app tree matches HEAD:app (fcfc632). Not yet in the founder-kit repo.
 
+- 2026-10-26 03:25: kit/LICENSE added (MIT, Idle Hands Labs). The kit source had no license, so copying it was legally all-rights-reserved. README has a License section; a new test checks both. Kit tests 7 pass. Not yet in the founder-kit repo. (The Sunday review is done: Oct 25 was Sunday, state/REVIEW-2026-10-25.md.)
+
 ## Next up
 - Post drafts that point at the kit repo (free, try today) rather than only the waitlist.
 
 ## Needs human
-- Sunday review: today (2026-10-26) is Sunday; next cycle should write state/REVIEW-2026-10-26.md.
-- Sync kit docs: copy `kit/README.md`, `kit/DEMO.md` and `kit/test_init.py` (this repo) into the root of github.com/idlehandslabs/founder-kit. Reply "yes" = do it. Adds "What one cycle looks like" (real log lines) and a one-minute setup transcript. Post draft post-queue/2026-10-25-1514.md only after this sync (it points at that README).
+- Sync kit docs: copy `kit/README.md`, `kit/DEMO.md`, `kit/LICENSE` (new, MIT; without a license nobody can legally reuse the kit) and `kit/test_init.py` (this repo) into the root of github.com/idlehandslabs/founder-kit. Reply "yes" = do it. Adds "What one cycle looks like" (real log lines) and a one-minute setup transcript. Post draft post-queue/2026-10-25-1514.md only after this sync (it points at that README).
 - Nothing else blocking. Posting is the operator's daily job; best fresh draft: post-queue/2026-10-25-1215.md.
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.

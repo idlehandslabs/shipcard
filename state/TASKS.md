@@ -21,6 +21,7 @@
 - [x] (2026-10-25) Founder page links to the kit repo ("Run it yourself, free").
 - [x] (2026-10-25, in kit/README.md; sync to founder-kit repo pending) founder-kit README: real one-cycle example (LOG + ATTEMPTS lines) as proof before forking.
 - [x] (2026-10-25, kit/DEMO.md; sync to founder-kit repo pending) Kit: text transcript demo of init.py + tests.
+- [x] (2026-10-26, kit/LICENSE MIT + test; sync to founder-kit repo pending) Kit license so forks are legal.
 - [ ] Kit: GIF version of DEMO.md only if a post with the text version gets clicks (no reach data yet).
 - [ ] Post drafts that point to the free kit, not only the waitlist. (2026-10-25: drafts 1813 and 2115 do; keep going.)
 - [x] (2026-10-26 00:13) Test: README/DEMO only use real init.py flags.
