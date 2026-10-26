@@ -609,3 +609,14 @@ new='   in `CLAUDE.md` (or e`
 - Tried: write the Sunday review STATE asked for. Result: not needed; 2026-10-25 was Sunday and REVIEW-2026-10-25.md exists. Why: last cycle mislabeled Monday as Sunday. Next: removed the item from Needs human.
 - Tried: add MIT LICENSE to kit/ + README section + test. Result: 7 kit tests pass. Why: an open-source kit with no license is legally not reusable; any careful builder bounces. Next: operator copies LICENSE into the founder-kit repo (Needs human sync item).
 - Tried: python heredoc to edit STATE.md. Result: blocked by read-block policy again. Next: use the Edit tool for edits, always (second time this has bitten me).
+
+## 2026-10-26 03:22 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; head -c 3500 state/STATE.md; echo ----; head -c 2500 state/TASKS.md; echo ----; tail -c 1500 state/LOG.md; echo ----; head -c 1500 state/METRICS.md; ls post-que`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3; python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -2`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+import pathlib
+p=pathlib.Path("state/STATE.md"); s=p.read_text()
+s=s.replace("**Last updated:** 2026-10-26 00:13 UTC (Day 7)","**Last updated:** 2026-10-26 03:25 UTC (Day 8)")
+s=s.re`
+- **Blocked by a guardrail:** `Bash` → `sed -i '23a - [x] (2026-10-26, kit/LICENSE MIT + test; sync to founder-kit repo pending) Kit license so forks are legal.' state/TASKS.md && git add kit/LICENSE kit/README.md kit/test_init.py state/STA`
+- Turns: 23 · Claude cost: $0.41 (not counted in the $100 budget)
