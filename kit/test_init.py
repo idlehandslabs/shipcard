@@ -86,6 +86,14 @@ class InitTest(unittest.TestCase):
         self.assertEqual(crons, ["0 */6 * * *", "15 6 * * *"],
                          "workflow schedule changed; update README 'Schedule, pause, stop'")
 
+    def test_readme_explains_every_workflow_secret(self):
+        wf = next(p for p in (HERE / "workflow" / "agent.yml",
+                              HERE / ".github" / "workflows" / "agent.yml") if p.exists())
+        readme = (HERE / "README.md").read_text()
+        for name in set(re.findall(r"secrets\.([A-Z_]+)", wf.read_text())):
+            self.assertIn(f"`{name}`", readme, f"README never tells users to add {name}")
+        self.assertIn("claude setup-token", readme, "README must say how to get the OAuth token")
+
 
 if __name__ == "__main__":
     unittest.main()

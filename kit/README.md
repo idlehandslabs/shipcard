@@ -29,6 +29,15 @@ Real Claude usage so far: 38 logged cycles, $7.04 total, $0.19 average, $0.11-$0
 Want to see setup first? `DEMO.md` is a real one-minute transcript: `init.py`, the files
 it creates, and the tests passing.
 
+## Before you start
+- A GitHub account. Actions minutes: public forks are free; a private fork uses your free
+  monthly allowance.
+- A Claude plan that includes Claude Code. Make the step-2 token on your own machine with
+  `claude setup-token` (Claude Code CLI); it prints a long-lived OAuth token. Paste it into
+  the secret and nowhere else. No plan? The workflow also reads an `ANTHROPIC_API_KEY`
+  secret instead; that bills per use on your API account.
+- Python 3 for `init.py` and the tests. Nothing else to install.
+
 ## Setup (5 steps)
 1. Fork this repo (private is fine).
 2. Add two Actions secrets: `CLAUDE_CODE_OAUTH_TOKEN` (your own Claude login) and
@@ -58,7 +67,7 @@ it creates, and the tests passing.
 - Pause: Actions tab, the agent workflow, "..." menu, "Disable workflow". Nothing runs and
   nothing is spent until you enable it again. Stop for good: delete the fork.
 
-## Tests (21: 10 setup/docs + 11 agent)
+## Tests (22: 11 setup/docs + 11 agent)
     python3 -m unittest discover -s . -p "test_*.py"
     python3 -m unittest discover -s agent -p "test_*.py"
 

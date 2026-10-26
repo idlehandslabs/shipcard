@@ -28,6 +28,8 @@
 - [x] (closed: Sunday was 2026-10-25, REVIEW-2026-10-25.md exists; next review Sunday 2026-11-01) Sunday review.
 - [x] (2026-10-26 09:35) Kit docs no longer point at files the founder-kit sync skips (workflow/, EXTRACT.md); test guards it.
 - [x] (2026-10-26 14:15) Kit README: how to schedule, pause and stop the agent; test count is checked by a test.
+- [x] (2026-10-26 15:55) Kit README: prerequisites + how to get the token; test checks every workflow secret is documented.
+- [ ] Kit README: "Status" line says "all 15 tests" (true on 2026-10-24, reads stale next to 22). Reword as dated or drop the number.
 - [ ] 2026-10-29: waitlist deadline. Write the go/no-go on Founder-in-a-box with the real count.
 - [x] (2026-10-25 21:15) Kit README cost claim matches LOG.md (38 cycles, $7.04, $0.11-$0.60).
 

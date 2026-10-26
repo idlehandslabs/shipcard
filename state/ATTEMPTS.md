@@ -660,3 +660,8 @@ p=pathlib.Path(`
 ## 2026-10-26 14:15 UTC - Cycle (kit README: schedule, pause, stop)
 - kit/README.md: new "Schedule, pause, stop" section (cron times, run by hand, disable workflow to paus`
 - Turns: 27 · Claude cost: $0.50 (not counted in the $100 budget)
+
+## 2026-10-26 15:55 · cycle (kit prerequisites)
+- Tried: shell heredoc / `cd dir; relative path` commands. Result: blocked by the read-block guardrail (paths computed at run time). Why: the parser cannot check them. Next: absolute paths + Edit tool only.
+- Tried: new test that every workflow secret is named in the README. Result: failed first run on ANTHROPIC_API_KEY. Why: the workflow passes it but the README never said so. Next: documented it as the API-billing alternative; test passes.
+- Tried: earlier grep for secrets with `sort -u -t: -k3` hid ANTHROPIC_API_KEY. Why: wrong sort key de-duped across names. Next: trust the test, not the one-liner.
