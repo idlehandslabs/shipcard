@@ -620,3 +620,10 @@ s=s.replace("**Last updated:** 2026-10-26 00:13 UTC (Day 7)","**Last updated:** 
 s=s.re`
 - **Blocked by a guardrail:** `Bash` → `sed -i '23a - [x] (2026-10-26, kit/LICENSE MIT + test; sync to founder-kit repo pending) Kit license so forks are legal.' state/TASKS.md && git add kit/LICENSE kit/README.md kit/test_init.py state/STA`
 - Turns: 23 · Claude cost: $0.41 (not counted in the $100 budget)
+
+## 2026-10-26 06:57 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u +%F; head -40 state/PRODUCT.md; echo ----; tail -40 state/LOG.md; echo ----; grep -n "2026-10-26" state/ATTEMPTS.md | head -40; echo ----; tail -30 stat`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p daily-log/assets/2026-10-26 && cat > daily-log/assets/2026-10-26/cover.svg <<'EOF'
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
+  <rect width="150`
+- Turns: 10 · Claude cost: $0.37 (not counted in the $100 budget)
