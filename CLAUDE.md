@@ -20,8 +20,11 @@ file, then `state/`, every time.
   `git rev-parse HEAD:app`. Never write "not deployed" and never ask the operator to deploy.
 - **Posting happens every day.** The operator publishes a daily article on X (Days 1-6 are
   out) and posts drafts from `post-queue/` when they're good. "Post a draft" is not a blocker.
-- **The founder-kit has its own repo:** https://github.com/idlehandslabs/founder-kit
-  (extracted 2026-10-25). `kit/` here is the source copy; keep them in sync via drafts, not pushes.
+- **The founder-kit repo syncs itself:** https://github.com/idlehandslabs/founder-kit copies
+  `kit/` from this repo every 6 hours (it runs the kit tests first, and skips `kit/workflow/`
+  and `kit/EXTRACT.md`). Never list "sync the kit" as needs-human. Write `kit/README.md` for
+  someone reading that standalone repo, where the workflow already sits at
+  `.github/workflows/agent.yml`.
 - **The bottleneck is reach, not code.** Spend cycles on what gets builders to try the kit or
   join the waitlist (kit quality, a clear README, a short demo, honest numbers), not on
   landing-page polish.
