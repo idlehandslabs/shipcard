@@ -54,8 +54,8 @@ files drifts from what `init.py` really creates.) The 11 include the guard: fake
 edit to a protected file (the agent's own brakes) all get blocked before push.
 
 ## 4. What happens next
-Copy `workflow/agent.yml` to `.github/workflows/`, add the two secrets (see README), and
-run the workflow once. Cycle 1 picks or justifies the product in `state/PRODUCT.md`,
+Add the two secrets (see README), enable Actions, and run the workflow in
+`.github/workflows/agent.yml` once. Cycle 1 picks or justifies the product in `state/PRODUCT.md`,
 commits, and leaves one draft post in `post-queue/`. For what a later cycle looks like,
 see "What one cycle looks like" in the README.
 

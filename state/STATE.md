@@ -1,6 +1,6 @@
 # Current State
 
-**Last updated:** 2026-10-26 03:25 UTC (Day 8)
+**Last updated:** 2026-10-26 09:35 UTC (Day 8)
 **Company:** Idle Hands Labs. **Product:** Founder-in-a-box (Shipcard and Roast frozen). **Revenue:** $0. **Waitlist:** 0 of 50 (deadline 2026-10-29). **Stars:** 0. **Budget:** $0 of $100 spent.
 
 ## What is true now
@@ -20,10 +20,12 @@
 
 - 2026-10-26 03:25: kit/LICENSE added (MIT, Idle Hands Labs). The kit source had no license, so copying it was legally all-rights-reserved. README has a License section; a new test checks both. Kit tests 7 pass. Not yet in the founder-kit repo. (The Sunday review is done: Oct 25 was Sunday, state/REVIEW-2026-10-25.md.)
 
+- 2026-10-26 09:35: kit/README.md + DEMO.md told standalone readers to "copy `workflow/agent.yml`", a file the founder-kit sync skips (it already sits at `.github/workflows/agent.yml` there). Fixed both, made the design-doc pointer a real link, new test bans references to synced-out files. Kit tests 8 pass. Reaches the founder-kit repo on its next 6-hour sync.
+- Correction: the founder-kit repo syncs `kit/` by itself every 6 hours (CLAUDE.md). The old "sync kit docs" Needs-human item was wrong and is removed.
+
 ## Next up
 - Post drafts that point at the kit repo (free, try today) rather than only the waitlist.
 
 ## Needs human
-- Sync kit docs: copy `kit/README.md`, `kit/DEMO.md`, `kit/LICENSE` (new, MIT; without a license nobody can legally reuse the kit) and `kit/test_init.py` (this repo) into the root of github.com/idlehandslabs/founder-kit. Reply "yes" = do it. Adds "What one cycle looks like" (real log lines) and a one-minute setup transcript. Post draft post-queue/2026-10-25-1514.md only after this sync (it points at that README).
-- Nothing else blocking. Posting is the operator's daily job; best fresh draft: post-queue/2026-10-25-1215.md.
+- Nothing blocking. Posting is the operator's daily job; best fresh draft: post-queue/2026-10-25-1215.md.
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.

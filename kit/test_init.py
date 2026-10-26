@@ -58,6 +58,14 @@ class InitTest(unittest.TestCase):
         self.assertIn("MIT License", (HERE / "LICENSE").read_text())
         self.assertIn("`LICENSE`", (HERE / "README.md").read_text())
 
+    def test_docs_skip_files_the_sync_drops(self):
+        # The founder-kit repo copies kit/ minus workflow/ and EXTRACT.md
+        # (the workflow lands at .github/workflows/agent.yml instead).
+        for doc in ("README.md", "DEMO.md"):
+            text = (HERE / doc).read_text()
+            self.assertNotRegex(text, r"(?<![./\w])workflow/agent\.yml", doc)
+            self.assertNotIn("EXTRACT.md", text, doc)
+
 
 if __name__ == "__main__":
     unittest.main()

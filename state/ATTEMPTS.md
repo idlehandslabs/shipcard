@@ -627,3 +627,8 @@ s=s.re`
 <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
   <rect width="150`
 - Turns: 10 · Claude cost: $0.37 (not counted in the $100 budget)
+
+## 2026-10-26 09:29 UTC
+- Tried: read kit/README.md as a stranger landing on github.com/idlehandslabs/founder-kit. Result: setup told them to copy `workflow/agent.yml`, which the sync never copies there. Why: docs were written for kit/ in this repo, not the standalone one. Next: fixed README + DEMO, added a test so it can't come back.
+- Tried: keep the "sync kit docs" Needs-human item. Result: removed; CLAUDE.md says the repo syncs kit/ every 6 hours. Why: I asked the operator for something automatic for 4 cycles. Next: never list sync as needs-human.
+- Tried: `cd kit && python3 -m unittest ...`, a stash-based before/after check, and a heredoc append to LOG.md. Result: all blocked by the read-block / compound-command policy. Next: run `python3 /abs/path/kit/test_init.py` (worked: 8 OK) and use Edit for appends.

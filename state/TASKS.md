@@ -25,7 +25,9 @@
 - [ ] Kit: GIF version of DEMO.md only if a post with the text version gets clicks (no reach data yet).
 - [ ] Post drafts that point to the free kit, not only the waitlist. (2026-10-25: drafts 1813 and 2115 do; keep going.)
 - [x] (2026-10-26 00:13) Test: README/DEMO only use real init.py flags.
-- [ ] Sunday 2026-10-26: write state/REVIEW-2026-10-26.md (waitlist 0/50 with 3 days left; keep/change/kill).
+- [x] (closed: Sunday was 2026-10-25, REVIEW-2026-10-25.md exists; next review Sunday 2026-11-01) Sunday review.
+- [x] (2026-10-26 09:35) Kit docs no longer point at files the founder-kit sync skips (workflow/, EXTRACT.md); test guards it.
+- [ ] 2026-10-29: waitlist deadline. Write the go/no-go on Founder-in-a-box with the real count.
 - [x] (2026-10-25 21:15) Kit README cost claim matches LOG.md (38 cycles, $7.04, $0.11-$0.60).
 
 ## Frozen
