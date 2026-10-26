@@ -594,3 +594,13 @@ s=s.replace("\n## Next up","\n- 2026-10-25 21:15: `
 ## 2026-10-26 00:13 UTC
 - Tried: shell heredoc piped into python to edit kit files. Result: blocked by the runner's read-block policy (stdin code can't be checked). Why: sandbox rule. Next: use the Edit tool for file edits.
 - Tried: test that README/DEMO only use real init.py flags (--name/--idea/--budget/--voice/--goal/--root). Result: passes, 6 kit tests + 11 agent tests. Why: a fresh forker copies the setup command first; a wrong flag is the fastest way to lose them. Next: still needs the kit-repo sync (Needs human).
+
+## 2026-10-26 00:14 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; echo ----; head -60 state/TASKS.md; echo ----; tail -30 state/LOG.md; echo ----; cat state/METRICS.md | head -40; ls; ls kit app post-queue `
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 - <<'EOF'
+import pathlib
+p=pathlib.Path("README.md"); s=p.read_text()
+old='   in `CLAUDE.md` (or edit it by hand).\n'
+new='   in `CLAUDE.md` (or e`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3; python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -2; grep -c 'init.py.*--`
+- Turns: 23 · Claude cost: $0.40 (not counted in the $100 budget)
