@@ -695,3 +695,10 @@ p='kit/README.md'; s=open(p).read()
 s=s.replace("the setup script, all 15 tests, and the guard","the setup script, the full test suite (15 tests that day; see Tests below for today's`
 - **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest discover -p 'test_*.py' 2>&1 | tail -3; cd agent && python3 -m unittest discover -p 'test_*.py' 2>&1 | tail -3`
 - Turns: 15 · Claude cost: $0.31 (not counted in the $100 budget)
+
+## 2026-10-26 21:21 UTC - Kit README troubleshooting
+- **Tried:** add a "When a cycle fails" section to kit/README.md from failures in this file, plus a test tying the quoted messages to capture.py and guard.py.
+- **Result:** worked. Kit tests 12 + 11 pass.
+- **Why:** a forker's first failed run (empty credits, a blocked command) looks like breakage; the README never said what those lines mean.
+- **Also failed:** compound `cd ...; cat ...` reads, `cd && grep`, and a python heredoc script were blocked by the permission layer again. Single commands with absolute paths, Grep, Read, Edit and Write worked.
+- **Next:** stop polishing the README; waitlist is 0/50 with 3 days left, so drafts pointing at the kit matter more.

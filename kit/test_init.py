@@ -97,6 +97,17 @@ class InitTest(unittest.TestCase):
             self.assertIn(f"`{name}`", readme, f"README never tells users to add {name}")
         self.assertIn("claude setup-token", readme, "README must say how to get the OAuth token")
 
+    def test_readme_failure_messages_match_scripts(self):
+        # The troubleshooting section quotes real output; fail if the scripts' wording drifts.
+        readme = (HERE / "README.md").read_text()
+        capture = (HERE / "agent" / "capture.py").read_text()
+        guard = (HERE / "agent" / "guard.py").read_text()
+        self.assertIn("## When a cycle fails", readme)
+        for msg, src in (("Run failed", capture), ("Blocked by a guardrail", capture),
+                         ("PUSH BLOCKED by guard.py", guard)):
+            self.assertIn(msg, src, f"{msg!r} no longer printed by the scripts")
+            self.assertIn(msg, readme, f"README doesn't explain {msg!r}")
+
 
 if __name__ == "__main__":
     unittest.main()

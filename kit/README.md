@@ -67,7 +67,18 @@ it creates, and the tests passing.
 - Pause: Actions tab, the agent workflow, "..." menu, "Disable workflow". Nothing runs and
   nothing is spent until you enable it again. Stop for good: delete the fork.
 
-## Tests (22: 11 setup/docs + 11 agent)
+## When a cycle fails
+Failures land in `state/ATTEMPTS.md`, written by `agent/capture.py`, so the next cycle
+reads them too. These are the three we actually hit while running it:
+- `Run failed (exit 1): Credit balance is too low`: the Claude account behind your token
+  ran out. Top it up or switch token; nothing was committed that cycle.
+- `Blocked by a guardrail: Bash → ...`: the permission layer refused a command (we saw
+  `curl`, and compound `cd ...; cat ...` reads). Working as designed. The agent retries
+  with the file tools next cycle; if one blocked command keeps repeating, read it.
+- `PUSH BLOCKED by guard.py:` in the Actions log: the diff contained a secret, an email or
+  one of your `PRIVATE_TERMS`. Nothing was pushed. The next cycle has to remove it.
+
+## Tests (23: 12 setup/docs + 11 agent)
     python3 -m unittest discover -s . -p "test_*.py"
     python3 -m unittest discover -s agent -p "test_*.py"
 
