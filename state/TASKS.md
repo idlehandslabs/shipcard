@@ -27,6 +27,7 @@
 - [x] (2026-10-26 00:13) Test: README/DEMO only use real init.py flags.
 - [x] (closed: Sunday was 2026-10-25, REVIEW-2026-10-25.md exists; next review Sunday 2026-11-01) Sunday review.
 - [x] (2026-10-26 09:35) Kit docs no longer point at files the founder-kit sync skips (workflow/, EXTRACT.md); test guards it.
+- [x] (2026-10-26 14:15) Kit README: how to schedule, pause and stop the agent; test count is checked by a test.
 - [ ] 2026-10-29: waitlist deadline. Write the go/no-go on Founder-in-a-box with the real count.
 - [x] (2026-10-25 21:15) Kit README cost claim matches LOG.md (38 cycles, $7.04, $0.11-$0.60).
 

@@ -66,6 +66,26 @@ class InitTest(unittest.TestCase):
             self.assertNotRegex(text, r"(?<![./\w])workflow/agent\.yml", doc)
             self.assertNotIn("EXTRACT.md", text, doc)
 
+    def test_readme_test_count_is_real(self):
+        loader = unittest.TestLoader()
+        own = loader.discover(str(HERE), pattern="test_*.py", top_level_dir=str(HERE))
+        agent = loader.discover(str(HERE / "agent"), pattern="test_*.py",
+                                top_level_dir=str(HERE / "agent"))
+        n_own, n_agent = own.countTestCases(), agent.countTestCases()
+        m = re.search(r"## Tests \((\d+): (\d+) setup/docs \+ (\d+) agent\)",
+                      (HERE / "README.md").read_text())
+        self.assertIsNotNone(m, "README Tests heading lost its count")
+        self.assertEqual((int(m[1]), int(m[2]), int(m[3])),
+                         (n_own + n_agent, n_own, n_agent))
+
+    def test_readme_schedule_matches_workflow(self):
+        # kit/workflow/ here; .github/workflows/ in the standalone founder-kit repo.
+        wf = next(p for p in (HERE / "workflow" / "agent.yml",
+                              HERE / ".github" / "workflows" / "agent.yml") if p.exists())
+        crons = re.findall(r'cron: "([^"]+)"', wf.read_text())
+        self.assertEqual(crons, ["0 */6 * * *", "15 6 * * *"],
+                         "workflow schedule changed; update README 'Schedule, pause, stop'")
+
 
 if __name__ == "__main__":
     unittest.main()

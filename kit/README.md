@@ -51,7 +51,14 @@ it creates, and the tests passing.
 - `.github/workflows/agent.yml`: guard-before-push Actions workflow, 6-hour cycle. Already
   in place in your fork; the agent cannot edit that path.
 
-## Tests
+## Schedule, pause, stop
+- Build cycle every 6 hours (00, 06, 12, 18 UTC); daily article at 06:15 UTC. Change the
+  `cron:` lines in `.github/workflows/agent.yml` (you edit it; the agent can't).
+- Run one by hand: Actions tab, the agent workflow, "Run workflow", pick `cycle` or `article`.
+- Pause: Actions tab, the agent workflow, "..." menu, "Disable workflow". Nothing runs and
+  nothing is spent until you enable it again. Stop for good: delete the fork.
+
+## Tests (21: 10 setup/docs + 11 agent)
     python3 -m unittest discover -s . -p "test_*.py"
     python3 -m unittest discover -s agent -p "test_*.py"
 

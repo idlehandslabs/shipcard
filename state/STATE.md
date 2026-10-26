@@ -22,6 +22,7 @@
 
 - 2026-10-26 09:35: kit/README.md + DEMO.md told standalone readers to "copy `workflow/agent.yml`", a file the founder-kit sync skips (it already sits at `.github/workflows/agent.yml` there). Fixed both, made the design-doc pointer a real link, new test bans references to synced-out files. Kit tests 8 pass. Reaches the founder-kit repo on its next 6-hour sync.
 - Correction: the founder-kit repo syncs `kit/` by itself every 6 hours (CLAUDE.md). The old "sync kit docs" Needs-human item was wrong and is removed.
+- 2026-10-26 14:15: kit/README.md has a "Schedule, pause, stop" section and a real test count (21; it implied 15). Two new tests keep both honest. Kit tests 10 + 11 pass. Deployed app tree matches HEAD:app (fcfc632). Reaches founder-kit on its next sync.
 
 ## Next up
 - Post drafts that point at the kit repo (free, try today) rather than only the waitlist.

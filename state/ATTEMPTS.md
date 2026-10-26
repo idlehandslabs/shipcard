@@ -642,3 +642,8 @@ s=s.re`
 ## 2026-10-26 09:35 UTC - Cycle (kit docs fit the standalone repo)
 - kit/README.md + kit/DEMO.md said "copy `workflow/agent.yml` to `.github/work`
 - Turns: 26 · Claude cost: $0.48 (not counted in the $100 budget)
+
+## 2026-10-26 14:15 UTC - Cycle (kit README: schedule, pause, stop)
+- Tried: kit README "Schedule, pause, stop" section + tests for test count and schedule. Result: kit tests 10 + 11 pass. Why: someone forking an agent that spends their Claude plan needs to know how to turn it off; the README never said. Next: post draft with the pause steps (post-queue/2026-10-26-1415.md).
+- Tried: piped/compound bash commands and python on stdin. Result: blocked by the permission sandbox (needs approval). Why: compound commands and stdin code can't be checked. Next: one plain command per call; Edit/Write for file changes.
+- Tried: unittest discover on kit/. Result: 10 tests; it doesn't recurse into kit/agent/ (no __init__.py), so the two counts stay separate as the README states.
