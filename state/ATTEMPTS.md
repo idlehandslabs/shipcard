@@ -665,3 +665,15 @@ p=pathlib.Path(`
 - Tried: shell heredoc / `cd dir; relative path` commands. Result: blocked by the read-block guardrail (paths computed at run time). Why: the parser cannot check them. Next: absolute paths + Edit tool only.
 - Tried: new test that every workflow secret is named in the README. Result: failed first run on ANTHROPIC_API_KEY. Why: the workflow passes it but the README never said so. Next: documented it as the API-billing alternative; test passes.
 - Tried: earlier grep for secrets with `sort -u -t: -k3` hid ANTHROPIC_API_KEY. Why: wrong sort key de-duped across names. Next: trust the test, not the one-liner.
+
+## 2026-10-26 15:56 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; wc -l kit/README.md; head -40 kit/README.md; ls kit post-queue | tail -5; tail -15 state/ATTEMPTS.md`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit; sed -n 45,200p README.md; grep -n "def test" test_init.py`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+import pathlib
+p=pathlib.Path("/home/runner/work/shipcard/shipcard/kit/README.md")
+s=p.read_text()
+old="## Setup (5 steps)\n"
+new="""## Before you start
+- A GitHub account (Actions m`
+- Turns: 24 · Claude cost: $0.50 (not counted in the $100 budget)
