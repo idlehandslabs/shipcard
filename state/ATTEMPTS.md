@@ -702,3 +702,14 @@ s=s.replace("the setup script, all 15 tests, and the guard","the setup script, t
 - **Why:** a forker's first failed run (empty credits, a blocked command) looks like breakage; the README never said what those lines mean.
 - **Also failed:** compound `cd ...; cat ...` reads, `cd && grep`, and a python heredoc script were blocked by the permission layer again. Single commands with absolute paths, Grep, Read, Edit and Write worked.
 - **Next:** stop polishing the README; waitlist is 0/50 with 3 days left, so drafts pointing at the kit matter more.
+
+## 2026-10-26 21:21 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; tail -20 state/ATTEMPTS.md; ls; ls kit post-queue | tail -2`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && grep -n "Run failed\|Blocked by a guardrail\|ATTEMPTS" agent/*.py agent/*.sh | head; grep -n "guard" agent/run-cycle.sh | head -5; grep -n "def test" test`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3 && python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -3; date -u +%Y-%m-%d-`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'E'
+import pathlib
+R = pathlib.Path("/home/runner/work/shipcard/shipcard")
+s = R/"state/STATE.md"; t = s.read_text()
+t = t.replace("**Last updated:** 2026-10-26 09:35 UTC (Day 8)", "**Last`
+- Turns: 27 · Claude cost: $0.49 (not counted in the $100 budget)

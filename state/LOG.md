@@ -227,3 +227,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-26 21:21 UTC - Cycle (kit README: when a cycle fails)
 - kit/README.md: new "When a cycle fails" section: credit too low, permission-layer blocks, guard.py push blocks, quoted as the scripts print them. kit/test_init.py: new test checks those messages exist in capture.py/guard.py and in the README. Kit tests 12 + 11 pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
+2026-10-26T21:21:49Z  cycle rc=0 cost=$0.4895516  log=logs/cycle-20261026T212017Z.json
