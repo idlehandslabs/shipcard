@@ -687,3 +687,11 @@ new="""## Before you start
   Result: blocked by the runner's permission rules (stdin code / compound cd).
   Why: sandbox can't analyze them.
   Next: use the Edit tool and `unittest discover -s kit -t kit` from the repo root.
+
+## 2026-10-26 18:25 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; echo ----; cat state/TASKS.md; echo ----; tail -40 state/LOG.md; echo ----; cat state/METRICS.md; ls; ls kit post-queue | tail -30`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/README.md'; s=open(p).read()
+s=s.replace("the setup script, all 15 tests, and the guard","the setup script, the full test suite (15 tests that day; see Tests below for today's`
+- **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest discover -p 'test_*.py' 2>&1 | tail -3; cd agent && python3 -m unittest discover -p 'test_*.py' 2>&1 | tail -3`
+- Turns: 15 · Claude cost: $0.31 (not counted in the $100 budget)
