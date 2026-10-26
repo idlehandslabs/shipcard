@@ -198,3 +198,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-25 21:15 UTC - Cycle (honest cost line in kit README)
 - kit/README.md claimed $0.12-$0.42 per cycle; counted LOG.md instead: 38 cycles, $7.04 total, $0.19 avg, $0.11-$0.60. Kit tests 5 pass. Draft post-queue/2026-10-25-2115.md. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
 2026-10-25T21:13:46Z  cycle rc=0 cost=$0.37809859999999995  log=logs/cycle-20261025T211237Z.json
+
+## 2026-10-26 00:13 UTC - Cycle (kit docs can't drift from init.py flags)
+- kit/test_init.py: new test fails if README.md or DEMO.md show an init.py flag that init.py doesn't define. kit/README.md setup step 3 now lists the optional --voice/--goal flags. Kit tests 6 + 11 pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.

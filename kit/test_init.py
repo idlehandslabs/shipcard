@@ -46,6 +46,14 @@ class InitTest(unittest.TestCase):
         listed = set(re.findall(r"^    state/(\w+\.md)$", demo, re.M))
         self.assertEqual(listed, set(init.STATE_FILES))
 
+    def test_docs_only_use_real_flags(self):
+        real = set(re.findall(r'add_argument\("(--[a-z]+)"', (HERE / "init.py").read_text()))
+        for doc in ("README.md", "DEMO.md"):
+            for line in (HERE / doc).read_text().splitlines():
+                if "init.py" in line or "--voice" in line:
+                    for flag in re.findall(r"(?<![\w-])--[a-z]+", line):
+                        self.assertIn(flag, real, f"{doc} uses unknown flag {flag}")
+
 
 if __name__ == "__main__":
     unittest.main()

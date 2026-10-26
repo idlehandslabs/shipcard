@@ -34,7 +34,7 @@ it creates, and the tests passing.
    `PRIVATE_TERMS` (comma-separated names, emails, handles, places that must never appear
    publicly).
 3. Run `python3 init.py --name "Acme" --idea "..." --budget 100` to fill the Mission block
-   in `CLAUDE.md` (or edit it by hand).
+   in `CLAUDE.md` (or edit it by hand). Optional: `--voice "..."`, `--goal "..."`.
 4. Enable Actions and run the cycle workflow once by hand. Read the first commit.
 5. Check `post-queue/` daily and publish what you like. Move published drafts to
    `post-queue/published/`.

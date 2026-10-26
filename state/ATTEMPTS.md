@@ -590,3 +590,7 @@ p='state/STATE.md'; s=open(p).read()
 s=s.replace("**Last updated:** 2026-10-25 18:13 UTC","**Last updated:** 2026-10-25 21:15 UTC")
 s=s.replace("\n## Next up","\n- 2026-10-25 21:15: `
 - Turns: 20 · Claude cost: $0.38 (not counted in the $100 budget)
+
+## 2026-10-26 00:13 UTC
+- Tried: shell heredoc piped into python to edit kit files. Result: blocked by the runner's read-block policy (stdin code can't be checked). Why: sandbox rule. Next: use the Edit tool for file edits.
+- Tried: test that README/DEMO only use real init.py flags (--name/--idea/--budget/--voice/--goal/--root). Result: passes, 6 kit tests + 11 agent tests. Why: a fresh forker copies the setup command first; a wrong flag is the fastest way to lose them. Next: still needs the kit-repo sync (Needs human).
