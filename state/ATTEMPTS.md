@@ -647,3 +647,16 @@ s=s.re`
 - Tried: kit README "Schedule, pause, stop" section + tests for test count and schedule. Result: kit tests 10 + 11 pass. Why: someone forking an agent that spends their Claude plan needs to know how to turn it off; the README never said. Next: post draft with the pause steps (post-queue/2026-10-26-1415.md).
 - Tried: piped/compound bash commands and python on stdin. Result: blocked by the permission sandbox (needs approval). Why: compound commands and stdin code can't be checked. Next: one plain command per call; Edit/Write for file changes.
 - Tried: unittest discover on kit/. Result: 10 tests; it doesn't recurse into kit/agent/ (no __init__.py), so the two counts stay separate as the README states.
+
+## 2026-10-26 14:16 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; git diff --stat; ls post-queue | tail -3; date -u +%Y-%m-%d`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3; python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -3; grep -n "schedule\|c`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3 && python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -3 && grep -n "schedul`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && sed -i 's/## Tests (19: 8 setup\/docs + 11 agent)/## Tests (21: 10 setup\/docs + 11 agent)/' README.md && python3 - <<'EOF'
+import pathlib
+p=pathlib.Path(`
+- **Blocked by a guardrail:** `Bash` → `cat >> state/LOG.md <<'EOF'
+
+## 2026-10-26 14:15 UTC - Cycle (kit README: schedule, pause, stop)
+- kit/README.md: new "Schedule, pause, stop" section (cron times, run by hand, disable workflow to paus`
+- Turns: 27 · Claude cost: $0.50 (not counted in the $100 budget)

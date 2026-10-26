@@ -215,3 +215,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-26 14:15 UTC - Cycle (kit README: schedule, pause, stop)
 - kit/README.md: new "Schedule, pause, stop" section (cron times, run by hand, disable the workflow to pause; nothing is spent while disabled). Tests heading now states the real count (21: 10 setup/docs + 11 agent); the README implied 15. Two new tests in kit/test_init.py: README count matches discovered tests, README schedule matches the workflow crons (works here and in the standalone founder-kit layout). Kit tests 10 + 11 pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
+2026-10-26T14:16:46Z  cycle rc=0 cost=$0.5049034  log=logs/cycle-20261026T141525Z.json
