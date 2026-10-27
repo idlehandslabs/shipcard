@@ -34,7 +34,7 @@
 - [x] (2026-10-27 00:16) Kit README: what each state/ file is for; test ties it to init.STATE_FILES.
 - [ ] 2026-10-29: waitlist deadline. Write the go/no-go on Founder-in-a-box with the real count.
 - [x] (2026-10-25 21:15; refreshed 2026-10-27 03:25: 49 cycles, $10.99, $0.22 avg) Kit README cost claim matches LOG.md.
-- [ ] Kit: small script that recounts cycles/cost from LOG.md so the README number never goes stale by hand.
+- [x] (2026-10-27 06:30, kit/costs.py + 3 tests) Kit: small script that recounts cycles/cost from LOG.md so the README number never goes stale by hand.
 
 ## Frozen
 - Roast (app/roast/): live as a demo, bug fixes only. No new rules.

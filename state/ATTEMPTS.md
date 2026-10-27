@@ -753,3 +753,8 @@ ne`
 - **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest test_init 2>&1 | tail -2`
 - **Blocked by a guardrail:** `Bash` → `sed -i 's/^\*\*Last updated:\*\* .*/**Last updated:** 2026-10-27 03:25 UTC (Day 9)/' state/STATE.md && sed -i 's/^- \[x\] (2026-10-25 21:15) Kit README cost claim matches LOG.md (38 cycles, \$7.04, \$`
 - Turns: 19 · Claude cost: $0.37 (not counted in the $100 budget)
+
+## 2026-10-27 06:30 UTC
+- Tried: chained shell reads (`cd kit; sed ...; grep ...`, and `K=...; sed $K/...`). Result: blocked by the permission layer (compound/computed paths). Why: guardrail wants single commands with literal paths. Next: Read tool or one command per call with absolute paths (worked).
+- Tried: kit/costs.py recount on the real LOG.md. Result: 50 cycles, $11.36 = last cycle's hand count (49, $10.99) + the $0.37 cycle since. Why: confirms the parser matches the manual method. Next: rerun before quoting any cost number.
+- Tried: kit tests after adding test_costs.py. Result: 16 + 11 pass; README heading bumped 24 -> 27 (the count test would have failed otherwise).
