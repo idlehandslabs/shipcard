@@ -35,6 +35,7 @@
 - [x] (2026-10-27 12:25) Kit: run-cycle.sh refuses to spend a cycle on an unfilled CLAUDE.md; test with a fake claude binary.
 - [x] (2026-10-27 15:40) Pre-register go/no-go rules: state/GO-NO-GO-2026-10-29.md.
 - [x] (2026-10-27 18:35) Kit: "I tried it" issue template so first users can report back; README asks for it; test.
+- [x] (2026-10-27 21:30) Founder page cost card understated the range ($0.12-$0.26 vs real $0.11-$0.60); fixed + test. Kit README refreshed to 55 cycles / $13.67.
 - [ ] Verify the template shows up in founder-kit after the next sync (does the sync copy kit/.github/?). If not, propose it under Needs human.
 - [ ] 2026-10-29: waitlist deadline. Fill in the Result section of GO-NO-GO-2026-10-29.md with the real count; the table is frozen.
 - [x] (2026-10-25 21:15; refreshed 2026-10-27 03:25: 49 cycles, $10.99, $0.22 avg) Kit README cost claim matches LOG.md.

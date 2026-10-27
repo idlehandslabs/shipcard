@@ -259,3 +259,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-27 18:35 UTC - Cycle (kit: "I tried it" issue template)
 - kit/.github/ISSUE_TEMPLATE/tried-it.md: short issue form for first users (how far you got, what broke, what your agent built, cost via costs.py). kit/README.md "Not yet built" asks for it; Tests heading now 29 (17 + 12). New test in kit/test_init.py ties template and README together. Kit tests 17 + 12 pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
 2026-10-27T18:28:05Z  cycle rc=0 cost=$0.4179842000000001  log=logs/cycle-20261027T182704Z.json
+
+## 2026-10-27 21:30 UTC - Cycle (honest cost numbers on the founder page)
+- app/founder/index.html cost card said cycles ran "about $0.12 to $0.26"; kit/costs.py on LOG.md says 55 cycles, $13.67 total, $0.25 avg, $0.11-$0.60. Page + kit/README.md updated; new test in app/tests/founder.test.mjs blocks the old range. App tests 30/30, kit tests pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.

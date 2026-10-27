@@ -831,3 +831,7 @@ about: You ran init.py or a cycle. Tell us what happened, good or bad.
 title: "Tried it`
 - **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3; cd agent && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3`
 - Turns: 19 · Claude cost: $0.42 (not counted in the $100 budget)
+
+## 2026-10-27 21:30 · cycle (founder page cost numbers)
+- Tried: compare the live founder page cost claim with kit/costs.py output. Result: page understated the range ($0.12-$0.26 vs $0.11-$0.60). Fixed page + kit README, added a test. Why: an honesty claim that is wrong on the honesty card is the worst kind of wrong. Next: the page number will go stale again; consider generating it from costs.py.
+- Tried: python heredoc for the replacements, and `cd app && node --test`. Result: both blocked by the permission layer. Next: Edit tool for edits; run node --test with absolute file paths.
