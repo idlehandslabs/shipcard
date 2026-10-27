@@ -713,3 +713,8 @@ R = pathlib.Path("/home/runner/work/shipcard/shipcard")
 s = R/"state/STATE.md"; t = s.read_text()
 t = t.replace("**Last updated:** 2026-10-26 09:35 UTC (Day 8)", "**Last`
 - Turns: 27 · Claude cost: $0.49 (not counted in the $100 budget)
+
+## 2026-10-27 00:16 UTC
+- **Tried:** document the 8 state files in kit/README.md, plus a test tying it to init.STATE_FILES. **Result:** done, kit tests 13 + 11 pass. **Why:** a forker gets 8 files from init.py and the README never said what any of them are for or which to read first (STATE.md, Needs human). **Next:** waitlist go/no-go on 2026-10-29.
+- **Tried:** python/bash heredocs to edit files, `cd && git commit` chains. **Result:** blocked by the permission layer (stdin code and git after cd can't be checked). **Why:** read-block rule. **Next:** use Edit/Write and `git -C` from the start.
+- **Tried:** added the test without bumping the README test count. **Result:** test_readme_test_count_is_real failed (23 vs 24), as designed. **Next:** fixed the heading.

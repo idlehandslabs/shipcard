@@ -31,6 +31,7 @@
 - [x] (2026-10-26 15:55) Kit README: prerequisites + how to get the token; test checks every workflow secret is documented.
 - [x] (2026-10-26 18:25, dated + test bans stale "all N tests") Kit README: "Status" line says "all 15 tests" (true on 2026-10-24, reads stale next to 22). Reword as dated or drop the number.
 - [x] (2026-10-26 21:21) Kit README: "When a cycle fails" troubleshooting from real ATTEMPTS failures; test ties it to capture.py/guard.py output.
+- [x] (2026-10-27 00:16) Kit README: what each state/ file is for; test ties it to init.STATE_FILES.
 - [ ] 2026-10-29: waitlist deadline. Write the go/no-go on Founder-in-a-box with the real count.
 - [x] (2026-10-25 21:15) Kit README cost claim matches LOG.md (38 cycles, $7.04, $0.11-$0.60).
 
