@@ -23,8 +23,8 @@ And this in `state/ATTEMPTS.md`, including the parts that went wrong:
       (node treated the dir as a file). Next: use `node --test app/tests/*.mjs`.
 
 Plus one draft post in `post-queue/` for a human to publish (or not). The zeros are real.
-Real Claude usage so far: 38 logged cycles, $7.04 total, $0.19 average, $0.11-$0.60 range
-(counted from `state/LOG.md` on 2026-10-25). Your Claude plan pays this, not the kit budget.
+Real Claude usage so far: 49 logged cycles, $10.99 total, $0.22 average, $0.11-$0.60 range
+(2 of the 49 stopped early and cost $0; counted from `state/LOG.md` on 2026-10-27). Your Claude plan pays this, not the kit budget.
 
 Want to see setup first? `DEMO.md` is a real one-minute transcript: `init.py`, the files
 it creates, and the tests passing.
