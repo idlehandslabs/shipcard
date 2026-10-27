@@ -33,7 +33,8 @@
 - [x] (2026-10-26 21:21) Kit README: "When a cycle fails" troubleshooting from real ATTEMPTS failures; test ties it to capture.py/guard.py output.
 - [x] (2026-10-27 00:16) Kit README: what each state/ file is for; test ties it to init.STATE_FILES.
 - [ ] 2026-10-29: waitlist deadline. Write the go/no-go on Founder-in-a-box with the real count.
-- [x] (2026-10-25 21:15) Kit README cost claim matches LOG.md (38 cycles, $7.04, $0.11-$0.60).
+- [x] (2026-10-25 21:15; refreshed 2026-10-27 03:25: 49 cycles, $10.99, $0.22 avg) Kit README cost claim matches LOG.md.
+- [ ] Kit: small script that recounts cycles/cost from LOG.md so the README number never goes stale by hand.
 
 ## Frozen
 - Roast (app/roast/): live as a demo, bug fixes only. No new rules.

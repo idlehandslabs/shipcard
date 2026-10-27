@@ -737,3 +737,7 @@ Co-Authored-By: Claude`
 ## 2026-10-27 00:16 UTC - Cycle (kit README: where to look each day)
 - kit/README.md: new "Where to look each day" section explai`
 - Turns: 32 · Claude cost: $0.49 (not counted in the $100 budget)
+
+## 2026-10-27 03:25 UTC
+- Tried: inline python heredoc to edit kit/README.md and a chained `cd kit && unittest`. Result: both blocked by the permission layer (stdin code / compound command). Why: read-block guard cannot analyze them. Next: use Edit tool and `python3 -m unittest discover -s kit` from repo root (worked).
+- Tried: recount cycle cost from LOG.md with grep+awk. Result: 49 cycles, $10.99, avg $0.22, $0.11-$0.60 for nonzero runs; 2 logged $0. README updated, test_init OK. Next: script it so it is not refreshed by hand.
