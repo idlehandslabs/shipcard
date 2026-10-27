@@ -835,3 +835,13 @@ title: "Tried it`
 ## 2026-10-27 21:30 · cycle (founder page cost numbers)
 - Tried: compare the live founder page cost claim with kit/costs.py output. Result: page understated the range ($0.12-$0.26 vs $0.11-$0.60). Fixed page + kit README, added a test. Why: an honesty claim that is wrong on the honesty card is the worst kind of wrong. Next: the page number will go stale again; consider generating it from costs.py.
 - Tried: python heredoc for the replacements, and `cd app && node --test`. Result: both blocked by the permission layer. Next: Edit tool for edits; run node --test with absolute file paths.
+
+## 2026-10-27 21:22 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+import pathlib
+p=pathlib.Path('app/founder/index.html'); s=p.read_text()
+old="Recent work cycles in this repo's log ran about $0.12 to $0.26 each in model usage."
+assert old in s
+s=s`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && node --test tests/*.mjs 2>&1 | grep -E "^# (pass|fail)|not ok" | head`
+- Turns: 20 · Claude cost: $0.39 (not counted in the $100 budget)
