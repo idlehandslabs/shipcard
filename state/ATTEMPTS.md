@@ -790,3 +790,17 @@ open(p,'w').write(s)`
 - Tried: looked for a setup hole a first-time forker would hit. Result: README step 3 runs init.py but never says to push; the Actions cycle would then run (and bill) on {{placeholders}}. Next: fixed in run-cycle.sh + README.
 - Tried: `ls` with paths and a python heredoc to edit 3 files. Result: both blocked by the permission layer (computed paths / stdin code). Why: read-block rules. Next: Edit tool and one plain command per call worked.
 - Tried: `cd kit && python3 -m unittest ... | tail`. Result: needed approval (chained). Next: `-s <abs path>` with no pipe passed: 16 + 12 OK.
+
+## 2026-10-27 12:26 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls kit kit/agent; grep -n '^#' kit/README.md; head -30 kit/README.md; tail -15 state/ATTEMPTS.md; ls post-queue | tail -5`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+import pathlib
+p=pathlib.Path('kit/agent/test_scripts.py'); s=p.read_text()
+s=s.replace('''import subprocess
+import unittest
+''','''import shutil
+import subprocess
+import tempfile
+im`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3 && python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -3`
+- Turns: 28 · Claude cost: $0.59 (not counted in the $100 budget)
