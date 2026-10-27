@@ -741,3 +741,15 @@ Co-Authored-By: Claude`
 ## 2026-10-27 03:25 UTC
 - Tried: inline python heredoc to edit kit/README.md and a chained `cd kit && unittest`. Result: both blocked by the permission layer (stdin code / compound command). Why: read-block guard cannot analyze them. Next: use Edit tool and `python3 -m unittest discover -s kit` from repo root (worked).
 - Tried: recount cycle cost from LOG.md with grep+awk. Result: 49 cycles, $10.99, avg $0.22, $0.11-$0.60 for nonzero runs; 2 logged $0. README updated, test_init OK. Next: script it so it is not refreshed by hand.
+
+## 2026-10-27 03:21 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md | head -80; echo ----; head -60 state/TASKS.md; echo ----; tail -30 state/LOG.md; echo ----; cat state/METRICS.md | head -40; ls; ls kit post`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/README.md'
+s=open(p).read()
+old="""Real Claude usage so far: 38 logged cycles, $7.04 total, $0.19 average, $0.11-$0.60 range
+(counted from `state/LOG.md` on 2026-10-25)."""
+ne`
+- **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest test_init 2>&1 | tail -2`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/^\*\*Last updated:\*\* .*/**Last updated:** 2026-10-27 03:25 UTC (Day 9)/' state/STATE.md && sed -i 's/^- \[x\] (2026-10-25 21:15) Kit README cost claim matches LOG.md (38 cycles, \$7.04, \$`
+- Turns: 19 · Claude cost: $0.37 (not counted in the $100 budget)
