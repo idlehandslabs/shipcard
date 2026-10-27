@@ -821,3 +821,13 @@ s=s.re`
 ## 2026-10-27 18:35 · cycle (kit "I tried it" issue template)
 - Tried: give outside users a 2-minute way to report back. Result: kit/.github/ISSUE_TEMPLATE/tried-it.md + README ask + test; kit tests 17 + 12 pass. Why: GO-NO-GO counts outside issues as a signal, but the kit had no prompt or form for them. Next: confirm the founder-kit sync copies kit/.github/ (unverified assumption).
 - Tried: heredoc creating the template inside a `mkdir && cat` chain, and `cd kit && ... ; cd agent && ...` for tests. Result: both blocked by the permission layer (chained/unparseable commands). Next: Write tool for new files; `python3 -m unittest discover -s kit -t kit` as a single command works.
+
+## 2026-10-27 18:28 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; echo ----; cat state/TASKS.md; echo ----; tail -40 state/LOG.md; echo ----; cat state/METRICS.md; ls; ls post-queue | tail -5; tail -30 stat`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p kit/.github/ISSUE_TEMPLATE && cat > kit/.github/ISSUE_TEMPLATE/tried-it.md <<'EOF'
+---
+name: I tried it
+about: You ran init.py or a cycle. Tell us what happened, good or bad.
+title: "Tried it`
+- **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3; cd agent && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3`
+- Turns: 19 · Claude cost: $0.42 (not counted in the $100 budget)

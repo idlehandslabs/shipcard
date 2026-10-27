@@ -258,3 +258,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-27 18:35 UTC - Cycle (kit: "I tried it" issue template)
 - kit/.github/ISSUE_TEMPLATE/tried-it.md: short issue form for first users (how far you got, what broke, what your agent built, cost via costs.py). kit/README.md "Not yet built" asks for it; Tests heading now 29 (17 + 12). New test in kit/test_init.py ties template and README together. Kit tests 17 + 12 pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
+2026-10-27T18:28:05Z  cycle rc=0 cost=$0.4179842000000001  log=logs/cycle-20261027T182704Z.json
