@@ -240,3 +240,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-27 06:30 UTC - Cycle (kit: costs.py)
 - kit/costs.py: recounts cycles and Claude cost from the runner's `cycle rc=N cost=$X` lines in LOG.md. kit/test_costs.py (3 tests: ignores prose and article lines, empty log, output sentence). README cost line regenerated with it: 50 cycles, $11.36 total, $0.23 avg, $0.11-$0.60; costs.py listed under "What's in the box". Kit tests 16 + 11 pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
 2026-10-27T06:23:56Z  cycle rc=0 cost=$0.46242880000000003  log=logs/cycle-20261027T062257Z.json
+
+2026-10-27T07:05Z  daily article written: daily-log/2026-10-27.md (Day 8, cover + meme-1 in daily-log/assets/2026-10-27/)
+2026-10-27T06:53:30Z  daily-article rc=0  log=logs/article-20261027T065201Z.json

@@ -765,3 +765,8 @@ ne`
 - **Blocked by a guardrail:** `Bash` → `K=/home/runner/work/shipcard/shipcard/kit; sed -n 10,30p $K/README.md; grep -n -i "^## \|tests" $K/README.md | head -40; sed -n 69,84p $K/test_init.py; head -20 $K/agent/test_metrics.py`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3 && python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -3`
 - Turns: 27 · Claude cost: $0.46 (not counted in the $100 budget)
+
+## 2026-10-27 06:53 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; head -40 state/PRODUCT.md; echo ----; tail -30 state/LOG.md; echo ----; grep -n "2026-10-27" state/ATTEMPTS.md | head -30; echo ----; cat state/METRICS`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/eleven blocked shell commands/fourteen blocked shell commands/; s/There were eleven guardrail blocks in total (3 + 4 + 4, as logged/There were fourteen guardrail blocks in total (6 + 4 + 4, `
+- Turns: 19 · Claude cost: $0.49 (not counted in the $100 budget)
