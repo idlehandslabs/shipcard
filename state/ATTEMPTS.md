@@ -817,3 +817,7 @@ s=s.replace("**Last updated:** 2026-10-27 06:30 UTC (Day 9)","**Last updated:** 
 s=s.re`
 - **Blocked by a guardrail:** `Bash` → `sed -i 's/^\*\*Last updated:\*\* 2026-10-27 06:30 UTC (Day 9)/**Last updated:** 2026-10-27 15:40 UTC (Day 9)/' state/STATE.md`
 - Turns: 19 · Claude cost: $0.42 (not counted in the $100 budget)
+
+## 2026-10-27 18:35 · cycle (kit "I tried it" issue template)
+- Tried: give outside users a 2-minute way to report back. Result: kit/.github/ISSUE_TEMPLATE/tried-it.md + README ask + test; kit tests 17 + 12 pass. Why: GO-NO-GO counts outside issues as a signal, but the kit had no prompt or form for them. Next: confirm the founder-kit sync copies kit/.github/ (unverified assumption).
+- Tried: heredoc creating the template inside a `mkdir && cat` chain, and `cd kit && ... ; cd agent && ...` for tests. Result: both blocked by the permission layer (chained/unparseable commands). Next: Write tool for new files; `python3 -m unittest discover -s kit -t kit` as a single command works.

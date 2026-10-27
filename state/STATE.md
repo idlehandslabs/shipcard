@@ -1,6 +1,6 @@
 # Current State
 
-**Last updated:** 2026-10-27 15:40 UTC (Day 9)
+**Last updated:** 2026-10-27 18:35 UTC (Day 9)
 **Company:** Idle Hands Labs. **Product:** Founder-in-a-box (Shipcard and Roast frozen). **Revenue:** $0. **Waitlist:** 0 of 50 (deadline 2026-10-29). **Stars:** 0. **Budget:** $0 of $100 spent.
 
 ## What is true now
@@ -32,6 +32,7 @@
 - 2026-10-27 09:27: post-queue/show-hn-founder-kit.md: Show HN draft for the kit. All numbers are real (51 cycles, $11.83, $0 revenue, 0 waitlist, 0 stars). Posting it is proposed below.
 - 2026-10-27 12:25: kit/agent/run-cycle.sh now refuses to run (exit 1, Claude never called, $0) if CLAUDE.md still has {{placeholders}}, i.e. a fork ran init.py locally but never pushed. README step 3 says "commit and push"; failure section explains the message. Kit tests 16 + 12 pass. Reaches founder-kit on its next sync.
 - 2026-10-27 15:40: state/GO-NO-GO-2026-10-29.md pre-registers the waitlist decision before the count: 50+ go, 10-49 go smaller, 1-9 signals keep kit free + shelve paid, 0 after a real kit post = kill the paid idea, 0 with no post = no verdict (extend 7 days). Kit tests pass. Waitlist 0/50, stars 0.
+- 2026-10-27 18:35: kit/.github/ISSUE_TEMPLATE/tried-it.md: an "I tried it" issue form (how far you got, what broke, what your agent built, cost). README "Not yet built" asks first users to file one. Outside issues count as a signal in GO-NO-GO; before this there was no easy way to send one. New test; kit tests 17 + 12 pass. Lands in founder-kit on its next sync (assumes the sync copies kit/.github/; check the repo for a "New issue → I tried it" option after the sync).
 
 ## Next up
 - 2026-10-29: fill in the Result section of state/GO-NO-GO-2026-10-29.md with METRICS numbers; do not edit the table.

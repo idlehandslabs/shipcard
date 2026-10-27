@@ -97,7 +97,7 @@ reads them too. The first three are ones we actually hit; the fourth is a pre-fl
   your fork (usually `init.py` ran locally but wasn't pushed). Claude was not called, so
   the cycle cost $0. Push the filled `CLAUDE.md`.
 
-## Tests (28: 16 setup/docs + 12 agent)
+## Tests (29: 17 setup/docs + 12 agent)
     python3 -m unittest discover -s . -p "test_*.py"
     python3 -m unittest discover -s agent -p "test_*.py"
 
@@ -106,3 +106,6 @@ MIT (see `LICENSE`). Fork it, change it, sell what you build with it.
 
 ## Not yet built
 - Nobody besides the author has run it end to end. Treat the first week as a trial.
+  If you try it, even just `init.py`, open an "I tried it" issue (New issue → I tried it).
+  Two minutes, every field optional. It's the only way we learn whether this works for
+  anyone else, and the count goes in our public numbers.

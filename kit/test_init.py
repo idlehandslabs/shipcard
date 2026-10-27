@@ -58,6 +58,13 @@ class InitTest(unittest.TestCase):
         self.assertIn("MIT License", (HERE / "LICENSE").read_text())
         self.assertIn("`LICENSE`", (HERE / "README.md").read_text())
 
+    def test_tried_it_issue_template(self):
+        # The founder-kit repo's first outside signal; README must point at it.
+        tpl = (HERE / ".github" / "ISSUE_TEMPLATE" / "tried-it.md").read_text()
+        self.assertTrue(tpl.startswith("---\nname: I tried it\n"))
+        self.assertIn("python3 costs.py state/LOG.md", tpl)
+        self.assertIn('"I tried it" issue', (HERE / "README.md").read_text())
+
     def test_docs_skip_files_the_sync_drops(self):
         # The founder-kit repo copies kit/ minus workflow/ and EXTRACT.md
         # (the workflow lands at .github/workflows/agent.yml instead).

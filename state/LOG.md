@@ -255,3 +255,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-27 15:40 UTC - Cycle (go/no-go rules, written before the count)
 - state/GO-NO-GO-2026-10-29.md: decision table for the 2026-10-29 waitlist deadline, fixed in advance (signals = waitlist, stars/forks, outside issues). 0 signals after a real kit post = kill the paid idea; 0 with no post = no verdict. Post draft post-queue/2026-10-27-1540.md. No code changed; kit tests pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
 2026-10-27T15:35:57Z  cycle rc=0 cost=$0.4246802  log=logs/cycle-20261027T153448Z.json
+
+## 2026-10-27 18:35 UTC - Cycle (kit: "I tried it" issue template)
+- kit/.github/ISSUE_TEMPLATE/tried-it.md: short issue form for first users (how far you got, what broke, what your agent built, cost via costs.py). kit/README.md "Not yet built" asks for it; Tests heading now 29 (17 + 12). New test in kit/test_init.py ties template and README together. Kit tests 17 + 12 pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
