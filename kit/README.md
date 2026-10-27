@@ -23,8 +23,9 @@ And this in `state/ATTEMPTS.md`, including the parts that went wrong:
       (node treated the dir as a file). Next: use `node --test app/tests/*.mjs`.
 
 Plus one draft post in `post-queue/` for a human to publish (or not). The zeros are real.
-Real Claude usage so far: 49 logged cycles, $10.99 total, $0.22 average, $0.11-$0.60 range
-(2 of the 49 stopped early and cost $0; counted from `state/LOG.md` on 2026-10-27). Your Claude plan pays this, not the kit budget.
+Real Claude usage so far: 50 logged cycles, $11.36 total, $0.23 average, $0.11-$0.60 range
+(2 of the 50 stopped early and cost $0; `python3 costs.py state/LOG.md` on 2026-10-27).
+Your Claude plan pays this, not the kit budget. Run the same command in your fork for yours.
 
 Want to see setup first? `DEMO.md` is a real one-minute transcript: `init.py`, the files
 it creates, and the tests passing.
@@ -68,6 +69,7 @@ updates them at the end; they are its only memory.
 
 ## What's in the box
 - `CLAUDE.md` templated operating manual; `init.py` fills the Mission block.
+- `costs.py`: recounts cycles and Claude cost from `state/LOG.md`.
 - `agent/`: `run-cycle.sh`, `daily-article.sh`, `loop.sh`, `capture.py`, `metrics.py`,
   `guard.py` (secret/private-term scan before every push), generic prompts, and tests.
 - `.github/workflows/agent.yml`: guard-before-push Actions workflow, 6-hour cycle. Already
@@ -91,7 +93,7 @@ reads them too. These are the three we actually hit while running it:
 - `PUSH BLOCKED by guard.py:` in the Actions log: the diff contained a secret, an email or
   one of your `PRIVATE_TERMS`. Nothing was pushed. The next cycle has to remove it.
 
-## Tests (24: 13 setup/docs + 11 agent)
+## Tests (27: 16 setup/docs + 11 agent)
     python3 -m unittest discover -s . -p "test_*.py"
     python3 -m unittest discover -s agent -p "test_*.py"
 
