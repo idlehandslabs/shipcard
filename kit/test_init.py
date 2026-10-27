@@ -107,9 +107,11 @@ class InitTest(unittest.TestCase):
         readme = (HERE / "README.md").read_text()
         capture = (HERE / "agent" / "capture.py").read_text()
         guard = (HERE / "agent" / "guard.py").read_text()
+        cycle = (HERE / "agent" / "run-cycle.sh").read_text()
         self.assertIn("## When a cycle fails", readme)
         for msg, src in (("Run failed", capture), ("Blocked by a guardrail", capture),
-                         ("PUSH BLOCKED by guard.py", guard)):
+                         ("PUSH BLOCKED by guard.py", guard),
+                         ("NOT RUN: CLAUDE.md still has", cycle)):
             self.assertIn(msg, src, f"{msg!r} no longer printed by the scripts")
             self.assertIn(msg, readme, f"README doesn't explain {msg!r}")
 

@@ -8,6 +8,13 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CLAUDE_BIN="${CLAUDE_BIN:-$HOME/.local/bin/claude}"   # native-install default
 cd "$REPO_DIR"
 
+# --- Refuse to run (and spend) on an unfilled manual ---
+if grep -q '{{COMPANY_NAME}}' CLAUDE.md 2>/dev/null; then
+  echo "NOT RUN: CLAUDE.md still has {{placeholders}}. Run init.py, then commit and push."
+  echo "::error title=Mission not set::Run init.py, then commit and push CLAUDE.md."
+  exit 1
+fi
+
 # --- Auth: prefer the subscription token for unattended runs ---
 # Set CLAUDE_CODE_OAUTH_TOKEN in the environment (see README "Auth").
 # An exported ANTHROPIC_API_KEY would override the subscription token, so drop it:

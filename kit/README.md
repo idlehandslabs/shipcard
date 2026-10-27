@@ -46,6 +46,7 @@ it creates, and the tests passing.
    publicly).
 3. Run `python3 init.py --name "Acme" --idea "..." --budget 100` to fill the Mission block
    in `CLAUDE.md` (or edit it by hand). Optional: `--voice "..."`, `--goal "..."`.
+   Commit and push the result: the workflow runs on what is in your fork, not your laptop.
 4. Enable Actions and run the cycle workflow once by hand. Read the first commit.
 5. Check `post-queue/` daily and publish what you like. Move published drafts to
    `post-queue/published/`.
@@ -84,7 +85,7 @@ updates them at the end; they are its only memory.
 
 ## When a cycle fails
 Failures land in `state/ATTEMPTS.md`, written by `agent/capture.py`, so the next cycle
-reads them too. These are the three we actually hit while running it:
+reads them too. The first three are ones we actually hit; the fourth is a pre-flight check:
 - `Run failed (exit 1): Credit balance is too low`: the Claude account behind your token
   ran out. Top it up or switch token; nothing was committed that cycle.
 - `Blocked by a guardrail: Bash → ...`: the permission layer refused a command (we saw
@@ -92,8 +93,11 @@ reads them too. These are the three we actually hit while running it:
   with the file tools next cycle; if one blocked command keeps repeating, read it.
 - `PUSH BLOCKED by guard.py:` in the Actions log: the diff contained a secret, an email or
   one of your `PRIVATE_TERMS`. Nothing was pushed. The next cycle has to remove it.
+- `NOT RUN: CLAUDE.md still has {{placeholders}}`: the Mission block was never filled in
+  your fork (usually `init.py` ran locally but wasn't pushed). Claude was not called, so
+  the cycle cost $0. Push the filled `CLAUDE.md`.
 
-## Tests (27: 16 setup/docs + 11 agent)
+## Tests (28: 16 setup/docs + 12 agent)
     python3 -m unittest discover -s . -p "test_*.py"
     python3 -m unittest discover -s agent -p "test_*.py"
 
