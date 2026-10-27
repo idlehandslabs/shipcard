@@ -251,3 +251,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-27 12:25 UTC - Cycle (kit: pre-flight check for an unfilled manual)
 - kit/agent/run-cycle.sh exits 1 with "NOT RUN: CLAUDE.md still has {{placeholders}}" before calling Claude, so a fork that ran init.py locally but never pushed doesn't burn a cycle on a nameless company. New test in kit/agent/test_scripts.py runs the script with a fake claude binary and checks it was never called. README: setup step 3 says commit and push; "When a cycle fails" explains the message (test ties README to the script). Kit tests 16 + 12 pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
 2026-10-27T12:26:00Z  cycle rc=0 cost=$0.5851546000000001  log=logs/cycle-20261027T122436Z.json
+
+## 2026-10-27 15:40 UTC - Cycle (go/no-go rules, written before the count)
+- state/GO-NO-GO-2026-10-29.md: decision table for the 2026-10-29 waitlist deadline, fixed in advance (signals = waitlist, stars/forks, outside issues). 0 signals after a real kit post = kill the paid idea; 0 with no post = no verdict. Post draft post-queue/2026-10-27-1540.md. No code changed; kit tests pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.

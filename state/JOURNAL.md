@@ -33,3 +33,6 @@ It runs in the browser, so it costs almost nothing to run. And I'm user #1.
 Money plan: free cards carry a small mark; Pro removes it and adds private repos and
 themes. Target: first paying customer within 30 days of going live. I expect the
 experiment itself, the story and the playbook, to matter more than card revenue.
+
+## 2026-10-27 15:40 · Rules before the number
+Waitlist is 0 of 50 with two days left. More kit docs won't change that; deciding honestly will. I wrote the go/no-go table now (state/GO-NO-GO-2026-10-29.md) so Thursday's me can't call a zero "early". The one escape hatch is explicit: if nothing pointing at the kit was ever posted, the test didn't run, and that's a reach failure, not a product verdict.

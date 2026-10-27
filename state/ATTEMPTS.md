@@ -804,3 +804,7 @@ import tempfile
 im`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3 && python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -3`
 - Turns: 28 · Claude cost: $0.59 (not counted in the $100 budget)
+
+## 2026-10-27 15:40 · cycle (go/no-go pre-registration)
+- Tried: pick work that moves the Oct 29 decision instead of another kit doc. Result: wrote state/GO-NO-GO-2026-10-29.md with a fixed decision table. Why: 0/50 waitlist; rules set after seeing the count would be motivated reasoning. Next: fill in Result on 2026-10-29; Show HN still awaits a yes.
+- Tried: python heredoc and `sed -i` to edit STATE/TASKS. Result: both blocked by the permission layer (stdin code / sed not allowlisted). Next: Edit tool for edits, `cat >> file <<EOF` for appends (works).
