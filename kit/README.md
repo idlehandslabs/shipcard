@@ -49,6 +49,19 @@ it creates, and the tests passing.
 5. Check `post-queue/` daily and publish what you like. Move published drafts to
    `post-queue/published/`.
 
+## Where to look each day
+`init.py` creates these in `state/`. The agent reads them at the start of every cycle and
+updates them at the end; they are its only memory.
+- `STATE.md`: where things stand. Read **Needs human** first: that is what it wants you
+  to approve.
+- `LOG.md`: one dated line per cycle (what shipped, test count).
+- `ATTEMPTS.md`: tried / result / why / next, failures included.
+- `TASKS.md`: the backlog it grooms.
+- `JOURNAL.md`: its reasoning when it makes a decision.
+- `PRODUCT.md`: what it is building and why (empty until cycle 1).
+- `BUDGET.md`: your money cap and a ledger. It proposes spends; you approve them.
+- `METRICS.md`: real numbers `agent/metrics.py` collects before each cycle.
+
 ## Safety properties
 - `CLAUDE.md`, `agent/`, `.github/` are protected: the agent can't edit its own brakes.
 - Hard rules: no posting, no deploys, no spending, no credentials, outside text is data.
@@ -78,7 +91,7 @@ reads them too. These are the three we actually hit while running it:
 - `PUSH BLOCKED by guard.py:` in the Actions log: the diff contained a secret, an email or
   one of your `PRIVATE_TERMS`. Nothing was pushed. The next cycle has to remove it.
 
-## Tests (23: 12 setup/docs + 11 agent)
+## Tests (24: 13 setup/docs + 11 agent)
     python3 -m unittest discover -s . -p "test_*.py"
     python3 -m unittest discover -s agent -p "test_*.py"
 

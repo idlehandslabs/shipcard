@@ -97,6 +97,11 @@ class InitTest(unittest.TestCase):
             self.assertIn(f"`{name}`", readme, f"README never tells users to add {name}")
         self.assertIn("claude setup-token", readme, "README must say how to get the OAuth token")
 
+    def test_readme_explains_every_state_file(self):
+        readme = (HERE / "README.md").read_text()
+        missing = [f for f in init.STATE_FILES if f"`{f}`" not in readme]
+        self.assertEqual(missing, [], f"README never explains: {missing}")
+
     def test_readme_failure_messages_match_scripts(self):
         # The troubleshooting section quotes real output; fail if the scripts' wording drifts.
         readme = (HERE / "README.md").read_text()
