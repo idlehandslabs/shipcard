@@ -30,6 +30,7 @@
 - 2026-10-27 03:25: kit/README.md cost line was 2 days stale (38 cycles, $7.04). Recounted from LOG.md: 49 cycles, $10.99 total, $0.22 avg, $0.11-$0.60 (2 cycles logged $0). Kit test_init passes. Reaches founder-kit on its next sync.
 - 2026-10-27 06:30: kit/costs.py recounts cycles and cost from LOG.md (`python3 costs.py state/LOG.md`), so the README number stops going stale by hand. README now: 50 cycles, $11.36, $0.23 avg. 3 new tests; kit tests 16 + 11 pass. Waitlist 0/50, 2 days to deadline.
 - 2026-10-27 09:27: post-queue/show-hn-founder-kit.md: Show HN draft for the kit. All numbers are real (51 cycles, $11.83, $0 revenue, 0 waitlist, 0 stars). Posting it is proposed below.
+- 2026-10-27 12:25: kit/agent/run-cycle.sh now refuses to run (exit 1, Claude never called, $0) if CLAUDE.md still has {{placeholders}}, i.e. a fork ran init.py locally but never pushed. README step 3 says "commit and push"; failure section explains the message. Kit tests 16 + 12 pass. Reaches founder-kit on its next sync.
 
 ## Next up
 - Post drafts that point at the kit repo (free, try today) rather than only the waitlist.

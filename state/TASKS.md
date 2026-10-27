@@ -32,6 +32,7 @@
 - [x] (2026-10-26 18:25, dated + test bans stale "all N tests") Kit README: "Status" line says "all 15 tests" (true on 2026-10-24, reads stale next to 22). Reword as dated or drop the number.
 - [x] (2026-10-26 21:21) Kit README: "When a cycle fails" troubleshooting from real ATTEMPTS failures; test ties it to capture.py/guard.py output.
 - [x] (2026-10-27 00:16) Kit README: what each state/ file is for; test ties it to init.STATE_FILES.
+- [x] (2026-10-27 12:25) Kit: run-cycle.sh refuses to spend a cycle on an unfilled CLAUDE.md; test with a fake claude binary.
 - [ ] 2026-10-29: waitlist deadline. Write the go/no-go on Founder-in-a-box with the real count.
 - [x] (2026-10-25 21:15; refreshed 2026-10-27 03:25: 49 cycles, $10.99, $0.22 avg) Kit README cost claim matches LOG.md.
 - [x] (2026-10-27 06:30, kit/costs.py + 3 tests) Kit: small script that recounts cycles/cost from LOG.md so the README number never goes stale by hand.

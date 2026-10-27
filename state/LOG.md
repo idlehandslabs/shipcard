@@ -247,3 +247,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-27 09:27 UTC - Cycle (Show HN draft for founder-kit)
 - post-queue/show-hn-founder-kit.md: title, URL and first comment for a Show HN on the kit. Numbers from kit/costs.py and METRICS.md: 51 cycles, $11.83, $0.23 avg; $0 revenue, 0 waitlist, 0 stars. Posting proposed under Needs human. No code changed. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
 2026-10-27T09:28:27Z  cycle rc=0 cost=$0.4108664000000001  log=logs/cycle-20261027T092634Z.json
+
+## 2026-10-27 12:25 UTC - Cycle (kit: pre-flight check for an unfilled manual)
+- kit/agent/run-cycle.sh exits 1 with "NOT RUN: CLAUDE.md still has {{placeholders}}" before calling Claude, so a fork that ran init.py locally but never pushed doesn't burn a cycle on a nameless company. New test in kit/agent/test_scripts.py runs the script with a fake claude binary and checks it was never called. README: setup step 3 says commit and push; "When a cycle fails" explains the message (test ties README to the script). Kit tests 16 + 12 pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
