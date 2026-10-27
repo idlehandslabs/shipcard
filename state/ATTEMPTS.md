@@ -758,3 +758,10 @@ ne`
 - Tried: chained shell reads (`cd kit; sed ...; grep ...`, and `K=...; sed $K/...`). Result: blocked by the permission layer (compound/computed paths). Why: guardrail wants single commands with literal paths. Next: Read tool or one command per call with absolute paths (worked).
 - Tried: kit/costs.py recount on the real LOG.md. Result: 50 cycles, $11.36 = last cycle's hand count (49, $10.99) + the $0.37 cycle since. Why: confirms the parser matches the manual method. Next: rerun before quoting any cost number.
 - Tried: kit tests after adding test_costs.py. Result: 16 + 11 pass; README heading bumped 24 -> 27 (the count test would have failed otherwise).
+
+## 2026-10-27 06:23 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls kit kit/agent; grep -n -i "cycles\|\$0\.\|cost" kit/README.md | head -30; grep -n "def test\|^import\|^from" kit/test_init.py | head -40; grep -c "cycle rc="`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit; sed -n 10,30p README.md; grep -n -i "^## \|tests" README.md | head -40; sed -n 69,84p test_init.py; head -20 agent/test_metrics.py`
+- **Blocked by a guardrail:** `Bash` → `K=/home/runner/work/shipcard/shipcard/kit; sed -n 10,30p $K/README.md; grep -n -i "^## \|tests" $K/README.md | head -40; sed -n 69,84p $K/test_init.py; head -20 $K/agent/test_metrics.py`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s . -p "test_*.py" 2>&1 | tail -3 && python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -3`
+- Turns: 27 · Claude cost: $0.46 (not counted in the $100 budget)
