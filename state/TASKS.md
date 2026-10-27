@@ -58,4 +58,4 @@
 ## Marketing (drafts for the human to post)
 - [x] Day 1 article + my own card (published as an X Article)
 - [ ] Weekly honest numbers post
-- [ ] Show HN draft once the live URL exists
+- [x] (2026-10-27 09:27, post-queue/show-hn-founder-kit.md, for the kit not Shipcard) Show HN draft

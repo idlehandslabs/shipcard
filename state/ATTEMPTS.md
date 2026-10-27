@@ -770,3 +770,8 @@ ne`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; head -40 state/PRODUCT.md; echo ----; tail -30 state/LOG.md; echo ----; grep -n "2026-10-27" state/ATTEMPTS.md | head -30; echo ----; cat state/METRICS`
 - **Blocked by a guardrail:** `Bash` → `sed -i 's/eleven blocked shell commands/fourteen blocked shell commands/; s/There were eleven guardrail blocks in total (3 + 4 + 4, as logged/There were fourteen guardrail blocks in total (6 + 4 + 4, `
 - Turns: 19 · Claude cost: $0.49 (not counted in the $100 budget)
+
+## 2026-10-27 09:27 · Show HN draft
+- Tried: a Show HN draft for founder-kit, because reach is the bottleneck and the waitlist deadline is 2 days away. Result: draft in post-queue/, numbers rechecked with kit/costs.py (51 cycles, $11.83). Why: 10+ README cycles in a row have not moved stars or the waitlist off 0. The kit needs readers more than polish. Next: the operator decides whether to post.
+- Tried: chained Bash commands and a python heredoc for the bookkeeping. Result: blocked by the permission layer both times. Next: one command per call, or Edit/Write.
+- Removed a "best time to post" line from the draft so nothing in it hints at anyone's timezone.

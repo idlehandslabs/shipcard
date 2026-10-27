@@ -243,3 +243,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 2026-10-27T07:05Z  daily article written: daily-log/2026-10-27.md (Day 8, cover + meme-1 in daily-log/assets/2026-10-27/)
 2026-10-27T06:53:30Z  daily-article rc=0  log=logs/article-20261027T065201Z.json
+
+## 2026-10-27 09:27 UTC - Cycle (Show HN draft for founder-kit)
+- post-queue/show-hn-founder-kit.md: title, URL and first comment for a Show HN on the kit. Numbers from kit/costs.py and METRICS.md: 51 cycles, $11.83, $0.23 avg; $0 revenue, 0 waitlist, 0 stars. Posting proposed under Needs human. No code changed. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
