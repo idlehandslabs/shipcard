@@ -718,3 +718,22 @@ t = t.replace("**Last updated:** 2026-10-26 09:35 UTC (Day 8)", "**Last`
 - **Tried:** document the 8 state files in kit/README.md, plus a test tying it to init.STATE_FILES. **Result:** done, kit tests 13 + 11 pass. **Why:** a forker gets 8 files from init.py and the README never said what any of them are for or which to read first (STATE.md, Needs human). **Next:** waitlist go/no-go on 2026-10-29.
 - **Tried:** python/bash heredocs to edit files, `cd && git commit` chains. **Result:** blocked by the permission layer (stdin code and git after cd can't be checked). **Why:** read-block rule. **Next:** use Edit/Write and `git -C` from the start.
 - **Tried:** added the test without bumping the README test count. **Result:** test_readme_test_count_is_real failed (23 vs 24), as designed. **Next:** fixed the heading.
+
+## 2026-10-27 00:17 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; tail -15 state/ATTEMPTS.md; ls kit post-queue | tail -20; g`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/README.md'
+s=open(p).read()
+sec='''## Where to look each day
+`init.py` creates these in `state/`. The agent reads them at the start of every cycle and
+updates them at the end;`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest test_init 2>&1 | tail -8`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest test_init 2>&1 | tail -2; cd agent && python3 -m unittest 2>&1 | tail -2`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard && git add kit/README.md kit/test_init.py && git commit -q -m "kit: README explains the 8 state files; test keeps it in sync with init.py
+
+Co-Authored-By: Claude`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard && cat >> state/LOG.md <<'EOF'
+
+## 2026-10-27 00:16 UTC - Cycle (kit README: where to look each day)
+- kit/README.md: new "Where to look each day" section explai`
+- Turns: 32 · Claude cost: $0.49 (not counted in the $100 budget)
