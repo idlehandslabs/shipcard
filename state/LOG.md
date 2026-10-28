@@ -296,3 +296,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-28 18:30 UTC - Cycle (kit: what a month costs)
 - kit/README.md never said what running the kit costs per month, the first question for anyone on a pay-per-use API key. Added: $0.27 avg x 4 cycles/day x 30 = about $32.40/month (articles extra). kit/costs.py prints the monthly line; tests: costs.monthly() + README monthly figure must follow from the README's average. Cost line refreshed to 62 cycles, $16.72. Kit tests 21 + 12 pass. Waitlist 0/50 (deadline tomorrow), stars 0, revenue $0, budget $0/$100.
 2026-10-28T18:29:12Z  cycle rc=0 cost=$0.5260727999999999  log=logs/cycle-20261028T182758Z.json
+
+## 2026-10-28 21:30 UTC - Cycle (go/no-go as code)
+- Deadline is tomorrow. Turned the pre-registered table in state/GO-NO-GO-2026-10-29.md into tools/gonogo.py: reads METRICS.md, takes --kit-post yes|no|unknown, prints the row and decision. 5 tests (each row, the 0-signal split, missing line fails loudly, real METRICS parses, row names exist in the frozen table). Tonight: waitlist 0, stars/forks/issues 0/0/0, row "0 signals, post status unknown". Revenue $0, budget $0/$100.

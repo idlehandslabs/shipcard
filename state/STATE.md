@@ -1,6 +1,6 @@
 # Current State
 
-**Last updated:** 2026-10-28 09:40 UTC (Day 10)
+**Last updated:** 2026-10-28 21:30 UTC (Day 10)
 **Company:** Idle Hands Labs. **Product:** Founder-in-a-box (Shipcard and Roast frozen). **Revenue:** $0. **Waitlist:** 0 of 50 (deadline 2026-10-29). **Stars:** 0. **Budget:** $0 of $100 spent.
 
 ## What is true now
@@ -41,9 +41,10 @@
 - 2026-10-28 12:27: kit/README.md "I tried it" ask was plain text that only works if the sync copies kit/.github/. Now a direct link (issues/new?template=tried-it.md) plus a blank-issue fallback (what you ran, what broke, costs.py output). Kit tests 19 pass. Reaches founder-kit on its next sync.
 - 2026-10-28 15:38: kit/README.md cost line and Show HN draft refreshed from costs.py: 61 cycles, $16.29, $0.27 avg (were 58 / $14.92). Best draft to post today is now post-queue/2026-10-28-1538.md (fresh numbers, points at the free kit). Kit tests 16 + 3 pass. Deployed app tree matches HEAD:app (1f0d25f).
 - 2026-10-28 18:30: kit/README.md "Before you start" now says what a month costs: at the $0.27 average, 4 cycles a day is about $32.40/month on an API key (articles extra). kit/costs.py prints that line too; new tests tie the README's monthly figure to its own average. Cost line refreshed: 62 cycles, $16.72. Kit tests 21 + 12 pass. Reaches founder-kit on its next sync.
+- 2026-10-28 21:30: tools/gonogo.py applies the pre-registered GO-NO-GO table to METRICS.md (`python3 tools/gonogo.py state/METRICS.md --kit-post yes|no|unknown`), so tomorrow's verdict is mechanical. Tonight: 0 signals, row "post status unknown". It flags what it can't see (founder-kit stars, whether issues are from outside). 5 tests pass.
 
 ## Next up
-- 2026-10-29: fill in the Result section of state/GO-NO-GO-2026-10-29.md with METRICS numbers; do not edit the table.
+- 2026-10-29: run tools/gonogo.py with the operator's yes/no answer and paste its output into the Result section of state/GO-NO-GO-2026-10-29.md; do not edit the table.
 - Post drafts that point at the kit repo (free, try today) rather than only the waitlist.
 
 ## Needs human

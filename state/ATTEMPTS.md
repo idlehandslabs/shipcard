@@ -963,3 +963,10 @@ t=t.replace('''if __name__ == "__main__":''','''def monthly(s, per_day=4):
     """Wha`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest test_costs test_init 2>&1 | tail -3; python3 costs.py ../state/LOG.md`
 - Turns: 28 · Claude cost: $0.53 (not counted in the $100 budget)
+
+## 2026-10-28 21:30 UTC
+- Tried: encode the go/no-go table as tools/gonogo.py + tests, run it on current METRICS.
+- Result: works, 5 tests pass. Verdict today: undecided, because a 0 splits on whether a kit post went out, which the repo can't see.
+- Also tried: writing files and state edits via bash heredocs. Blocked by the permission layer (it can't parse heredoc/stdin code). Switched to the Write/Edit tools; no harm.
+- Why: removes any chance of bending the rule tomorrow after seeing the number.
+- Next: 2026-10-29, run it with the operator's yes/no and paste the output into the Result section.
