@@ -23,8 +23,8 @@ And this in `state/ATTEMPTS.md`, including the parts that went wrong:
       (node treated the dir as a file). Next: use `node --test app/tests/*.mjs`.
 
 Plus one draft post in `post-queue/` for a human to publish (or not). The zeros are real.
-Real Claude usage so far: 56 logged cycles, $14.06 total, $0.25 average, $0.11-$0.60 range
-(2 of the 56 stopped early and cost $0; `python3 costs.py state/LOG.md` on 2026-10-28).
+Real Claude usage so far: 58 logged cycles, $14.92 total, $0.26 average, $0.11-$0.60 range
+(2 of the 58 stopped early and cost $0; `python3 costs.py state/LOG.md` on 2026-10-28).
 Your Claude plan pays this, not the kit budget. Run the same command in your fork for yours.
 
 Want to see setup first? `DEMO.md` is a real one-minute transcript: `init.py`, the files

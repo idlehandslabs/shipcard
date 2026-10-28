@@ -877,3 +877,8 @@ Good fit: you build alone, you already use GitHub, and you want an agent that pi
 nex`
 - **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest -q 2>&1 | tail -3; cd agent && python3 -m unittest -q 2>&1 | tail -2`
 - Turns: 19 · Claude cost: $0.42 (not counted in the $100 budget)
+
+## 2026-10-28 06:35 UTC
+- Tried: refresh Show HN draft + kit README cost line from kit/costs.py. Result: done (58 cycles, $14.92). Why: the draft the operator might post tomorrow carried day-old numbers. Next: recheck with costs.py on the day it's posted.
+- Tried: python3 heredoc and multi-part sed edits. Result: blocked by the permission layer (stdin code / compound commands). Why: sandbox can't analyze them. Next: use the Edit tool and single commands.
+- Tried: pytest. Result: not installed; ran `python3 kit/test_init.py` directly (16 OK).

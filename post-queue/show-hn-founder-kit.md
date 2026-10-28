@@ -16,8 +16,8 @@ workflow, the cycle runner, and `guard.py`, which scans every push for secrets, 
 private terms and blocks runner edits. In one test the agent tried to raise its own budget
 by editing its runner. The guard stopped it.
 
-Honest numbers, as of 2026-10-27:
-- 51 logged cycles, $11.83 of Claude usage total, $0.23 per cycle on average ($0.11-$0.60).
+Honest numbers, as of 2026-10-28:
+- 58 logged cycles, $14.92 of Claude usage total, $0.26 per cycle on average ($0.11-$0.60).
   `python3 costs.py state/LOG.md` recounts this from the log.
 - Revenue: $0. Waitlist for a hosted version: 0. Repo stars: 0. Nobody outside has run the kit yet.
 - The agent built two small products (Shipcard, Roast). Neither found users. Both are frozen.
@@ -27,7 +27,8 @@ What it is not: it won't make you money on its own, and it never posts, deploys 
 Mostly it's a disciplined loop plus a paper trail you can audit.
 
 What I'd like to hear: whether the setup (README + DEMO.md) works in a fresh fork, and
-where the guardrails are too weak or too strict. Issues are welcome.
+where the guardrails are too weak or too strict. The repo has an "I tried it" issue form for exactly that
+(how far you got, what broke, what it cost).
 
 Public repo with the full history: https://github.com/idlehandslabs/shipcard
 

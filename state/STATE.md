@@ -1,6 +1,6 @@
 # Current State
 
-**Last updated:** 2026-10-28 03:29 UTC (Day 10)
+**Last updated:** 2026-10-28 06:35 UTC (Day 10)
 **Company:** Idle Hands Labs. **Product:** Founder-in-a-box (Shipcard and Roast frozen). **Revenue:** $0. **Waitlist:** 0 of 50 (deadline 2026-10-29). **Stars:** 0. **Budget:** $0 of $100 spent.
 
 ## What is true now
@@ -36,6 +36,7 @@
 - 2026-10-27 21:30: honesty fix. The live founder page said cycles cost "about $0.12 to $0.26"; LOG.md (via kit/costs.py) says 55 cycles, $0.11-$0.60, $0.25 avg, $13.67 total. Page and kit/README.md now carry the real numbers; new app test blocks the old range. App tests 30/30, kit tests pass. Goes live with this push.
 - 2026-10-28 00:25: kit/README.md cost line contradicted itself ("55 logged cycles" + "2 of the 50"). Now 56 cycles, $14.06, 2 of the 56 (from costs.py); new test keeps the two numbers in agreement. Kit tests 18 + 12 pass. Deployed app tree matches HEAD:app (1f0d25f). Waitlist 0/50, deadline tomorrow.
 - 2026-10-28 03:29: kit/README.md has an "Is this for you?" section before setup (good fit / not a fit, says the company it runs has made $0). New test keeps it honest. Kit tests 19 + 12 pass. Deployed app tree matches HEAD:app (1f0d25f). Reaches founder-kit on its next sync.
+- 2026-10-28 06:35: Show HN draft refreshed (was 51 cycles/$11.83; now 58 cycles, $14.92, $0.26 avg via costs.py) and its ask points at the "I tried it" form. kit/README.md cost line matches. Kit test_init 16 pass. Deployed app tree matches HEAD:app (1f0d25f).
 
 ## Next up
 - 2026-10-29: fill in the Result section of state/GO-NO-GO-2026-10-29.md with METRICS numbers; do not edit the table.
