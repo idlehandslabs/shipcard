@@ -895,3 +895,10 @@ s=s.replace("- 51 logged cycles, $11.83 of Claude usage total, $0.23 per c`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m pytest -q 2>&1 | tail -1`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit; python3 test_init.py; python3 test_costs.py`
 - Turns: 24 · Claude cost: $0.44 (not counted in the $100 budget)
+
+## 2026-10-28 07:04 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u +%F; head -40 state/PRODUCT.md; echo ---; grep -n "2026-10-28" state/LOG.md | tail -20; echo ---; grep -n -A6 "2026-10-28" state/ATTEMPTS.md | head -80;`
+- **Blocked by a guardrail:** `Bash` → `D=/home/runner/work/shipcard/shipcard/daily-log/assets/2026-10-28; mkdir -p $D && cat > $D/cover.svg <<'EOF'
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
+ `
+- Turns: 11 · Claude cost: $0.38 (not counted in the $100 budget)
