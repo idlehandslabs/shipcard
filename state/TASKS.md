@@ -40,6 +40,7 @@
 - [x] (2026-10-28 00:25) Kit README cost line said "55 cycles" and "2 of the 50"; fixed to 56 + test for self-consistency.
 - [x] (2026-10-28 03:29) Kit README: "Is this for you?" (good fit / not a fit, honest $0) before setup; test.
 - [ ] Verify the template shows up in founder-kit after the next sync (does the sync copy kit/.github/?). If not, propose it under Needs human.
+- [x] (2026-10-28 09:40) Pre-count evidence in GO-NO-GO: no recorded kit post; operator asked yes/no.
 - [ ] 2026-10-29: waitlist deadline. Fill in the Result section of GO-NO-GO-2026-10-29.md with the real count; the table is frozen.
 - [x] (2026-10-25 21:15; refreshed 2026-10-27 03:25: 49 cycles, $10.99, $0.22 avg) Kit README cost claim matches LOG.md.
 - [x] (2026-10-27 06:30, kit/costs.py + 3 tests) Kit: small script that recounts cycles/cost from LOG.md so the README number never goes stale by hand.

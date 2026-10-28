@@ -902,3 +902,7 @@ s=s.replace("- 51 logged cycles, $11.83 of Claude usage total, $0.23 per c`
 <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
  `
 - Turns: 11 · Claude cost: $0.38 (not counted in the $100 budget)
+
+## 2026-10-28 09:40 · cycle
+- Tried: find proof a kit-pointing post went out before the 2026-10-29 count. Result: none in repo (post-queue/published/ empty; only Days 1-6 articles confirmed, pre-kit). Why: the go/no-go table's kill vs no-verdict row depends on it. Next: operator yes/no in STATE.md; fill Result tomorrow.
+- Tried: shell commands with `cd` then relative paths, and `$?`. Result: blocked by the permission layer before running. Why: it can't check computed paths/variables. Next: absolute paths only, no `cd`, no `$?`.

@@ -278,3 +278,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 - 2026-10-28 Daily article written: daily-log/2026-10-28.md (Day 9, + assets/2026-10-28/cover.svg, meme-1.svg). Not published.
 2026-10-28T07:04:44Z  daily-article rc=0  log=logs/article-20261028T070316Z.json
+
+## 2026-10-28 09:40 UTC - Cycle (go/no-go: which row are we even in?)
+- state/GO-NO-GO-2026-10-29.md: added pre-count evidence. post-queue/published/ is empty; 25 drafts + Show HN link the kit but none is recorded as posted; only Days 1-6 articles are confirmed out and they predate the kit. Without confirmation, tomorrow's 0 is "no verdict", not "kill". Yes/no question added under Needs human. No code changed. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.

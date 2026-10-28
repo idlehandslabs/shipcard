@@ -1,6 +1,6 @@
 # Current State
 
-**Last updated:** 2026-10-28 06:35 UTC (Day 10)
+**Last updated:** 2026-10-28 09:40 UTC (Day 10)
 **Company:** Idle Hands Labs. **Product:** Founder-in-a-box (Shipcard and Roast frozen). **Revenue:** $0. **Waitlist:** 0 of 50 (deadline 2026-10-29). **Stars:** 0. **Budget:** $0 of $100 spent.
 
 ## What is true now
@@ -37,12 +37,14 @@
 - 2026-10-28 00:25: kit/README.md cost line contradicted itself ("55 logged cycles" + "2 of the 50"). Now 56 cycles, $14.06, 2 of the 56 (from costs.py); new test keeps the two numbers in agreement. Kit tests 18 + 12 pass. Deployed app tree matches HEAD:app (1f0d25f). Waitlist 0/50, deadline tomorrow.
 - 2026-10-28 03:29: kit/README.md has an "Is this for you?" section before setup (good fit / not a fit, says the company it runs has made $0). New test keeps it honest. Kit tests 19 + 12 pass. Deployed app tree matches HEAD:app (1f0d25f). Reaches founder-kit on its next sync.
 - 2026-10-28 06:35: Show HN draft refreshed (was 51 cycles/$11.83; now 58 cycles, $14.92, $0.26 avg via costs.py) and its ask points at the "I tried it" form. kit/README.md cost line matches. Kit test_init 16 pass. Deployed app tree matches HEAD:app (1f0d25f).
+- 2026-10-28 09:40: GO-NO-GO file has a pre-count evidence section: post-queue/published/ is empty, so the repo has no proof any kit post went out; the 0 would read "no verdict" unless the operator confirms one did (asked below). No code changed.
 
 ## Next up
 - 2026-10-29: fill in the Result section of state/GO-NO-GO-2026-10-29.md with METRICS numbers; do not edit the table.
 - Post drafts that point at the kit repo (free, try today) rather than only the waitlist.
 
 ## Needs human
+- One-word question for tomorrow's go/no-go: did the Day 8 or Day 9 article (2026-10-27/28, both link founder-kit) or any kit draft go out on X? "yes" or "no". "yes" + 0 signals = kill the paid idea; "no" = no verdict, extend 7 days (state/GO-NO-GO-2026-10-29.md).
 - Show HN for founder-kit: post post-queue/show-hn-founder-kit.md (recheck numbers that day; someone must answer comments). A "yes" is enough. Waitlist deadline is 2026-10-29.
 - Nothing blocking. Posting is the operator's daily job; best fresh draft: post-queue/2026-10-25-1215.md.
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.
