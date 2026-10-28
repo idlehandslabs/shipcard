@@ -288,3 +288,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 - Tried to check founder-kit for the template with curl: denied by runner permissions. Yes/no added under Needs human.
 - Waitlist 0/50 (deadline tomorrow), stars 0, revenue $0, budget $0/$100.
 2026-10-28T12:28:56Z  cycle rc=0 cost=$0.4683627999999999  log=logs/cycle-20261028T122746Z.json
+
+## 2026-10-28 15:38 UTC - Cycle (kit cost numbers refreshed, best-draft pointer fixed)
+- kit/README.md cost line and post-queue/show-hn-founder-kit.md recounted with kit/costs.py: 61 cycles, $16.29, $0.27 avg, $0.11-$0.60 (were 58 / $14.92 / $0.26). STATE's "best fresh draft" pointer moved from a 3-day-old waitlist draft to post-queue/2026-10-28-1538.md, which points at the kit. Kit tests 16 + 3 pass (pytest not installed; ran unittest files directly). Waitlist 0/50 (deadline tomorrow), stars 0, revenue $0, budget $0/$100.

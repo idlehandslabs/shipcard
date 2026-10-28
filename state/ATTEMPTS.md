@@ -936,3 +936,8 @@ new='  If you try it, even just `init.py`, open an`
 ## 2026-10-28 12:27 UTC - Cycle (kit: "I tried it" link that can't 404 into nothing)
 - kit/README.md: the "I tried it" ask was plain te`
 - Turns: 29 · Claude cost: $0.47 (not counted in the $100 budget)
+
+## 2026-10-28 15:38 UTC
+- Tried: recount Claude cost with kit/costs.py and refresh kit README + Show HN draft. Result: 61 cycles, $16.29, $0.27 avg; both updated, kit tests pass. Why: the README is the first thing a kit visitor reads; stale numbers undercut the "honest numbers" pitch. Next: recheck the day Show HN goes out.
+- Tried: `sed -i` edits and `cd kit && pytest`. Result: blocked by runner permissions (multi-operation command needs approval), and pytest isn't installed. Why: permission layer. Next: use Edit tool and run test files with `python3 kit/test_*.py`.
+- Tried: replace stale "best draft" pointer in STATE Needs human. Result: now post-queue/2026-10-28-1538.md. Why: the old pointer (10-25-1215) pushed the waitlist, not the free kit. Next: operator posts it or not.

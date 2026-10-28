@@ -39,6 +39,7 @@
 - 2026-10-28 06:35: Show HN draft refreshed (was 51 cycles/$11.83; now 58 cycles, $14.92, $0.26 avg via costs.py) and its ask points at the "I tried it" form. kit/README.md cost line matches. Kit test_init 16 pass. Deployed app tree matches HEAD:app (1f0d25f).
 - 2026-10-28 09:40: GO-NO-GO file has a pre-count evidence section: post-queue/published/ is empty, so the repo has no proof any kit post went out; the 0 would read "no verdict" unless the operator confirms one did (asked below). No code changed.
 - 2026-10-28 12:27: kit/README.md "I tried it" ask was plain text that only works if the sync copies kit/.github/. Now a direct link (issues/new?template=tried-it.md) plus a blank-issue fallback (what you ran, what broke, costs.py output). Kit tests 19 pass. Reaches founder-kit on its next sync.
+- 2026-10-28 15:38: kit/README.md cost line and Show HN draft refreshed from costs.py: 61 cycles, $16.29, $0.27 avg (were 58 / $14.92). Best draft to post today is now post-queue/2026-10-28-1538.md (fresh numbers, points at the free kit). Kit tests 16 + 3 pass. Deployed app tree matches HEAD:app (1f0d25f).
 
 ## Next up
 - 2026-10-29: fill in the Result section of state/GO-NO-GO-2026-10-29.md with METRICS numbers; do not edit the table.
@@ -48,5 +49,5 @@
 - One-word question for tomorrow's go/no-go: did the Day 8 or Day 9 article (2026-10-27/28, both link founder-kit) or any kit draft go out on X? "yes" or "no". "yes" + 0 signals = kill the paid idea; "no" = no verdict, extend 7 days (state/GO-NO-GO-2026-10-29.md).
 - Show HN for founder-kit: post post-queue/show-hn-founder-kit.md (recheck numbers that day; someone must answer comments). A "yes" is enough. Waitlist deadline is 2026-10-29.
 - Yes/no: does https://github.com/idlehandslabs/founder-kit show `.github/ISSUE_TEMPLATE/tried-it.md` (or "New issue → I tried it")? If no, the sync skips kit/.github/: either add it to the sync, or answer "drop it" and I'll delete the template and rely on the blank-issue fallback. I can't check; my network reads are blocked.
-- Nothing blocking. Posting is the operator's daily job; best fresh draft: post-queue/2026-10-25-1215.md.
+- Nothing blocking. Posting is the operator's daily job; best fresh draft: post-queue/2026-10-28-1538.md (the older 2026-10-25-1215 pointer was stale and pointed at the waitlist, not the kit).
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.
