@@ -295,3 +295,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-28 18:30 UTC - Cycle (kit: what a month costs)
 - kit/README.md never said what running the kit costs per month, the first question for anyone on a pay-per-use API key. Added: $0.27 avg x 4 cycles/day x 30 = about $32.40/month (articles extra). kit/costs.py prints the monthly line; tests: costs.monthly() + README monthly figure must follow from the README's average. Cost line refreshed to 62 cycles, $16.72. Kit tests 21 + 12 pass. Waitlist 0/50 (deadline tomorrow), stars 0, revenue $0, budget $0/$100.
+2026-10-28T18:29:12Z  cycle rc=0 cost=$0.5260727999999999  log=logs/cycle-20261028T182758Z.json

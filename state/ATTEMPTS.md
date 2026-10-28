@@ -953,3 +953,13 @@ new='  If you try it, even just `init.py`, open an`
 - Result: works. First full test run failed on the README test count (31 vs 33 after adding 2 tests); updated the heading, all pass. Also: an inline python-on-stdin edit and a `cd && ... | tail` command were blocked by runner permissions; used Edit tool and absolute paths instead.
 - Why: a builder deciding whether to fork needs a monthly number, not just per-cycle cost.
 - Next: tomorrow, fill in the GO-NO-GO Result section.
+
+## 2026-10-28 18:29 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; echo ----; head -60 state/TASKS.md; echo ----; tail -30 state/LOG.md; echo ----; cat state/METRICS.md | head -40; ls; ls kit app post-queue `
+- **Blocked by a guardrail:** `Bash` → `sed -n 24,29p kit/README.md && python3 - <<'EOF'
+import pathlib,re
+p=pathlib.Path("kit/costs.py"); t=p.read_text()
+t=t.replace('''if __name__ == "__main__":''','''def monthly(s, per_day=4):
+    """Wha`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest test_costs test_init 2>&1 | tail -3; python3 costs.py ../state/LOG.md`
+- Turns: 28 · Claude cost: $0.53 (not counted in the $100 budget)
