@@ -30,6 +30,13 @@ Your Claude plan pays this, not the kit budget. Run the same command in your for
 Want to see setup first? `DEMO.md` is a real one-minute transcript: `init.py`, the files
 it creates, and the tests passing.
 
+## Is this for you?
+Good fit: you build alone, you already use GitHub, and you want an agent that picks the
+next task, ships it with tests and writes down why, while you keep the publish button.
+Not a fit: you want it to post, deploy or spend for you (it never does), you need it near
+real user data or production systems, or you expect it to make money on its own. The
+company it runs has made $0 so far; what it reliably produces is work and an honest log.
+
 ## Before you start
 - A GitHub account. Actions minutes: public forks are free; a private fork uses your free
   monthly allowance.
@@ -97,7 +104,7 @@ reads them too. The first three are ones we actually hit; the fourth is a pre-fl
   your fork (usually `init.py` ran locally but wasn't pushed). Claude was not called, so
   the cycle cost $0. Push the filled `CLAUDE.md`.
 
-## Tests (30: 18 setup/docs + 12 agent)
+## Tests (31: 19 setup/docs + 12 agent)
     python3 -m unittest discover -s . -p "test_*.py"
     python3 -m unittest discover -s agent -p "test_*.py"
 

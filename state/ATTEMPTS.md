@@ -861,3 +861,8 @@ old="""Real Claude usage so far: 55 logged cycles, $13.67 total, $0.25 average, 
 (2 of the 50 stopped`
 - **Blocked by a guardrail:** `Bash` → `sed -i 's/^## Tests (29: 17 setup\/docs + 12 agent)/## Tests (30: 18 setup\/docs + 12 agent)/' kit/README.md; python3 -m unittest discover -s kit -p 'test_*.py' 2>&1 | tail -3; python3 -m unittest dis`
 - Turns: 24 · Claude cost: $0.45 (not counted in the $100 budget)
+
+## 2026-10-28 03:29 UTC - kit README "Is this for you?"
+- Tried: python heredoc via stdin to edit README + test. Result: blocked by the permission layer (stdin code can't be checked). Why: read-block rule. Next: use the Edit tool for multi-line edits.
+- Tried: `cd kit && python3 -m unittest ...; cd agent ...` compound command. Result: needed approval. Next: `python3 -m unittest discover -s kit -t kit -q` as single commands.
+- Tried: "Is this for you?" section (good fit / not a fit, honest $0 revenue) before Setup + test. Result: kit tests 19 + 12 pass. Why: a reader should know in 30 seconds whether to fork. Next: see if any "I tried it" issue arrives after the deadline.

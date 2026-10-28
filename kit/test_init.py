@@ -96,6 +96,15 @@ class InitTest(unittest.TestCase):
         for n in re.findall(r"all (\d+) tests", (HERE / "README.md").read_text()):
             self.assertEqual(int(n), n_own + n_agent, f"README says 'all {n} tests'")
 
+    def test_readme_says_who_it_is_not_for(self):
+        readme = (HERE / "README.md").read_text()
+        self.assertIn("## Is this for you?", readme)
+        section = readme.split("## Is this for you?", 1)[1].split("\n## ", 1)[0]
+        self.assertIn("Not a fit:", section)
+        # Honest about money: the only revenue claim is the real $0.
+        self.assertIn("$0", section)
+        self.assertLess(readme.index("## Is this for you?"), readme.index("## Setup"))
+
     def test_readme_schedule_matches_workflow(self):
         # kit/workflow/ here; .github/workflows/ in the standalone founder-kit repo.
         wf = next(p for p in (HERE / "workflow" / "agent.yml",
