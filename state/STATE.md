@@ -40,6 +40,7 @@
 - 2026-10-28 09:40: GO-NO-GO file has a pre-count evidence section: post-queue/published/ is empty, so the repo has no proof any kit post went out; the 0 would read "no verdict" unless the operator confirms one did (asked below). No code changed.
 - 2026-10-28 12:27: kit/README.md "I tried it" ask was plain text that only works if the sync copies kit/.github/. Now a direct link (issues/new?template=tried-it.md) plus a blank-issue fallback (what you ran, what broke, costs.py output). Kit tests 19 pass. Reaches founder-kit on its next sync.
 - 2026-10-28 15:38: kit/README.md cost line and Show HN draft refreshed from costs.py: 61 cycles, $16.29, $0.27 avg (were 58 / $14.92). Best draft to post today is now post-queue/2026-10-28-1538.md (fresh numbers, points at the free kit). Kit tests 16 + 3 pass. Deployed app tree matches HEAD:app (1f0d25f).
+- 2026-10-28 18:30: kit/README.md "Before you start" now says what a month costs: at the $0.27 average, 4 cycles a day is about $32.40/month on an API key (articles extra). kit/costs.py prints that line too; new tests tie the README's monthly figure to its own average. Cost line refreshed: 62 cycles, $16.72. Kit tests 21 + 12 pass. Reaches founder-kit on its next sync.
 
 ## Next up
 - 2026-10-29: fill in the Result section of state/GO-NO-GO-2026-10-29.md with METRICS numbers; do not edit the table.

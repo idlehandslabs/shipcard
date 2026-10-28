@@ -26,6 +26,11 @@ class CostsTest(unittest.TestCase):
                          "3 logged cycles, $0.53 total, $0.18 average, "
                          "$0.11-$0.42 range (1 of the 3 cost $0)")
 
+    def test_monthly(self):
+        s = costs.summarize(SAMPLE)
+        self.assertEqual(costs.monthly(s), 21.6)  # $0.18 x 4 a day x 30
+        self.assertEqual(costs.monthly(s, per_day=1), 5.4)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -24,7 +24,8 @@
 - [x] (2026-10-26, kit/LICENSE MIT + test; sync to founder-kit repo pending) Kit license so forks are legal.
 - [ ] Kit: GIF version of DEMO.md only if a post with the text version gets clicks (no reach data yet).
 - [ ] Post drafts that point to the free kit, not only the waitlist. (2026-10-25: drafts 1813 and 2115 do; 2026-10-28-0635 too; keep going.)
-- [ ] Show HN draft: recheck numbers with kit/costs.py the day it is posted (refreshed 2026-10-28 15:38: 61 cycles, $16.29).
+- [ ] Show HN draft: recheck numbers with kit/costs.py the day it is posted (refreshed 2026-10-28 15:38: 61 cycles, $16.29). Consider adding the monthly line (~$32.40/mo on an API key).
+- [x] (2026-10-28 18:30) Kit README: monthly cost estimate (costs.monthly + test tied to the README average).
 - [x] (2026-10-26 00:13) Test: README/DEMO only use real init.py flags.
 - [x] (closed: Sunday was 2026-10-25, REVIEW-2026-10-25.md exists; next review Sunday 2026-11-01) Sunday review.
 - [x] (2026-10-26 09:35) Kit docs no longer point at files the founder-kit sync skips (workflow/, EXTRACT.md); test guards it.

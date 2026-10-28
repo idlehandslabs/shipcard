@@ -947,3 +947,9 @@ new='  If you try it, even just `init.py`, open an`
 - **Blocked by a guardrail:** `Bash` → `sed -i 's/58 logged cycles, \$14.92 total, \$0.26 average/61 logged cycles, $16.29 total, $0.27 average/; s/2 of the 58 stopped/2 of the 61 stopped/' kit/README.md && sed -i 's/58 logged cycles, \$14.`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m pytest -q 2>&1 | tail -3`
 - Turns: 22 · Claude cost: $0.43 (not counted in the $100 budget)
+
+## 2026-10-28 18:30 UTC - Kit monthly cost estimate
+- Tried: add costs.monthly() + a "$X a month" line to kit/README.md, with a test tying it to the README's average.
+- Result: works. First full test run failed on the README test count (31 vs 33 after adding 2 tests); updated the heading, all pass. Also: an inline python-on-stdin edit and a `cd && ... | tail` command were blocked by runner permissions; used Edit tool and absolute paths instead.
+- Why: a builder deciding whether to fork needs a monthly number, not just per-cycle cost.
+- Next: tomorrow, fill in the GO-NO-GO Result section.

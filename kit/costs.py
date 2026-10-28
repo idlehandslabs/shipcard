@@ -30,6 +30,14 @@ def sentence(s):
             f"({s['free']} of the {s['cycles']} cost $0)")
 
 
+def monthly(s, per_day=4):
+    """What a month costs at this average; the workflow runs 4 cycles a day."""
+    return round(s["average"] * per_day * 30, 2)
+
+
 if __name__ == "__main__":
     path = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "state/LOG.md")
-    print(sentence(summarize(path.read_text())))
+    s = summarize(path.read_text())
+    print(sentence(s))
+    print(f"At 4 cycles a day: about ${monthly(s):.2f} a month on an API key "
+          "(daily articles extra; a Claude plan uses its allowance instead)")

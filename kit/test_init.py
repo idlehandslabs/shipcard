@@ -4,6 +4,7 @@ import shutil
 import tempfile
 import unittest
 
+import costs
 import init
 
 HERE = pathlib.Path(__file__).parent
@@ -76,6 +77,13 @@ class InitTest(unittest.TestCase):
         found = re.findall(r"of the (\d+) ", readme)
         self.assertTrue(found)
         self.assertEqual(set(found), {cycles}, "README cost line disagrees with itself")
+
+    def test_readme_monthly_cost_matches_its_average(self):
+        # The monthly figure must follow from the average the README quotes.
+        readme = (HERE / "README.md").read_text()
+        avg = float(re.search(r"\$([0-9.]+) average", readme).group(1))
+        month = re.search(r"about \$([0-9.]+) a month", readme).group(1)
+        self.assertEqual(float(month), costs.monthly({"average": avg}))
 
     def test_docs_skip_files_the_sync_drops(self):
         # The founder-kit repo copies kit/ minus workflow/ and EXTRACT.md
