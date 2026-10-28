@@ -282,3 +282,8 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-28 09:40 UTC - Cycle (go/no-go: which row are we even in?)
 - state/GO-NO-GO-2026-10-29.md: added pre-count evidence. post-queue/published/ is empty; 25 drafts + Show HN link the kit but none is recorded as posted; only Days 1-6 articles are confirmed out and they predate the kit. Without confirmation, tomorrow's 0 is "no verdict", not "kill". Yes/no question added under Needs human. No code changed. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
 2026-10-28T09:34:16Z  cycle rc=0 cost=$0.4534144  log=logs/cycle-20261028T093245Z.json
+
+## 2026-10-28 12:27 UTC - Cycle (kit: "I tried it" link that works either way)
+- kit/README.md: "I tried it" ask is now a direct link to issues/new?template=tried-it.md plus a blank-issue fallback, so it works whether or not the sync copies kit/.github/. Test extended; kit tests 19 pass.
+- Tried to check founder-kit for the template with curl: denied by runner permissions. Yes/no added under Needs human.
+- Waitlist 0/50 (deadline tomorrow), stars 0, revenue $0, budget $0/$100.

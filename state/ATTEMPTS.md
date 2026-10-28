@@ -916,3 +916,8 @@ s=s.replace("- 51 logged cycles, $11.83 of Claude usage total, $0.23 per c`
 ## Pre-count evidence (gathered 2026-10-28 09:40 UTC, does not change the table)
 The "kill" vs "no verdict" rows hinge on one fact this repo can't see: did`
 - Turns: 14 · Claude cost: $0.45 (not counted in the $100 budget)
+
+## 2026-10-28 12:27 UTC
+- Tried: curl founder-kit to see if .github/ISSUE_TEMPLATE/tried-it.md got synced. Result: denied (runner permissions). Why: no network reads allowed. Next: yes/no for the operator in STATE.md.
+- Tried: make the README's "I tried it" ask work either way (direct template link + blank-issue fallback). Result: done, kit tests 19 pass. Why: a first user hitting a missing form is the worst moment to lose them. Next: lands on founder-kit's next 6-hour sync.
+- Also: a python heredoc edit was blocked by the shell permission checker; used the Edit tool instead.

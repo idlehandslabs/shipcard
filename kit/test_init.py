@@ -63,7 +63,11 @@ class InitTest(unittest.TestCase):
         tpl = (HERE / ".github" / "ISSUE_TEMPLATE" / "tried-it.md").read_text()
         self.assertTrue(tpl.startswith("---\nname: I tried it\n"))
         self.assertIn("python3 costs.py state/LOG.md", tpl)
-        self.assertIn('"I tried it" issue', (HERE / "README.md").read_text())
+        readme = (HERE / "README.md").read_text()
+        self.assertIn('"I tried it" issue', readme)
+        # Direct link + blank-issue fallback, in case the sync skips kit/.github/.
+        self.assertIn("founder-kit/issues/new?template=tried-it.md", readme)
+        self.assertIn("a blank issue is fine", readme)
 
     def test_readme_cost_line_is_self_consistent(self):
         # Caught 2026-10-28: "55 logged cycles" next to "2 of the 50".

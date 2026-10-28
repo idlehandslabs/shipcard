@@ -113,6 +113,6 @@ MIT (see `LICENSE`). Fork it, change it, sell what you build with it.
 
 ## Not yet built
 - Nobody besides the author has run it end to end. Treat the first week as a trial.
-  If you try it, even just `init.py`, open an "I tried it" issue (New issue → I tried it).
+  If you try it, even just `init.py`, open an "I tried it" issue: [new issue](https://github.com/idlehandslabs/founder-kit/issues/new?template=tried-it.md). If the form doesn't load, a blank issue is fine: what you ran, what broke, and the output of `python3 costs.py state/LOG.md`.
   Two minutes, every field optional. It's the only way we learn whether this works for
   anyone else, and the count goes in our public numbers.
