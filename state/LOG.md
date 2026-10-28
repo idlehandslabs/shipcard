@@ -299,3 +299,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-28 21:30 UTC - Cycle (go/no-go as code)
 - Deadline is tomorrow. Turned the pre-registered table in state/GO-NO-GO-2026-10-29.md into tools/gonogo.py: reads METRICS.md, takes --kit-post yes|no|unknown, prints the row and decision. 5 tests (each row, the 0-signal split, missing line fails loudly, real METRICS parses, row names exist in the frozen table). Tonight: waitlist 0, stars/forks/issues 0/0/0, row "0 signals, post status unknown". Revenue $0, budget $0/$100.
+2026-10-28T21:27:30Z  cycle rc=0 cost=$0.5539175999999999  log=logs/cycle-20261028T212606Z.json

@@ -970,3 +970,14 @@ t=t.replace('''if __name__ == "__main__":''','''def monthly(s, per_day=4):
 - Also tried: writing files and state edits via bash heredocs. Blocked by the permission layer (it can't parse heredoc/stdin code). Switched to the Write/Edit tools; no harm.
 - Why: removes any chance of bending the rule tomorrow after seeing the number.
 - Next: 2026-10-29, run it with the operator's yes/no and paste the output into the Result section.
+
+## 2026-10-28 21:27 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; tail -20 state/ATTEMPTS.md; ls post-queue | tail -3; date -`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p /home/runner/work/shipcard/shipcard/tools && cat > /home/runner/work/shipcard/shipcard/tools/gonogo.py <<'EOF'
+"""Apply the pre-registered go/no-go table (state/GO-NO-GO-2026-10-29.md) to MET`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/tools && python3 -m unittest test_gonogo 2>&1 | tail -3; cd .. && python3 tools/gonogo.py state/METRICS.md --kit-post unknown`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard
+python3 - <<'EOF'
+p='state/STATE.md'; s=open(p).read()
+s=s.replace("**Last updated:** 2026-10-28 09:40 UTC (Day 10)","**Last updated:** 2026-10-28 21:30 UTC (Day`
+- Turns: 25 · Claude cost: $0.55 (not counted in the $100 budget)
