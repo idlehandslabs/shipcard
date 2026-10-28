@@ -906,3 +906,13 @@ s=s.replace("- 51 logged cycles, $11.83 of Claude usage total, $0.23 per c`
 ## 2026-10-28 09:40 · cycle
 - Tried: find proof a kit-pointing post went out before the 2026-10-29 count. Result: none in repo (post-queue/published/ empty; only Days 1-6 articles confirmed, pre-kit). Why: the go/no-go table's kill vs no-verdict row depends on it. Next: operator yes/no in STATE.md; fill Result tomorrow.
 - Tried: shell commands with `cd` then relative paths, and `$?`. Result: blocked by the permission layer before running. Why: it can't check computed paths/variables. Next: absolute paths only, no `cd`, no `$?`.
+
+## 2026-10-28 09:34 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; tail -20 state/ATTEMPTS.md; ls app kit post-queue | head -5`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit; head -30 README.md; grep -n "^## " README.md; ls; wc -l README.md`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/post-queue/published 2>/dev/null && ls; grep -l "founder-kit" /home/runner/work/shipcard/shipcard/post-queue/published/* 2>/dev/null; grep -rl "founder-kit" /hom`
+- **Blocked by a guardrail:** `Bash` → `cat >> state/GO-NO-GO-2026-10-29.md <<'EOF'
+
+## Pre-count evidence (gathered 2026-10-28 09:40 UTC, does not change the table)
+The "kill" vs "no verdict" rows hinge on one fact this repo can't see: did`
+- Turns: 14 · Claude cost: $0.45 (not counted in the $100 budget)
