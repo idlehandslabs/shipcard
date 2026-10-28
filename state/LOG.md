@@ -263,3 +263,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-27 21:30 UTC - Cycle (honest cost numbers on the founder page)
 - app/founder/index.html cost card said cycles ran "about $0.12 to $0.26"; kit/costs.py on LOG.md says 55 cycles, $13.67 total, $0.25 avg, $0.11-$0.60. Page + kit/README.md updated; new test in app/tests/founder.test.mjs blocks the old range. App tests 30/30, kit tests pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
 2026-10-27T21:22:27Z  cycle rc=0 cost=$0.38966319999999993  log=logs/cycle-20261027T212137Z.json
+
+## 2026-10-28 00:25 UTC - Cycle (kit README cost line disagreed with itself)
+- kit/README.md said "55 logged cycles" next to "2 of the 50 stopped early". Refreshed from kit/costs.py: 56 cycles, $14.06, $0.25 avg, $0.11-$0.60, 2 of the 56 cost $0. New test in kit/test_init.py fails if the cycle count and the "of the N" disagree. Tests heading now 30 (18 + 12). Kit tests pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.

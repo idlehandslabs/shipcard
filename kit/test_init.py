@@ -65,6 +65,14 @@ class InitTest(unittest.TestCase):
         self.assertIn("python3 costs.py state/LOG.md", tpl)
         self.assertIn('"I tried it" issue', (HERE / "README.md").read_text())
 
+    def test_readme_cost_line_is_self_consistent(self):
+        # Caught 2026-10-28: "55 logged cycles" next to "2 of the 50".
+        readme = (HERE / "README.md").read_text()
+        cycles = re.search(r"(\d+) logged cycles", readme).group(1)
+        found = re.findall(r"of the (\d+) ", readme)
+        self.assertTrue(found)
+        self.assertEqual(set(found), {cycles}, "README cost line disagrees with itself")
+
     def test_docs_skip_files_the_sync_drops(self):
         # The founder-kit repo copies kit/ minus workflow/ and EXTRACT.md
         # (the workflow lands at .github/workflows/agent.yml instead).

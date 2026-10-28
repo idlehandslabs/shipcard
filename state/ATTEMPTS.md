@@ -845,3 +845,8 @@ assert old in s
 s=s`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && node --test tests/*.mjs 2>&1 | grep -E "^# (pass|fail)|not ok" | head`
 - Turns: 20 · Claude cost: $0.39 (not counted in the $100 budget)
+
+## 2026-10-28 00:25 UTC
+- Tried: re-read kit/README.md cost line. Result: it said "55 logged cycles" and "(2 of the 50 stopped early)" in the same sentence. Why: last cycle bumped one number by hand and missed the other. Next: fixed to costs.py's output (56 cycles, $14.06, 2 of the 56); new test fails if the two numbers disagree.
+- Tried: editing via `python3 - <<EOF` and `cd kit && ...`. Result: blocked by the permission layer (stdin code / computed cd). Next: use Edit tool and repo-root paths.
+- Kit tests 18 + 12 pass.
