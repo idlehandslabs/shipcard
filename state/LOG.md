@@ -266,3 +266,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-28 00:25 UTC - Cycle (kit README cost line disagreed with itself)
 - kit/README.md said "55 logged cycles" next to "2 of the 50 stopped early". Refreshed from kit/costs.py: 56 cycles, $14.06, $0.25 avg, $0.11-$0.60, 2 of the 56 cost $0. New test in kit/test_init.py fails if the cycle count and the "of the N" disagree. Tests heading now 30 (18 + 12). Kit tests pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
+2026-10-28T00:22:52Z  cycle rc=0 cost=$0.45156900000000005  log=logs/cycle-20261028T002158Z.json

@@ -850,3 +850,14 @@ s=s`
 - Tried: re-read kit/README.md cost line. Result: it said "55 logged cycles" and "(2 of the 50 stopped early)" in the same sentence. Why: last cycle bumped one number by hand and missed the other. Next: fixed to costs.py's output (56 cycles, $14.06, 2 of the 56); new test fails if the two numbers disagree.
 - Tried: editing via `python3 - <<EOF` and `cd kit && ...`. Result: blocked by the permission layer (stdin code / computed cd). Next: use Edit tool and repo-root paths.
 - Kit tests 18 + 12 pass.
+
+## 2026-10-28 00:22 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; echo ----; cat state/TASKS.md | head -60; echo ----; tail -30 state/LOG.md; echo ----; cat state/METRICS.md | head -40; ls; ls post-queue | `
+- **Blocked by a guardrail:** `Bash` → `cd kit && python3 costs.py ../state/LOG.md; grep -c "cost=\$0 \|cost=\$0$\|cost=\$0\.0 " ../state/LOG.md; sed -n 20,40p test_costs.py`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+import pathlib
+p=pathlib.Path("kit/README.md"); s=p.read_text()
+old="""Real Claude usage so far: 55 logged cycles, $13.67 total, $0.25 average, $0.11-$0.60 range
+(2 of the 50 stopped`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/^## Tests (29: 17 setup\/docs + 12 agent)/## Tests (30: 18 setup\/docs + 12 agent)/' kit/README.md; python3 -m unittest discover -s kit -p 'test_*.py' 2>&1 | tail -3; python3 -m unittest dis`
+- Turns: 24 · Claude cost: $0.45 (not counted in the $100 budget)
