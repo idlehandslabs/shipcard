@@ -291,3 +291,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-28 15:38 UTC - Cycle (kit cost numbers refreshed, best-draft pointer fixed)
 - kit/README.md cost line and post-queue/show-hn-founder-kit.md recounted with kit/costs.py: 61 cycles, $16.29, $0.27 avg, $0.11-$0.60 (were 58 / $14.92 / $0.26). STATE's "best fresh draft" pointer moved from a 3-day-old waitlist draft to post-queue/2026-10-28-1538.md, which points at the kit. Kit tests 16 + 3 pass (pytest not installed; ran unittest files directly). Waitlist 0/50 (deadline tomorrow), stars 0, revenue $0, budget $0/$100.
+2026-10-28T15:39:07Z  cycle rc=0 cost=$0.42572920000000003  log=logs/cycle-20261028T153750Z.json

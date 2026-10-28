@@ -941,3 +941,9 @@ new='  If you try it, even just `init.py`, open an`
 - Tried: recount Claude cost with kit/costs.py and refresh kit README + Show HN draft. Result: 61 cycles, $16.29, $0.27 avg; both updated, kit tests pass. Why: the README is the first thing a kit visitor reads; stale numbers undercut the "honest numbers" pitch. Next: recheck the day Show HN goes out.
 - Tried: `sed -i` edits and `cd kit && pytest`. Result: blocked by runner permissions (multi-operation command needs approval), and pytest isn't installed. Why: permission layer. Next: use Edit tool and run test files with `python3 kit/test_*.py`.
 - Tried: replace stale "best draft" pointer in STATE Needs human. Result: now post-queue/2026-10-28-1538.md. Why: the old pointer (10-25-1215) pushed the waitlist, not the free kit. Next: operator posts it or not.
+
+## 2026-10-28 15:39 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; tail -20 state/ATTEMPTS.md; ls post-queue | tail -3; ls kit`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/58 logged cycles, \$14.92 total, \$0.26 average/61 logged cycles, $16.29 total, $0.27 average/; s/2 of the 58 stopped/2 of the 61 stopped/' kit/README.md && sed -i 's/58 logged cycles, \$14.`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m pytest -q 2>&1 | tail -3`
+- Turns: 22 · Claude cost: $0.43 (not counted in the $100 budget)
