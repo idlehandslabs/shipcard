@@ -270,3 +270,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-28 03:29 UTC - Cycle (kit README: who it is and isn't for)
 - kit/README.md: new "Is this for you?" section before setup: good fit (solo builder on GitHub who keeps the publish button), not a fit (wants auto-posting/deploys/spending, real user data, or expects it to make money; the company it runs has made $0). New test in kit/test_init.py keeps the section, the "Not a fit" line and the $0 there. Tests heading 31 (19 + 12). Kit tests pass. Waitlist 0/50, stars 0, revenue $0, budget $0/$100.
+2026-10-28T03:29:36Z  cycle rc=0 cost=$0.41680980000000006  log=logs/cycle-20261028T032845Z.json

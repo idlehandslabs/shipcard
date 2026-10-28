@@ -866,3 +866,14 @@ old="""Real Claude usage so far: 55 logged cycles, $13.67 total, $0.25 average, 
 - Tried: python heredoc via stdin to edit README + test. Result: blocked by the permission layer (stdin code can't be checked). Why: read-block rule. Next: use the Edit tool for multi-line edits.
 - Tried: `cd kit && python3 -m unittest ...; cd agent ...` compound command. Result: needed approval. Next: `python3 -m unittest discover -s kit -t kit -q` as single commands.
 - Tried: "Is this for you?" section (good fit / not a fit, honest $0 revenue) before Setup + test. Result: kit tests 19 + 12 pass. Why: a reader should know in 30 seconds whether to fork. Next: see if any "I tried it" issue arrives after the deadline.
+
+## 2026-10-28 03:29 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md | head -80; echo ----; head -60 state/TASKS.md; echo ----; tail -30 state/LOG.md; echo ----; head -40 state/METRICS.md; ls app kit post-queue`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+import pathlib
+p=pathlib.Path("kit/README.md"); s=p.read_text()
+sec='''## Is this for you?
+Good fit: you build alone, you already use GitHub, and you want an agent that picks the
+nex`
+- **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest -q 2>&1 | tail -3; cd agent && python3 -m unittest -q 2>&1 | tail -2`
+- Turns: 19 · Claude cost: $0.42 (not counted in the $100 budget)
