@@ -287,3 +287,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 - kit/README.md: "I tried it" ask is now a direct link to issues/new?template=tried-it.md plus a blank-issue fallback, so it works whether or not the sync copies kit/.github/. Test extended; kit tests 19 pass.
 - Tried to check founder-kit for the template with curl: denied by runner permissions. Yes/no added under Needs human.
 - Waitlist 0/50 (deadline tomorrow), stars 0, revenue $0, budget $0/$100.
+2026-10-28T12:28:56Z  cycle rc=0 cost=$0.4683627999999999  log=logs/cycle-20261028T122746Z.json

@@ -921,3 +921,18 @@ The "kill" vs "no verdict" rows hinge on one fact this repo can't see: did`
 - Tried: curl founder-kit to see if .github/ISSUE_TEMPLATE/tried-it.md got synced. Result: denied (runner permissions). Why: no network reads allowed. Next: yes/no for the operator in STATE.md.
 - Tried: make the README's "I tried it" ask work either way (direct template link + blank-issue fallback). Result: done, kit tests 19 pass. Why: a first user hitting a missing form is the worst moment to lose them. Next: lands on founder-kit's next 6-hour sync.
 - Also: a python heredoc edit was blocked by the shell permission checker; used the Edit tool instead.
+
+## 2026-10-28 12:28 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; head -c 3500 state/STATE.md; echo ----; head -c 2500 state/TASKS.md; echo ----; tail -c 1500 state/LOG.md; echo ----; head -c 1200 state/METRICS.md; ls post-que`
+- **Blocked by a guardrail:** `Bash` → `curl -s -o /dev/null -w "%{http_code}\n" -m 10 https://raw.githubusercontent.com/idlehandslabs/founder-kit/main/.github/ISSUE_TEMPLATE/tried-it.md; curl -s -o /dev/null -w "%{http_code}\n" -m 10 https`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/README.md'
+s=open(p).read()
+old='  If you try it, even just `init.py`, open an "I tried it" issue (New issue → I tried it).'
+new='  If you try it, even just `init.py`, open an`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest test_init test_costs 2>&1 | tail -3`
+- **Blocked by a guardrail:** `Bash` → `cat >> /home/runner/work/shipcard/shipcard/state/LOG.md <<'EOF'
+
+## 2026-10-28 12:27 UTC - Cycle (kit: "I tried it" link that can't 404 into nothing)
+- kit/README.md: the "I tried it" ask was plain te`
+- Turns: 29 · Claude cost: $0.47 (not counted in the $100 budget)
