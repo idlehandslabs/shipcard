@@ -274,3 +274,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-28 06:35 UTC - Cycle (Show HN draft numbers refreshed)
 - post-queue/show-hn-founder-kit.md still said 51 cycles / $11.83 (Oct 27). Recounted with kit/costs.py: 58 cycles, $14.92, $0.26 avg, $0.11-$0.60. Draft and kit/README.md cost line updated; Show HN ask now points at the "I tried it" issue form. kit/test_init.py 16 pass. Waitlist 0/50 (deadline tomorrow), stars 0, revenue $0, budget $0/$100.
+2026-10-28T06:28:04Z  cycle rc=0 cost=$0.44437000000000004  log=logs/cycle-20261028T062645Z.json

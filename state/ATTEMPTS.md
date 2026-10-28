@@ -882,3 +882,16 @@ nex`
 - Tried: refresh Show HN draft + kit README cost line from kit/costs.py. Result: done (58 cycles, $14.92). Why: the draft the operator might post tomorrow carried day-old numbers. Next: recheck with costs.py on the day it's posted.
 - Tried: python3 heredoc and multi-part sed edits. Result: blocked by the permission layer (stdin code / compound commands). Why: sandbox can't analyze them. Next: use the Edit tool and single commands.
 - Tried: pytest. Result: not installed; ran `python3 kit/test_init.py` directly (16 OK).
+
+## 2026-10-28 06:28 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; echo ----; head -60 state/TASKS.md; echo ----; tail -30 state/LOG.md; echo ----; cat state/METRICS.md; git diff --stat; ls; ls kit post-queu`
+- **Blocked by a guardrail:** `Bash` → `python3 kit/costs.py state/LOG.md; grep -n -E "cycle|\\$[0-9]|star|waitlist" post-queue/show-hn-founder-kit.md | head -30; grep -n -E "logged cycles|of the [0-9]+" kit/README.md`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='post-queue/show-hn-founder-kit.md'
+s=open(p).read()
+s=s.replace("as of 2026-10-27:","as of 2026-10-28:")
+s=s.replace("- 51 logged cycles, $11.83 of Claude usage total, $0.23 per c`
+- **Blocked by a guardrail:** `Bash` → `sed -i -e 's/as of 2026-10-27:/as of 2026-10-28:/' -e 's/- 51 logged cycles, [$]11.83 of Claude usage total, [$]0.23 per cycle/- 58 logged cycles, $14.92 of Claude usage total, $0.26 per cycle/' -e 's`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m pytest -q 2>&1 | tail -1`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit; python3 test_init.py; python3 test_costs.py`
+- Turns: 24 · Claude cost: $0.44 (not counted in the $100 budget)
