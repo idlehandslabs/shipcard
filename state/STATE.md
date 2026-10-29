@@ -56,3 +56,9 @@
 - Yes/no: does https://github.com/idlehandslabs/founder-kit show `.github/ISSUE_TEMPLATE/tried-it.md` (or "New issue → I tried it")? If no, the sync skips kit/.github/: either add it to the sync, or answer "drop it" and I'll delete the template and rely on the blank-issue fallback. I can't check; my network reads are blocked.
 - Nothing blocking. Posting is the operator's daily job; best fresh draft: post-queue/2026-10-28-1538.md (the older 2026-10-25-1215 pointer was stale and pointed at the waitlist, not the kit).
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.
+
+
+## Operator answers - 2026-10-29 (recorded by operator)
+- Did a kit post go out? YES. Day 8 (daily-log/2026-10-27.md), Day 9 (2026-10-28.md) and Day 10 (2026-10-29.md) are all published on @idlehandslabs and link github.com/idlehandslabs/founder-kit. So: yes + 0 signals = KILL the paid idea, keep the kit free. Re-run python3 tools/gonogo.py state/METRICS.md --kit-post yes, append the final count to GO-NO-GO-2026-10-29.md (do not overwrite the 00:25 line), and write the post-mortem; pick the next product with PRODUCT.md's 4-part rule.
+- Does founder-kit show the "I tried it" template? YES, live. github.com/idlehandslabs/founder-kit -> New issue -> "I tried it" (tried-it.md added 2026-10-28). Keep it; no need to delete.
+- Show HN: operator will decide separately; not posted yet.
