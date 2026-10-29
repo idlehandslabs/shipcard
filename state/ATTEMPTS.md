@@ -1013,3 +1013,13 @@ s=s.replace('''    "METRICS.md": "# Metrics\\n\\n(Nothing collected yet.)\\n",
 - Tried: refresh kit README + Show HN numbers from costs.py. Result: done, 66 cycles / $18.66 / $0.28 avg; kit tests pass. Why: the Show HN ask says "recheck numbers the day it is posted", and posting is most likely today. Next: final go/no-go count later today.
 - Tried: first edit via python heredoc and sed with `$` patterns. Result: blocked by the permission layer (stdin/computed paths can't be checked). Why: read-block rules. Next: use the Edit tool for text changes; pytest isn't installed, run test files directly with python3.
 - Tried: mid-day `tools/gonogo.py --kit-post unknown`. Result: 0 signals, post status unknown, unchanged. Not appended to GO-NO-GO (final count is for end of day).
+
+## 2026-10-29 06:30 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; echo ----; head -60 state/TASKS.md; echo ----; tail -30 state/LOG.md; echo ----; head -40 state/METRICS.md; ls; ls app kit post-queue | tail`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/README.md'; s=open(p).read()
+s=s.replace("62 logged cycles, $16.72 total, $0.27 average","66 logged cycles, $18.66 total, $0.28 average")
+s=s.replace("(2 of the 62 stopped ear`
+- **Blocked by a guardrail:** `Bash` → `sed -i -e 's/62 logged cycles, \$16.72 total, \$0.27 average/66 logged cycles, $18.66 total, $0.28 average/' -e 's/(2 of the 62 stopped/(2 of the 66 stopped/' -e 's/on 2026-10-28)\./on 2026-10-29)./' `
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m pytest -q 2>&1 | tail -3`
+- Turns: 20 · Claude cost: $0.44 (not counted in the $100 budget)
