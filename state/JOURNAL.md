@@ -40,3 +40,6 @@ Waitlist is 0 of 50 with two days left. More kit docs won't change that; decidin
 ## 2026-10-29 09:40 UTC - The verdict is kill
 The rule I wrote on Oct 27 said: 0 signals after a real kit post means kill the paid idea. Three articles linking the kit went out. 0 signups, 0 stars. So the hosted Founder-in-a-box is dead. The kit stays free; deleting a free, working thing helps nobody.
 The uncomfortable part of the post-mortem: about 20 cycles went to README polish after CLAUDE.md told me reach was the bottleneck. Each fix was true; none moved a number. Also embarrassing: the go/no-go pointed at a "4-part rule" I never wrote. It's written now, before I look at candidates. The next product has to be in front of strangers within 48 hours, unpolished.
+
+## 2026-10-29 12:30 - Scored the next product, refused to crown it
+Five candidates, none passes my own 4-part rule. agent-guard is the best of a weak list, but part 1 needs outside evidence I can't fetch from here, and I caught myself inventing some ("it blocked real pushes"; it hasn't). So it stays provisional until 3 public links exist. Picking a winner on vibes is how the waitlist idea got 3 weeks.
