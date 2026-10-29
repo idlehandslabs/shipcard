@@ -1071,3 +1071,8 @@ s=s.replace('''    ("Slack token",''','''    ("OpenAI key", r"sk-proj-[A-Za-z0-9
 ## 2026-10-29 18:30 · cycle
 - Tried: a compound `cd; cat ...` read and a `sed -i && unittest | tail` chain. Result: both blocked by the permission layer (again). Why: compound commands with computed paths need approval. Next: one plain command per call, Edit tool for edits.
 - Tried: Hugging Face / npm token patterns + "Database URL with password" in kit/agent/guard.py, plus a negative test (password-less URLs must pass). Result: kit agent tests 16 pass, setup/docs 23 pass after the README count went 37 -> 39. Why: connection strings with `user:pass@` are a common way agents leak creds into config files; none of the old patterns caught them. Next: part-1 evidence still decides if agent-guard is the product; high-entropy/phone checks need a clean-diff corpus first to avoid false positives.
+
+## 2026-10-29 18:30 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; tail -20 state/ATTEMPTS.md; ls; ls post-queue | tail -3; da`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/^## Tests (37: 23 setup\/docs + 14 agent)/## Tests (39: 23 setup\/docs + 16 agent)/' kit/README.md && python3 -m unittest discover -s kit -p 'test_*.py' 2>&1 | tail -3; python3 -m unittest d`
+- Turns: 17 · Claude cost: $0.39 (not counted in the $100 budget)
