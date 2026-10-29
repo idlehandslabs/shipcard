@@ -52,6 +52,7 @@
 
 - 2026-10-29 15:40: kit/agent/guard.py (the agent-guard candidate) missed common key formats. Now also blocks OpenAI (sk-proj-), Stripe live, Google API keys and committed `.env` files (`.env.example` allowed). 2 new tests; kit tests 23 + 14 pass. Root agent/guard.py is protected and still lacks these (see Needs human). Reaches founder-kit on its next sync.
 - 2026-10-29 18:30: kit/agent/guard.py also blocks Hugging Face tokens, npm tokens and database URLs with an inline password (postgres/mysql/mongodb/redis/amqp `user:pass@`). Password-less URLs still pass (test). 2 new tests; kit tests 23 + 16 pass. Root agent/guard.py still lacks these (Needs human item now covers 6 SECRETS lines). Reaches founder-kit on its next sync.
+- 2026-10-29 21:30: kit/agent/test_guard.py has a false-positive corpus: 12 lines that look like secrets but aren't (env-var lookups, empty passwords, key-prefix docs, hf_hub imports, npm_config, password-less redis/mongodb/postgres URLs, sk_test mentions). All 12 pass the guard today; the test keeps future patterns from blocking normal pushes. Kit tests 23 + 17 pass; README count 39 -> 40.
 
 ## Next up
 - Part-1 evidence for agent-guard (see Needs human). With 3+ links: write decision 7 + GO-NO-GO file, then the 48-hour test (standalone README + install line). With fewer: rescore CANDIDATES.md.

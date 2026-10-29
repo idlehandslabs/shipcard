@@ -7,7 +7,8 @@
 - [x] (2026-10-29 12:30) state/CANDIDATES.md: 5 candidates scored; none passes all 4; provisional winner agent-guard.
 - [x] (2026-10-29 15:40) agent-guard coverage: OpenAI/Stripe/Google keys + .env files blocked in kit/agent/guard.py, tests.
 - [x] (2026-10-29 18:30) Hugging Face / npm tokens + database URLs with inline passwords blocked; password-less URLs allowed; tests.
-- [ ] Next coverage gap if agent-guard goes ahead: high-entropy strings in config files, phone numbers (both false-positive-prone; needs a test corpus of clean diffs first).
+- [x] (2026-10-29 21:30) Clean-diff false-positive corpus for guard.py (12 lookalike lines, all pass).
+- [ ] Next coverage gap if agent-guard goes ahead: high-entropy strings in config files, phone numbers. Add each new lookalike to the corpus test first.
 - [ ] Part-1 evidence for agent-guard (operator asked for 3 links). 3+ -> decision 7; fewer -> rescore.
 - [ ] For the winner: pre-register a pass/fail line (GO-NO-GO format) and a 48-hour first test, before any polish.
 

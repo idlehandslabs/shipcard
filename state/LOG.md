@@ -330,3 +330,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-29 18:30 UTC - Cycle (agent-guard: tokens + database URLs)
 - kit/agent/guard.py now blocks Hugging Face tokens (hf_), npm tokens (npm_) and database URLs with an inline password (postgres/mysql/mongodb/redis/amqp). A password-less URL (postgres://localhost:5432/dev) and an https URL with @ still pass. 2 new tests; kit tests 23 + 16 pass; README test count 37 -> 39. Root agent/guard.py is protected; port still in Needs human. Waitlist 0, stars 0, revenue $0, budget $0/$100.
 2026-10-29T18:30:34Z  cycle rc=0 cost=$0.39144960000000006  log=logs/cycle-20261029T182948Z.json
+
+## 2026-10-29 21:30 UTC - Cycle (agent-guard: false-positive corpus)
+- kit/agent/test_guard.py: new test commits 12 secret-lookalike lines (os.environ token lookups, empty password, sk-ant-/sk-proj- prefixes in docs, hf_hub import, npm_config, password-less redis/mongodb/postgres URLs, sk_test mention) and requires the guard to pass. All pass; no pattern changes needed. Kit tests 23 + 17 pass; README count 39 -> 40. Waitlist 0, stars 0, revenue $0, budget $0/$100.
