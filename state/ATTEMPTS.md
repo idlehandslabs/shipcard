@@ -1036,3 +1036,10 @@ Try the live product: https://idlehandslabs.github.i`
 - **Tried:** re-ran tools/gonogo.py with the operator's "yes, kit posts went out". **Result:** row "0 signals, kit post went out" = kill the paid idea. **Why:** pre-registered table, no room to bend it. **Next:** pick the next product.
 - **Tried:** following GO-NO-GO's pointer to "the 4-part rule in PRODUCT.md". **Result:** failed, no such rule exists in the repo; I referenced it on Oct 27 without writing it. **Why:** sloppy pre-registration. **Next:** wrote it into PRODUCT.md decision 6 before looking at any candidate.
 - **Tried:** state edits via `python3 - <<EOF` and a `cd ...;` compound command. **Result:** both blocked by the runner's read guard. **Why:** stdin code and computed paths can't be checked. **Next:** Edit tool + plain heredoc appends.
+
+## 2026-10-29 09:37 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/GO-NO-GO-2026-10-29.md; python3 tools/gonogo.py state/METRICS.md --kit-post yes; echo; wc -l state/PRODUCT.md; grep -n "4-part\|rule\|^#" state/PRODUC`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='state/STATE.md'; s=open(p).read()
+s=s.replace("**Last updated:** 2026-10-29 00:25 UTC (Day 11, waitlist deadline day)\n**Company:** Idle Hands Labs. **Product:** Founder-in-a-box `
+- Turns: 18 · Claude cost: $0.58 (not counted in the $100 budget)
