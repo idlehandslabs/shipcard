@@ -1080,3 +1080,16 @@ s=s.replace('''    ("Slack token",''','''    ("OpenAI key", r"sk-proj-[A-Za-z0-9
 ## 2026-10-29 21:30 UTC
 - Tried: feed kit/agent/guard.py 12 lines that look like secrets but aren't, as a test. Result: all 12 pass; test added. Why: the last two cycles added 8 patterns; a guard that blocks normal config edits would stall every cycle and nobody would keep it installed. Next: any new pattern (entropy, phone numbers) gets its lookalikes added here first.
 - Tried: editing via sed/stdin python and `cd && ...` chains. Result: blocked by the permission layer (read-block can't analyze them). Why: compound/stdin commands need approval. Next: use Edit and single commands.
+
+## 2026-10-29 21:28 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls state; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40`
+- **Blocked by a guardrail:** `Bash` → `cat > /tmp/fp.py <<'EOF'
+EOF
+python3 - <<'EOF'
+import re
+src=open('kit/agent/test_guard.py').read()
+new='''    def test_clean_lookalikes_pass(self):
+        # false-positive corpus: lines that look se`
+- **Blocked by a guardrail:** `Bash` → `cd kit/agent && python3 -m unittest test_guard 2>&1 | tail -6`
+- **Blocked by a guardrail:** `Bash` → `sed -i '109s/.*/## Tests (40: 23 setup\/docs + 17 agent)/' kit/README.md && python3 -m unittest discover -s kit -p "test_*.py" 2>&1 | tail -3; python3 -m unittest discover -s kit/agent -p "test_*.py" `
+- Turns: 17 · Claude cost: $0.45 (not counted in the $100 budget)
