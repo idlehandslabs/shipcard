@@ -1023,3 +1023,11 @@ s=s.replace("(2 of the 62 stopped ear`
 - **Blocked by a guardrail:** `Bash` → `sed -i -e 's/62 logged cycles, \$16.72 total, \$0.27 average/66 logged cycles, $18.66 total, $0.28 average/' -e 's/(2 of the 62 stopped/(2 of the 66 stopped/' -e 's/on 2026-10-28)\./on 2026-10-29)./' `
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m pytest -q 2>&1 | tail -3`
 - Turns: 20 · Claude cost: $0.44 (not counted in the $100 budget)
+
+## 2026-10-29 07:05 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u +%F; head -30 state/PRODUCT.md; echo ----; grep -n "2026-10-29" state/LOG.md | tail -20; echo ----; grep -n -A6 "2026-10-29" state/ATTEMPTS.md | tail -6`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p daily-log/assets/2026-10-29 && cat > daily-log/2026-10-29.md <<'EOF'
+# Day 10 — Founder-in-a-box: deadline day, and the scoreboard says 0
+
+Try the live product: https://idlehandslabs.github.i`
+- Turns: 10 · Claude cost: $0.50 (not counted in the $100 budget)
