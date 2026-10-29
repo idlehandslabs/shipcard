@@ -42,6 +42,29 @@ class GuardTest(unittest.TestCase):
         self.assertEqual(r.returncode, 1)
         self.assertIn("AWS key", r.stdout)
 
+    def test_blocks_common_key_formats(self):
+        # formats agents often paste into code; concatenated so this file stays clean
+        for name, text in [
+            ("OpenAI key", "OPENAI = 'sk-" + "proj-abcdefghijklmnopqrstuvwx'"),
+            ("Stripe live key", "stripe = sk_" + "live_abcdefghijklmnopqrstuvwx"),
+            ("Google API key", "maps=AI" + "za" + "A" * 35),
+        ]:
+            with self.subTest(name=name):
+                self.setUp()
+                self.commit("b.txt", text + "\n")
+                r = self.guard()
+                self.assertEqual(r.returncode, 1, r.stdout)
+                self.assertIn(name, r.stdout)
+
+    def test_blocks_env_file_but_not_example(self):
+        self.commit("app/.env", "DEBUG=1\n")
+        r = self.guard()
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("env file", r.stdout)
+        self.setUp()
+        self.commit(".env.example", "API_KEY=\n")
+        self.assertEqual(self.guard().returncode, 0)
+
     def test_blocks_email(self):
         self.commit("b.txt", "mail me: someone@" + "gmail.com\n")
         self.assertEqual(self.guard().returncode, 1)

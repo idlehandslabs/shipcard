@@ -1053,3 +1053,7 @@ s=s.replace("**Last updated:** 2026-10-29 00:25 UTC (Day 11, waitlist deadline d
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md | head -80; echo ----; head -60 state/TASKS.md; echo ----; tail -30 state/LOG.md; echo ----; head -40 state/METRICS.md; ls; ls app kit post-q`
 - **Blocked by a guardrail:** `Bash` → `sed -i 's/Our own evidence: guard has blocked real pushes here (ATTEMPTS.md)\./Our own evidence is thin: kit README lists a guard push block among failures we hit, but I found no log line of a real bl`
 - Turns: 16 · Claude cost: $0.43 (not counted in the $100 budget)
+
+## 2026-10-29 15:40 · cycle (agent-guard key coverage)
+- Tried: compound `cd; cat` Bash and a python stdin heredoc to edit files. Result: both blocked by the permission layer. Why: computed paths / stdin code cannot be checked. Next: plain commands + Edit tool (worked).
+- Tried: adding OpenAI/Stripe/Google key patterns + `.env` file-name block to kit/agent/guard.py. Result: 14 agent tests pass; README test count test failed (35 vs 37) until README updated, then 23 pass. Why: a pre-push guard that misses the most common keys is not a product. Next: operator ports it to protected agent/guard.py; part-1 evidence still pending.

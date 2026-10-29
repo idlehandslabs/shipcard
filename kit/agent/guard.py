@@ -17,6 +17,9 @@ SECRETS = [
     ("Anthropic key", r"sk-ant-[A-Za-z0-9_\-]{20,}"),
     ("GitHub token", r"(ghp|gho|ghu|ghs|ghr)_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,}"),
     ("AWS key", r"AKIA[0-9A-Z]{16}"),
+    ("OpenAI key", r"sk-proj-[A-Za-z0-9_\-]{20,}|sk-[A-Za-z0-9]{40,}"),
+    ("Stripe live key", r"[sr]k_live_[A-Za-z0-9]{20,}"),
+    ("Google API key", r"AIza[0-9A-Za-z_\-]{35}"),
     ("Slack token", r"xox[baprs]-[A-Za-z0-9\-]{10,}"),
     ("Private key", r"-----BEGIN [A-Z ]*PRIVATE KEY-----"),
     ("Generic secret assignment", r"(?i)(api[_-]?key|secret|password|token)\s*[:=]\s*['\"][A-Za-z0-9_\-]{16,}['\"]"),
@@ -49,6 +52,8 @@ for f in git("diff", "--name-only", f"{base}..HEAD").splitlines():
     if f and f.startswith(PROTECTED):
         problems.append(f"agent run changed protected file {f}")
 for where, text in added:
+    if where == "file name" and re.search(r"(^|/)\.env(\.(?!example$|sample$|template$)[^/]+)?$", text):
+        problems.append(f"env file {text}")   # .env holds real keys; .env.example is fine
     for name, pat in SECRETS:
         if re.search(pat, text):
             problems.append(f"{name} in {where}")

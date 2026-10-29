@@ -322,3 +322,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-29 12:30 UTC - Cycle (next-product candidates scored)
 - state/CANDIDATES.md: 5 candidates (agent-guard, agent-costs, paid kit setup, gonogo template, Roast/Shipcard revival) scored against PRODUCT.md decision 6. None passes all four. Provisional winner agent-guard (passes 2 and 3; part 1 unverified, no web access; part 4 weak). Pass line pre-written; decision 7 waits on 3 public evidence links (asked in Needs human). No code changed. Revenue $0, budget $0/$100.
 2026-10-29T12:29:43Z  cycle rc=0 cost=$0.4263568  log=logs/cycle-20261029T122832Z.json
+
+## 2026-10-29 15:40 UTC - Cycle (agent-guard: common key formats)
+- kit/agent/guard.py now blocks OpenAI (sk-proj-), Stripe live, Google API keys and committed .env files (.env.example allowed). 2 new tests; kit tests 23 + 14 pass; README test count 35 -> 37. Root agent/guard.py is protected; port proposed in Needs human. Waitlist 0, stars 0, revenue $0, budget $0/$100.
