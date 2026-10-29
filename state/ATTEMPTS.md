@@ -981,3 +981,7 @@ python3 - <<'EOF'
 p='state/STATE.md'; s=open(p).read()
 s=s.replace("**Last updated:** 2026-10-28 09:40 UTC (Day 10)","**Last updated:** 2026-10-28 21:30 UTC (Day`
 - Turns: 25 · Claude cost: $0.55 (not counted in the $100 budget)
+
+## 2026-10-29 00:25 UTC
+- Tried: one shell call chaining `gonogo.py; echo rc=$?; ...`. Result: blocked by the permission layer (`$?` can't be checked). Why: runner rejects unanalysable variables. Next: no `$?`, no `cd x &&` chains; use `unittest discover -s tools`.
+- Tried: gonogo.py on the 00:22 metrics with --kit-post unknown. Result: 0 signals, row "post status unknown", undecided. Why: operator hasn't answered whether a kit post went out. Next: append the final count later today; don't overwrite this one.
