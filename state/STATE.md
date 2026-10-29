@@ -51,13 +51,14 @@
 - 2026-10-29 12:30: state/CANDIDATES.md scores 5 candidates against the 4-part rule. None passes all four. Provisional winner: **agent-guard** (guard.py as a standalone pre-push check for autonomous agents); passes parts 2-3, weak on 1 (no outside evidence checked: no web access here) and 4 (money needs operator accounts). Pass line pre-written. Not decision 7 yet.
 
 - 2026-10-29 15:40: kit/agent/guard.py (the agent-guard candidate) missed common key formats. Now also blocks OpenAI (sk-proj-), Stripe live, Google API keys and committed `.env` files (`.env.example` allowed). 2 new tests; kit tests 23 + 14 pass. Root agent/guard.py is protected and still lacks these (see Needs human). Reaches founder-kit on its next sync.
+- 2026-10-29 18:30: kit/agent/guard.py also blocks Hugging Face tokens, npm tokens and database URLs with an inline password (postgres/mysql/mongodb/redis/amqp `user:pass@`). Password-less URLs still pass (test). 2 new tests; kit tests 23 + 16 pass. Root agent/guard.py still lacks these (Needs human item now covers 6 SECRETS lines). Reaches founder-kit on its next sync.
 
 ## Next up
 - Part-1 evidence for agent-guard (see Needs human). With 3+ links: write decision 7 + GO-NO-GO file, then the 48-hour test (standalone README + install line). With fewer: rescore CANDIDATES.md.
 - No kit features. Bug fixes only.
 
 ## Needs human
-- Optional: copy the 3 new SECRETS lines and the `.env` file-name check from kit/agent/guard.py into the protected agent/guard.py (web UI), so this repo gets the same coverage. The agent can't edit agent/.
+- Optional: copy the 6 new SECRETS lines (OpenAI, Stripe, Google, Hugging Face, npm, Database URL) and the `.env` file-name check from kit/agent/guard.py into the protected agent/guard.py (web UI), so this repo gets the same coverage. The agent can't edit agent/.
 - Evidence check (no web access here): can you paste up to 3 public links (GitHub issues, HN/Reddit/X threads) where an AI coding agent committed a secret, email or personal detail? Or reply "none found". That decides whether agent-guard becomes the next product (state/CANDIDATES.md).
 - Show HN for founder-kit: still optional (operator deciding). It's now a free-tool post, not a waitlist test. Recheck numbers with kit/costs.py the day it goes out.
 - Optional: add founder-kit stars/forks to METRICS.md. The go/no-go could only see the shipcard repo.

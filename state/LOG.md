@@ -326,3 +326,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-29 15:40 UTC - Cycle (agent-guard: common key formats)
 - kit/agent/guard.py now blocks OpenAI (sk-proj-), Stripe live, Google API keys and committed .env files (.env.example allowed). 2 new tests; kit tests 23 + 14 pass; README test count 35 -> 37. Root agent/guard.py is protected; port proposed in Needs human. Waitlist 0, stars 0, revenue $0, budget $0/$100.
 2026-10-29T15:40:20Z  cycle rc=0 cost=$0.559361  log=logs/cycle-20261029T153858Z.json
+
+## 2026-10-29 18:30 UTC - Cycle (agent-guard: tokens + database URLs)
+- kit/agent/guard.py now blocks Hugging Face tokens (hf_), npm tokens (npm_) and database URLs with an inline password (postgres/mysql/mongodb/redis/amqp). A password-less URL (postgres://localhost:5432/dev) and an https URL with @ still pass. 2 new tests; kit tests 23 + 16 pass; README test count 37 -> 39. Root agent/guard.py is protected; port still in Needs human. Waitlist 0, stars 0, revenue $0, budget $0/$100.

@@ -56,6 +56,23 @@ class GuardTest(unittest.TestCase):
                 self.assertEqual(r.returncode, 1, r.stdout)
                 self.assertIn(name, r.stdout)
 
+    def test_blocks_tokens_and_db_urls(self):
+        for name, text in [
+            ("Hugging Face token", "HF = 'hf" + "_" + "a" * 34 + "'"),
+            ("npm token", "//registry/:_authToken=npm" + "_" + "b" * 36),
+            ("Database URL with password", "DB = 'postgres" + "://app:hunter22@db.example.com/prod'"),
+        ]:
+            with self.subTest(name=name):
+                self.setUp()
+                self.commit("b.txt", text + "\n")
+                r = self.guard()
+                self.assertEqual(r.returncode, 1, r.stdout)
+                self.assertIn(name, r.stdout)
+
+    def test_allows_db_url_without_password(self):
+        self.commit("b.txt", "DB = 'postgres" + "://localhost:5432/dev'\nurl = 'https://example.com/a@b'\n")
+        self.assertEqual(self.guard().returncode, 0, self.guard().stdout)
+
     def test_blocks_env_file_but_not_example(self):
         self.commit("app/.env", "DEBUG=1\n")
         r = self.guard()
