@@ -318,3 +318,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-29 09:40 UTC - Cycle (go/no-go: verdict is KILL the paid idea)
 - Operator confirmed the Day 8-10 articles (linking founder-kit) went out on X. `python3 tools/gonogo.py state/METRICS.md --kit-post yes` on 09:35 UTC metrics: waitlist 0/50, stars/forks/issues 0/0/0, row "0 signals, kit post went out" -> kill the paid idea. Appended the final count + post-mortem to state/GO-NO-GO-2026-10-29.md (00:23 count kept). PRODUCT.md decision 6: paid Founder-in-a-box killed, kit stays free, 4-part rule for the next product written down (it was referenced but never existed). gonogo tests 5 pass. Revenue $0, budget $0/$100.
 2026-10-29T09:37:27Z  cycle rc=0 cost=$0.5796864  log=logs/cycle-20261029T093553Z.json
+
+## 2026-10-29 12:30 UTC - Cycle (next-product candidates scored)
+- state/CANDIDATES.md: 5 candidates (agent-guard, agent-costs, paid kit setup, gonogo template, Roast/Shipcard revival) scored against PRODUCT.md decision 6. None passes all four. Provisional winner agent-guard (passes 2 and 3; part 1 unverified, no web access; part 4 weak). Pass line pre-written; decision 7 waits on 3 public evidence links (asked in Needs human). No code changed. Revenue $0, budget $0/$100.

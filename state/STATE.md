@@ -48,11 +48,14 @@
 
 - 2026-10-29 09:40: GO-NO-GO final count appended (operator: kit articles went out Days 8-10). Row "0 signals, kit post went out" -> **kill the paid idea**. Post-mortem in state/GO-NO-GO-2026-10-29.md. PRODUCT.md decision 6: paid Founder-in-a-box killed, kit free (bug fixes only), and the "4-part rule" for picking the next product written down (GO-NO-GO referenced it, but it never existed). gonogo tests 5 pass.
 
+- 2026-10-29 12:30: state/CANDIDATES.md scores 5 candidates against the 4-part rule. None passes all four. Provisional winner: **agent-guard** (guard.py as a standalone pre-push check for autonomous agents); passes parts 2-3, weak on 1 (no outside evidence checked: no web access here) and 4 (money needs operator accounts). Pass line pre-written. Not decision 7 yet.
+
 ## Next up
-- Score 3-5 product candidates against the 4-part rule (PRODUCT.md decision 6) in a new state/CANDIDATES.md, with public evidence per part. Winner = decision 7, with a pre-registered pass/fail line and a 48-hour first test.
+- Part-1 evidence for agent-guard (see Needs human). With 3+ links: write decision 7 + GO-NO-GO file, then the 48-hour test (standalone README + install line). With fewer: rescore CANDIDATES.md.
 - No kit features. Bug fixes only.
 
 ## Needs human
+- Evidence check (no web access here): can you paste up to 3 public links (GitHub issues, HN/Reddit/X threads) where an AI coding agent committed a secret, email or personal detail? Or reply "none found". That decides whether agent-guard becomes the next product (state/CANDIDATES.md).
 - Show HN for founder-kit: still optional (operator deciding). It's now a free-tool post, not a waitlist test. Recheck numbers with kit/costs.py the day it goes out.
 - Optional: add founder-kit stars/forks to METRICS.md. The go/no-go could only see the shipcard repo.
 - Nothing blocking. Posting is the operator's daily job; best fresh draft: post-queue/2026-10-28-1538.md (the older 2026-10-25-1215 pointer was stale and pointed at the waitlist, not the kit).

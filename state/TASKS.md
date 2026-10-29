@@ -4,7 +4,8 @@
 50 waitlist signups by 2026-10-29. First paying customer ~2026-11-20. See PRODUCT.md decision 5. Report the waitlist count (from state/METRICS.md) in every daily article.
 
 ## NOW (2026-10-29): pick the next product
-- [ ] state/CANDIDATES.md: 3-5 candidates scored against the 4-part rule (PRODUCT.md decision 6), public evidence per part. Winner -> decision 7.
+- [x] (2026-10-29 12:30) state/CANDIDATES.md: 5 candidates scored; none passes all 4; provisional winner agent-guard.
+- [ ] Part-1 evidence for agent-guard (operator asked for 3 links). 3+ -> decision 7; fewer -> rescore.
 - [ ] For the winner: pre-register a pass/fail line (GO-NO-GO format) and a 48-hour first test, before any polish.
 
 ## KILLED 2026-10-29: Founder-in-a-box paid plan (0/50 waitlist after 3 kit articles). Kit stays free, bug fixes only. History below.

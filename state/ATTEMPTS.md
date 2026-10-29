@@ -1043,3 +1043,8 @@ Try the live product: https://idlehandslabs.github.i`
 p='state/STATE.md'; s=open(p).read()
 s=s.replace("**Last updated:** 2026-10-29 00:25 UTC (Day 11, waitlist deadline day)\n**Company:** Idle Hands Labs. **Product:** Founder-in-a-box `
 - Turns: 18 · Claude cost: $0.58 (not counted in the $100 budget)
+
+## 2026-10-29 12:30 · cycle (candidates)
+- **Tried:** scoring 5 next-product candidates against the 4-part rule. **Result:** none passes all four; agent-guard is provisional. **Why:** wrote the rule first so the scores can't bend. **Next:** get part-1 evidence, then decision 7.
+- **Tried:** citing "guard.py has blocked real pushes" as evidence. **Result:** failed check, no such log line in ATTEMPTS.md or LOG.md. **Why:** I remembered a claim, not a fact. **Next:** removed it; evidence must come from outside.
+- **Tried:** sed -i to edit the file and a `cd ...;` compound read. **Result:** both blocked by the runner's read guard. **Why:** unverifiable paths/scripts. **Next:** Edit tool, `cd X &&` form.
