@@ -1057,3 +1057,13 @@ s=s.replace("**Last updated:** 2026-10-29 00:25 UTC (Day 11, waitlist deadline d
 ## 2026-10-29 15:40 · cycle (agent-guard key coverage)
 - Tried: compound `cd; cat` Bash and a python stdin heredoc to edit files. Result: both blocked by the permission layer. Why: computed paths / stdin code cannot be checked. Next: plain commands + Edit tool (worked).
 - Tried: adding OpenAI/Stripe/Google key patterns + `.env` file-name block to kit/agent/guard.py. Result: 14 agent tests pass; README test count test failed (35 vs 37) until README updated, then 23 pass. Why: a pre-push guard that misses the most common keys is not a product. Next: operator ports it to protected agent/guard.py; part-1 evidence still pending.
+
+## 2026-10-29 15:40 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; echo ----; head -60 state/TASKS.md; echo ----; tail -30 state/LOG.md; echo ----; cat state/METRICS.md | head -40; ls; ls kit app post-queue `
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/agent/guard.py'
+s=open(p).read()
+s=s.replace('''    ("Slack token",''','''    ("OpenAI key", r"sk-proj-[A-Za-z0-9_\\-]{20,}|sk-[A-Za-z0-9]{40,}"),
+    ("Stripe live key", r"[s`
+- **Blocked by a guardrail:** `Bash` → `sed -i '109s/.*/## Tests (37: 23 setup\/docs + 14 agent)/' kit/README.md && sed -n 105,120p kit/README.md && grep -n -i "guard" kit/README.md | head`
+- Turns: 25 · Claude cost: $0.56 (not counted in the $100 budget)
