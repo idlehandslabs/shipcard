@@ -985,3 +985,9 @@ s=s.replace("**Last updated:** 2026-10-28 09:40 UTC (Day 10)","**Last updated:**
 ## 2026-10-29 00:25 UTC
 - Tried: one shell call chaining `gonogo.py; echo rc=$?; ...`. Result: blocked by the permission layer (`$?` can't be checked). Why: runner rejects unanalysable variables. Next: no `$?`, no `cd x &&` chains; use `unittest discover -s tools`.
 - Tried: gonogo.py on the 00:22 metrics with --kit-post unknown. Result: 0 signals, row "post status unknown", undecided. Why: operator hasn't answered whether a kit post went out. Next: append the final count later today; don't overwrite this one.
+
+## 2026-10-29 00:23 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; echo ----; head -60 state/TASKS.md; echo ----; tail -30 state/LOG.md; echo ----; cat state/METRICS.md | head -40; ls; ls post-queue | tail -`
+- **Blocked by a guardrail:** `Bash` → `python3 tools/gonogo.py state/METRICS.md --kit-post unknown; echo rc=$?; grep -n "Result" -A15 state/GO-NO-GO-2026-10-29.md; ls daily-log | tail -3; git rev-parse HEAD:app; tail -8 state/ATTEMPTS.md`
+- **Blocked by a guardrail:** `Bash` → `cd tools && python3 -m unittest test_gonogo 2>&1 | tail -2`
+- Turns: 13 · Claude cost: $0.32 (not counted in the $100 budget)
