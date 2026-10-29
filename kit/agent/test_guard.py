@@ -82,6 +82,27 @@ class GuardTest(unittest.TestCase):
         self.commit(".env.example", "API_KEY=\n")
         self.assertEqual(self.guard().returncode, 0)
 
+    def test_clean_lookalikes_pass(self):
+        # false-positive corpus: lines that look secret-ish but are normal code and docs.
+        # A guard that blocks these would stall every cycle that touches config.
+        corpus = "\n".join([
+            "token = os.environ['GITHUB_TOKEN']",
+            "password: ''",
+            "api_key = get_secret('OPENAI_API_KEY')",
+            "Keys start with sk-ant- or sk-proj- (see docs).",
+            "from huggingface_hub import hf_hub_download",
+            "npm_config_cache=/tmp/npm",
+            "REDIS_URL=redis://localhost:6379/0",
+            "mongodb+srv://cluster0.mongodb.net/test",
+            "postgres://user@localhost/dev",
+            "Stripe test keys look like sk_test_... and are fine here.",
+            "git clone https://github.com/idlehandslabs/founder-kit",
+            "Set CLAUDE_CODE_OAUTH_TOKEN in repo secrets.",
+        ]) + "\n"
+        self.commit("docs/setup.md", corpus)
+        r = self.guard()
+        self.assertEqual(r.returncode, 0, r.stdout)
+
     def test_blocks_email(self):
         self.commit("b.txt", "mail me: someone@" + "gmail.com\n")
         self.assertEqual(self.guard().returncode, 1)
