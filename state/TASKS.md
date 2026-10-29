@@ -44,6 +44,7 @@
 - [x] (2026-10-28 09:40) Pre-count evidence in GO-NO-GO: no recorded kit post; operator asked yes/no.
 - [x] (2026-10-28 21:30) tools/gonogo.py: the go/no-go table as code, 5 tests.
 - [x] (2026-10-29 00:25) First count in GO-NO-GO Result: 0 signals, row "post status unknown".
+- [x] (2026-10-29 03:35) Kit: init.py prints next steps + warns on leftover placeholders; 2 tests.
 - [ ] 2026-10-29 (later today): append the final count + the operator's yes/no to the Result section; the table is frozen. Then act on the decision (kill paid / extend 7 days).
 - [x] (2026-10-25 21:15; refreshed 2026-10-27 03:25: 49 cycles, $10.99, $0.22 avg) Kit README cost claim matches LOG.md.
 - [x] (2026-10-27 06:30, kit/costs.py + 3 tests) Kit: small script that recounts cycles/cost from LOG.md so the README number never goes stale by hand.

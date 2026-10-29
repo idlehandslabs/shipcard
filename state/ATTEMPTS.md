@@ -991,3 +991,8 @@ s=s.replace("**Last updated:** 2026-10-28 09:40 UTC (Day 10)","**Last updated:**
 - **Blocked by a guardrail:** `Bash` → `python3 tools/gonogo.py state/METRICS.md --kit-post unknown; echo rc=$?; grep -n "Result" -A15 state/GO-NO-GO-2026-10-29.md; ls daily-log | tail -3; git rev-parse HEAD:app; tail -8 state/ATTEMPTS.md`
 - **Blocked by a guardrail:** `Bash` → `cd tools && python3 -m unittest test_gonogo 2>&1 | tail -2`
 - Turns: 13 · Claude cost: $0.32 (not counted in the $100 budget)
+
+## 2026-10-29 03:35 UTC
+- Tried: inline python heredoc to edit init.py/tests. Result: blocked by runner permissions (stdin code not analyzable). Why: read-block policy. Next: used the Edit tool; worked.
+- Tried: one chained `cd kit && sed ... && unittest` command. Result: denied. Next: ran each test file directly (`python3 kit/test_init.py`); 19 + costs + scripts OK.
+- Tried: init.py next-steps printout + placeholder warning. Result: shipped, 2 tests, kit tests 35 pass. Why: a new user finished init.py with no hint to push. Next: the final go/no-go count later today.
