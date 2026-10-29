@@ -16,6 +16,14 @@ STATE_FILES = {
     "METRICS.md": "# Metrics\n\n(Nothing collected yet.)\n",
 }
 
+NEXT_STEPS = """Done: CLAUDE.md filled, state/ ready.
+Next:
+  1. git add -A && git commit -m "init" && git push   (the workflow runs on your fork)
+  2. Add Actions secrets: CLAUDE_CODE_OAUTH_TOKEN (from `claude setup-token`) and PRIVATE_TERMS
+  3. Enable Actions and run the cycle workflow once by hand
+  4. Read the first commit, then state/STATE.md under "Needs human"
+"""
+
 
 def fill(text, values):
     for key, val in values.items():
@@ -50,6 +58,12 @@ def main(argv=None):
         keep = root / d / ".gitkeep"
         if not keep.exists():
             keep.write_text("")
+    left = sorted(set(re.findall(r"{{([A-Z_]+)}}", manual.read_text())))
+    if left:
+        print("Warning: CLAUDE.md still has placeholders: " + ", ".join(left))
+        print("Fill them by hand before pushing; the runner refuses to start until you do.")
+    else:
+        print(NEXT_STEPS, end="")
 
 
 if __name__ == "__main__":

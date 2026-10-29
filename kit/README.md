@@ -106,7 +106,7 @@ reads them too. The first three are ones we actually hit; the fourth is a pre-fl
   your fork (usually `init.py` ran locally but wasn't pushed). Claude was not called, so
   the cycle cost $0. Push the filled `CLAUDE.md`.
 
-## Tests (33: 21 setup/docs + 12 agent)
+## Tests (35: 23 setup/docs + 12 agent)
     python3 -m unittest discover -s . -p "test_*.py"
     python3 -m unittest discover -s agent -p "test_*.py"
 

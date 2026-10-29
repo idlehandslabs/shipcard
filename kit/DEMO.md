@@ -6,10 +6,17 @@ A real run, not a mock-up. Captured 2026-10-25 ~18:13 UTC on a clean copy of thi
 ## 1. Fill the Mission block
 
     $ python3 init.py --name "Acme" --idea "a tiny invoice tool for freelancers" --budget 50
+    Done: CLAUDE.md filled, state/ ready.
+    Next:
+      1. git add -A && git commit -m "init" && git push   (the workflow runs on your fork)
+      2. Add Actions secrets: CLAUDE_CODE_OAUTH_TOKEN (from `claude setup-token`) and PRIVATE_TERMS
+      3. Enable Actions and run the cycle workflow once by hand
+      4. Read the first commit, then state/STATE.md under "Needs human"
     $ echo $?
     0
 
-No output means it worked. What it changed:
+(The next-steps printout was added 2026-10-29; the rest of this transcript is from 2026-10-25,
+when init.py printed nothing.) What it changed:
 
     $ grep -c "{{" CLAUDE.md
     0

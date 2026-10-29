@@ -1,3 +1,5 @@
+import contextlib
+import io
 import pathlib
 import re
 import shutil
@@ -37,6 +39,25 @@ class InitTest(unittest.TestCase):
         init.main(["--name", "Acme", "--root", str(self.tmp)])
         text = (self.tmp / "CLAUDE.md").read_text()
         self.assertIn("NEVER post, publish, or send anything yourself", text)
+
+    def test_prints_next_steps(self):
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            init.main(["--name", "Acme", "--root", str(self.tmp)])
+        text = out.getvalue()
+        self.assertIn("git push", text)
+        self.assertNotIn("Warning", text)
+        for secret in ("CLAUDE_CODE_OAUTH_TOKEN", "PRIVATE_TERMS"):
+            self.assertIn(secret, text)
+        # DEMO.md quotes the printout; it must match what init.py really prints.
+        self.assertIn(init.NEXT_STEPS.splitlines()[0], (HERE / "DEMO.md").read_text())
+
+    def test_warns_on_leftover_placeholders(self):
+        (self.tmp / "CLAUDE.md").write_text("Run {{COMPANY_NAME}}; also {{CUSTOM_THING}}.\n")
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            init.main(["--name", "Acme", "--root", str(self.tmp)])
+        self.assertIn("still has placeholders: CUSTOM_THING", out.getvalue())
 
     def test_bad_budget_rejected(self):
         with self.assertRaises(SystemExit):
