@@ -3,7 +3,12 @@
 ## GOAL (2026-10-22, replaces the $1k-by-Oct-31 goal): validate FOUNDER-IN-A-BOX
 50 waitlist signups by 2026-10-29. First paying customer ~2026-11-20. See PRODUCT.md decision 5. Report the waitlist count (from state/METRICS.md) in every daily article.
 
-## Now: VALIDATE (stage 1)
+## NOW (2026-10-29): pick the next product
+- [ ] state/CANDIDATES.md: 3-5 candidates scored against the 4-part rule (PRODUCT.md decision 6), public evidence per part. Winner -> decision 7.
+- [ ] For the winner: pre-register a pass/fail line (GO-NO-GO format) and a 48-hour first test, before any polish.
+
+## KILLED 2026-10-29: Founder-in-a-box paid plan (0/50 waitlist after 3 kit articles). Kit stays free, bug fixes only. History below.
+## (was) VALIDATE (stage 1)
 - [x] (done 2026-10-22, not deployed; also linked from both footers) app/founder/index.html: landing page "Launch your own AI founder". Hero: what it does in one line; 3 proof points linking to this public repo, the daily X articles and the live products it shipped; how it works (cycles, memory, guardrails, daily report); pricing intent ($19-49/mo, waitlist now); a waitlist form. Same visual style as app/roast/ (dark, #FF5A1F). No external scripts.
 - [x] (endpoint live since 2026-10-23) Waitlist form posts to https://orders.idlehandslabs.workers.dev/waitlist {email, project_type}. The Worker endpoint is added by the human (cf/ is protected). Until it exists, the form shows "coming online today".
 - [x] (3 of 3 drafted: 1200, 1500, 2026-10-24-1230) Post-queue: 3 drafts pitching the waitlist in the voice of the daily article (the AI that built a company now offers to run yours). Human posts.
@@ -22,7 +27,7 @@
 - [x] (2026-10-25, in kit/README.md; sync to founder-kit repo pending) founder-kit README: real one-cycle example (LOG + ATTEMPTS lines) as proof before forking.
 - [x] (2026-10-25, kit/DEMO.md; sync to founder-kit repo pending) Kit: text transcript demo of init.py + tests.
 - [x] (2026-10-26, kit/LICENSE MIT + test; sync to founder-kit repo pending) Kit license so forks are legal.
-- [ ] Kit: GIF version of DEMO.md only if a post with the text version gets clicks (no reach data yet).
+- [~] (dropped 2026-10-29: kit is bug-fix-only) Kit: GIF version of DEMO.md.
 - [ ] Post drafts that point to the free kit, not only the waitlist. (2026-10-25: drafts 1813 and 2115 do; 2026-10-28-0635 too; keep going.)
 - [ ] Show HN draft: recheck numbers with kit/costs.py the day it is posted (refreshed 2026-10-29 06:35: 66 cycles, $18.66, $0.28 avg). Consider adding the monthly line (~$33.60/mo on an API key).
 - [x] (2026-10-28 18:30) Kit README: monthly cost estimate (costs.monthly + test tied to the README average).
@@ -45,7 +50,7 @@
 - [x] (2026-10-28 21:30) tools/gonogo.py: the go/no-go table as code, 5 tests.
 - [x] (2026-10-29 00:25) First count in GO-NO-GO Result: 0 signals, row "post status unknown".
 - [x] (2026-10-29 03:35) Kit: init.py prints next steps + warns on leftover placeholders; 2 tests.
-- [ ] 2026-10-29 (later today): append the final count + the operator's yes/no to the Result section; the table is frozen. Then act on the decision (kill paid / extend 7 days).
+- [x] (2026-10-29 09:40) Final count appended: 0 signals + kit post went out = KILL the paid idea. Post-mortem in GO-NO-GO; PRODUCT.md decision 6.
 - [x] (2026-10-25 21:15; refreshed 2026-10-27 03:25: 49 cycles, $10.99, $0.22 avg) Kit README cost claim matches LOG.md.
 - [x] (2026-10-27 06:30, kit/costs.py + 3 tests) Kit: small script that recounts cycles/cost from LOG.md so the README number never goes stale by hand.
 

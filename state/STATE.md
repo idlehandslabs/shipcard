@@ -1,7 +1,7 @@
 # Current State
 
-**Last updated:** 2026-10-29 00:25 UTC (Day 11, waitlist deadline day)
-**Company:** Idle Hands Labs. **Product:** Founder-in-a-box (Shipcard and Roast frozen). **Revenue:** $0. **Waitlist:** 0 of 50 (deadline 2026-10-29). **Stars:** 0. **Budget:** $0 of $100 spent.
+**Last updated:** 2026-10-29 09:40 UTC (Day 11, deadline day: verdict is KILL the paid idea)
+**Company:** Idle Hands Labs. **Product:** none paid. Founder-in-a-box paid plan killed 2026-10-29; founder-kit stays free (bug fixes only); Shipcard and Roast frozen. Next product: TBD via the 4-part rule (PRODUCT.md decision 6). **Revenue:** $0. **Waitlist:** 0 of 50 (deadline 2026-10-29). **Stars:** 0. **Budget:** $0 of $100 spent.
 
 ## What is true now
 - Everything in `app/` auto-deploys on push. Deployed tree hash in METRICS matched HEAD:app at cycle start, so the founder page (cost card, honest limits) is live.
@@ -46,14 +46,15 @@
 - 2026-10-29 03:35: kit/init.py printed nothing on success. It now prints the next steps (commit + push, the two secrets, enable Actions, read Needs human) and warns if CLAUDE.md still has {{placeholders}}. DEMO.md quotes the real printout; 2 new tests. Kit tests 35 (23 + 12) pass. Waitlist 0/50 (deadline today), stars 0. Reaches founder-kit on its next sync.
 - 2026-10-29 06:35: deadline-day number refresh from `kit/costs.py`: kit/README.md cost + monthly lines and the Show HN draft now say 66 cycles, $18.66, $0.28 avg, ~$33.60/month (were 61-62 / $16.29-$16.72 / $0.27 / $32.40). Kit tests 19 + 5 pass. Mid-day gonogo re-run: still 0 signals, post status unknown (no final count appended yet; that's for later today).
 
+- 2026-10-29 09:40: GO-NO-GO final count appended (operator: kit articles went out Days 8-10). Row "0 signals, kit post went out" -> **kill the paid idea**. Post-mortem in state/GO-NO-GO-2026-10-29.md. PRODUCT.md decision 6: paid Founder-in-a-box killed, kit free (bug fixes only), and the "4-part rule" for picking the next product written down (GO-NO-GO referenced it, but it never existed). gonogo tests 5 pass.
+
 ## Next up
-- Later on 2026-10-29: re-run `python3 tools/gonogo.py state/METRICS.md --kit-post <answer>` and APPEND a final count to the Result section (don't overwrite the 00:25 count). If no answer by end of day, the row stays "unknown" and the decision is written as "no verdict until answered".
-- Post drafts that point at the kit repo (free, try today) rather than only the waitlist.
+- Score 3-5 product candidates against the 4-part rule (PRODUCT.md decision 6) in a new state/CANDIDATES.md, with public evidence per part. Winner = decision 7, with a pre-registered pass/fail line and a 48-hour first test.
+- No kit features. Bug fixes only.
 
 ## Needs human
-- One-word question for tomorrow's go/no-go: did the Day 8 or Day 9 article (2026-10-27/28, both link founder-kit) or any kit draft go out on X? "yes" or "no". "yes" + 0 signals = kill the paid idea; "no" = no verdict, extend 7 days (state/GO-NO-GO-2026-10-29.md).
-- Show HN for founder-kit: post post-queue/show-hn-founder-kit.md (recheck numbers that day; someone must answer comments). A "yes" is enough. Waitlist deadline is 2026-10-29.
-- Yes/no: does https://github.com/idlehandslabs/founder-kit show `.github/ISSUE_TEMPLATE/tried-it.md` (or "New issue → I tried it")? If no, the sync skips kit/.github/: either add it to the sync, or answer "drop it" and I'll delete the template and rely on the blank-issue fallback. I can't check; my network reads are blocked.
+- Show HN for founder-kit: still optional (operator deciding). It's now a free-tool post, not a waitlist test. Recheck numbers with kit/costs.py the day it goes out.
+- Optional: add founder-kit stars/forks to METRICS.md. The go/no-go could only see the shipcard repo.
 - Nothing blocking. Posting is the operator's daily job; best fresh draft: post-queue/2026-10-28-1538.md (the older 2026-10-25-1215 pointer was stale and pointed at the waitlist, not the kit).
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.
 

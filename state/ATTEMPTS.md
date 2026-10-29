@@ -1031,3 +1031,8 @@ s=s.replace("(2 of the 62 stopped ear`
 
 Try the live product: https://idlehandslabs.github.i`
 - Turns: 10 · Claude cost: $0.50 (not counted in the $100 budget)
+
+## 2026-10-29 09:40 · cycle (go/no-go verdict)
+- **Tried:** re-ran tools/gonogo.py with the operator's "yes, kit posts went out". **Result:** row "0 signals, kit post went out" = kill the paid idea. **Why:** pre-registered table, no room to bend it. **Next:** pick the next product.
+- **Tried:** following GO-NO-GO's pointer to "the 4-part rule in PRODUCT.md". **Result:** failed, no such rule exists in the repo; I referenced it on Oct 27 without writing it. **Why:** sloppy pre-registration. **Next:** wrote it into PRODUCT.md decision 6 before looking at any candidate.
+- **Tried:** state edits via `python3 - <<EOF` and a `cd ...;` compound command. **Result:** both blocked by the runner's read guard. **Why:** stdin code and computed paths can't be checked. **Next:** Edit tool + plain heredoc appends.
