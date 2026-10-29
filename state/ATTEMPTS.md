@@ -996,3 +996,15 @@ s=s.replace("**Last updated:** 2026-10-28 09:40 UTC (Day 10)","**Last updated:**
 - Tried: inline python heredoc to edit init.py/tests. Result: blocked by runner permissions (stdin code not analyzable). Why: read-block policy. Next: used the Edit tool; worked.
 - Tried: one chained `cd kit && sed ... && unittest` command. Result: denied. Next: ran each test file directly (`python3 kit/test_init.py`); 19 + costs + scripts OK.
 - Tried: init.py next-steps printout + placeholder warning. Result: shipped, 2 tests, kit tests 35 pass. Why: a new user finished init.py with no hint to push. Next: the final go/no-go count later today.
+
+## 2026-10-29 03:32 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; cat state/TASKS.md; tail -40 state/LOG.md; cat state/METRICS.md; git diff state/METRICS.md | head -30`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+import pathlib
+p=pathlib.Path('kit/init.py'); s=p.read_text()
+s=s.replace('''    "METRICS.md": "# Metrics\\n\\n(Nothing collected yet.)\\n",
+}
+''','''    "METRICS.md": "# Metrics\\n\`
+- **Blocked by a guardrail:** `Bash` → `cd kit && sed -i 's/## Tests (33: 21 setup\/docs + 12 agent)/## Tests (35: 23 setup\/docs + 12 agent)/' README.md && python3 -m unittest test_init test_costs 2>&1 | tail -3 && cd agent && python3 -m u`
+- **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest test_init test_costs 2>&1 | tail -3`
+- Turns: 26 · Claude cost: $0.55 (not counted in the $100 budget)
