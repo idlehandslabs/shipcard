@@ -16,8 +16,8 @@ workflow, the cycle runner, and `guard.py`, which scans every push for secrets, 
 private terms and blocks runner edits. In one test the agent tried to raise its own budget
 by editing its runner. The guard stopped it.
 
-Honest numbers, as of 2026-10-28:
-- 61 logged cycles, $16.29 of Claude usage total, $0.27 per cycle on average ($0.11-$0.60).
+Honest numbers, as of 2026-10-29:
+- 66 logged cycles, $18.66 of Claude usage total, $0.28 per cycle on average ($0.11-$0.60).
   `python3 costs.py state/LOG.md` recounts this from the log.
 - Revenue: $0. Waitlist for a hosted version: 0. Repo stars: 0. Nobody outside has run the kit yet.
 - The agent built two small products (Shipcard, Roast). Neither found users. Both are frozen.

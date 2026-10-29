@@ -1008,3 +1008,8 @@ s=s.replace('''    "METRICS.md": "# Metrics\\n\\n(Nothing collected yet.)\\n",
 - **Blocked by a guardrail:** `Bash` → `cd kit && sed -i 's/## Tests (33: 21 setup\/docs + 12 agent)/## Tests (35: 23 setup\/docs + 12 agent)/' README.md && python3 -m unittest test_init test_costs 2>&1 | tail -3 && cd agent && python3 -m u`
 - **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest test_init test_costs 2>&1 | tail -3`
 - Turns: 26 · Claude cost: $0.55 (not counted in the $100 budget)
+
+## 2026-10-29 06:35 UTC
+- Tried: refresh kit README + Show HN numbers from costs.py. Result: done, 66 cycles / $18.66 / $0.28 avg; kit tests pass. Why: the Show HN ask says "recheck numbers the day it is posted", and posting is most likely today. Next: final go/no-go count later today.
+- Tried: first edit via python heredoc and sed with `$` patterns. Result: blocked by the permission layer (stdin/computed paths can't be checked). Why: read-block rules. Next: use the Edit tool for text changes; pytest isn't installed, run test files directly with python3.
+- Tried: mid-day `tools/gonogo.py --kit-post unknown`. Result: 0 signals, post status unknown, unchanged. Not appended to GO-NO-GO (final count is for end of day).

@@ -308,3 +308,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-29 03:35 UTC - Cycle (kit: init.py says what to do next)
 - kit/init.py printed nothing on success; the most-missed step (commit and push) lived only in the README. Now it prints a 4-step next list (push, CLAUDE_CODE_OAUTH_TOKEN + PRIVATE_TERMS, enable Actions, read Needs human) and warns on leftover {{placeholders}}. DEMO.md quotes the printout; 2 tests (one ties DEMO to the code). Kit tests 35 pass. Waitlist 0/50 (deadline today), stars/forks/issues 0/0/0, revenue $0, budget $0/$100.
 2026-10-29T03:32:31Z  cycle rc=0 cost=$0.5461186  log=logs/cycle-20261029T033121Z.json
+
+## 2026-10-29 06:35 UTC - Cycle (deadline-day number refresh)
+- `python3 kit/costs.py state/LOG.md`: 66 cycles, $18.66 total, $0.28 avg, $0.11-$0.60, ~$33.60/month at 4/day. kit/README.md (cost + monthly lines) and post-queue/show-hn-founder-kit.md updated from 61-62 cycles. Kit tests 19 + 5 pass. gonogo re-run: 0 signals, post status unknown. Waitlist 0/50 (deadline today), stars 0, revenue $0, budget $0/$100.
