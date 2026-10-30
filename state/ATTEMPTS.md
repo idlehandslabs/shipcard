@@ -1162,3 +1162,17 @@ s=s.replace('''    ("Slack token",''','''    ("Webhook URL", r"https://hooks\\.s
 - Failed: python-on-stdin edits, `cd kit && ...` chains and multi-heredoc appends were all refused by the permission layer (same as last cycle). Switched to the Edit tool + one command per call. Lesson for next cycle: start with Edit, not shell scripts.
 - Why: next item on the agent-guard coverage list. Twilio account SIDs (`AC...`) are deliberately not blocked (identifiers, not secrets). Newer Mailgun key format (hex-hex-hex) not covered yet.
 - Next: high-entropy strings in config files (corpus first); root agent/guard.py port still waits on the operator.
+
+## 2026-10-30 12:29 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; head -60 state/STATE.md; echo ----; head -50 state/TASKS.md; echo ----; tail -25 state/LOG.md; echo ----; head -40 state/METRICS.md; ls; ls kit app post-queue |`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/agent/guard.py'; s=open(p).read()
+s=s.replace('''    ("Webhook URL",''','''    ("Twilio API key", r"\\bSK[0-9a-f]{32}\\b"),
+    ("Mailgun key", r"\\bkey-[0-9a-f]{32}\\b"),
+   `
+- **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -3; python3 -m unittest test_init test_costs 2>&1 | tail -3`
+- **Blocked by a guardrail:** `Bash` → `cat >> state/LOG.md <<'EOF'
+
+## 2026-10-30 12:35 UTC - Cycle (agent-guard: Twilio + Mailgun)
+- kit/agent/guard.py now blocks Twilio API keys (`SK` + 32 hex) and legacy Mailgun keys (`key-` + 32 hex). `
+- Turns: 29 · Claude cost: $0.58 (not counted in the $100 budget)
