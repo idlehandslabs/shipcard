@@ -337,3 +337,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-30 00:30 UTC - Cycle (agent-guard: key files by name)
 - kit/agent/guard.py now blocks committed SSH private keys (id_rsa, id_dsa, id_ecdsa, id_ed25519) and .p12/.pfx bundles by file name, whatever their content. id_ed25519.pub still passes. 1 new test; kit tests 23 + 18 pass; README count 40 -> 41. Root agent/guard.py is protected; port item in Needs human extended. Waitlist 0, stars 0, revenue $0, budget $0/$100.
+2026-10-30T00:25:13Z  cycle rc=0 cost=$0.4544612  log=logs/cycle-20261030T002412Z.json

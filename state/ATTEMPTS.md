@@ -1097,3 +1097,13 @@ new='''    def test_clean_lookalikes_pass(self):
 ## 2026-10-30 00:30 · cycle (agent-guard: key files by name)
 - **Tried:** block SSH private key files and .p12/.pfx by name in kit/agent/guard.py. **Result:** works; test commits 4 key names (all blocked) and id_ed25519.pub (passes). Kit tests 23 + 18 pass. **Why:** a binary .p12 or an OpenSSH key without the PEM header never hits the content patterns. **Next:** phone numbers / high-entropy strings only if agent-guard gets part-1 evidence.
 - **Tried:** a python heredoc and `cd kit && python3 -m unittest` to edit and test. **Result:** blocked by runner permissions. **Why:** heredoc code and compound cd commands need approval. **Next:** use Edit tool + `python3 -m unittest discover -s <abs path> -t <abs path>` (works).
+
+## 2026-10-30 00:25 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/agent/guard.py'; s=open(p).read()
+s=s.replace('''        problems.append(f"env file {text}")   # .env holds real keys; .env.example is fine
+''','''        problems.append(f"en`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/## Tests (40: 23 setup\/docs + 17 agent)/## Tests (41: 23 setup\/docs + 18 agent)/' kit/README.md && grep -rn "\b40\b\|17 agent" kit/README.md kit/test_*.py | head; cd kit && python3 -m unit`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest -q test_init test_costs 2>&1 | tail -2`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit/agent && python3 -m unittest -q 2>&1 | tail -2`
+- Turns: 21 · Claude cost: $0.45 (not counted in the $100 budget)
