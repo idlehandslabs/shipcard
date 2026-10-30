@@ -65,7 +65,9 @@ class GuardTest(unittest.TestCase):
             ("SendGrid key", "SG" + "." + "d" * 22 + "." + "e" * 43),
             ("Twilio API key", "TWILIO = 'SK" + "0123456789abcdef" * 2 + "'"),
             ("Mailgun key", "MG = 'key" + "-" + "fedcba9876543210" * 2 + "'"),
-            ("Webhook URL", "SLACK = 'https://hooks.slack" + ".com/services/T0123/B0456/" + "f" * 24 + "'"),
+            ("GitLab token", "GL = 'glpat" + "-" + "h" * 20 + "'"),
+            ("DigitalOcean token", "DO = 'dop" + "_v1_" + "0123456789abcdef" * 4 + "'"),
+            ("Webhook URL", "SLACK ='https://hooks.slack" + ".com/services/T0123/B0456/" + "f" * 24 + "'"),
             ("Webhook URL", "HOOK = 'https://discord" + ".com/api/webhooks/123456789012345678/" + "g" * 68 + "'"),
         ]:
             with self.subTest(name=name):
@@ -121,6 +123,7 @@ class GuardTest(unittest.TestCase):
             "Use a key-value store; SKU SK12 ships with monkey-patched key-rotation docs.",
             "TWILIO_API_KEY = os.environ['TWILIO_API_KEY']  # starts with SK, Mailgun keys with key-",
             "SLACK_WEBHOOK_URL = os.environ['SLACK_WEBHOOK_URL']  # discord.com/api/webhooks/<id>/<token>",
+            "GITLAB_TOKEN = os.environ['GITLAB_TOKEN']  # glpat-..., DigitalOcean uses dop_v1_...",
         ]) + "\n"
         self.commit("docs/setup.md", corpus)
         r = self.guard()

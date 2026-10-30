@@ -27,6 +27,8 @@ SECRETS = [
     ("SendGrid key", r"SG\.[A-Za-z0-9_\-]{22}\.[A-Za-z0-9_\-]{43}"),
     ("Twilio API key", r"\bSK[0-9a-f]{32}\b"),
     ("Mailgun key", r"\bkey-[0-9a-f]{32}\b"),
+    ("GitLab token", r"\bglpat-[A-Za-z0-9_\-]{20,}"),
+    ("DigitalOcean token", r"\bdo[por]_v1_[0-9a-f]{64}\b"),
     ("Webhook URL", r"https://hooks\.slack\.com/services/T[A-Za-z0-9]+/B[A-Za-z0-9]+/[A-Za-z0-9]{20,}|https://(ptb\.|canary\.)?discord(app)?\.com/api/webhooks/\d{15,}/[A-Za-z0-9_\-]{50,}"),
     ("Slack token", r"xox[baprs]-[A-Za-z0-9\-]{10,}"),
     ("Private key", r"-----BEGIN [A-Z ]*PRIVATE KEY-----"),

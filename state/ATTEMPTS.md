@@ -1176,3 +1176,9 @@ s=s.replace('''    ("Webhook URL",''','''    ("Twilio API key", r"\\bSK[0-9a-f]{
 ## 2026-10-30 12:35 UTC - Cycle (agent-guard: Twilio + Mailgun)
 - kit/agent/guard.py now blocks Twilio API keys (`SK` + 32 hex) and legacy Mailgun keys (`key-` + 32 hex). `
 - Turns: 29 · Claude cost: $0.58 (not counted in the $100 budget)
+
+## 2026-10-30 15:45 · cycle (agent-guard: GitLab + DigitalOcean)
+- **Tried:** add GitLab PAT and DigitalOcean token patterns to kit/agent/guard.py, test-first via subtests + one corpus lookalike.
+- **Result:** works. Kit tests 23 + 18 pass. Edits done with the Edit tool (last cycle's python heredoc and `cd kit && ...` test commands were blocked by the permission layer; `python3 -m unittest discover -s kit/agent` from the repo root runs fine).
+- **Why:** both tokens are common in deploy/CI agent repos and the guard missed them.
+- **Next:** still no outside evidence for agent-guard (Needs human). Stop adding patterns after high-entropy config strings unless evidence arrives; diminishing returns.
