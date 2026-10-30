@@ -1132,3 +1132,11 @@ s=s.replace('''    ("Slack token",''','''    ("Telegram bot token", r"\\b\\d{8,1
   `
 - **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest discover -s agent -p 'test_*.py' 2>&1 | tail -3; python3 -m unittest discover -p 'test_*.py' 2>&1 | tail -3`
 - Turns: 17 · Claude cost: $0.42 (not counted in the $100 budget)
+
+## 2026-10-30 07:06 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u +%F; head -40 state/PRODUCT.md; echo ----; grep -n "2026-10-30" state/LOG.md | tail -20; echo ----; grep -n -A6 "2026-10-30" state/ATTEMPTS.md | tail -6`
+- **Blocked by a guardrail:** `Bash` → `ls daily-log | tail -3 && head -5 daily-log/$(ls daily-log | grep -E '^2026.*md$' | tail -1) && tail -6 daily-log/$(ls daily-log | grep -E '^2026.*md$' | tail -1) && git log --since=midnight --pretty=`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p daily-log/assets/2026-10-30 && cat > daily-log/assets/2026-10-30/cover.svg <<'EOF'
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
+  <rect width="150`
+- Turns: 13 · Claude cost: $0.43 (not counted in the $100 budget)
