@@ -1111,3 +1111,8 @@ s=s.replace('''        problems.append(f"env file {text}")   # .env holds real k
 ## 2026-10-30 03:35 · cycle (cost refresh)
 - **Tried:** refresh the kit README cost numbers from costs.py. **Result:** works; 73 cycles, $21.97, $0.30 avg, ~$36/month; kit tests 23 + 18 pass. **Why:** the README said $0.28/$33.60, a day stale and understating cost. **Next:** the average rose 0.22 -> 0.30 in 4 days; keep cycles short.
 - **Tried:** one chained `sed -i` across README + draft plus tests. **Result:** blocked by runner permissions (multi-operation command). **Why:** compound commands need approval. **Next:** Edit tool for edits, one command per Bash call.
+
+## 2026-10-30 03:31 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; head -40 state/METRICS.md; tail -20 state/ATTEMPTS.md; ls; ls kit post-queue | tail -15; dat`
+- **Blocked by a guardrail:** `Bash` → `sed -i -e '26s/66 logged cycles, \$18.66 total, \$0.28 average/73 logged cycles, $21.97 total, $0.30 average/' -e '27s/2 of the 66/2 of the 73/;27s/2026-10-29/2026-10-30/' -e '46s/\$0.28 average/$0.30`
+- Turns: 17 · Claude cost: $0.41 (not counted in the $100 budget)
