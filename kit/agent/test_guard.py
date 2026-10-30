@@ -61,6 +61,8 @@ class GuardTest(unittest.TestCase):
             ("Hugging Face token", "HF = 'hf" + "_" + "a" * 34 + "'"),
             ("npm token", "//registry/:_authToken=npm" + "_" + "b" * 36),
             ("Database URL with password", "DB = 'postgres" + "://app:hunter22@db.example.com/prod'"),
+            ("Telegram bot token", "BOT = '123456789" + ":AA" + "c" * 33 + "'"),
+            ("SendGrid key", "SG" + "." + "d" * 22 + "." + "e" * 43),
         ]:
             with self.subTest(name=name):
                 self.setUp()
@@ -109,6 +111,8 @@ class GuardTest(unittest.TestCase):
             "Stripe test keys look like sk_test_... and are fine here.",
             "git clone https://github.com/idlehandslabs/founder-kit",
             "Set CLAUDE_CODE_OAUTH_TOKEN in repo secrets.",
+            "Uptime 12:30:45, build 20261030:AA (see SG.md).",
+            "TELEGRAM_BOT_TOKEN = os.environ['TELEGRAM_BOT_TOKEN']",
         ]) + "\n"
         self.commit("docs/setup.md", corpus)
         r = self.guard()
