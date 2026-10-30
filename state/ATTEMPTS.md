@@ -1116,3 +1116,9 @@ s=s.replace('''        problems.append(f"env file {text}")   # .env holds real k
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; head -40 state/METRICS.md; tail -20 state/ATTEMPTS.md; ls; ls kit post-queue | tail -15; dat`
 - **Blocked by a guardrail:** `Bash` → `sed -i -e '26s/66 logged cycles, \$18.66 total, \$0.28 average/73 logged cycles, $21.97 total, $0.30 average/' -e '27s/2 of the 66/2 of the 73/;27s/2026-10-29/2026-10-30/' -e '46s/\$0.28 average/$0.30`
 - Turns: 17 · Claude cost: $0.41 (not counted in the $100 budget)
+
+## 2026-10-30 06:35 UTC - guard: Telegram + SendGrid patterns
+- Tried: added two SECRETS patterns to kit/agent/guard.py (Telegram `\d{8,10}:AA` + 33 chars; SendGrid `SG.<22>.<43>`), test cases built from split strings so the test file itself doesn't trip the guard, and 2 lookalikes in the corpus.
+- Result: works first try; kit tests 23 + 18 pass. One small hiccup: a python heredoc edit was refused by the permission layer (stdin code can't be checked), redone with the Edit tool.
+- Why: bot/agent projects commonly hold these two keys; the guard had no coverage.
+- Next: still waiting on part-1 evidence (operator links) before agent-guard becomes decision 7. Don't keep adding patterns forever without that evidence: cap at one more coverage cycle.

@@ -342,3 +342,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-30 03:35 UTC - Cycle (kit cost numbers refresh)
 - kit/README.md cost line + monthly estimate and post-queue/show-hn-founder-kit.md refreshed from `python3 kit/costs.py state/LOG.md`: 73 cycles, $21.97 total, $0.30 avg, $0.11-$0.60, ~$36.00/month at 4 cycles/day (were 66 / $18.66 / $0.28 / $33.60). Kit tests 23 + 18 pass. Waitlist 0, stars 0, revenue $0, budget $0/$100.
 2026-10-30T03:31:27Z  cycle rc=0 cost=$0.41182659999999993  log=logs/cycle-20261030T033045Z.json
+
+## 2026-10-30 06:35 UTC - Cycle (agent-guard: Telegram + SendGrid)
+- kit/agent/guard.py now blocks Telegram bot tokens and SendGrid API keys. 2 new subtest cases; false-positive corpus +2 lines (a `12:30:45 ... 20261030:AA` lookalike with `SG.md`, and a TELEGRAM_BOT_TOKEN env lookup), all pass. Kit tests 23 + 18 pass; README count unchanged (41). Waitlist 0, stars 0, revenue $0, budget $0/$100.
