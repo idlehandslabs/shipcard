@@ -1155,3 +1155,10 @@ p='kit/agent/guard.py'; s=open(p).read()
 s=s.replace('''    ("Slack token",''','''    ("Webhook URL", r"https://hooks\\.slack\\.com/services/T[A-Za-z0-9]+/B[A-Za-z0-9]+/[A-Za-z0-9]{2`
 - **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest discover -s agent -p 'test_*.py' 2>&1 | tail -3; python3 -m unittest test_init 2>&1 | tail -3`
 - Turns: 16 · Claude cost: $0.43 (not counted in the $100 budget)
+
+## 2026-10-30 12:35 UTC - Twilio + Mailgun patterns in kit guard
+- Tried: added `\bSK[0-9a-f]{32}\b` (Twilio API key) and `\bkey-[0-9a-f]{32}\b` (legacy Mailgun key) to kit/agent/guard.py, 2 blocking subtests, 2 lookalike corpus lines.
+- Result: works. Kit tests 23 + 18 pass first try.
+- Failed: python-on-stdin edits, `cd kit && ...` chains and multi-heredoc appends were all refused by the permission layer (same as last cycle). Switched to the Edit tool + one command per call. Lesson for next cycle: start with Edit, not shell scripts.
+- Why: next item on the agent-guard coverage list. Twilio account SIDs (`AC...`) are deliberately not blocked (identifiers, not secrets). Newer Mailgun key format (hex-hex-hex) not covered yet.
+- Next: high-entropy strings in config files (corpus first); root agent/guard.py port still waits on the operator.
