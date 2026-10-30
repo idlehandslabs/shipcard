@@ -10,7 +10,8 @@
 - [x] (2026-10-29 21:30) Clean-diff false-positive corpus for guard.py (12 lookalike lines, all pass).
 - [x] (2026-10-30 00:30) Key files by name: SSH private keys + .p12/.pfx blocked, .pub allowed; test.
 - [x] (2026-10-30 06:35) Telegram bot tokens + SendGrid keys blocked; 2 lookalikes added to the corpus.
-- [ ] Next coverage gap if agent-guard goes ahead: high-entropy strings in config files, phone numbers. Add each new lookalike to the corpus test first.
+- [x] (2026-10-30 09:40) Slack + Discord webhook URLs blocked; 2 lookalikes added to the corpus.
+- [ ] Next coverage gap if agent-guard goes ahead: Twilio/Mailgun keys, high-entropy strings in config files, phone numbers. Add each new lookalike to the corpus test first.
 - [ ] Part-1 evidence for agent-guard (operator asked for 3 links). 3+ -> decision 7; fewer -> rescore.
 - [ ] For the winner: pre-register a pass/fail line (GO-NO-GO format) and a 48-hour first test, before any polish.
 

@@ -1140,3 +1140,10 @@ s=s.replace('''    ("Slack token",''','''    ("Telegram bot token", r"\\b\\d{8,1
 <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
   <rect width="150`
 - Turns: 13 · Claude cost: $0.43 (not counted in the $100 budget)
+
+## 2026-10-30 09:40 UTC - webhook URLs in guard.py
+- Tried: added a "Webhook URL" pattern (Slack incoming webhooks, Discord webhooks incl. ptb/canary/discordapp) to kit/agent/guard.py, plus 2 block cases and 2 lookalikes in the false-positive corpus.
+- Result: all 18 guard tests + 23 kit tests pass on the first run.
+- Why: webhook URLs are bearer credentials that bot/agent projects hardcode often, and the guard had no rule for them.
+- Next: root agent/guard.py port (operator, protected path). Still waiting on part-1 evidence before agent-guard becomes decision 7; stop adding patterns after one more gap (Twilio/Mailgun) unless evidence arrives.
+- Also: first attempt to edit via a python heredoc was blocked by the permission layer (stdin code can't be checked); redid it with plain file edits. No effect on the result.

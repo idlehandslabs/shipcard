@@ -63,6 +63,8 @@ class GuardTest(unittest.TestCase):
             ("Database URL with password", "DB = 'postgres" + "://app:hunter22@db.example.com/prod'"),
             ("Telegram bot token", "BOT = '123456789" + ":AA" + "c" * 33 + "'"),
             ("SendGrid key", "SG" + "." + "d" * 22 + "." + "e" * 43),
+            ("Webhook URL", "SLACK = 'https://hooks.slack" + ".com/services/T0123/B0456/" + "f" * 24 + "'"),
+            ("Webhook URL", "HOOK = 'https://discord" + ".com/api/webhooks/123456789012345678/" + "g" * 68 + "'"),
         ]:
             with self.subTest(name=name):
                 self.setUp()
@@ -113,6 +115,8 @@ class GuardTest(unittest.TestCase):
             "Set CLAUDE_CODE_OAUTH_TOKEN in repo secrets.",
             "Uptime 12:30:45, build 20261030:AA (see SG.md).",
             "TELEGRAM_BOT_TOKEN = os.environ['TELEGRAM_BOT_TOKEN']",
+            "Create one at https://api.slack.com/messaging/webhooks (hooks.slack.com/services/...).",
+            "SLACK_WEBHOOK_URL = os.environ['SLACK_WEBHOOK_URL']  # discord.com/api/webhooks/<id>/<token>",
         ]) + "\n"
         self.commit("docs/setup.md", corpus)
         r = self.guard()
