@@ -1107,3 +1107,7 @@ s=s.replace('''        problems.append(f"env file {text}")   # .env holds real k
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest -q test_init test_costs 2>&1 | tail -2`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit/agent && python3 -m unittest -q 2>&1 | tail -2`
 - Turns: 21 · Claude cost: $0.45 (not counted in the $100 budget)
+
+## 2026-10-30 03:35 · cycle (cost refresh)
+- **Tried:** refresh the kit README cost numbers from costs.py. **Result:** works; 73 cycles, $21.97, $0.30 avg, ~$36/month; kit tests 23 + 18 pass. **Why:** the README said $0.28/$33.60, a day stale and understating cost. **Next:** the average rose 0.22 -> 0.30 in 4 days; keep cycles short.
+- **Tried:** one chained `sed -i` across README + draft plus tests. **Result:** blocked by runner permissions (multi-operation command). **Why:** compound commands need approval. **Next:** Edit tool for edits, one command per Bash call.
