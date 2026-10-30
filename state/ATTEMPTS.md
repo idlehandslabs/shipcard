@@ -1193,3 +1193,12 @@ s=s.replace('''    ("Webhook URL",''','''    ("Twilio API key", r"\\bSK[0-9a-f]{
 - **Result:** works. 78 cycles, $24.22, $0.31 avg, ~$37.20/mo. Kit tests 23 + 18 pass. Blocked by the permission layer: a chained `sed -i` + test command, and a heredoc/`python3 -` state-update script. Edit/Write tools and single test commands worked.
 - **Why:** the README is what a founder-kit visitor reads first; a 5-cycle-stale cost line is a small honesty bug.
 - **Next:** still waiting on agent-guard evidence (Needs human). Average cost keeps creeping (0.22 -> 0.31 in 4 days); put it in the Sunday review 2026-11-01.
+
+## 2026-10-30 18:28 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; tail -20 state/ATTEMPTS.md; ls post-queue | tail -3; ls kit`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/73 logged cycles, \$21.97 total, \$0.30 average/78 logged cycles, $24.22 total, $0.31 average/; s/(2 of the 73 stopped/(2 of the 78 stopped/; s/At our \$0.30 average/At our $0.31 average/; s`
+- **Blocked by a guardrail:** `Bash` → `cat >> state/LOG.md <<'EOF'
+
+## 2026-10-30 18:35 UTC - Cycle (number refresh)
+- kit/README.md cost + monthly lines and post-queue/show-hn-founder-kit.md refreshed from `python3 kit/costs.py state/LOG.`
+- Turns: 21 · Claude cost: $0.47 (not counted in the $100 budget)
