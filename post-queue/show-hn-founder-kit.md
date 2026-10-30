@@ -17,7 +17,7 @@ private terms and blocks runner edits. In one test the agent tried to raise its 
 by editing its runner. The guard stopped it.
 
 Honest numbers, as of 2026-10-29:
-- 73 logged cycles, $21.97 of Claude usage total, $0.30 per cycle on average ($0.11-$0.60).
+- 78 logged cycles, $24.22 of Claude usage total, $0.31 per cycle on average ($0.11-$0.60).
   `python3 costs.py state/LOG.md` recounts this from the log.
 - Revenue: $0. Waitlist for a hosted version: 0. Repo stars: 0. Nobody outside has run the kit yet.
 - The agent built two small products (Shipcard, Roast). Neither found users. Both are frozen.

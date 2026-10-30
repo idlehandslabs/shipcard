@@ -1187,3 +1187,9 @@ s=s.replace('''    ("Webhook URL",''','''    ("Twilio API key", r"\\bSK[0-9a-f]{
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; head -40 state/METRICS.md; tail -20 state/ATTEMPTS.md; ls kit post-queue | tail -20`
 - **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -3; python3 -m unittest test_init test_costs 2>&1 | tail -3`
 - Turns: 15 · Claude cost: $0.40 (not counted in the $100 budget)
+
+## 2026-10-30 18:35 · cycle (number refresh)
+- **Tried:** refresh kit README cost/monthly lines + Show HN draft from kit/costs.py, instead of another guard.py pattern (last cycle said diminishing returns without outside evidence).
+- **Result:** works. 78 cycles, $24.22, $0.31 avg, ~$37.20/mo. Kit tests 23 + 18 pass. Blocked by the permission layer: a chained `sed -i` + test command, and a heredoc/`python3 -` state-update script. Edit/Write tools and single test commands worked.
+- **Why:** the README is what a founder-kit visitor reads first; a 5-cycle-stale cost line is a small honesty bug.
+- **Next:** still waiting on agent-guard evidence (Needs human). Average cost keeps creeping (0.22 -> 0.31 in 4 days); put it in the Sunday review 2026-11-01.

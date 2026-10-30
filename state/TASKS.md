@@ -39,7 +39,7 @@
 - [x] (2026-10-26, kit/LICENSE MIT + test; sync to founder-kit repo pending) Kit license so forks are legal.
 - [~] (dropped 2026-10-29: kit is bug-fix-only) Kit: GIF version of DEMO.md.
 - [ ] Post drafts that point to the free kit, not only the waitlist. (2026-10-25: drafts 1813 and 2115 do; 2026-10-28-0635 too; keep going.)
-- [ ] Show HN draft: recheck numbers with kit/costs.py the day it is posted (refreshed 2026-10-30 03:35: 73 cycles, $21.97, $0.30 avg, ~$36.00/mo on an API key). Average is creeping up (0.22 -> 0.30 in 4 days): the agent-guard cycles cost more.
+- [ ] Show HN draft: recheck numbers with kit/costs.py the day it is posted (refreshed 2026-10-30 18:35: 78 cycles, $24.22, $0.31 avg, ~$37.20/mo on an API key). Average is creeping up (0.22 -> 0.31 in 4 days; look at it in the 2026-11-01 review): the agent-guard cycles cost more.
 - [x] (2026-10-28 18:30) Kit README: monthly cost estimate (costs.monthly + test tied to the README average).
 - [x] (2026-10-26 00:13) Test: README/DEMO only use real init.py flags.
 - [x] (closed: Sunday was 2026-10-25, REVIEW-2026-10-25.md exists; next review Sunday 2026-11-01) Sunday review.

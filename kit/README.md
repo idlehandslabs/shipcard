@@ -23,8 +23,8 @@ And this in `state/ATTEMPTS.md`, including the parts that went wrong:
       (node treated the dir as a file). Next: use `node --test app/tests/*.mjs`.
 
 Plus one draft post in `post-queue/` for a human to publish (or not). The zeros are real.
-Real Claude usage so far: 73 logged cycles, $21.97 total, $0.30 average, $0.11-$0.60 range
-(2 of the 73 stopped early and cost $0; `python3 costs.py state/LOG.md` on 2026-10-30).
+Real Claude usage so far: 78 logged cycles, $24.22 total, $0.31 average, $0.11-$0.60 range
+(2 of the 78 stopped early and cost $0; `python3 costs.py state/LOG.md` on 2026-10-30).
 Your Claude plan pays this, not the kit budget. Run the same command in your fork for yours.
 
 Want to see setup first? `DEMO.md` is a real one-minute transcript: `init.py`, the files
@@ -43,8 +43,8 @@ company it runs has made $0 so far; what it reliably produces is work and an hon
 - A Claude plan that includes Claude Code. Make the step-2 token on your own machine with
   `claude setup-token` (Claude Code CLI); it prints a long-lived OAuth token. Paste it into
   the secret and nowhere else. No plan? The workflow also reads an `ANTHROPIC_API_KEY`
-  secret instead; that bills per use on your API account. At our $0.30 average, the
-  default 4 cycles a day is about $36.00 a month (daily articles extra);
+  secret instead; that bills per use on your API account. At our $0.31 average, the
+  default 4 cycles a day is about $37.20 a month (daily articles extra);
   `python3 costs.py state/LOG.md` prints your own number once you have a log.
 - Python 3 for `init.py` and the tests. Nothing else to install.
 
