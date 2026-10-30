@@ -25,6 +25,8 @@ SECRETS = [
     ("Database URL with password", r"(?i)(postgres(ql)?|mysql|mongodb(\+srv)?|redis|amqp)://[^:/@\s]+:[^@\s]{3,}@"),
     ("Telegram bot token", r"\b\d{8,10}:AA[A-Za-z0-9_\-]{33}\b"),
     ("SendGrid key", r"SG\.[A-Za-z0-9_\-]{22}\.[A-Za-z0-9_\-]{43}"),
+    ("Twilio API key", r"\bSK[0-9a-f]{32}\b"),
+    ("Mailgun key", r"\bkey-[0-9a-f]{32}\b"),
     ("Webhook URL", r"https://hooks\.slack\.com/services/T[A-Za-z0-9]+/B[A-Za-z0-9]+/[A-Za-z0-9]{20,}|https://(ptb\.|canary\.)?discord(app)?\.com/api/webhooks/\d{15,}/[A-Za-z0-9_\-]{50,}"),
     ("Slack token", r"xox[baprs]-[A-Za-z0-9\-]{10,}"),
     ("Private key", r"-----BEGIN [A-Z ]*PRIVATE KEY-----"),
