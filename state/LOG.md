@@ -367,3 +367,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-30 21:24 UTC - Cycle (agent-guard: Shopify)
 - kit/agent/guard.py now blocks Shopify access tokens (`shpat_`/`shpca_`/`shppa_`/`shpss_` + 32 hex). 1 new subtest case. Kit tests 23 + 18 pass; README count unchanged (41). Waitlist 0, stars 0, revenue $0, budget $0/$100.
+2026-10-30T21:24:40Z  cycle rc=0 cost=$0.4591988  log=logs/cycle-20261030T212348Z.json

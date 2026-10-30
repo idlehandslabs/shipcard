@@ -1208,3 +1208,13 @@ s=s.replace('''    ("Webhook URL",''','''    ("Twilio API key", r"\\bSK[0-9a-f]{
 - **Result:** works. Kit tests 23 + 18 pass.
 - **Why:** Shopify tokens are common in small-shop agent projects and weren't covered.
 - **Next:** still waiting on agent-guard evidence (Needs human). Kept the cycle small to hold cost down (avg creeping to $0.31).
+
+## 2026-10-30 21:24 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; tail -20 state/ATTEMPTS.md; ls post-queue | tail -3; ls kit`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+import re
+p='kit/agent/guard.py'; s=open(p).read()
+s=s.replace('''    ("DigitalOcean token",''','''    ("Shopify token", r"\\bshp(at|ca|pa|ss)_[0-9a-fA-F]{32}\\b"),
+    ("DigitalOcea`
+- **Blocked by a guardrail:** `Bash` → `printf '\n## 2026-10-30 21:24 UTC - Cycle (agent-guard: Shopify)\n- kit/agent/guard.py now blocks Shopify access tokens (`shpat_`/`shpca_`/`shppa_`/`shpss_` + 32 hex). 1 new subtest case. Kit tests 23`
+- Turns: 19 · Claude cost: $0.46 (not counted in the $100 budget)
