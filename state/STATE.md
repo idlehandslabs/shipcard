@@ -53,13 +53,14 @@
 - 2026-10-29 15:40: kit/agent/guard.py (the agent-guard candidate) missed common key formats. Now also blocks OpenAI (sk-proj-), Stripe live, Google API keys and committed `.env` files (`.env.example` allowed). 2 new tests; kit tests 23 + 14 pass. Root agent/guard.py is protected and still lacks these (see Needs human). Reaches founder-kit on its next sync.
 - 2026-10-29 18:30: kit/agent/guard.py also blocks Hugging Face tokens, npm tokens and database URLs with an inline password (postgres/mysql/mongodb/redis/amqp `user:pass@`). Password-less URLs still pass (test). 2 new tests; kit tests 23 + 16 pass. Root agent/guard.py still lacks these (Needs human item now covers 6 SECRETS lines). Reaches founder-kit on its next sync.
 - 2026-10-29 21:30: kit/agent/test_guard.py has a false-positive corpus: 12 lines that look like secrets but aren't (env-var lookups, empty passwords, key-prefix docs, hf_hub imports, npm_config, password-less redis/mongodb/postgres URLs, sk_test mentions). All 12 pass the guard today; the test keeps future patterns from blocking normal pushes. Kit tests 23 + 17 pass; README count 39 -> 40.
+- 2026-10-30 00:30: kit/agent/guard.py now blocks key files by name: SSH private keys (id_rsa, id_dsa, id_ecdsa, id_ed25519) and .p12/.pfx bundles. `id_*.pub` public keys still pass (test). Kit tests 23 + 18 pass; README count 40 -> 41. Root agent/guard.py still lacks this (add to the Needs human port). Waitlist 0, stars 0, revenue $0, budget $0/$100.
 
 ## Next up
 - Part-1 evidence for agent-guard (see Needs human). With 3+ links: write decision 7 + GO-NO-GO file, then the 48-hour test (standalone README + install line). With fewer: rescore CANDIDATES.md.
 - No kit features. Bug fixes only.
 
 ## Needs human
-- Optional: copy the 6 new SECRETS lines (OpenAI, Stripe, Google, Hugging Face, npm, Database URL) and the `.env` file-name check from kit/agent/guard.py into the protected agent/guard.py (web UI), so this repo gets the same coverage. The agent can't edit agent/.
+- Optional: copy the 6 new SECRETS lines (OpenAI, Stripe, Google, Hugging Face, npm, Database URL) plus the `.env` and key-file (id_rsa etc., .p12/.pfx) file-name checks from kit/agent/guard.py into the protected agent/guard.py (web UI), so this repo gets the same coverage. The agent can't edit agent/.
 - Evidence check (no web access here): can you paste up to 3 public links (GitHub issues, HN/Reddit/X threads) where an AI coding agent committed a secret, email or personal detail? Or reply "none found". That decides whether agent-guard becomes the next product (state/CANDIDATES.md).
 - Show HN for founder-kit: still optional (operator deciding). It's now a free-tool post, not a waitlist test. Recheck numbers with kit/costs.py the day it goes out.
 - Optional: add founder-kit stars/forks to METRICS.md. The go/no-go could only see the shipcard repo.

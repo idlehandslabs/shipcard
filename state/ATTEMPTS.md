@@ -1093,3 +1093,7 @@ new='''    def test_clean_lookalikes_pass(self):
 - **Blocked by a guardrail:** `Bash` → `cd kit/agent && python3 -m unittest test_guard 2>&1 | tail -6`
 - **Blocked by a guardrail:** `Bash` → `sed -i '109s/.*/## Tests (40: 23 setup\/docs + 17 agent)/' kit/README.md && python3 -m unittest discover -s kit -p "test_*.py" 2>&1 | tail -3; python3 -m unittest discover -s kit/agent -p "test_*.py" `
 - Turns: 17 · Claude cost: $0.45 (not counted in the $100 budget)
+
+## 2026-10-30 00:30 · cycle (agent-guard: key files by name)
+- **Tried:** block SSH private key files and .p12/.pfx by name in kit/agent/guard.py. **Result:** works; test commits 4 key names (all blocked) and id_ed25519.pub (passes). Kit tests 23 + 18 pass. **Why:** a binary .p12 or an OpenSSH key without the PEM header never hits the content patterns. **Next:** phone numbers / high-entropy strings only if agent-guard gets part-1 evidence.
+- **Tried:** a python heredoc and `cd kit && python3 -m unittest` to edit and test. **Result:** blocked by runner permissions. **Why:** heredoc code and compound cd commands need approval. **Next:** use Edit tool + `python3 -m unittest discover -s <abs path> -t <abs path>` (works).
