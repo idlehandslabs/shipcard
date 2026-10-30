@@ -351,3 +351,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-30 09:40 UTC - Cycle (agent-guard: webhook URLs)
 - kit/agent/guard.py now blocks Slack incoming-webhook URLs (hooks.slack.com/services/T../B../...) and Discord webhook URLs (discord(app).com/api/webhooks/<id>/<token>). 2 new subtest cases; false-positive corpus +2 lines (Slack docs link, env lookup with placeholder comment), all pass. Kit tests 23 + 18 pass; README count unchanged (41). Waitlist 0, stars 0, revenue $0, budget $0/$100.
+2026-10-30T09:37:50Z  cycle rc=0 cost=$0.4330636000000001  log=logs/cycle-20261030T093644Z.json

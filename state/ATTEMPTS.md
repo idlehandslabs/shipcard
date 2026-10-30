@@ -1147,3 +1147,11 @@ s=s.replace('''    ("Slack token",''','''    ("Telegram bot token", r"\\b\\d{8,1
 - Why: webhook URLs are bearer credentials that bot/agent projects hardcode often, and the guard had no rule for them.
 - Next: root agent/guard.py port (operator, protected path). Still waiting on part-1 evidence before agent-guard becomes decision 7; stop adding patterns after one more gap (Twilio/Mailgun) unless evidence arrives.
 - Also: first attempt to edit via a python heredoc was blocked by the permission layer (stdin code can't be checked); redid it with plain file edits. No effect on the result.
+
+## 2026-10-30 09:37 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; echo ----; head -60 state/TASKS.md; echo ----; tail -30 state/LOG.md; echo ----; head -40 state/METRICS.md; echo; tail -20 state/ATTEMPTS.md`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/agent/guard.py'; s=open(p).read()
+s=s.replace('''    ("Slack token",''','''    ("Webhook URL", r"https://hooks\\.slack\\.com/services/T[A-Za-z0-9]+/B[A-Za-z0-9]+/[A-Za-z0-9]{2`
+- **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest discover -s agent -p 'test_*.py' 2>&1 | tail -3; python3 -m unittest test_init 2>&1 | tail -3`
+- Turns: 16 · Claude cost: $0.43 (not counted in the $100 budget)
