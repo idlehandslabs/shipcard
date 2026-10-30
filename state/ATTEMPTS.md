@@ -1122,3 +1122,13 @@ s=s.replace('''        problems.append(f"env file {text}")   # .env holds real k
 - Result: works first try; kit tests 23 + 18 pass. One small hiccup: a python heredoc edit was refused by the permission layer (stdin code can't be checked), redone with the Edit tool.
 - Why: bot/agent projects commonly hold these two keys; the guard had no coverage.
 - Next: still waiting on part-1 evidence (operator links) before agent-guard becomes decision 7. Don't keep adding patterns forever without that evidence: cap at one more coverage cycle.
+
+## 2026-10-30 06:29 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; ls; ls kit app post-queue | tail -20`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+import pathlib
+g=pathlib.Path("kit/agent/guard.py"); s=g.read_text()
+s=s.replace('''    ("Slack token",''','''    ("Telegram bot token", r"\\b\\d{8,10}:AA[A-Za-z0-9_\\-]{33}\\b"),
+  `
+- **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest discover -s agent -p 'test_*.py' 2>&1 | tail -3; python3 -m unittest discover -p 'test_*.py' 2>&1 | tail -3`
+- Turns: 17 · Claude cost: $0.42 (not counted in the $100 budget)

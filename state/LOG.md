@@ -345,3 +345,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-30 06:35 UTC - Cycle (agent-guard: Telegram + SendGrid)
 - kit/agent/guard.py now blocks Telegram bot tokens and SendGrid API keys. 2 new subtest cases; false-positive corpus +2 lines (a `12:30:45 ... 20261030:AA` lookalike with `SG.md`, and a TELEGRAM_BOT_TOKEN env lookup), all pass. Kit tests 23 + 18 pass; README count unchanged (41). Waitlist 0, stars 0, revenue $0, budget $0/$100.
+2026-10-30T06:29:30Z  cycle rc=0 cost=$0.42199960000000003  log=logs/cycle-20261030T062836Z.json
