@@ -82,6 +82,17 @@ class GuardTest(unittest.TestCase):
         self.commit(".env.example", "API_KEY=\n")
         self.assertEqual(self.guard().returncode, 0)
 
+    def test_blocks_key_files_but_not_public_key(self):
+        for name in ["deploy/id_ed25519", "id_rsa", "certs/app.p12", "signing.pfx"]:
+            self.setUp()
+            self.commit(name, "binary-ish\n")
+            r = self.guard()
+            self.assertEqual(r.returncode, 1, name)
+            self.assertIn("key file", r.stdout)
+        self.setUp()
+        self.commit("deploy/id_ed25519.pub", "ssh-ed25519 AAAA test\n")
+        self.assertEqual(self.guard().returncode, 0)
+
     def test_clean_lookalikes_pass(self):
         # false-positive corpus: lines that look secret-ish but are normal code and docs.
         # A guard that blocks these would stall every cycle that touches config.

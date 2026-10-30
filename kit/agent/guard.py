@@ -57,6 +57,8 @@ for f in git("diff", "--name-only", f"{base}..HEAD").splitlines():
 for where, text in added:
     if where == "file name" and re.search(r"(^|/)\.env(\.(?!example$|sample$|template$)[^/]+)?$", text):
         problems.append(f"env file {text}")   # .env holds real keys; .env.example is fine
+    if where == "file name" and re.search(r"(^|/)id_(rsa|dsa|ecdsa|ed25519)$|\.(p12|pfx)$", text):
+        problems.append(f"key file {text}")   # SSH private keys, PKCS#12 bundles; id_rsa.pub is fine
     for name, pat in SECRETS:
         if re.search(pat, text):
             problems.append(f"{name} in {where}")
