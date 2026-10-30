@@ -66,6 +66,7 @@ class GuardTest(unittest.TestCase):
             ("Twilio API key", "TWILIO = 'SK" + "0123456789abcdef" * 2 + "'"),
             ("Mailgun key", "MG = 'key" + "-" + "fedcba9876543210" * 2 + "'"),
             ("GitLab token", "GL = 'glpat" + "-" + "h" * 20 + "'"),
+            ("Shopify token", "SHOP = 'shpat" + "_" + "0123456789abcdef" * 2 + "'"),
             ("DigitalOcean token", "DO = 'dop" + "_v1_" + "0123456789abcdef" * 4 + "'"),
             ("Webhook URL", "SLACK ='https://hooks.slack" + ".com/services/T0123/B0456/" + "f" * 24 + "'"),
             ("Webhook URL", "HOOK = 'https://discord" + ".com/api/webhooks/123456789012345678/" + "g" * 68 + "'"),

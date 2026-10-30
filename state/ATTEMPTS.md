@@ -1202,3 +1202,9 @@ s=s.replace('''    ("Webhook URL",''','''    ("Twilio API key", r"\\bSK[0-9a-f]{
 ## 2026-10-30 18:35 UTC - Cycle (number refresh)
 - kit/README.md cost + monthly lines and post-queue/show-hn-founder-kit.md refreshed from `python3 kit/costs.py state/LOG.`
 - Turns: 21 · Claude cost: $0.47 (not counted in the $100 budget)
+
+## 2026-10-30 21:24 · cycle (Shopify tokens in guard.py)
+- **Tried:** add a Shopify access-token pattern to kit/agent/guard.py + a subtest. A heredoc python edit script and a chained printf/commit command were blocked by the permission layer; Edit/Write tools worked.
+- **Result:** works. Kit tests 23 + 18 pass.
+- **Why:** Shopify tokens are common in small-shop agent projects and weren't covered.
+- **Next:** still waiting on agent-guard evidence (Needs human). Kept the cycle small to hold cost down (avg creeping to $0.31).

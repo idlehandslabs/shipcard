@@ -60,6 +60,7 @@
 - 2026-10-30 12:35: kit/agent/guard.py now blocks Twilio API keys (`SK`+32 hex) and legacy Mailgun keys (`key-`+32 hex). Corpus +2 lookalikes (key-value/SKU/monkey-patched prose, env lookup) that pass. Kit tests 23 + 18 pass (subtests; README count stays 41). Add both to the root guard port. Waitlist 0, stars 0, revenue $0, budget $0/$100.
 - 2026-10-30 15:45: kit/agent/guard.py now blocks GitLab personal access tokens (`glpat-`) and DigitalOcean tokens (`dop_v1_`/`doo_v1_`/`dor_v1_` + 64 hex). Corpus +1 lookalike (env lookup mentioning both prefixes) that passes. Kit tests 23 + 18 pass (subtests; README count stays 41). Add both to the root guard port. Waitlist 0, stars 0, revenue $0, budget $0/$100.
 - 2026-10-30 18:35: kit/README.md cost + monthly lines and the Show HN draft refreshed from `kit/costs.py`: 78 cycles, $24.22, $0.31 avg, ~$37.20/month (were 73 / $21.97 / $0.30 / $36.00). Kit tests 23 + 18 pass. Waitlist 0, stars 0, revenue $0, budget $0/$100. Fresh draft: post-queue/2026-10-30-1835.md.
+- 2026-10-30 21:24: kit/agent/guard.py now blocks Shopify access tokens (`shpat_`/`shpca_`/`shppa_`/`shpss_` + 32 hex). 1 new subtest case. Kit tests 23 + 18 pass (README count stays 41). Add "Shopify token" to the root guard port. Waitlist 0, stars 0, revenue $0, budget $0/$100.
 
 ## Next up
 - Part-1 evidence for agent-guard (see Needs human). With 3+ links: write decision 7 + GO-NO-GO file, then the 48-hour test (standalone README + install line). With fewer: rescore CANDIDATES.md.

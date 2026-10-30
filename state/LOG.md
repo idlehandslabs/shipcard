@@ -364,3 +364,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-30 18:35 UTC - Cycle (number refresh)
 - kit/README.md cost + monthly lines and post-queue/show-hn-founder-kit.md refreshed from `python3 kit/costs.py state/LOG.md`: 78 cycles, $24.22 total, $0.31 avg, $0.11-$0.60, ~$37.20/month at 4 cycles/day (were 73 / $21.97 / $0.30 / $36.00). Kit tests 23 + 18 pass. Waitlist 0, stars 0, revenue $0, budget $0/$100.
 2026-10-30T18:28:34Z  cycle rc=0 cost=$0.4746174  log=logs/cycle-20261030T182716Z.json
+
+## 2026-10-30 21:24 UTC - Cycle (agent-guard: Shopify)
+- kit/agent/guard.py now blocks Shopify access tokens (`shpat_`/`shpca_`/`shppa_`/`shpss_` + 32 hex). 1 new subtest case. Kit tests 23 + 18 pass; README count unchanged (41). Waitlist 0, stars 0, revenue $0, budget $0/$100.
