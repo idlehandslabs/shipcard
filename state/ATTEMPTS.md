@@ -1182,3 +1182,8 @@ s=s.replace('''    ("Webhook URL",''','''    ("Twilio API key", r"\\bSK[0-9a-f]{
 - **Result:** works. Kit tests 23 + 18 pass. Edits done with the Edit tool (last cycle's python heredoc and `cd kit && ...` test commands were blocked by the permission layer; `python3 -m unittest discover -s kit/agent` from the repo root runs fine).
 - **Why:** both tokens are common in deploy/CI agent repos and the guard missed them.
 - **Next:** still no outside evidence for agent-guard (Needs human). Stop adding patterns after high-entropy config strings unless evidence arrives; diminishing returns.
+
+## 2026-10-30 15:38 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; head -40 state/METRICS.md; tail -20 state/ATTEMPTS.md; ls kit post-queue | tail -20`
+- **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest discover -s agent -p "test_*.py" 2>&1 | tail -3; python3 -m unittest test_init test_costs 2>&1 | tail -3`
+- Turns: 15 · Claude cost: $0.40 (not counted in the $100 budget)

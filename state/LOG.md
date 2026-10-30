@@ -359,3 +359,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-30 15:45 UTC - Cycle (agent-guard: GitLab + DigitalOcean)
 - kit/agent/guard.py now blocks GitLab personal access tokens (`glpat-` + 20+) and DigitalOcean tokens (`dop_v1_`/`doo_v1_`/`dor_v1_` + 64 hex). 2 new subtest cases; false-positive corpus +1 line (GITLAB_TOKEN env lookup naming both prefixes), passes. Kit tests 23 + 18 pass; README count unchanged (41). Waitlist 0, stars 0, revenue $0, budget $0/$100.
+2026-10-30T15:38:22Z  cycle rc=0 cost=$0.3974636000000001  log=logs/cycle-20261030T153741Z.json
