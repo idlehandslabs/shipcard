@@ -1273,3 +1273,11 @@ Try the live product: https://idlehandslabs.`
 - Tried: write guard.py's standalone use (git pre-push hook) into kit/README.md + a test. Result: done, 24 setup/docs tests pass. Why: agent-guard's 48-hour test needs "install line" anyway, and 11 cycles of single regexes added coverage nobody asked for. Next: Sunday review decides continue/stop.
 - Tried: nothing end to end. Did NOT run the hook in a scratch repo under /tmp (outside this repository). Next: a kit test that builds a temp git repo inside the test run could prove it; only if agent-guard goes ahead.
 - Tried: a python heredoc to edit files. Result: blocked by the permission layer (stdin code can't be checked). Switched to Edit tool.
+
+## 2026-10-31 09:27 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; head -40 state/METRICS.md; tail -15 state/ATTEMPTS.md; ls kit post-queue | tail -20`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p="kit/README.md"; s=open(p).read()
+sec='''## Use guard.py on its own (any repo, no agent needed)
+`agent/guard.py` works as a plain git pre-push hook: it scans the commits you are ab`
+- Turns: 19 · Claude cost: $0.50 (not counted in the $100 budget)
