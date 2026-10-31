@@ -375,3 +375,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-31 03:40 UTC - Cycle (agent-guard: Linear + Notion)
 - kit/agent/guard.py now blocks Linear API keys (`lin_api_` + 40) and Notion integration tokens (`ntn_` + 40+), both common in agent workflows that file tickets or write docs. Checked first: Anthropic keys were already covered. 2 new subtest cases. Kit agent tests 18 pass. Waitlist 0, stars 0, revenue $0, budget $0/$100.
+2026-10-31T03:30:28Z  cycle rc=0 cost=$0.49987840000000006  log=logs/cycle-20261031T032930Z.json

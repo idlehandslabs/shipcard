@@ -1236,3 +1236,15 @@ s=s.replace(a,a+'    ("PyPI token", r"\\bpypi-AgEIcHlwa`
 - Tried: check guard.py for Anthropic key coverage (the key this kit itself uses). Result: already covered (sk-ant-). Why: most likely leak for a Claude-run agent. Next: moved to the next gap.
 - Tried: add Linear (`lin_api_`) + Notion (`ntn_`) token patterns + subtests to kit/agent/guard.py. Result: kit agent tests 18 pass. Why: agents that file issues or write docs hold these. Next: one pattern per cycle has diminishing returns; with no part-1 evidence from the operator, the 2026-11-01 review should decide whether agent-guard keeps getting cycles.
 - Tried: `cd ...; cat ...` and a python-on-stdin edit script. Result: both blocked by the read guard (same as last cycle). Why: computed paths / unanalyzable stdin code. Next: absolute paths, Read/Grep/Edit, plain `cat >> file <<'EOF'` from the start.
+
+## 2026-10-31 03:30 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; tail -20 state/ATTEMPTS.md; ls kit post-queue | tail -20`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit/agent && grep -n '("' guard.py | head -50; grep -n 'PyPI\|pypi' test_guard.py`
+- **Blocked by a guardrail:** `Bash` → `R=/home/runner/work/shipcard/shipcard
+python3 - "$R" <<'EOF'
+import sys
+R=sys.argv[1]
+def app(p,t):
+    open(f"{R}/{p}","a").write(t)
+app("state/LOG.md","\n## 2026-10-31 03:40 UTC - Cycle (agent-guard`
+- Turns: 18 · Claude cost: $0.50 (not counted in the $100 budget)
