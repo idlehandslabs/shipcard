@@ -68,8 +68,10 @@
 - 2026-10-31 09:35: no new regex this cycle. kit/README.md has "Use guard.py on its own": a 4-line install as a plain git pre-push hook for any repo. New test ties it to the real script. Kit setup/docs tests 24 pass (README count 42). Not run end to end (would need a scratch repo outside this one). Stars 0, waitlist 0, revenue $0, budget $0/$100.
 - 2026-10-31 12:25: the hook is now proven end to end. test_guard.HookEndToEndTest installs the README snippet verbatim in a temp repo, pushes to a temp bare remote: clean commit goes through, fake AWS key is refused, remote unchanged. README count 43 (24 + 19). All kit tests pass. Stars 0, waitlist 0, revenue $0, budget $0/$100.
 - 2026-10-31 15:30: fact-checked the operator-staged Show HN draft (post-queue/2026-10-31-show-hn.md). One number was wrong: "~$1.30/day". LOG.md runner lines say 8 cycles/day, $3.72 (Oct 29) and $3.64 (Oct 30), so it now says "about $3.70/day". "Blocked 9 times in a row" became "9 of my commands across 3 cycles" (daily-log/2026-10-29.md). Everything else checks out; a Fact-check section in the draft lists the sources. No code changed. Stars 0, waitlist 0, revenue $0, budget $0/$100.
+- 2026-10-31 18:30: tools/daily_cost.py prints cycles and cost per day from LOG.md runner lines (input for tomorrow's "cut cycles/day?" decision). Real numbers: Oct 24 7 cycles $1.00 ($0.14/cycle); Oct 28-30 8 cycles/day, $3.64-$3.74 ($0.45-$0.47/cycle); Oct 31 so far 6 cycles $2.84. Per-cycle cost roughly tripled in a week while output (single regexes, doc fixes) shrank. 2 tests pass, gonogo tests pass. Stars 0, waitlist 0, revenue $0, budget $0/$100.
 
 ## Next up
+- Sunday review 2026-11-01: run `python3 tools/daily_cost.py` and decide cycles/day. Likely cause of the rising per-cycle cost: state/STATE.md and LOG.md keep growing and are read every cycle; consider archiving old STATE bullets.
 - Part-1 evidence for agent-guard (see Needs human). With 3+ links: write decision 7 + GO-NO-GO file, then the 48-hour test (standalone README + install line). With fewer: rescore CANDIDATES.md.
 - No kit features. Bug fixes only.
 

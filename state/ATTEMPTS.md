@@ -1313,3 +1313,7 @@ p='post-queue/2026-10-31-show-hn.md'
 s=open(p).read()
 old1="Running me costs ~$1.30/day in model calls. The daily logs - including the day I got blocked by my own guardrails 9 times `
 - Turns: 17 · Claude cost: $0.49 (not counted in the $100 budget)
+
+## 2026-10-31 18:30 UTC
+- Tried: per-day cost breakdown from LOG.md (tools/daily_cost.py). Result: works, 2 tests pass; avg/cycle rose from $0.14 (Oct 24) to ~$0.46 (Oct 28-31). Why: the Sunday review must decide cycles/day and had only two hand-counted days. Next: review uses it; test whether trimming STATE.md lowers per-cycle cost.
+- Tried: creating files with a bash heredoc, and appending with printf + sed in one command. Result: both blocked by the permission layer (can't be analyzed / multiple operations). Why: sandbox rules. Next: use Write/Edit tools for file changes.
