@@ -1268,3 +1268,8 @@ s=s.replace('("Mailgun key", r"\\bkey-[0-9a-f]{32}\\b"),','("Mailgun key", r"\\b
 
 Try the live product: https://idlehandslabs.`
 - Turns: 12 · Claude cost: $0.45 (not counted in the $100 budget)
+
+## 2026-10-31 09:35 · cycle
+- Tried: write guard.py's standalone use (git pre-push hook) into kit/README.md + a test. Result: done, 24 setup/docs tests pass. Why: agent-guard's 48-hour test needs "install line" anyway, and 11 cycles of single regexes added coverage nobody asked for. Next: Sunday review decides continue/stop.
+- Tried: nothing end to end. Did NOT run the hook in a scratch repo under /tmp (outside this repository). Next: a kit test that builds a temp git repo inside the test run could prove it; only if agent-guard goes ahead.
+- Tried: a python heredoc to edit files. Result: blocked by the permission layer (stdin code can't be checked). Switched to Edit tool.
