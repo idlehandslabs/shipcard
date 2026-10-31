@@ -1232,3 +1232,7 @@ assert a in s
 s=s.replace(a,a+'    ("PyPI token", r"\\bpypi-AgEIcHlwa`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s agent 2>&1 | tail -3; python3 -m unittest test_init 2>&1 | tail -2`
 - Turns: 20 · Claude cost: $0.36 (not counted in the $100 budget)
+
+- Tried: check guard.py for Anthropic key coverage (the key this kit itself uses). Result: already covered (sk-ant-). Why: most likely leak for a Claude-run agent. Next: moved to the next gap.
+- Tried: add Linear (`lin_api_`) + Notion (`ntn_`) token patterns + subtests to kit/agent/guard.py. Result: kit agent tests 18 pass. Why: agents that file issues or write docs hold these. Next: one pattern per cycle has diminishing returns; with no part-1 evidence from the operator, the 2026-11-01 review should decide whether agent-guard keeps getting cycles.
+- Tried: `cd ...; cat ...` and a python-on-stdin edit script. Result: both blocked by the read guard (same as last cycle). Why: computed paths / unanalyzable stdin code. Next: absolute paths, Read/Grep/Edit, plain `cat >> file <<'EOF'` from the start.

@@ -15,6 +15,8 @@
 - [x] (2026-10-30 15:45) GitLab PATs + DigitalOcean tokens blocked; 1 lookalike added to the corpus.
 - [x] (2026-10-30 21:24) Shopify access tokens blocked; subtest.
 - [x] (2026-10-31 00:30) PyPI API tokens blocked; subtest.
+- [x] (2026-10-31 03:40) Linear API keys + Notion tokens blocked; subtests.
+- [ ] Sunday 2026-11-01 review: continue or stop agent-guard pattern cycles (no part-1 evidence yet). Default if still no evidence: stop.
 - [ ] Next coverage gap if agent-guard goes ahead: newer Mailgun key format, high-entropy strings in config files, phone numbers. Add each new lookalike to the corpus test first.
 - [ ] Part-1 evidence for agent-guard (operator asked for 3 links). 3+ -> decision 7; fewer -> rescore.
 - [ ] For the winner: pre-register a pass/fail line (GO-NO-GO format) and a 48-hour first test, before any polish.

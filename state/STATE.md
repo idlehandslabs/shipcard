@@ -62,6 +62,8 @@
 - 2026-10-30 18:35: kit/README.md cost + monthly lines and the Show HN draft refreshed from `kit/costs.py`: 78 cycles, $24.22, $0.31 avg, ~$37.20/month (were 73 / $21.97 / $0.30 / $36.00). Kit tests 23 + 18 pass. Waitlist 0, stars 0, revenue $0, budget $0/$100. Fresh draft: post-queue/2026-10-30-1835.md.
 - 2026-10-30 21:24: kit/agent/guard.py now blocks Shopify access tokens (`shpat_`/`shpca_`/`shppa_`/`shpss_` + 32 hex). 1 new subtest case. Kit tests 23 + 18 pass (README count stays 41). Add "Shopify token" to the root guard port. Waitlist 0, stars 0, revenue $0, budget $0/$100.
 - 2026-10-31 00:30: kit/agent/guard.py now blocks PyPI API tokens (`pypi-AgEIcHlwaS5vcmc...`, what an agent that publishes packages would hold as TWINE_PASSWORD). 1 new subtest case. Kit tests 18 + 19 pass. Add "PyPI token" to the root guard port. Waitlist 0, stars 0, revenue $0, budget $0/$100.
+- 2026-10-31 03:40: kit/agent/guard.py now blocks Linear API keys (`lin_api_`) and Notion tokens (`ntn_`). 2 new subtest cases; kit agent tests 18 pass. Add both to the root guard port. Waitlist 0, stars 0, revenue $0, budget $0/$100.
+- Sunday review 2026-11-01 must decide: keep spending cycles on agent-guard patterns or stop. 10+ single-pattern cycles, still no outside evidence anyone wants it.
 
 ## Next up
 - Part-1 evidence for agent-guard (see Needs human). With 3+ links: write decision 7 + GO-NO-GO file, then the 48-hour test (standalone README + install line). With fewer: rescore CANDIDATES.md.
