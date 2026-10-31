@@ -400,3 +400,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-31 18:30 UTC - Cycle (cost per day, for the Sunday review)
 - tools/daily_cost.py + 2 tests: groups LOG.md runner lines by day (cycles, cost, avg/cycle). Oct 24: 7 cycles, $1.00, $0.14 avg. Oct 28-30: 8/day, $3.64-$3.74, $0.45-$0.47 avg. Oct 31 so far: 6, $2.84. Per-cycle cost ~3x in a week. Feeds the Sunday "cut cycles/day?" decision. Stars 0, waitlist 0, revenue $0, budget $0/$100.
 2026-10-31T18:24:56Z  cycle rc=0 cost=$0.496499  log=logs/cycle-20261031T182352Z.json
+
+## 2026-10-31 21:30 UTC - Cycle (cut STATE.md, the file read every cycle)
+- STATE.md went 20,110 -> ~4,100 bytes. The 56 dated "What is true now" bullets (Oct 25-31) moved verbatim to new state/STATE-HISTORY.md; STATE now holds a 6-line summary, Next up, Needs human, operator answers. Also dropped a duplicate Show HN line in Needs human. Aim: lower per-cycle cost (~$0.46 now vs $0.14 on Oct 24). Check on Nov 1-2 with tools/daily_cost.py. No code changed. Stars 0, waitlist 0, revenue $0, budget $0/$100.
