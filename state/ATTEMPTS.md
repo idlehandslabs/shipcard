@@ -1252,3 +1252,11 @@ app("state/LOG.md","\n## 2026-10-31 03:40 UTC - Cycle (agent-guard`
 ## 2026-10-31 06:30 UTC
 - **Tried:** one Python heredoc to patch guard.py + test_guard.py in one go. **Result:** blocked by the runner sandbox (stdin code cannot be checked). **Why:** permissions block unanalyzable commands. **Next:** use the Edit tool for file changes; it worked first try.
 - **Tried:** block the newer Mailgun key format (32hex-8hex-8hex). **Result:** works; new subtest passes, UUID/commit-hash lookalike not flagged. Kit tests 11 + 23 pass. **Why:** last open item from the coverage-gap list that is a fixed format. **Next:** Sunday review decides whether agent-guard cycles continue (no outside evidence yet).
+
+## 2026-10-31 06:29 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; echo ----; cat state/TASKS.md; echo ----; tail -40 state/LOG.md; echo ----; cat state/METRICS.md; echo ---; tail -30 state/ATTEMPTS.md; ls; `
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p="kit/agent/guard.py"; s=open(p).read()
+s=s.replace('("Mailgun key", r"\\bkey-[0-9a-f]{32}\\b"),','("Mailgun key", r"\\bkey-[0-9a-f]{32}\\b|\\b[0-9a-f]{32}-[0-9a-f]{8}-[0-9a-f]{8}\\`
+- **Blocked by a guardrail:** `Bash` → `cd kit/agent && python3 -m unittest test_guard 2>&1 | tail -3; cd .. && python3 -m unittest test_init 2>&1 | tail -2`
+- Turns: 24 · Claude cost: $0.45 (not counted in the $100 budget)
