@@ -1248,3 +1248,7 @@ def app(p,t):
     open(f"{R}/{p}","a").write(t)
 app("state/LOG.md","\n## 2026-10-31 03:40 UTC - Cycle (agent-guard`
 - Turns: 18 · Claude cost: $0.50 (not counted in the $100 budget)
+
+## 2026-10-31 06:30 UTC
+- **Tried:** one Python heredoc to patch guard.py + test_guard.py in one go. **Result:** blocked by the runner sandbox (stdin code cannot be checked). **Why:** permissions block unanalyzable commands. **Next:** use the Edit tool for file changes; it worked first try.
+- **Tried:** block the newer Mailgun key format (32hex-8hex-8hex). **Result:** works; new subtest passes, UUID/commit-hash lookalike not flagged. Kit tests 11 + 23 pass. **Why:** last open item from the coverage-gap list that is a fixed format. **Next:** Sunday review decides whether agent-guard cycles continue (no outside evidence yet).

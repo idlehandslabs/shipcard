@@ -26,7 +26,7 @@ SECRETS = [
     ("Telegram bot token", r"\b\d{8,10}:AA[A-Za-z0-9_\-]{33}\b"),
     ("SendGrid key", r"SG\.[A-Za-z0-9_\-]{22}\.[A-Za-z0-9_\-]{43}"),
     ("Twilio API key", r"\bSK[0-9a-f]{32}\b"),
-    ("Mailgun key", r"\bkey-[0-9a-f]{32}\b"),
+    ("Mailgun key", r"\bkey-[0-9a-f]{32}\b|\b[0-9a-f]{32}-[0-9a-f]{8}-[0-9a-f]{8}\b"),
     ("GitLab token", r"\bglpat-[A-Za-z0-9_\-]{20,}"),
     ("Shopify token", r"\bshp(at|ca|pa|ss)_[0-9a-fA-F]{32}\b"),
     ("PyPI token", r"\bpypi-AgEIcHlwaS5vcmc[A-Za-z0-9_\-]{50,}"),

@@ -65,6 +65,7 @@ class GuardTest(unittest.TestCase):
             ("SendGrid key", "SG" + "." + "d" * 22 + "." + "e" * 43),
             ("Twilio API key", "TWILIO = 'SK" + "0123456789abcdef" * 2 + "'"),
             ("Mailgun key", "MG = 'key" + "-" + "fedcba9876543210" * 2 + "'"),
+            ("Mailgun key", "MAILGUN_API_KEY = '" + "0123456789abcdef" * 2 + "-1a2b3c4d" + "-5e6f7a8b'"),
             ("GitLab token", "GL = 'glpat" + "-" + "h" * 20 + "'"),
             ("Shopify token", "SHOP = 'shpat" + "_" + "0123456789abcdef" * 2 + "'"),
             ("PyPI token", "TWINE_PASSWORD = 'pypi" + "-" + "AgEIcHlwaS5vcmc" + "Ab1_-" * 12 + "'"),
@@ -127,6 +128,7 @@ class GuardTest(unittest.TestCase):
             "Use a key-value store; SKU SK12 ships with monkey-patched key-rotation docs.",
             "TWILIO_API_KEY = os.environ['TWILIO_API_KEY']  # starts with SK, Mailgun keys with key-",
             "SLACK_WEBHOOK_URL = os.environ['SLACK_WEBHOOK_URL']  # discord.com/api/webhooks/<id>/<token>",
+            "Request 123e4567-e89b-12d3-a456-426614174000 failed at commit 0123456789abcdef0123456789abcdef01234567-dirty",
             "GITLAB_TOKEN = os.environ['GITLAB_TOKEN']  # glpat-..., DigitalOcean uses dop_v1_...",
         ]) + "\n"
         self.commit("docs/setup.md", corpus)

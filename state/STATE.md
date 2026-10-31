@@ -64,6 +64,7 @@
 - 2026-10-31 00:30: kit/agent/guard.py now blocks PyPI API tokens (`pypi-AgEIcHlwaS5vcmc...`, what an agent that publishes packages would hold as TWINE_PASSWORD). 1 new subtest case. Kit tests 18 + 19 pass. Add "PyPI token" to the root guard port. Waitlist 0, stars 0, revenue $0, budget $0/$100.
 - 2026-10-31 03:40: kit/agent/guard.py now blocks Linear API keys (`lin_api_`) and Notion tokens (`ntn_`). 2 new subtest cases; kit agent tests 18 pass. Add both to the root guard port. Waitlist 0, stars 0, revenue $0, budget $0/$100.
 - Sunday review 2026-11-01 must decide: keep spending cycles on agent-guard patterns or stop. 10+ single-pattern cycles, still no outside evidence anyone wants it.
+- 2026-10-31 06:30: guard.py now also blocks the newer Mailgun key format (`<32 hex>-<8 hex>-<8 hex>`). A UUID and a commit hash followed by -dirty sit in the false-positive corpus and are not blocked. Kit tests 11 + 23 pass. Stars 0, issues 0, waitlist 0, revenue $0, budget $0/$100.
 
 ## Next up
 - Part-1 evidence for agent-guard (see Needs human). With 3+ links: write decision 7 + GO-NO-GO file, then the 48-hour test (standalone README + install line). With fewer: rescore CANDIDATES.md.
