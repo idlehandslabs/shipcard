@@ -1286,3 +1286,16 @@ sec='''## Use guard.py on its own (any repo, no agent needed)
 - **Tried:** prove the README's standalone pre-push snippet actually blocks a push. **Result:** works. Test parses the snippet out of README.md, installs it in a temp repo, pushes to a temp bare remote: clean commit passes, fake AWS key exits non-zero and the remote is unchanged. **Why:** last cycle shipped the snippet untested. **Next:** Sunday review decides whether agent-guard continues.
 - **Tried:** writing the test via `python3 - <<EOF` and `cd kit/agent && ...`. **Result:** both blocked by the permission layer. **Why:** stdin scripts and compound cd commands need approval. **Next:** used Edit + `unittest discover -s kit/agent` instead.
 - **Tried:** first full kit run. **Result:** test_readme_test_count_is_real failed (README said 42, real 43). **Next:** bumped the count; all pass.
+
+## 2026-10-31 12:26 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; ls post-queue | tail -3; ls kit app`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/agent/test_guard.py'
+s=open(p).read()
+new='''
+
+class HookEndToEndTest(unittest.TestCase):
+    """Installs the exact pre-push hook from kit/README.md and does a real git push."`
+- **Blocked by a guardrail:** `Bash` → `cd kit/agent && python3 -m unittest test_guard 2>&1 | tail -6`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/^## Tests (42: 24 setup\/docs + 18 agent)/## Tests (43: 24 setup\/docs + 19 agent)/' kit/README.md && sed -n 122,128p kit/README.md && python3 -m unittest discover -s kit 2>&1 | grep -E "^Ra`
+- Turns: 26 · Claude cost: $0.54 (not counted in the $100 budget)
