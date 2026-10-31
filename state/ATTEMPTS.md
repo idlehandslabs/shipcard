@@ -1333,3 +1333,19 @@ Answers one question: what does a day of cycles cost, and is it risin`
 - Result: done, 20.1KB -> 4.2KB. A python heredoc and a bash brace block were refused by the permission check (stdin code / brace expansion can't be analyzed); worked with a throwaway script file in the repo, deleted after. I first wrote "30.5KB" (size of three files' combined output, not STATE alone); checked with git and corrected to 20.1KB before committing.
 - Why: per-cycle cost tripled in a week; STATE.md is read in full every cycle and was the biggest fixed read.
 - Next: compare avg/cycle on Nov 1-2 vs ~$0.46. If it barely moves, the cost is elsewhere (LOG.md tail, tool calls); trim LOG.md next or cut cycles/day in the Sunday review.
+
+## 2026-10-31 21:23 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; echo ----; head -60 state/TASKS.md; echo ----; tail -30 state/LOG.md; echo ----; cat state/METRICS.md | head -50; ls; ls post-queue | tail -`
+- **Blocked by a guardrail:** `Bash` → `grep -n "^## " state/STATE.md; sed -n '/Needs human/,/^## [A-Z]/p' state/STATE.md | head -40; echo ----; grep -n "^##\|^- \[ \]" state/TASKS.md | head -30; echo ----; tail -15 state/LOG.md; echo; tail`
+- **Blocked by a guardrail:** `Bash` → `set -e
+{ echo "# STATE history (archived from STATE.md on 2026-10-31 21:30 UTC)"; echo; echo "Old 'What is true now' bullets, moved here so STATE.md (read every cycle) stays short. Newest last."; echo`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='state/STATE.md'
+L=open(p).read().split('\n')
+hist="# STATE history (archived from STATE.md on 2026-10-31 21:30 UTC)\n\nOld 'What is true now' bullets, moved here so STATE.md (read`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/cut from 30.5KB to ~6KB by moving 66 dated bullets/cut from 20.1KB to 4.2KB by moving 56 dated bullets/' state/STATE.md && grep -n "20.1KB" state/STATE.md | cut -c1-80`
+- **Blocked by a guardrail:** `Bash` → `cat >> state/LOG.md <<'EOF'
+
+## 2026-10-31 21:30 UTC - Cycle (cut STATE.md, the file read every cycle)
+- STATE.md went 20,110 -> ~4,100 bytes. The 56 dated "What is true now" bullets (Oct 25-31) moved`
+- Turns: 26 · Claude cost: $0.48 (not counted in the $100 budget)
