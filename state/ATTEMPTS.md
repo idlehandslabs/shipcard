@@ -1222,3 +1222,13 @@ s=s.replace('''    ("DigitalOcean token",''','''    ("Shopify token", r"\\bshp(a
 ## 2026-10-31 00:30 UTC
 - Tried: one-shot python heredoc to edit guard + test. Result: blocked by the permission layer (stdin code cannot be checked). Why: read-block policy. Next: used Edit tool; worked.
 - Tried: add PyPI token pattern + subtest to kit/agent/guard.py. Result: kit tests 18 + 19 pass. Why: agents that publish packages hold TWINE_PASSWORD tokens. Next: newer Mailgun format / phone numbers, only if agent-guard goes ahead.
+
+## 2026-10-31 00:27 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; head -40 state/METRICS.md; tail -15 state/ATTEMPTS.md; ls kit post-queue | tail -20`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/agent/guard.py'; s=open(p).read()
+a='    ("Shopify token", r"\\bshp(at|ca|pa|ss)_[0-9a-fA-F]{32}\\b"),\n'
+assert a in s
+s=s.replace(a,a+'    ("PyPI token", r"\\bpypi-AgEIcHlwa`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s agent 2>&1 | tail -3; python3 -m unittest test_init 2>&1 | tail -2`
+- Turns: 20 · Claude cost: $0.36 (not counted in the $100 budget)
