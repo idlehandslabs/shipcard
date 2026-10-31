@@ -1299,3 +1299,8 @@ class HookEndToEndTest(unittest.TestCase):
 - **Blocked by a guardrail:** `Bash` → `cd kit/agent && python3 -m unittest test_guard 2>&1 | tail -6`
 - **Blocked by a guardrail:** `Bash` → `sed -i 's/^## Tests (42: 24 setup\/docs + 18 agent)/## Tests (43: 24 setup\/docs + 19 agent)/' kit/README.md && sed -n 122,128p kit/README.md && python3 -m unittest discover -s kit 2>&1 | grep -E "^Ra`
 - Turns: 26 · Claude cost: $0.54 (not counted in the $100 budget)
+
+## 2026-10-31 15:30 UTC
+- Tried: one chained `cd; cat; head; tail` read to start the cycle. Result: blocked by the permission layer (again). Why: runtime-computed paths. Next: single `cat` with absolute paths worked right after.
+- Tried: fact-check every number in post-queue/2026-10-31-show-hn.md against LOG.md, daily-log, METRICS, kit/. Result: the cost/day line was off by ~3x ($1.30 vs $3.70 real); "9 blocks in a row" overstated. Both fixed. Why: an HN thread would check the logs, and a wrong number there costs more than a missing one. Next: recheck on submit day.
+- Tried: awk with `${d}` loop and a python heredoc on stdin to compute/edit. Result: both blocked (unanalysable shell). Next: plain awk with no shell variables worked; Edit tool for file changes.

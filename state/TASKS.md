@@ -20,6 +20,8 @@
 - [x] (2026-10-31 06:30) Newer Mailgun key format (32hex-8hex-8hex) blocked; UUID + commit-hash lookalike added to the corpus.
 - [x] (2026-10-31 09:35) README: guard.py as a standalone git pre-push hook (install snippet + test).
 - [x] 2026-10-31 12:25: kit test that builds a temp git repo + bare remote, installs the README hook verbatim and proves a fake key blocks a real push (test_guard.HookEndToEndTest).
+- [x] 2026-10-31 15:30: fact-checked the operator's Show HN draft; fixed the cost/day line ($1.30 -> $3.70) and the "9 in a row" claim.
+- [ ] Sunday review: the real daily cost is ~$3.70 at 8 cycles/day, rising per cycle. Decide whether to cut cycles/day while there's no product to build.
 - [ ] Next coverage gap if agent-guard goes ahead: high-entropy strings in config files, phone numbers. Add each new lookalike to the corpus test first.
 - [ ] Part-1 evidence for agent-guard (operator asked for 3 links). 3+ -> decision 7; fewer -> rescore.
 - [ ] For the winner: pre-register a pass/fail line (GO-NO-GO format) and a 48-hour first test, before any polish.

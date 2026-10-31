@@ -67,6 +67,7 @@
 - 2026-10-31 06:30: guard.py now also blocks the newer Mailgun key format (`<32 hex>-<8 hex>-<8 hex>`). A UUID and a commit hash followed by -dirty sit in the false-positive corpus and are not blocked. Kit tests 11 + 23 pass. Stars 0, issues 0, waitlist 0, revenue $0, budget $0/$100.
 - 2026-10-31 09:35: no new regex this cycle. kit/README.md has "Use guard.py on its own": a 4-line install as a plain git pre-push hook for any repo. New test ties it to the real script. Kit setup/docs tests 24 pass (README count 42). Not run end to end (would need a scratch repo outside this one). Stars 0, waitlist 0, revenue $0, budget $0/$100.
 - 2026-10-31 12:25: the hook is now proven end to end. test_guard.HookEndToEndTest installs the README snippet verbatim in a temp repo, pushes to a temp bare remote: clean commit goes through, fake AWS key is refused, remote unchanged. README count 43 (24 + 19). All kit tests pass. Stars 0, waitlist 0, revenue $0, budget $0/$100.
+- 2026-10-31 15:30: fact-checked the operator-staged Show HN draft (post-queue/2026-10-31-show-hn.md). One number was wrong: "~$1.30/day". LOG.md runner lines say 8 cycles/day, $3.72 (Oct 29) and $3.64 (Oct 30), so it now says "about $3.70/day". "Blocked 9 times in a row" became "9 of my commands across 3 cycles" (daily-log/2026-10-29.md). Everything else checks out; a Fact-check section in the draft lists the sources. No code changed. Stars 0, waitlist 0, revenue $0, budget $0/$100.
 
 ## Next up
 - Part-1 evidence for agent-guard (see Needs human). With 3+ links: write decision 7 + GO-NO-GO file, then the 48-hour test (standalone README + install line). With fewer: rescore CANDIDATES.md.
@@ -75,6 +76,7 @@
 ## Needs human
 - Optional: copy the 6 new SECRETS lines (OpenAI, Stripe, Google, Hugging Face, npm, Database URL, plus Telegram, SendGrid, Webhook URL, Twilio, Mailgun, GitLab and DigitalOcean added 2026-10-30) plus the `.env` and key-file (id_rsa etc., .p12/.pfx) file-name checks from kit/agent/guard.py into the protected agent/guard.py (web UI), so this repo gets the same coverage. The agent can't edit agent/.
 - Evidence check (no web access here): can you paste up to 3 public links (GitHub issues, HN/Reddit/X threads) where an AI coding agent committed a secret, email or personal detail? Or reply "none found". That decides whether agent-guard becomes the next product (state/CANDIDATES.md).
+- Show HN: if you submit, use post-queue/2026-10-31-show-hn.md (fact-checked 15:30 UTC; the cost line was fixed from ~$1.30/day to ~$3.70/day). The older show-hn-founder-kit.md is superseded.
 - Show HN for founder-kit: still optional (operator deciding). It's now a free-tool post, not a waitlist test. Recheck numbers with kit/costs.py the day it goes out.
 - Optional: add founder-kit stars/forks to METRICS.md. The go/no-go could only see the shipcard repo.
 - Nothing blocking. Posting is the operator's daily job; best fresh draft: post-queue/2026-10-28-1538.md (the older 2026-10-25-1215 pointer was stale and pointed at the waitlist, not the kit).
