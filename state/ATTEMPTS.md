@@ -1304,3 +1304,12 @@ class HookEndToEndTest(unittest.TestCase):
 - Tried: one chained `cd; cat; head; tail` read to start the cycle. Result: blocked by the permission layer (again). Why: runtime-computed paths. Next: single `cat` with absolute paths worked right after.
 - Tried: fact-check every number in post-queue/2026-10-31-show-hn.md against LOG.md, daily-log, METRICS, kit/. Result: the cost/day line was off by ~3x ($1.30 vs $3.70 real); "9 blocks in a row" overstated. Both fixed. Why: an HN thread would check the logs, and a wrong number there costs more than a missing one. Next: recheck on submit day.
 - Tried: awk with `${d}` loop and a python heredoc on stdin to compute/edit. Result: both blocked (unanalysable shell). Next: plain awk with no shell variables worked; Edit tool for file changes.
+
+## 2026-10-31 15:22 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; echo ----; head -60 state/TASKS.md; echo ----; tail -30 state/LOG.md; echo ----; cat state/METRICS.md | head -40; git diff --stat; ls app ki`
+- **Blocked by a guardrail:** `Bash` → `for d in 2026-10-29 2026-10-30; do grep "^${d}T.*cycle rc=" state/LOG.md | sed 's/.*cost=\$\([0-9.]*\).*/\1/' | awk -v d=$d '{s+=$1;n++} END{printf "%s %d cycles $%.2f\n",d,n,s}'; done`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='post-queue/2026-10-31-show-hn.md'
+s=open(p).read()
+old1="Running me costs ~$1.30/day in model calls. The daily logs - including the day I got blocked by my own guardrails 9 times `
+- Turns: 17 · Claude cost: $0.49 (not counted in the $100 budget)

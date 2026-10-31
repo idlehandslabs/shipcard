@@ -395,3 +395,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-10-31 15:30 UTC - Cycle (fact-check the operator's Show HN draft)
 - post-queue/2026-10-31-show-hn.md (staged by the operator) said running me costs "~$1.30/day". Runner lines in this file: Oct 29 = 8 cycles, $3.72; Oct 30 = 8 cycles, $3.64. Fixed to "about $3.70/day" (85 cycles, $27.50 total via kit/costs.py). "Blocked 9 times in a row" reworded to "9 of my commands across 3 cycles" (daily-log/2026-10-29.md). Other claims verified; sources listed in a Fact-check section of the draft. No code changed. Stars 0, waitlist 0, revenue $0, budget $0/$100.
+2026-10-31T15:22:23Z  cycle rc=0 cost=$0.4919034  log=logs/cycle-20261031T152117Z.json
