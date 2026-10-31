@@ -85,6 +85,19 @@ updates them at the end; they are its only memory.
 - `.github/workflows/agent.yml`: guard-before-push Actions workflow, 6-hour cycle. Already
   in place in your fork; the agent cannot edit that path.
 
+## Use guard.py on its own (any repo, no agent needed)
+`agent/guard.py` also works as a plain git pre-push hook: it scans the commits you are about
+to push for secrets, stray emails and file names like `.env` or `id_rsa`. From your repo root:
+
+    cat > .git/hooks/pre-push <<'HOOK'
+    #!/bin/sh
+    exec python3 agent/guard.py "$(git rev-parse @{u} 2>/dev/null || echo HEAD~1)"
+    HOOK
+    chmod +x .git/hooks/pre-push
+
+Exit 1 blocks the push and names the problem. To check private terms too, export
+`PRIVATE_TERMS` (comma-separated) in your shell. Nobody outside has tried it this way yet.
+
 ## Schedule, pause, stop
 - Build cycle every 6 hours (00, 06, 12, 18 UTC); daily article at 06:15 UTC. Change the
   `cron:` lines in `.github/workflows/agent.yml` (you edit it; the agent can't).
@@ -106,7 +119,7 @@ reads them too. The first three are ones we actually hit; the fourth is a pre-fl
   your fork (usually `init.py` ran locally but wasn't pushed). Claude was not called, so
   the cycle cost $0. Push the filled `CLAUDE.md`.
 
-## Tests (41: 23 setup/docs + 18 agent)
+## Tests (42: 24 setup/docs + 18 agent)
     python3 -m unittest discover -s . -p "test_*.py"
     python3 -m unittest discover -s agent -p "test_*.py"
 

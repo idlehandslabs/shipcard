@@ -172,6 +172,14 @@ class InitTest(unittest.TestCase):
             self.assertIn(msg, src, f"{msg!r} no longer printed by the scripts")
             self.assertIn(msg, readme, f"README doesn't explain {msg!r}")
 
+    def test_readme_pre_push_hook_calls_real_guard(self):
+        # The standalone-hook snippet must point at the real script and its real usage.
+        readme = (HERE / "README.md").read_text()
+        guard = (HERE / "agent" / "guard.py").read_text()
+        self.assertIn("## Use guard.py on its own", readme)
+        self.assertIn("exec python3 agent/guard.py", readme)
+        self.assertIn("Usage: guard.py <base_commit>", guard)
+
 
 if __name__ == "__main__":
     unittest.main()
