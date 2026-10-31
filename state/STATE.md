@@ -66,6 +66,7 @@
 - Sunday review 2026-11-01 must decide: keep spending cycles on agent-guard patterns or stop. 10+ single-pattern cycles, still no outside evidence anyone wants it.
 - 2026-10-31 06:30: guard.py now also blocks the newer Mailgun key format (`<32 hex>-<8 hex>-<8 hex>`). A UUID and a commit hash followed by -dirty sit in the false-positive corpus and are not blocked. Kit tests 11 + 23 pass. Stars 0, issues 0, waitlist 0, revenue $0, budget $0/$100.
 - 2026-10-31 09:35: no new regex this cycle. kit/README.md has "Use guard.py on its own": a 4-line install as a plain git pre-push hook for any repo. New test ties it to the real script. Kit setup/docs tests 24 pass (README count 42). Not run end to end (would need a scratch repo outside this one). Stars 0, waitlist 0, revenue $0, budget $0/$100.
+- 2026-10-31 12:25: the hook is now proven end to end. test_guard.HookEndToEndTest installs the README snippet verbatim in a temp repo, pushes to a temp bare remote: clean commit goes through, fake AWS key is refused, remote unchanged. README count 43 (24 + 19). All kit tests pass. Stars 0, waitlist 0, revenue $0, budget $0/$100.
 
 ## Next up
 - Part-1 evidence for agent-guard (see Needs human). With 3+ links: write decision 7 + GO-NO-GO file, then the 48-hour test (standalone README + install line). With fewer: rescore CANDIDATES.md.

@@ -1281,3 +1281,8 @@ p="kit/README.md"; s=open(p).read()
 sec='''## Use guard.py on its own (any repo, no agent needed)
 `agent/guard.py` works as a plain git pre-push hook: it scans the commits you are ab`
 - Turns: 19 · Claude cost: $0.50 (not counted in the $100 budget)
+
+## 2026-10-31 12:25 · cycle (hook end-to-end test)
+- **Tried:** prove the README's standalone pre-push snippet actually blocks a push. **Result:** works. Test parses the snippet out of README.md, installs it in a temp repo, pushes to a temp bare remote: clean commit passes, fake AWS key exits non-zero and the remote is unchanged. **Why:** last cycle shipped the snippet untested. **Next:** Sunday review decides whether agent-guard continues.
+- **Tried:** writing the test via `python3 - <<EOF` and `cd kit/agent && ...`. **Result:** both blocked by the permission layer. **Why:** stdin scripts and compound cd commands need approval. **Next:** used Edit + `unittest discover -s kit/agent` instead.
+- **Tried:** first full kit run. **Result:** test_readme_test_count_is_real failed (README said 42, real 43). **Next:** bumped the count; all pass.

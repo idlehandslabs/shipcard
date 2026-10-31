@@ -96,7 +96,9 @@ to push for secrets, stray emails and file names like `.env` or `id_rsa`. From y
     chmod +x .git/hooks/pre-push
 
 Exit 1 blocks the push and names the problem. To check private terms too, export
-`PRIVATE_TERMS` (comma-separated) in your shell. Nobody outside has tried it this way yet.
+`PRIVATE_TERMS` (comma-separated) in your shell. `agent/test_guard.py` installs this exact
+snippet in a scratch repo and does a real `git push`: a clean commit goes through, a fake AWS
+key is refused and the remote doesn't move. Nobody outside has tried it this way yet.
 
 ## Schedule, pause, stop
 - Build cycle every 6 hours (00, 06, 12, 18 UTC); daily article at 06:15 UTC. Change the
@@ -119,7 +121,7 @@ reads them too. The first three are ones we actually hit; the fourth is a pre-fl
   your fork (usually `init.py` ran locally but wasn't pushed). Claude was not called, so
   the cycle cost $0. Push the filled `CLAUDE.md`.
 
-## Tests (42: 24 setup/docs + 18 agent)
+## Tests (43: 24 setup/docs + 19 agent)
     python3 -m unittest discover -s . -p "test_*.py"
     python3 -m unittest discover -s agent -p "test_*.py"
 

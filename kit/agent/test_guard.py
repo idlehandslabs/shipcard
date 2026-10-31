@@ -150,5 +150,47 @@ class GuardTest(unittest.TestCase):
         self.assertEqual(self.guard().returncode, 1)
 
 
+class HookEndToEndTest(unittest.TestCase):
+    """Installs the exact pre-push hook from kit/README.md and does a real git push."""
+
+    def hook_from_readme(self):
+        readme = (pathlib.Path(__file__).parent.parent / "README.md").read_text()
+        body = readme.split("<<'HOOK'\n", 1)[1].split("\n    HOOK\n", 1)[0]
+        return "\n".join(line[4:] for line in body.splitlines()) + "\n"
+
+    def test_readme_hook_blocks_a_real_push(self):
+        tmp = pathlib.Path(tempfile.mkdtemp())
+        repo, remote = tmp / "repo", tmp / "remote.git"
+        env = {**os.environ, "PRIVATE_TERMS": ""}
+        run(tmp, "git", "init", "-q", "--bare", str(remote))
+        run(tmp, "git", "init", "-q", str(repo))
+        (repo / "agent").mkdir()
+        (repo / "agent" / "guard.py").write_text(GUARD.read_text())
+        (repo / "a.txt").write_text("hello\n")
+        run(repo, *GIT, "add", "-A")
+        run(repo, *GIT, "commit", "-qm", "base")
+        run(repo, "git", "remote", "add", "origin", str(remote))
+        first = run(repo, "git", "push", "-q", "-u", "origin", "HEAD", env=env)
+        self.assertEqual(first.returncode, 0, first.stderr)
+
+        hook = repo / ".git" / "hooks" / "pre-push"
+        hook.write_text(self.hook_from_readme())
+        hook.chmod(0o755)
+
+        def push_after(text):
+            (repo / "b.txt").write_text(text)
+            run(repo, *GIT, "add", "-A")
+            run(repo, *GIT, "commit", "-qm", "change")
+            return run(repo, "git", "push", "-q", "origin", "HEAD", env=env)
+
+        clean = push_after("nothing to see\n")
+        self.assertEqual(clean.returncode, 0, clean.stdout + clean.stderr)
+        pushed = run(remote, "git", "rev-parse", "HEAD").stdout
+        r = push_after("key = AKIA" + "ABCDEFGHIJKLMNOP\n")  # split so this file stays clean
+        self.assertNotEqual(r.returncode, 0)
+        self.assertIn("AWS key", r.stdout + r.stderr)
+        self.assertEqual(run(remote, "git", "rev-parse", "HEAD").stdout, pushed)
+
+
 if __name__ == "__main__":
     unittest.main()

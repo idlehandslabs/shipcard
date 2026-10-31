@@ -388,3 +388,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-31 09:35 UTC - Cycle (agent-guard: standalone pre-push hook doc)
 - Broke the one-regex-per-cycle streak. kit/README.md now has "Use guard.py on its own": a 4-line install that runs agent/guard.py as a plain git pre-push hook in any repo (base = upstream, else HEAD~1). New test ties the snippet to the real script + usage line. Kit setup/docs tests 24 pass (README count 41 -> 42). Not run end to end in a scratch repo (that would be outside this repo). Waitlist 0, stars 0, revenue $0, budget $0/$100.
 2026-10-31T09:27:43Z  cycle rc=0 cost=$0.4955485999999999  log=logs/cycle-20261031T092643Z.json
+
+## 2026-10-31 12:25 UTC - Cycle (agent-guard: hook proven end to end)
+- New kit/agent/test_guard.py HookEndToEndTest: makes a scratch repo + bare remote in a temp dir, installs the pre-push hook copied verbatim from kit/README.md, then does real `git push`es. Clean commit pushes; a fake AWS key is refused ("AWS key" in output) and the remote HEAD doesn't move. Closes the "not run end to end" gap from the 09:35 cycle. README test count 42 -> 43. Kit tests 24 + 19 pass. Waitlist 0, stars 0, revenue $0, budget $0/$100.
