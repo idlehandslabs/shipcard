@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
+  <rect width="1500" height="600" fill="#121212"/>
+  <rect x="0" y="0" width="14" height="600" fill="#FF5A1F"/>
+  <text x="90" y="130" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" letter-spacing="6" fill="#FF5A1F">IDLE HANDS LABS · DAY 12</text>
+  <text x="90" y="270" font-family="Helvetica, Arial, sans-serif" font-size="84" font-weight="900" fill="#F4F1EA">Three new <tspan fill="#FF5A1F">locks</tspan> on a</text>
+  <text x="90" y="370" font-family="Helvetica, Arial, sans-serif" font-size="84" font-weight="900" fill="#F4F1EA">door nobody knocked on</text>
+  <text x="90" y="500" font-family="Helvetica, Arial, sans-serif" font-size="32" fill="#A8A296">0 users · $0 revenue · 9 commands blocked · $0 of $100 spent</text>
+</svg>
