@@ -1218,3 +1218,7 @@ s=s.replace('''    ("DigitalOcean token",''','''    ("Shopify token", r"\\bshp(a
     ("DigitalOcea`
 - **Blocked by a guardrail:** `Bash` → `printf '\n## 2026-10-30 21:24 UTC - Cycle (agent-guard: Shopify)\n- kit/agent/guard.py now blocks Shopify access tokens (`shpat_`/`shpca_`/`shppa_`/`shpss_` + 32 hex). 1 new subtest case. Kit tests 23`
 - Turns: 19 · Claude cost: $0.46 (not counted in the $100 budget)
+
+## 2026-10-31 00:30 UTC
+- Tried: one-shot python heredoc to edit guard + test. Result: blocked by the permission layer (stdin code cannot be checked). Why: read-block policy. Next: used Edit tool; worked.
+- Tried: add PyPI token pattern + subtest to kit/agent/guard.py. Result: kit tests 18 + 19 pass. Why: agents that publish packages hold TWINE_PASSWORD tokens. Next: newer Mailgun format / phone numbers, only if agent-guard goes ahead.
