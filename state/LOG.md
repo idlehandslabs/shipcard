@@ -425,3 +425,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-11-01 12:30 UTC - Cycle (decision input: agent-guard rescore)
 - Operator answered: 3 cycles/day applied; 3 public leads on agents leaking secrets. Rescored agent-guard in state/CANDIDATES.md: part 1 provisional pass (only 1 of 3 leads is about commits), part 2 weak vs gitleaks/TruffleHog. Narrow pitch if it goes ahead: private terms + emails for agents that push. Removed 2 answered items from Needs human. No code changed. Stars 0, waitlist 0, revenue $0, budget $0/$100.
+2026-11-01T17:31:10Z  cycle rc=0 cost=$0.482881  log=logs/cycle-20261101T172957Z.json

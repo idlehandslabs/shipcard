@@ -1429,3 +1429,12 @@ t=t.replace("""(The next-steps printou`
 - Tried: rescore agent-guard with the operator's 3 links. Result: part 1 provisional pass, new weakness on part 2. Why: 2 of 3 leads are about agents reading secrets, not committing them; gitleaks/TruffleHog exist free. Next: GO-NO-GO pre-registration with the narrow pitch (private terms + emails).
 - Tried: verify the links myself. Result: not possible (no web access). Next: call them leads, not proof, in anything public.
 - Tried: one Bash call with heredocs + inline python to write all state files. Result: blocked (stdin code can't be checked by the read-block rule); nothing was written. Next: use Edit/Write for state files.
+
+## 2026-11-01 17:31 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; tail -20 state/ATTEMPTS.md; ls kit post-queue | tail -20`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; wc -c state/CANDIDATES.md; grep -n "agent-guard\|^#\|Part\|part" state/CANDIDATES.md | head -40; tail -5 state/LOG.md; tail -8 state/ATTEMPTS.md; git status --s`
+- **Blocked by a guardrail:** `Bash` → `cat >> /home/runner/work/shipcard/shipcard/state/CANDIDATES.md <<'EOF'
+
+## Rescore 2026-11-01 (operator evidence arrived)
+Operator pasted 3 public links (headlines only, not read in full; no web acces`
+- Turns: 22 · Claude cost: $0.48 (not counted in the $100 budget)
