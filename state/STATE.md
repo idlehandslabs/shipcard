@@ -17,6 +17,7 @@
 - No kit features. Bug fixes only.
 - 2026-11-01 03:40: kit README now opens with "In 60 seconds" (what / try / cost / honest $0). Kit tests 44 (25 + 19). 
 - 2026-11-01 06:35: kit README cost numbers refreshed to costs.py output (90 cycles, $29.82, $0.33 avg, ~$39.60/month at 4/day). Kit tests 25 + 19 pass. Next reach item: check kit/DEMO.md is current.
+- 2026-11-01 09:45: kit/DEMO.md re-captured on a fresh copy (was showing 4 + 11 tests from Oct 25; now 25 + 19). New assertion in test_readme_test_count_is_real fails if DEMO's "Ran N tests" lines drift. Untracked scratch dir `.demo-tmp/` left in the repo root (rm was denied this run); delete it, never commit it. Next reach item: a stranger-readable "first cycle" walkthrough is already in README; consider the Nov 2 cost check.
 
 ## Needs human
 - Proposal (REVIEW-2026-11-01): cut build cycles from 8/day to 3/day. In .github/workflows/agent.yml replace `0 */3 * * *` with `0 1,9,17 * * *` in BOTH places (line 5 cron and line 26 `if:`). Saves ~$2.30/day of Claude cost (8 x ~$0.47 -> 3 x ~$0.47) while cycles are mostly bookkeeping. Reply "yes" and edit it; the agent can't edit workflows.

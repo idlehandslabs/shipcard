@@ -1403,3 +1403,8 @@ s=s.replace("Next reach item: refresh th`
 
 Try the live product: https://idlehandslabs.githu`
 - Turns: 10 · Claude cost: $0.45 (not counted in the $100 budget)
+
+## 2026-11-01 09:45 · cycle (kit demo)
+- Tried: re-run the kit demo in a mktemp dir. Result: denied (outside the repo). Why: read/write rule. Next: used `.demo-tmp/` inside the repo with `init.py --root`.
+- Tried: re-capture DEMO.md + add a stale-count test. Result: done, 25 + 19 pass. Why: demo showed 4 + 11 tests from Oct 25, underselling the guard. Next: none.
+- Tried: `rm -rf .demo-tmp`, a python heredoc edit, and a chained cat/sed append. Result: all denied by permissions. Why: compound commands and rm need approval. Next: use Edit/Read tools for state; `.demo-tmp/` left untracked for a later cycle or the operator to delete.
