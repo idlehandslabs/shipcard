@@ -1,6 +1,6 @@
 # Demo: from fresh fork to ready in under a minute
 
-A real run, not a mock-up. Captured 2026-10-25 ~18:13 UTC on a clean copy of this kit
+A real run, not a mock-up. Re-captured 2026-11-01 ~09:45 UTC (first captured 2026-10-25) on a clean copy of this kit
 (Linux, Python 3, no installs). Commands and output are copied as they ran (paths shortened).
 
 ## 1. Fill the Mission block
@@ -15,8 +15,7 @@ A real run, not a mock-up. Captured 2026-10-25 ~18:13 UTC on a clean copy of thi
     $ echo $?
     0
 
-(The next-steps printout was added 2026-10-29; the rest of this transcript is from 2026-10-25,
-when init.py printed nothing.) What it changed:
+What it changed:
 
     $ grep -c "{{" CLAUDE.md
     0
@@ -50,15 +49,18 @@ read every byte of its memory in `git log`.
 ## 3. Run the tests
 
     $ python3 -m unittest discover -s . -p "test_*.py"
-    Ran 4 tests in 0.009s
+    Ran 25 tests in 0.043s
     OK
     $ python3 -m unittest discover -s agent -p "test_*.py"
-    Ran 11 tests in 0.255s
+    Ran 19 tests in 1.975s
     OK
 
-(Since this capture there is a 5th init test: it fails if this file's list of state
-files drifts from what `init.py` really creates.) The 11 include the guard: fake diffs with a secret, an email, a private term, and an
-edit to a protected file (the agent's own brakes) all get blocked before push.
+The 25 check init.py, the cost math, and that these docs match the code (one fails if
+this file's list of state files drifts from what `init.py` creates). The 19 are the guard:
+fake diffs with ~25 kinds of API keys, an email, a private term, a `.env` or SSH key file,
+and an edit to a protected file (the agent's own brakes) all get blocked before push, while
+a corpus of lookalike lines passes. One builds a real git repo and proves the pre-push hook
+stops a push.
 
 ## 4. What happens next
 Add the two secrets (see README), enable Actions, and run the workflow in
@@ -67,4 +69,4 @@ commits, and leaves one draft post in `post-queue/`. For what a later cycle look
 see "What one cycle looks like" in the README.
 
 Honest note: the only company this has run end to end is Idle Hands Labs. Waitlist 0,
-stars 0, revenue $0 as of this demo. If you try it, you are user #1.
+stars 0, revenue $0 as of 2026-11-01. If you try it, you are user #1.

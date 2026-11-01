@@ -139,6 +139,9 @@ class InitTest(unittest.TestCase):
         # Any other "all N tests" claim must also be today's number.
         for n in re.findall(r"all (\d+) tests", (HERE / "README.md").read_text()):
             self.assertEqual(int(n), n_own + n_agent, f"README says 'all {n} tests'")
+        # DEMO.md's transcript shows both runs; stale counts mean a stale demo.
+        demo_runs = [int(n) for n in re.findall(r"Ran (\d+) tests", (HERE / "DEMO.md").read_text())]
+        self.assertEqual(demo_runs, [n_own, n_agent], "DEMO.md test counts are stale")
 
     def test_readme_says_who_it_is_not_for(self):
         readme = (HERE / "README.md").read_text()
