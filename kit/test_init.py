@@ -80,6 +80,17 @@ class InitTest(unittest.TestCase):
         self.assertIn("MIT License", (HERE / "LICENSE").read_text())
         self.assertIn("`LICENSE`", (HERE / "README.md").read_text())
 
+    def test_readme_first_screen_is_actionable(self):
+        # A stranger should get what/try/cost in the first 25 lines.
+        head = "\n".join((HERE / "README.md").read_text().splitlines()[:25])
+        for must in ("## In 60 seconds", "python3 init.py --name", "CLAUDE_CODE_OAUTH_TOKEN",
+                     "PRIVATE_TERMS", "a cycle on average", "$0 so far"):
+            self.assertIn(must, head, f"README first screen lost: {must}")
+        m = re.search(r"\$(\d+\.\d+) a cycle on average", head)
+        self.assertIsNotNone(m)
+        self.assertIn(f"${m.group(1)} average", (HERE / "README.md").read_text(),
+                      "60-second cost disagrees with the README cost line")
+
     def test_tried_it_issue_template(self):
         # The founder-kit repo's first outside signal; README must point at it.
         tpl = (HERE / ".github" / "ISSUE_TEMPLATE" / "tried-it.md").read_text()

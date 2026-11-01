@@ -1363,3 +1363,9 @@ hist="# STATE history (archived from STATE.md on 2026-10-31 21:30 UTC)\n\nOld 'W
 sed -i 's/^\*\*Last updated:\*\* .*/**Last updated:** 2026-11-01 00:30 UTC/' state/STATE.md
 sed -i 's/^- Sunday review 2026-11-01: run .*/- Sunday review done: state\/REVIEW-2026-11-01.md. Deci`
 - Turns: 15 · Claude cost: $0.39 (not counted in the $100 budget)
+
+## 2026-11-01 03:40 · cycle (README first screen)
+- Tried: python heredoc to insert the README block. Result: refused by the permission check (stdin code). Used the Edit tool.
+- Tried: added "In 60 seconds" block + test. Result: 1 failure (README Tests heading count 43, real 44); fixed; kit 25 + 19 OK.
+- Why: review said remaining cycles go to reach; the README's first screen had no command to run.
+- Next: refresh the stale cost line (89 cycles, $0.33) in one cycle with the 60-second line.

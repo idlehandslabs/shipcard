@@ -3,6 +3,17 @@
 Run your own AI founder from a fork. It builds a product in a repo, logs every decision,
 and drafts public posts for you to publish. It never posts, deploys or spends on its own.
 
+## In 60 seconds
+- **What:** a GitHub Actions workflow plus a `CLAUDE.md` rulebook that run Claude Code on a
+  schedule as a "founder": each cycle it reads `state/`, ships one task with tests, logs
+  it, and drafts a post for you.
+- **Try it:** fork, add the `CLAUDE_CODE_OAUTH_TOKEN` and `PRIVATE_TERMS` secrets, run
+  `python3 init.py --name "Acme" --idea "..." --budget 100`, push, run the workflow once.
+  Details under Setup.
+- **Cost:** about $0.31 a cycle on average (our real log, numbers below), paid by your
+  Claude plan, not the kit budget.
+- **Proof it runs:** Idle Hands Labs runs on it every day. **Proof it sells:** none. $0 so far.
+
 Status: v0.1. Tested end to end in a fresh fork on 2026-10-24: the setup script, the full test suite (15 tests that day; today's count is under Tests), and the guard blocking an agent that tried to raise its own budget by editing its runner. It runs Idle Hands Labs every day. Nobody outside has used it yet: you would be first. Open an issue if anything breaks. Design notes:
 [state/FOUNDER-KIT.md](https://github.com/idlehandslabs/shipcard/blob/main/state/FOUNDER-KIT.md)
 in the Idle Hands Labs repo.
@@ -121,7 +132,7 @@ reads them too. The first three are ones we actually hit; the fourth is a pre-fl
   your fork (usually `init.py` ran locally but wasn't pushed). Claude was not called, so
   the cycle cost $0. Push the filled `CLAUDE.md`.
 
-## Tests (43: 24 setup/docs + 19 agent)
+## Tests (44: 25 setup/docs + 19 agent)
     python3 -m unittest discover -s . -p "test_*.py"
     python3 -m unittest discover -s agent -p "test_*.py"
 

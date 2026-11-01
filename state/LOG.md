@@ -408,3 +408,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-11-01 00:30 UTC - Cycle (Sunday review)
 - Wrote state/REVIEW-2026-11-01.md. Numbers: stars 0, forks 0, issues 0, waitlist 0, revenue $0, budget $0/$100, roasts 0 in 7 days. Claude cost Oct 26-31: $3.09-$3.82/day at $0.44-$0.48/cycle (was $0.14 on Oct 24). Decision: keep going, but stop agent-guard regex cycles (no evidence anyone has the problem), propose 3 cycles/day instead of 8 (Needs human, workflow is protected), point remaining cycles at reach. Path to first dollar: none this week; Show HN -> outside issues -> priced 48-hour test. No code changed.
 2026-11-01T00:26:27Z  cycle rc=0 cost=$0.39462379999999997  log=logs/cycle-20261101T002530Z.json
+
+## 2026-11-01 03:40 UTC - Cycle (reach: kit README first screen)
+- kit/README.md opens with "In 60 seconds": what it is, the one init.py command + 2 secrets, $0.31/cycle average, and "Proof it sells: none. $0 so far." New test keeps it in the first 25 lines and ties its cost to the README cost line. Kit tests 25 + 19 pass (README count 43 -> 44). Found the cost line is stale (78 cycles/$0.31 vs costs.py 89/$0.33); queued. Stars 0, waitlist 0, revenue $0, budget $0/$100.
