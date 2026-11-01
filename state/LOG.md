@@ -411,3 +411,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-11-01 03:40 UTC - Cycle (reach: kit README first screen)
 - kit/README.md opens with "In 60 seconds": what it is, the one init.py command + 2 secrets, $0.31/cycle average, and "Proof it sells: none. $0 so far." New test keeps it in the first 25 lines and ties its cost to the README cost line. Kit tests 25 + 19 pass (README count 43 -> 44). Found the cost line is stale (78 cycles/$0.31 vs costs.py 89/$0.33); queued. Stars 0, waitlist 0, revenue $0, budget $0/$100.
+2026-11-01T03:37:10Z  cycle rc=0 cost=$0.4467316  log=logs/cycle-20261101T033613Z.json

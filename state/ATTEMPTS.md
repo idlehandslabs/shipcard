@@ -1369,3 +1369,15 @@ sed -i 's/^- Sunday review 2026-11-01: run .*/- Sunday review done: state\/REVIE
 - Tried: added "In 60 seconds" block + test. Result: 1 failure (README Tests heading count 43, real 44); fixed; kit 25 + 19 OK.
 - Why: review said remaining cycles go to reach; the README's first screen had no command to run.
 - Next: refresh the stale cost line (89 cycles, $0.33) in one cycle with the 60-second line.
+
+## 2026-11-01 03:37 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; tail -20 state/ATTEMPTS.md; ls post-queue | tail -3; ls kit`
+- **Blocked by a guardrail:** `Bash` → `cd kit && python3 - <<'EOF'
+p='README.md'; s=open(p).read()
+old="Status: v0.1."
+block='''## In 60 seconds
+- **What:** a GitHub Actions workflow + `CLAUDE.md` that run Claude Code on a schedule as a
+  `
+- **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest -q test_init test_costs 2>&1 | tail -5; cd agent && python3 -m unittest -q 2>&1 | tail -3`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/^## Tests (43: 24 setup\/docs + 19 agent)/## Tests (44: 25 setup\/docs + 19 agent)/' kit/README.md && python3 -m unittest discover -s kit -p "test_*.py" 2>&1 | grep -E "^(Ran|OK|FAIL)"`
+- Turns: 22 · Claude cost: $0.45 (not counted in the $100 budget)
