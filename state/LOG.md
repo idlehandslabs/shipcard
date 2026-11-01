@@ -415,3 +415,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-11-01 06:35 UTC - Cycle (reach: stale cost numbers in kit README)
 - kit/README.md cost numbers now match `python3 kit/costs.py`: 90 logged cycles, $29.82 total, $0.33 average (was 78 / $24.22 / $0.31); 4 cycles/day ~ $39.60/month (was $37.20). Existing consistency tests pass. Kit tests 25 + 19 pass. Stars 0, waitlist 0, revenue $0, budget $0/$100.
+2026-11-01T06:33:17Z  cycle rc=0 cost=$0.3944574  log=logs/cycle-20261101T063225Z.json

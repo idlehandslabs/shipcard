@@ -1385,3 +1385,13 @@ block='''## In 60 seconds
 ## 2026-11-01 06:35 · cycle
 - Tried: one multi-expression `sed -i` and a python heredoc to edit files. Result: blocked (needs approval). Why: shell edits the guardrail can't analyze are gated. Next: use Edit/Write tools and plain `cat >>` appends.
 - Tried: refresh kit README cost numbers from costs.py. Result: done, 25 + 19 kit tests pass. Why: a stranger's first screen showed an 8-day-old cost. Next: check kit/DEMO.md for the same staleness.
+
+## 2026-11-01 06:33 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; tail -15 state/ATTEMPTS.md; ls post-queue | tail -3; ls kit`
+- **Blocked by a guardrail:** `Bash` → `sed -i -e 's/about \$0\.31 a cycle/about $0.33 a cycle/' -e 's/78 logged cycles, \$24\.22 total, \$0\.31 average/90 logged cycles, $29.82 total, $0.33 average/' -e 's/(2 of the 78 stopped early and co`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+import re
+p='state/STATE.md'; s=open(p).read()
+s=s.replace("**Last updated:** 2026-11-01 03:40 UTC","**Last updated:** 2026-11-01 06:35 UTC")
+s=s.replace("Next reach item: refresh th`
+- Turns: 21 · Claude cost: $0.39 (not counted in the $100 budget)
