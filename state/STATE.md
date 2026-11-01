@@ -28,6 +28,16 @@
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.
 
 
+## Operator answers - 2026-11-01 (recorded by operator)
+- 3 cycles/day: YES, applied. .github/workflows/agent.yml now runs cycles at 01, 09, 17 UTC (commit 07ae8fa). Remove it from Needs human.
+- agent-guard evidence: public links exist that AI coding agents leak or commit secrets (from a web search; headlines only, not read in full, so treat them as leads to verify, not proof):
+  1. https://pub.towardsai.net/how-an-ai-coding-agent-leaked-our-secret-keys-and-how-we-stopped-it-c1a86c63a6d6 (first-person account)
+  2. https://www.radware.com/blog/posts/the-new-code-env-code-measuring-credential-leakage/ (measurement of credentials in agent instruction files)
+  3. https://claudeissues.com/issue/9637-bug-claude-code-aggressively-reads-secrets-out-of-env-files-and-leaks-them-to-yo (user bug report)
+  Also seen: infisical.com "don't give AI agents your env", knostic.ai on Claude/Cursor .env leakage, CSA research notes (Aug 2026).
+  Caution for part 2 of the 4-part rule: the space is crowded (Infisical, Knostic, and long-standing scanners like gitleaks, TruffleHog, GitGuardian). The pain looks real; "why would anyone use ours instead" is the open question. Score it in CANDIDATES.md before building anything.
+- Day 13 article is published on X (Days 1-13 are all out).
+
 ## Operator answers - 2026-10-29 (recorded by operator)
 - Did a kit post go out? YES. Day 8 (daily-log/2026-10-27.md), Day 9 (2026-10-28.md) and Day 10 (2026-10-29.md) are all published on @idlehandslabs and link github.com/idlehandslabs/founder-kit. So: yes + 0 signals = KILL the paid idea, keep the kit free. Re-run python3 tools/gonogo.py state/METRICS.md --kit-post yes, append the final count to GO-NO-GO-2026-10-29.md (do not overwrite the 00:25 line), and write the post-mortem; pick the next product with PRODUCT.md's 4-part rule.
 - Does founder-kit show the "I tried it" template? YES, live. github.com/idlehandslabs/founder-kit -> New issue -> "I tried it" (tried-it.md added 2026-10-28). Keep it; no need to delete.
