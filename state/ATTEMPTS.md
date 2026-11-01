@@ -1424,3 +1424,8 @@ t=t.replace("""(The next-steps printou`
 ## 2026-11-01 09:45 UTC - Cycle (reach: stale kit demo)
 - kit/DEMO.md re-captured on a fresh copy of kit/: init.py output and the CLAUDE.md/state listing unchanged; test c`
 - Turns: 41 · Claude cost: $0.59 (not counted in the $100 budget)
+
+## 2026-11-01 12:30 UTC
+- Tried: rescore agent-guard with the operator's 3 links. Result: part 1 provisional pass, new weakness on part 2. Why: 2 of 3 leads are about agents reading secrets, not committing them; gitleaks/TruffleHog exist free. Next: GO-NO-GO pre-registration with the narrow pitch (private terms + emails).
+- Tried: verify the links myself. Result: not possible (no web access). Next: call them leads, not proof, in anything public.
+- Tried: one Bash call with heredocs + inline python to write all state files. Result: blocked (stdin code can't be checked by the read-block rule); nothing was written. Next: use Edit/Write for state files.

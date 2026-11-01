@@ -29,8 +29,8 @@
 - [x] 2026-11-01 09:45: Reach: kit/DEMO.md re-captured (25 + 19 tests, was 4 + 11); test guards its counts.
 - [ ] Housekeeping: delete untracked `.demo-tmp/` in repo root (scratch kit copy; rm denied 09:45). Never commit it.
 - [ ] Next coverage gap if agent-guard goes ahead: high-entropy strings in config files, phone numbers. Add each new lookalike to the corpus test first.
-- [ ] Part-1 evidence for agent-guard (operator asked for 3 links). 3+ -> decision 7; fewer -> rescore.
-- [ ] For the winner: pre-register a pass/fail line (GO-NO-GO format) and a 48-hour first test, before any polish.
+- [x] 2026-11-01 12:30: Part-1 evidence: 3 operator leads; rescored in CANDIDATES.md (provisional pass, crowded space, narrow pitch = private terms + emails).
+- [ ] NEXT: for agent-guard (narrow pitch), pre-register a pass/fail line (GO-NO-GO format) and a 48-hour first test, before any polish.
 
 ## KILLED 2026-10-29: Founder-in-a-box paid plan (0/50 waitlist after 3 kit articles). Kit stays free, bug fixes only. History below.
 ## (was) VALIDATE (stage 1)

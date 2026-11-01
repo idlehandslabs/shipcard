@@ -1,6 +1,6 @@
 # Current State
 
-**Last updated:** 2026-11-01 06:35 UTC
+**Last updated:** 2026-11-01 12:30 UTC
 **Company:** Idle Hands Labs. **Product:** none paid. Founder-in-a-box paid plan killed 2026-10-29; founder-kit stays free (bug fixes only); Shipcard and Roast frozen. Next product: TBD via the 4-part rule (PRODUCT.md decision 6). Candidate: agent-guard (state/CANDIDATES.md), waiting on part-1 evidence. **Revenue:** $0. **Waitlist:** 0. **Stars:** 0. **Issues:** 0. **Budget:** $0 of $100 spent.
 
 ## What is true now
@@ -13,16 +13,14 @@
 
 ## Next up
 - Sunday review DONE: state/REVIEW-2026-11-01.md. Decisions: stop agent-guard pattern cycles until evidence arrives; propose 3 cycles/day (Needs human); remaining cycles go to reach (Show HN readiness, a README a stranger can act on). Still compare avg/cycle on Nov 1-2 vs ~$0.46 (STATE trim). Next trim candidate: LOG.md (40.6KB; only its tail is needed).
-- Part-1 evidence for agent-guard (see Needs human). With 3+ links: write decision 7 + GO-NO-GO file, then the 48-hour test (standalone README + install line). With fewer: rescore CANDIDATES.md.
+- 2026-11-01 12:30: agent-guard rescored with the operator's 3 leads (CANDIDATES.md "Rescore 2026-11-01"): part 1 provisional pass (only 1 of 3 leads is about commits), part 2 weak vs gitleaks/TruffleHog. Narrow pitch if it goes ahead: private terms + emails for agents that push. Cycles now 3/day (01, 09, 17 UTC). Next: pre-register GO-NO-GO for the 48h test with that pitch, then a standalone README.
 - No kit features. Bug fixes only.
 - 2026-11-01 03:40: kit README now opens with "In 60 seconds" (what / try / cost / honest $0). Kit tests 44 (25 + 19). 
 - 2026-11-01 06:35: kit README cost numbers refreshed to costs.py output (90 cycles, $29.82, $0.33 avg, ~$39.60/month at 4/day). Kit tests 25 + 19 pass. Next reach item: check kit/DEMO.md is current.
 - 2026-11-01 09:45: kit/DEMO.md re-captured on a fresh copy (was showing 4 + 11 tests from Oct 25; now 25 + 19). New assertion in test_readme_test_count_is_real fails if DEMO's "Ran N tests" lines drift. Untracked scratch dir `.demo-tmp/` left in the repo root (rm was denied this run); delete it, never commit it. Next reach item: a stranger-readable "first cycle" walkthrough is already in README; consider the Nov 2 cost check.
 
 ## Needs human
-- Proposal (REVIEW-2026-11-01): cut build cycles from 8/day to 3/day. In .github/workflows/agent.yml replace `0 */3 * * *` with `0 1,9,17 * * *` in BOTH places (line 5 cron and line 26 `if:`). Saves ~$2.30/day of Claude cost (8 x ~$0.47 -> 3 x ~$0.47) while cycles are mostly bookkeeping. Reply "yes" and edit it; the agent can't edit workflows.
 - Optional: copy the 6 new SECRETS lines (OpenAI, Stripe, Google, Hugging Face, npm, Database URL, plus Telegram, SendGrid, Webhook URL, Twilio, Mailgun, GitLab and DigitalOcean added 2026-10-30) plus the `.env` and key-file (id_rsa etc., .p12/.pfx) file-name checks from kit/agent/guard.py into the protected agent/guard.py (web UI), so this repo gets the same coverage. The agent can't edit agent/.
-- Evidence check (no web access here): can you paste up to 3 public links (GitHub issues, HN/Reddit/X threads) where an AI coding agent committed a secret, email or personal detail? Or reply "none found". That decides whether agent-guard becomes the next product (state/CANDIDATES.md).
 - Show HN: if you submit, use post-queue/2026-10-31-show-hn.md (fact-checked 15:30 UTC; the cost line was fixed from ~$1.30/day to ~$3.70/day). The older show-hn-founder-kit.md is superseded.
 - Optional: add founder-kit stars/forks to METRICS.md. The go/no-go could only see the shipcard repo.
 - Nothing blocking. Posting is the operator's daily job; best fresh draft: post-queue/2026-10-28-1538.md (the older 2026-10-25-1215 pointer was stale and pointed at the waitlist, not the kit).

@@ -25,3 +25,20 @@ Nothing passes all four. A is the only one that passes 2 and 3 cleanly and has *
    - 48-hour test: standalone README + install line for guard.py, one daily-article mention.
    - Pass line (7 days after the mention): 5+ stars or 1+ outside "I ran it" issue = go.
      1-4 stars = keep free, no more cycles. 0 = kill.
+
+## Rescore 2026-11-01 (operator evidence arrived)
+Operator pasted 3 public links (headlines only, not read in full; no web access here):
+a Towards AI first-person "AI coding agent leaked our secret keys", a Radware measurement of
+credentials in agent instruction files, and a Claude Code bug report about secrets read out of
+`.env` files. Plus Infisical, Knostic and CSA write-ups.
+- **Part 1 (it hurts today): WEAK -> PROVISIONAL PASS.** 3 leads, not 3 verified incidents. 2 of 3
+  are about agents *reading/sending* secrets, which a pre-push diff check does not stop. Only the
+  first is about a commit. Honest count of on-target evidence: 1.
+- **Part 2 (we can build it): PASS on code, NEW WEAKNESS on "why ours".** gitleaks, TruffleHog and
+  GitGuardian already block secrets in commits, free and mature. Our differences: (1) one
+  zero-dependency file, (2) blocks *private terms* (names, places you list) and emails, not just
+  keys, (3) built for an agent's push loop. Only (2) is something scanners don't do out of the box.
+- **Decision:** no product yet. If agent-guard goes ahead, the pitch is "private terms + emails for
+  agents that push", NOT "another secret scanner". Pattern-adding cycles stay stopped.
+- **Next:** pre-register GO-NO-GO for the 48-hour test with that narrower pitch, then the
+  standalone README. Pass/kill lines unchanged.

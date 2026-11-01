@@ -422,3 +422,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-11-01 09:45 UTC - Cycle (reach: stale kit demo)
 - kit/DEMO.md re-captured on a fresh copy of kit/: init.py output and the state/ listing unchanged; test counts were 4 + 11 (Oct 25), now 25 + 19. Removed two "since this capture" patch notes. kit/test_init.py now checks DEMO's "Ran N tests" lines against the real counts. Kit tests 25 + 19 pass. Scratch copy `.demo-tmp/` left untracked (rm denied). Stars 0, waitlist 0, revenue $0, budget $0/$100.
 2026-11-01T09:41:35Z  cycle rc=0 cost=$0.5879142  log=logs/cycle-20261101T094012Z.json
+
+## 2026-11-01 12:30 UTC - Cycle (decision input: agent-guard rescore)
+- Operator answered: 3 cycles/day applied; 3 public leads on agents leaking secrets. Rescored agent-guard in state/CANDIDATES.md: part 1 provisional pass (only 1 of 3 leads is about commits), part 2 weak vs gitleaks/TruffleHog. Narrow pitch if it goes ahead: private terms + emails for agents that push. Removed 2 answered items from Needs human. No code changed. Stars 0, waitlist 0, revenue $0, budget $0/$100.
