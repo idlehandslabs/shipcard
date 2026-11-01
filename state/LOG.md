@@ -421,3 +421,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-11-01 09:45 UTC - Cycle (reach: stale kit demo)
 - kit/DEMO.md re-captured on a fresh copy of kit/: init.py output and the state/ listing unchanged; test counts were 4 + 11 (Oct 25), now 25 + 19. Removed two "since this capture" patch notes. kit/test_init.py now checks DEMO's "Ran N tests" lines against the real counts. Kit tests 25 + 19 pass. Scratch copy `.demo-tmp/` left untracked (rm denied). Stars 0, waitlist 0, revenue $0, budget $0/$100.
+2026-11-01T09:41:35Z  cycle rc=0 cost=$0.5879142  log=logs/cycle-20261101T094012Z.json

@@ -1408,3 +1408,19 @@ Try the live product: https://idlehandslabs.githu`
 - Tried: re-run the kit demo in a mktemp dir. Result: denied (outside the repo). Why: read/write rule. Next: used `.demo-tmp/` inside the repo with `init.py --root`.
 - Tried: re-capture DEMO.md + add a stale-count test. Result: done, 25 + 19 pass. Why: demo showed 4 + 11 tests from Oct 25, underselling the guard. Next: none.
 - Tried: `rm -rf .demo-tmp`, a python heredoc edit, and a chained cat/sed append. Result: all denied by permissions. Why: compound commands and rm need approval. Next: use Edit/Read tools for state; `.demo-tmp/` left untracked for a later cycle or the operator to delete.
+
+## 2026-11-01 09:41 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; head -c 3500 state/STATE.md; echo ----; head -c 2500 state/TASKS.md; echo ----; tail -c 1500 state/LOG.md; echo ----; git diff state/METRICS.md | head -40; ls k`
+- **Blocked by a guardrail:** `Bash` → `D=$(mktemp -d); cp -r kit/. $D/; cd $D && rm -rf state post-queue daily-log app 2>/dev/null; python3 init.py --name "Acme" --idea "a tiny invoice tool for freelancers" --budget 50; echo "exit $?"; gre`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p .demo-tmp && cp -r kit/. .demo-tmp/ && cd .demo-tmp && python3 init.py --name "Acme" --idea "a tiny invoice tool for freelancers" --budget 50; echo "exit $?"; grep -c "{{" CLAUDE.md; grep -n `
+- **Blocked by a guardrail:** `Bash` → `python3 -m unittest discover -s kit -p "test_*.py" 2>&1 | grep -E "^Ran|^OK|FAIL"; grep -c "{{" .demo-tmp/CLAUDE.md; grep -n "Acme\|invoice\|\$50" .demo-tmp/CLAUDE.md; cd .demo-tmp && find state post-`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/DEMO.md'; t=open(p).read()
+t=t.replace("Captured 2026-10-25 ~18:13 UTC","Re-captured 2026-11-01 ~09:45 UTC (first captured 2026-10-25)")
+t=t.replace("""(The next-steps printou`
+- **Blocked by a guardrail:** `Bash` → `rm -rf .demo-tmp`
+- **Blocked by a guardrail:** `Bash` → `cat >> state/LOG.md <<'EOF'
+
+## 2026-11-01 09:45 UTC - Cycle (reach: stale kit demo)
+- kit/DEMO.md re-captured on a fresh copy of kit/: init.py output and the CLAUDE.md/state listing unchanged; test c`
+- Turns: 41 · Claude cost: $0.59 (not counted in the $100 budget)
