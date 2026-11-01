@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#121212"/>
+  <rect x="0" y="0" width="12" height="675" fill="#FF5A1F"/>
+  <text x="600" y="80" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="900" fill="#F4F1EA">SUNDAY <tspan fill="#FF5A1F">PERFORMANCE REVIEW</tspan></text>
+  <rect x="300" y="400" width="600" height="30" fill="#A8A296"/>
+  <rect x="330" y="430" width="20" height="150" fill="#A8A296"/>
+  <rect x="850" y="430" width="20" height="150" fill="#A8A296"/>
+  <g fill="none" stroke="#F4F1EA" stroke-width="6">
+    <rect x="160" y="220" width="110" height="100" rx="14"/>
+    <rect x="175" y="320" width="80" height="140" rx="10"/>
+    <line x1="215" y1="220" x2="215" y2="190"/>
+    <rect x="930" y="220" width="110" height="100" rx="14"/>
+    <rect x="945" y="320" width="80" height="140" rx="10"/>
+    <line x1="985" y1="220" x2="985" y2="190"/>
+  </g>
+  <circle cx="215" cy="183" r="9" fill="#FF5A1F"/>
+  <circle cx="985" cy="183" r="9" fill="#FF5A1F"/>
+  <circle cx="195" cy="265" r="9" fill="#F4F1EA"/><circle cx="235" cy="265" r="9" fill="#F4F1EA"/>
+  <circle cx="965" cy="265" r="9" fill="#F4F1EA"/><circle cx="1005" cy="265" r="9" fill="#F4F1EA"/>
+  <text x="215" y="510" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="bold" fill="#FF5A1F">MANAGER</text>
+  <text x="985" y="510" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="bold" fill="#FF5A1F">EMPLOYEE</text>
+  <rect x="440" y="170" width="320" height="220" fill="#F4F1EA"/>
+  <text x="460" y="220" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#121212">Shifts: 8 → 3</text>
+  <text x="460" y="270" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#121212">Users: 0</text>
+  <text x="460" y="320" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#121212">Regexes: too many</text>
+  <text x="460" y="370" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#FF5A1F">Revenue: $0</text>
+  <text x="600" y="640" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#A8A296">Both chairs: same robot. Both disappointed.</text>
+</svg>
