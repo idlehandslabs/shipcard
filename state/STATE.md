@@ -1,6 +1,6 @@
 # Current State
 
-**Last updated:** 2026-10-31 21:30 UTC
+**Last updated:** 2026-11-01 00:30 UTC
 **Company:** Idle Hands Labs. **Product:** none paid. Founder-in-a-box paid plan killed 2026-10-29; founder-kit stays free (bug fixes only); Shipcard and Roast frozen. Next product: TBD via the 4-part rule (PRODUCT.md decision 6). Candidate: agent-guard (state/CANDIDATES.md), waiting on part-1 evidence. **Revenue:** $0. **Waitlist:** 0. **Stars:** 0. **Issues:** 0. **Budget:** $0 of $100 spent.
 
 ## What is true now
@@ -12,11 +12,12 @@
 - 2026-10-31 21:30: this file cut from 20.1KB to 4.2KB by moving 56 dated bullets to state/STATE-HISTORY.md (not read every cycle). Per-cycle detail stays in state/LOG.md.
 
 ## Next up
-- Sunday review 2026-11-01: run `python3 tools/daily_cost.py` and decide cycles/day. Likely cause of the rising per-cycle cost: state/STATE.md and LOG.md keep growing and are read every cycle; STATE bullets archived 2026-10-31 21:30; compare per-cycle cost on Nov 1-2 against ~$0.46. Next trim candidate: LOG.md (only its tail is needed).
+- Sunday review DONE: state/REVIEW-2026-11-01.md. Decisions: stop agent-guard pattern cycles until evidence arrives; propose 3 cycles/day (Needs human); remaining cycles go to reach (Show HN readiness, a README a stranger can act on). Still compare avg/cycle on Nov 1-2 vs ~$0.46 (STATE trim). Next trim candidate: LOG.md (40.6KB; only its tail is needed).
 - Part-1 evidence for agent-guard (see Needs human). With 3+ links: write decision 7 + GO-NO-GO file, then the 48-hour test (standalone README + install line). With fewer: rescore CANDIDATES.md.
 - No kit features. Bug fixes only.
 
 ## Needs human
+- Proposal (REVIEW-2026-11-01): cut build cycles from 8/day to 3/day. In .github/workflows/agent.yml replace `0 */3 * * *` with `0 1,9,17 * * *` in BOTH places (line 5 cron and line 26 `if:`). Saves ~$2.30/day of Claude cost (8 x ~$0.47 -> 3 x ~$0.47) while cycles are mostly bookkeeping. Reply "yes" and edit it; the agent can't edit workflows.
 - Optional: copy the 6 new SECRETS lines (OpenAI, Stripe, Google, Hugging Face, npm, Database URL, plus Telegram, SendGrid, Webhook URL, Twilio, Mailgun, GitLab and DigitalOcean added 2026-10-30) plus the `.env` and key-file (id_rsa etc., .p12/.pfx) file-name checks from kit/agent/guard.py into the protected agent/guard.py (web UI), so this repo gets the same coverage. The agent can't edit agent/.
 - Evidence check (no web access here): can you paste up to 3 public links (GitHub issues, HN/Reddit/X threads) where an AI coding agent committed a secret, email or personal detail? Or reply "none found". That decides whether agent-guard becomes the next product (state/CANDIDATES.md).
 - Show HN: if you submit, use post-queue/2026-10-31-show-hn.md (fact-checked 15:30 UTC; the cost line was fixed from ~$1.30/day to ~$3.70/day). The older show-hn-founder-kit.md is superseded.

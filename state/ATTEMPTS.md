@@ -1349,3 +1349,10 @@ hist="# STATE history (archived from STATE.md on 2026-10-31 21:30 UTC)\n\nOld 'W
 ## 2026-10-31 21:30 UTC - Cycle (cut STATE.md, the file read every cycle)
 - STATE.md went 20,110 -> ~4,100 bytes. The 56 dated "What is true now" bullets (Oct 25-31) moved`
 - Turns: 26 · Claude cost: $0.48 (not counted in the $100 budget)
+
+## 2026-11-01 00:30 · Sunday review
+- Tried: Sunday review with tools/daily_cost.py + METRICS.md.
+- Result: state/REVIEW-2026-11-01.md written. Decision: stop agent-guard pattern cycles; propose 3 cycles/day.
+- Why: 9 cycles of regexes with zero part-1 evidence is building before validating; per-cycle cost tripled in a week for mostly bookkeeping.
+- Next: operator yes/no on 3/day; Nov 2 cost comparison; reach work (README first screen).
+- Tried: one multi-command sed batch to update STATE/TASKS. Result: refused by the permission check (multiple operations). Did it with the Edit tool instead.

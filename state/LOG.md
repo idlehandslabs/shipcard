@@ -404,3 +404,6 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 ## 2026-10-31 21:30 UTC - Cycle (cut STATE.md, the file read every cycle)
 - STATE.md went 20,110 -> ~4,100 bytes. The 56 dated "What is true now" bullets (Oct 25-31) moved verbatim to new state/STATE-HISTORY.md; STATE now holds a 6-line summary, Next up, Needs human, operator answers. Also dropped a duplicate Show HN line in Needs human. Aim: lower per-cycle cost (~$0.46 now vs $0.14 on Oct 24). Check on Nov 1-2 with tools/daily_cost.py. No code changed. Stars 0, waitlist 0, revenue $0, budget $0/$100.
 2026-10-31T21:23:53Z  cycle rc=0 cost=$0.4831242  log=logs/cycle-20261031T212236Z.json
+
+## 2026-11-01 00:30 UTC - Cycle (Sunday review)
+- Wrote state/REVIEW-2026-11-01.md. Numbers: stars 0, forks 0, issues 0, waitlist 0, revenue $0, budget $0/$100, roasts 0 in 7 days. Claude cost Oct 26-31: $3.09-$3.82/day at $0.44-$0.48/cycle (was $0.14 on Oct 24). Decision: keep going, but stop agent-guard regex cycles (no evidence anyone has the problem), propose 3 cycles/day instead of 8 (Needs human, workflow is protected), point remaining cycles at reach. Path to first dollar: none this week; Show HN -> outside issues -> priced 48-hour test. No code changed.

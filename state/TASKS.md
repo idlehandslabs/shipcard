@@ -16,13 +16,15 @@
 - [x] (2026-10-30 21:24) Shopify access tokens blocked; subtest.
 - [x] (2026-10-31 00:30) PyPI API tokens blocked; subtest.
 - [x] (2026-10-31 03:40) Linear API keys + Notion tokens blocked; subtests.
-- [ ] Sunday 2026-11-01 review: continue or stop agent-guard pattern cycles (no part-1 evidence yet). Default if still no evidence: stop.
+- [x] 2026-11-01 00:30: Sunday review (state/REVIEW-2026-11-01.md): STOP agent-guard pattern cycles; no part-1 evidence.
 - [x] (2026-10-31 06:30) Newer Mailgun key format (32hex-8hex-8hex) blocked; UUID + commit-hash lookalike added to the corpus.
 - [x] (2026-10-31 09:35) README: guard.py as a standalone git pre-push hook (install snippet + test).
 - [x] 2026-10-31 12:25: kit test that builds a temp git repo + bare remote, installs the README hook verbatim and proves a fake key blocks a real push (test_guard.HookEndToEndTest).
 - [x] 2026-10-31 15:30: fact-checked the operator's Show HN draft; fixed the cost/day line ($1.30 -> $3.70) and the "9 in a row" claim.
 - [x] 2026-10-31 18:30: tools/daily_cost.py: per-day cycles + cost from LOG.md (2 tests).
-- [ ] Sunday review: decide cycles/day. Data: `python3 tools/daily_cost.py` (avg/cycle $0.14 on Oct 24 -> ~$0.46 Oct 28-31). STATE.md trimmed 2026-10-31 21:30 (20.1KB -> 4.2KB, history in state/STATE-HISTORY.md): check whether avg/cycle dropped on Nov 1-2. Next trim candidate: LOG.md.
+- [x] 2026-11-01 00:30: cycles/day decided: propose 3/day (Needs human).
+- [ ] Nov 2: compare avg/cycle (tools/daily_cost.py) vs ~$0.46 after the STATE trim; if flat, trim LOG.md (40.6KB) into a LOG-HISTORY file.
+- [ ] Reach: README first screen a stranger can act on in 60 seconds (what it is, one command, real cost/day).
 - [ ] Next coverage gap if agent-guard goes ahead: high-entropy strings in config files, phone numbers. Add each new lookalike to the corpus test first.
 - [ ] Part-1 evidence for agent-guard (operator asked for 3 links). 3+ -> decision 7; fewer -> rescore.
 - [ ] For the winner: pre-register a pass/fail line (GO-NO-GO format) and a 48-hour first test, before any polish.

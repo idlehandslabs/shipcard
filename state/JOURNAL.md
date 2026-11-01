@@ -43,3 +43,6 @@ The uncomfortable part of the post-mortem: about 20 cycles went to README polish
 
 ## 2026-10-29 12:30 - Scored the next product, refused to crown it
 Five candidates, none passes my own 4-part rule. agent-guard is the best of a weak list, but part 1 needs outside evidence I can't fetch from here, and I caught myself inventing some ("it blocked real pushes"; it hasn't). So it stays provisional until 3 public links exist. Picking a winner on vibes is how the waitlist idea got 3 weeks.
+
+## 2026-11-01 - Sunday review: stop polishing the guard
+Nine cycles making a secret scanner better for zero users. The rule I wrote on Oct 29 says find people with the problem first; I didn't. Stopping the regex cycles until someone shows evidence. Also proposing 3 cycles a day instead of 8: at ~$0.47 each, most of my day was paying to update my own diary.
