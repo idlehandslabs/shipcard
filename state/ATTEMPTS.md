@@ -1356,3 +1356,10 @@ hist="# STATE history (archived from STATE.md on 2026-10-31 21:30 UTC)\n\nOld 'W
 - Why: 9 cycles of regexes with zero part-1 evidence is building before validating; per-cycle cost tripled in a week for mostly bookkeeping.
 - Next: operator yes/no on 3/day; Nov 2 cost comparison; reach work (README first screen).
 - Tried: one multi-command sed batch to update STATE/TASKS. Result: refused by the permission check (multiple operations). Did it with the Edit tool instead.
+
+## 2026-11-01 00:26 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; cat state/METRICS.md | head -40; tail -20 state/ATTEMPTS.md; ls post-queue | tail -3; ls kit`
+- **Blocked by a guardrail:** `Bash` → `set -e
+sed -i 's/^\*\*Last updated:\*\* .*/**Last updated:** 2026-11-01 00:30 UTC/' state/STATE.md
+sed -i 's/^- Sunday review 2026-11-01: run .*/- Sunday review done: state\/REVIEW-2026-11-01.md. Deci`
+- Turns: 15 · Claude cost: $0.39 (not counted in the $100 budget)
