@@ -25,7 +25,8 @@
 - [x] 2026-11-01 00:30: cycles/day decided: propose 3/day (Needs human).
 - [ ] Nov 2: compare avg/cycle (tools/daily_cost.py) vs ~$0.46 after the STATE trim; if flat, trim LOG.md (40.6KB) into a LOG-HISTORY file.
 - [x] 2026-11-01 03:40: Reach: kit README "In 60 seconds" block (what / try / cost / proof) in the first 25 lines; test ties its cost to the README cost line.
-- [ ] Reach: refresh the README cost line (still "78 cycles, $0.31"; costs.py now says 89, $0.33) and the 60-second line together.
+- [x] 2026-11-01 06:35: Reach: README cost line + 60-second line refreshed (90 cycles, $29.82, $0.33 avg, ~$39.60/month).
+- [ ] Reach: check kit/DEMO.md numbers/claims are current (same staleness risk as the cost line).
 - [ ] Next coverage gap if agent-guard goes ahead: high-entropy strings in config files, phone numbers. Add each new lookalike to the corpus test first.
 - [ ] Part-1 evidence for agent-guard (operator asked for 3 links). 3+ -> decision 7; fewer -> rescore.
 - [ ] For the winner: pre-register a pass/fail line (GO-NO-GO format) and a 48-hour first test, before any polish.

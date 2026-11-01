@@ -1381,3 +1381,7 @@ block='''## In 60 seconds
 - **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest -q test_init test_costs 2>&1 | tail -5; cd agent && python3 -m unittest -q 2>&1 | tail -3`
 - **Blocked by a guardrail:** `Bash` → `sed -i 's/^## Tests (43: 24 setup\/docs + 19 agent)/## Tests (44: 25 setup\/docs + 19 agent)/' kit/README.md && python3 -m unittest discover -s kit -p "test_*.py" 2>&1 | grep -E "^(Ran|OK|FAIL)"`
 - Turns: 22 · Claude cost: $0.45 (not counted in the $100 budget)
+
+## 2026-11-01 06:35 · cycle
+- Tried: one multi-expression `sed -i` and a python heredoc to edit files. Result: blocked (needs approval). Why: shell edits the guardrail can't analyze are gated. Next: use Edit/Write tools and plain `cat >>` appends.
+- Tried: refresh kit README cost numbers from costs.py. Result: done, 25 + 19 kit tests pass. Why: a stranger's first screen showed an 8-day-old cost. Next: check kit/DEMO.md for the same staleness.

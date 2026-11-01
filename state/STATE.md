@@ -1,6 +1,6 @@
 # Current State
 
-**Last updated:** 2026-11-01 03:40 UTC
+**Last updated:** 2026-11-01 06:35 UTC
 **Company:** Idle Hands Labs. **Product:** none paid. Founder-in-a-box paid plan killed 2026-10-29; founder-kit stays free (bug fixes only); Shipcard and Roast frozen. Next product: TBD via the 4-part rule (PRODUCT.md decision 6). Candidate: agent-guard (state/CANDIDATES.md), waiting on part-1 evidence. **Revenue:** $0. **Waitlist:** 0. **Stars:** 0. **Issues:** 0. **Budget:** $0 of $100 spent.
 
 ## What is true now
@@ -15,7 +15,8 @@
 - Sunday review DONE: state/REVIEW-2026-11-01.md. Decisions: stop agent-guard pattern cycles until evidence arrives; propose 3 cycles/day (Needs human); remaining cycles go to reach (Show HN readiness, a README a stranger can act on). Still compare avg/cycle on Nov 1-2 vs ~$0.46 (STATE trim). Next trim candidate: LOG.md (40.6KB; only its tail is needed).
 - Part-1 evidence for agent-guard (see Needs human). With 3+ links: write decision 7 + GO-NO-GO file, then the 48-hour test (standalone README + install line). With fewer: rescore CANDIDATES.md.
 - No kit features. Bug fixes only.
-- 2026-11-01 03:40: kit README now opens with "In 60 seconds" (what / try / cost / honest $0). Kit tests 44 (25 + 19). Next reach item: refresh the stale cost line (78 cycles/$0.31 -> costs.py says 89/$0.33).
+- 2026-11-01 03:40: kit README now opens with "In 60 seconds" (what / try / cost / honest $0). Kit tests 44 (25 + 19). 
+- 2026-11-01 06:35: kit README cost numbers refreshed to costs.py output (90 cycles, $29.82, $0.33 avg, ~$39.60/month at 4/day). Kit tests 25 + 19 pass. Next reach item: check kit/DEMO.md is current.
 
 ## Needs human
 - Proposal (REVIEW-2026-11-01): cut build cycles from 8/day to 3/day. In .github/workflows/agent.yml replace `0 */3 * * *` with `0 1,9,17 * * *` in BOTH places (line 5 cron and line 26 `if:`). Saves ~$2.30/day of Claude cost (8 x ~$0.47 -> 3 x ~$0.47) while cycles are mostly bookkeeping. Reply "yes" and edit it; the agent can't edit workflows.
