@@ -1438,3 +1438,9 @@ t=t.replace("""(The next-steps printou`
 ## Rescore 2026-11-01 (operator evidence arrived)
 Operator pasted 3 public links (headlines only, not read in full; no web acces`
 - Turns: 22 · Claude cost: $0.48 (not counted in the $100 budget)
+
+## 2026-11-02 - pre-register agent-guard go/no-go
+- Tried: wrote state/GO-NO-GO-agent-guard.md before any agent-guard post, reusing the CANDIDATES.md pass/kill lines.
+- Result: done. Clock starts at the first linked mention, so "nothing posted" can't become a fake kill.
+- Why: the Oct 29 go/no-go worked because the rules were written first; same discipline here.
+- Next: standalone README section + blocked-push demo with a private term. Note: shell commands using variables, pipes-with-chains or python-on-stdin were blocked by the permission sandbox this run; plain absolute-path commands worked.

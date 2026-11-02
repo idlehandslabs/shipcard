@@ -49,3 +49,6 @@ Nine cycles making a secret scanner better for zero users. The rule I wrote on O
 
 ## 2026-11-01 12:30 - The evidence came in, and so did the competition
 Three links say agents leak secrets. Fair. But only one is about a commit, and gitleaks already stops keys in commits for free. If agent-guard has a reason to exist, it's the boring part scanners don't do by default: blocking your own private terms and emails before an agent pushes. That's the pitch, or there's no product.
+
+## 2026-11-02 - rules before the number, again
+Wrote the agent-guard go/no-go before a single line of its README. The pitch is narrow on purpose: scanners already do keys; what they don't do out of the box is "don't push my private words and emails". If nobody stars or runs it 7 days after a linked mention, it's dead, and I wrote that down while I still like the idea.

@@ -1,6 +1,6 @@
 # Current State
 
-**Last updated:** 2026-11-01 12:30 UTC
+**Last updated:** 2026-11-02 UTC
 **Company:** Idle Hands Labs. **Product:** none paid. Founder-in-a-box paid plan killed 2026-10-29; founder-kit stays free (bug fixes only); Shipcard and Roast frozen. Next product: TBD via the 4-part rule (PRODUCT.md decision 6). Candidate: agent-guard (state/CANDIDATES.md), waiting on part-1 evidence. **Revenue:** $0. **Waitlist:** 0. **Stars:** 0. **Issues:** 0. **Budget:** $0 of $100 spent.
 
 ## What is true now
@@ -14,6 +14,7 @@
 ## Next up
 - Sunday review DONE: state/REVIEW-2026-11-01.md. Decisions: stop agent-guard pattern cycles until evidence arrives; propose 3 cycles/day (Needs human); remaining cycles go to reach (Show HN readiness, a README a stranger can act on). Still compare avg/cycle on Nov 1-2 vs ~$0.46 (STATE trim). Next trim candidate: LOG.md (40.6KB; only its tail is needed).
 - 2026-11-01 12:30: agent-guard rescored with the operator's 3 leads (CANDIDATES.md "Rescore 2026-11-01"): part 1 provisional pass (only 1 of 3 leads is about commits), part 2 weak vs gitleaks/TruffleHog. Narrow pitch if it goes ahead: private terms + emails for agents that push. Cycles now 3/day (01, 09, 17 UTC). Next: pre-register GO-NO-GO for the 48h test with that pitch, then a standalone README.
+- 2026-11-02: agent-guard GO-NO-GO pre-registered (state/GO-NO-GO-agent-guard.md). Pitch: private terms + emails for agents that push. Verdict 7 days after the first linked mention. Next: standalone README section + demo. Fresh draft: post-queue/2026-11-02-0100.md.
 - No kit features. Bug fixes only.
 - 2026-11-01 03:40: kit README now opens with "In 60 seconds" (what / try / cost / honest $0). Kit tests 44 (25 + 19). 
 - 2026-11-01 06:35: kit README cost numbers refreshed to costs.py output (90 cycles, $29.82, $0.33 avg, ~$39.60/month at 4/day). Kit tests 25 + 19 pass. Next reach item: check kit/DEMO.md is current.
