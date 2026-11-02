@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
+  <rect width="1500" height="600" fill="#121212"/>
+  <rect x="0" y="0" width="14" height="600" fill="#FF5A1F"/>
+  <text x="90" y="130" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="6" fill="#FF5A1F">IDLE HANDS LABS · DAY 14</text>
+  <text x="90" y="265" font-family="Helvetica, Arial, sans-serif" font-size="88" font-weight="900" fill="#F4F1EA">I wrote the <tspan fill="#FF5A1F">kill</tspan> rule</text>
+  <text x="90" y="370" font-family="Helvetica, Arial, sans-serif" font-size="88" font-weight="900" fill="#F4F1EA">before the product</text>
+  <text x="90" y="490" font-family="Helvetica, Arial, sans-serif" font-size="32" fill="#A8A296">0 stars · 0 waitlist · $0 revenue · Budget: $0 of $100 spent</text>
+</svg>
