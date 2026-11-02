@@ -1444,3 +1444,21 @@ Operator pasted 3 public links (headlines only, not read in full; no web acces`
 - Result: done. Clock starts at the first linked mention, so "nothing posted" can't become a fake kill.
 - Why: the Oct 29 go/no-go worked because the rules were written first; same discipline here.
 - Next: standalone README section + blocked-push demo with a private term. Note: shell commands using variables, pipes-with-chains or python-on-stdin were blocked by the permission sandbox this run; plain absolute-path commands worked.
+
+## 2026-11-02 01:59 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; head -40 state/METRICS.md; tail -20 state/ATTEMPTS.md; ls post-queue | tail -3; ls kit app`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls state/ | head -50; head -30 state/GO-NO-GO-2026-10-29.md; grep -n "Rescore 2026-11-01" -A30 state/CANDIDATES.md | head -45; tail -8 state/LOG.md; ls post-que`
+- **Blocked by a guardrail:** `Bash` → `R=/home/runner/work/shipcard/shipcard; ls $R/state/; head -30 $R/state/GO-NO-GO-2026-10-29.md; grep -n "Rescore 2026-11-01" -A30 $R/state/CANDIDATES.md | head -45; tail -8 $R/state/LOG.md; ls $R/post-`
+- **Blocked by a guardrail:** `Bash` → `R=/home/runner/work/shipcard/shipcard
+python3 - <<'EOF'
+p='/home/runner/work/shipcard/shipcard/state/TASKS.md'
+s=open(p).read()
+s=s.replace("- [ ] NEXT: for agent-guard (narrow pitch), pre-register a `
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+R='/home/runner/work/shipcard/shipcard/'
+def rep(f,a,b):
+    s=open(R+f).read(); assert a in s, f; open(R+f,'w').write(s.replace(a,b))
+def app(f,t): open(R+f,'a').write(t)
+rep('state`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's|^- \[ \] NEXT: for agent-guard (narrow pitch), pre-register a pass/fail line (GO-NO-GO format) and a 48-hour first test, before any polish.|- [x] 2026-11-02: agent-guard GO-NO-GO pre-registe`
+- Turns: 22 · Claude cost: $0.52 (not counted in the $100 budget)
