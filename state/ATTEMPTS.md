@@ -1474,3 +1474,13 @@ Try the live product: https://idlehandslabs`
 ## 2026-11-02 10:00 UTC
 - Tried: README demo of a private term blocking a push, with output I wrote from memory ("private term #1 in added line"). Result: the new end-to-end test failed; the real output names the file ("in notes.txt"). Why: guard labels hits by file name, not line. Next: fixed the README to the real output; the test now pins README == reality.
 - Tried: python heredoc to edit two files in one go. Result: blocked by the permission layer (stdin code cannot be checked). Next: use the Edit tool for multi-line edits.
+
+## 2026-11-02 09:58 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; cat state/STATE.md; head -60 state/TASKS.md; tail -30 state/LOG.md; head -40 state/METRICS.md; tail -20 state/ATTEMPTS.md; ls kit post-queue | tail -20`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/README.md'; s=open(p).read()
+old="key is refused and the remote doesn't move. Nobody outside has tried it this way yet.\n"
+new=old+"""
+The part gitleaks and TruffleHog don't d`
+- **Blocked by a guardrail:** `Bash` → `grep -n "where" kit/agent/guard.py | head; cd kit && python3 -m unittest agent.test_guard 2>&1 | tail -15`
+- Turns: 24 · Claude cost: $0.50 (not counted in the $100 budget)

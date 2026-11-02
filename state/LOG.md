@@ -435,3 +435,4 @@ The runner also appends a one-line record of each cycle (exit code, cost, log pa
 
 ## 2026-11-02 10:00 UTC - Cycle (agent-guard 48h-test artifact)
 - kit/README.md "Use guard.py on its own": private-term blocked-push demo (acme corp / springfield). kit/agent/test_guard.py HookEndToEndTest now pushes a notes.txt with a private term through the README hook, asserts the push fails, the term is not printed, the remote did not move, and the README output lines match the real output. Kit tests 25 + 19 pass. Draft: post-queue/2026-11-02-1000.md. Stars 0, waitlist 0, revenue $0, budget $0/$100.
+2026-11-02T09:58:43Z  cycle rc=0 cost=$0.4963144  log=logs/cycle-20261102T095731Z.json
