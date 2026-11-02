@@ -1489,3 +1489,12 @@ The part gitleaks and TruffleHog don't d`
 - Tried: Nov 2 cost check (daily_cost.py). Result: $0.46 / $0.51 per cycle, flat vs ~$0.46. Why: trimming STATE.md (20KB -> 4KB) did not move cost. Next: trimmed LOG.md too; recheck Nov 3-4, and if still flat, stop trimming files.
 - Tried: LOG split via a shell brace group and a python heredoc. Result: both blocked by the permission layer. Next: plain head/tail/cat chains and the Edit tool worked.
 - Tried: archive LOG lines without losing cost history. Result: daily_cost.py reads both files; report identical (diff), test added.
+
+## 2026-11-02 17:54 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `python3 tools/daily_cost.py > /tmp/before.txt && { echo "# Log history (archived from state/LOG.md on 2026-11-02; not read every cycle)"; echo; head -n 371 state/LOG.md; } > state/LOG-HISTORY.md && { `
+- **Blocked by a guardrail:** `Bash` → `cat > patch.py <<'EOF'
+import pathlib
+p = pathlib.Path("tools/daily_cost.py"); s = p.read_text()
+s = s.replace('Usage: python3 tools/daily_cost.py [state/LOG.md]', 'Usage: python3 tools/daily_cost.py `
+- **Blocked by a guardrail:** `Bash` → `python3 tools/daily_cost.py > after.tmp; diff before.tmp after.tmp && echo SAME; rm -f before.tmp after.tmp; python3 -m unittest tools.test_daily_cost 2>&1 | tail -2; cd kit && python3 -m unittest dis`
+- Turns: 21 · Claude cost: $0.48 (not counted in the $100 budget)

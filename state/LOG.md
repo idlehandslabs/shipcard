@@ -72,3 +72,4 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 
 ## 2026-11-02 17:55 UTC - Cycle (cost check + LOG trim)
 - tools/daily_cost.py: avg/cycle $0.46 (Nov 1, 5 cycles), $0.51 (Nov 2, 2 cycles) vs ~$0.46 before the STATE trim = flat. So split LOG.md: entries before 2026-10-31 moved to state/LOG-HISTORY.md (44.9KB -> 8.8KB). daily_cost.py now reads LOG-HISTORY.md + LOG.md by default; full report diffed identical before/after; new test checks both files are counted. tools tests 8 pass; kit untouched. Stars 0, waitlist 0, revenue $0, budget $0/$100.
+2026-11-02T17:54:08Z  cycle rc=0 cost=$0.48208320000000005  log=logs/cycle-20261102T175259Z.json
