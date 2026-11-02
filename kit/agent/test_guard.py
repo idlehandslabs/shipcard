@@ -177,11 +177,11 @@ class HookEndToEndTest(unittest.TestCase):
         hook.write_text(self.hook_from_readme())
         hook.chmod(0o755)
 
-        def push_after(text):
+        def push_after(text, push_env=None):
             (repo / "b.txt").write_text(text)
             run(repo, *GIT, "add", "-A")
             run(repo, *GIT, "commit", "-qm", "change")
-            return run(repo, "git", "push", "-q", "origin", "HEAD", env=env)
+            return run(repo, "git", "push", "-q", "origin", "HEAD", env=push_env or env)
 
         clean = push_after("nothing to see\n")
         self.assertEqual(clean.returncode, 0, clean.stdout + clean.stderr)
@@ -189,6 +189,22 @@ class HookEndToEndTest(unittest.TestCase):
         r = push_after("key = AKIA" + "ABCDEFGHIJKLMNOP\n")  # split so this file stays clean
         self.assertNotEqual(r.returncode, 0)
         self.assertIn("AWS key", r.stdout + r.stderr)
+        self.assertEqual(run(remote, "git", "rev-parse", "HEAD").stdout, pushed)
+
+        # README private-term demo: blocked, output matches the README, term never printed
+        readme = (pathlib.Path(__file__).parent.parent / "README.md").read_text()
+        run(repo, "git", "reset", "-q", "--hard", "HEAD~1")
+        (repo / "notes.txt").write_text("meeting with Acme Corp\n")
+        run(repo, *GIT, "add", "notes.txt")
+        run(repo, *GIT, "commit", "-qm", "notes")
+        r = run(repo, "git", "push", "-q", "origin", "HEAD",
+                env={**env, "PRIVATE_TERMS": "acme corp,springfield"})
+        out = r.stdout + r.stderr
+        self.assertNotEqual(r.returncode, 0)
+        self.assertNotIn("acme", out.lower())
+        for line in ("PUSH BLOCKED by guard.py:", " - private term #1 in notes.txt"):
+            self.assertIn(line, out)
+            self.assertIn("    " + line + "\n", readme)
         self.assertEqual(run(remote, "git", "rev-parse", "HEAD").stdout, pushed)
 
 

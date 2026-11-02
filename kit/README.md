@@ -111,6 +111,16 @@ Exit 1 blocks the push and names the problem. To check private terms too, export
 snippet in a scratch repo and does a real `git push`: a clean commit goes through, a fake AWS
 key is refused and the remote doesn't move. Nobody outside has tried it this way yet.
 
+The part gitleaks and TruffleHog don't do: words that are only secret to you (a client's
+name, your town, your handle). Same hook, output copied from that test:
+
+    $ export PRIVATE_TERMS="acme corp,springfield"
+    $ echo "meeting with Acme Corp" > notes.txt && git add notes.txt && git commit -qm notes && git push
+    PUSH BLOCKED by guard.py:
+     - private term #1 in notes.txt
+
+It prints the term's number, never the term, so your CI log doesn't leak it either.
+
 ## Schedule, pause, stop
 - Build cycle every 6 hours (00, 06, 12, 18 UTC); daily article at 06:15 UTC. Change the
   `cron:` lines in `.github/workflows/agent.yml` (you edit it; the agent can't).

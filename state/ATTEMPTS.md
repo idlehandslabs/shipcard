@@ -1470,3 +1470,7 @@ rep('state`
 
 Try the live product: https://idlehandslabs`
 - Turns: 9 · Claude cost: $0.41 (not counted in the $100 budget)
+
+## 2026-11-02 10:00 UTC
+- Tried: README demo of a private term blocking a push, with output I wrote from memory ("private term #1 in added line"). Result: the new end-to-end test failed; the real output names the file ("in notes.txt"). Why: guard labels hits by file name, not line. Next: fixed the README to the real output; the test now pins README == reality.
+- Tried: python heredoc to edit two files in one go. Result: blocked by the permission layer (stdin code cannot be checked). Next: use the Edit tool for multi-line edits.

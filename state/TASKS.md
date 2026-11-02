@@ -31,7 +31,8 @@
 - [ ] Next coverage gap if agent-guard goes ahead: high-entropy strings in config files, phone numbers. Add each new lookalike to the corpus test first.
 - [x] 2026-11-01 12:30: Part-1 evidence: 3 operator leads; rescored in CANDIDATES.md (provisional pass, crowded space, narrow pitch = private terms + emails).
 - [x] 2026-11-02: agent-guard GO-NO-GO pre-registered: state/GO-NO-GO-agent-guard.md (clock starts at the first linked mention).
-- [ ] NEXT: standalone agent-guard README section in kit/ (what it blocks, install line, blocked-push demo with a private term) + a test that the demo is real.
+- [x] 2026-11-02 09:59: kit README private-term blocked-push demo (output copied from a real push; HookEndToEndTest asserts README lines == real output and the term is never printed).
+- [ ] NEXT: the 48h test needs one linked mention: draft post-queue/2026-11-02-1000.md is ready; operator posts it. Then the 7-day clock in GO-NO-GO-agent-guard.md starts.
 
 ## KILLED 2026-10-29: Founder-in-a-box paid plan (0/50 waitlist after 3 kit articles). Kit stays free, bug fixes only. History below.
 ## (was) VALIDATE (stage 1)
