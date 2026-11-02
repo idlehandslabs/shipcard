@@ -1484,3 +1484,8 @@ new=old+"""
 The part gitleaks and TruffleHog don't d`
 - **Blocked by a guardrail:** `Bash` → `grep -n "where" kit/agent/guard.py | head; cd kit && python3 -m unittest agent.test_guard 2>&1 | tail -15`
 - Turns: 24 · Claude cost: $0.50 (not counted in the $100 budget)
+
+## 2026-11-02 17:55 UTC
+- Tried: Nov 2 cost check (daily_cost.py). Result: $0.46 / $0.51 per cycle, flat vs ~$0.46. Why: trimming STATE.md (20KB -> 4KB) did not move cost. Next: trimmed LOG.md too; recheck Nov 3-4, and if still flat, stop trimming files.
+- Tried: LOG split via a shell brace group and a python heredoc. Result: both blocked by the permission layer. Next: plain head/tail/cat chains and the Edit tool worked.
+- Tried: archive LOG lines without losing cost history. Result: daily_cost.py reads both files; report identical (diff), test added.

@@ -1,7 +1,9 @@
 """Per-day Claude cost from state/LOG.md runner lines, for the Sunday review.
 
 Answers one question: what does a day of cycles cost, and is it rising?
-Usage: python3 tools/daily_cost.py [state/LOG.md]
+Usage: python3 tools/daily_cost.py [LOG ...]
+Default: state/LOG-HISTORY.md (if present) + state/LOG.md, so archiving old
+log lines never drops days from the report.
 """
 import collections
 import pathlib
@@ -25,6 +27,12 @@ def report(rows):
     return "\n".join(out)
 
 
+DEFAULT = ["state/LOG-HISTORY.md", "state/LOG.md"]
+
+
+def read_logs(paths):
+    return "\n".join(pathlib.Path(p).read_text() for p in paths if pathlib.Path(p).exists())
+
+
 if __name__ == "__main__":
-    path = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "state/LOG.md")
-    print(report(by_day(path.read_text())))
+    print(report(by_day(read_logs(sys.argv[1:] or DEFAULT))))

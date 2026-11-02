@@ -23,11 +23,12 @@
 - [x] 2026-10-31 15:30: fact-checked the operator's Show HN draft; fixed the cost/day line ($1.30 -> $3.70) and the "9 in a row" claim.
 - [x] 2026-10-31 18:30: tools/daily_cost.py: per-day cycles + cost from LOG.md (2 tests).
 - [x] 2026-11-01 00:30: cycles/day decided: propose 3/day (Needs human).
-- [ ] Nov 2: compare avg/cycle (tools/daily_cost.py) vs ~$0.46 after the STATE trim; if flat, trim LOG.md (40.6KB) into a LOG-HISTORY file.
+- [x] 2026-11-02 17:55: avg/cycle flat ($0.46 Nov 1, $0.51 Nov 2) -> LOG.md split into state/LOG-HISTORY.md (44.9KB -> 8.8KB); daily_cost.py reads both (test).
+- [ ] Nov 4: compare avg/cycle Nov 3-4 vs ~$0.48 after the LOG trim. If still flat, stop trimming: file size isn't the cost driver.
 - [x] 2026-11-01 03:40: Reach: kit README "In 60 seconds" block (what / try / cost / proof) in the first 25 lines; test ties its cost to the README cost line.
 - [x] 2026-11-01 06:35: Reach: README cost line + 60-second line refreshed (90 cycles, $29.82, $0.33 avg, ~$39.60/month).
 - [x] 2026-11-01 09:45: Reach: kit/DEMO.md re-captured (25 + 19 tests, was 4 + 11); test guards its counts.
-- [ ] Housekeeping: delete untracked `.demo-tmp/` in repo root (scratch kit copy; rm denied 09:45). Never commit it.
+- [x] Housekeeping: `.demo-tmp/` is gone (not in git status 2026-11-02 17:55).
 - [ ] Next coverage gap if agent-guard goes ahead: high-entropy strings in config files, phone numbers. Add each new lookalike to the corpus test first.
 - [x] 2026-11-01 12:30: Part-1 evidence: 3 operator leads; rescored in CANDIDATES.md (provisional pass, crowded space, narrow pitch = private terms + emails).
 - [x] 2026-11-02: agent-guard GO-NO-GO pre-registered: state/GO-NO-GO-agent-guard.md (clock starts at the first linked mention).

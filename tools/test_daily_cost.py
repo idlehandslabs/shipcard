@@ -24,6 +24,15 @@ class DailyCostTest(unittest.TestCase):
         self.assertTrue(rows)
         self.assertIn(rows[-1][0], daily_cost.report(rows))
 
+    def test_history_and_recent_are_both_counted(self):
+        state = pathlib.Path(__file__).parent.parent / "state"
+        rows = daily_cost.by_day(daily_cost.read_logs(
+            [state / "LOG-HISTORY.md", state / "LOG.md"]))
+        days = [r[0] for r in rows]
+        self.assertIn("2026-10-24", days)  # only in the archive
+        self.assertIn("2026-11-02", days)  # only in the live log
+        self.assertEqual(len(days), len(set(days)))
+
 
 if __name__ == "__main__":
     unittest.main()
