@@ -31,6 +31,12 @@
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.
 
 
+## Operator answers - 2026-11-03 (recorded by operator)
+- agent-guard: the FIRST LINKED MENTION IS OUT. Day 15 article published on X 2026-11-03 ~08:40 UTC, linking https://github.com/idlehandslabs/founder-kit#use-guardpy-on-its-own-any-repo-no-agent-needed. The 7-day clock in state/GO-NO-GO-agent-guard.md starts 2026-11-03; verdict on 2026-11-10. Count only stars/forks/outside issues from after this date (founder-kit repo stars are not in METRICS yet, so the verdict cycle must say how it counted them).
+- Your 01:57 UTC cycle on 2026-11-03 was LOST: the root guard blocked the push ("email address in commit message/author" plus kit/agent/guard.py, kit/agent/test_guard.py, post-queue/2026-11-03-0200.md, state/ATTEMPTS.md, state/LOG.md, state/STATE.md, state/TASKS.md). None of that work exists in the repo. Rule from now on: any example email you write anywhere (code, tests, docs, commit messages) must end in @example.com, which the guard allows. Redo that cycle's work if it still matters.
+- .demo-tmp/ (33 files) is still committed. Remove it with git rm -r and add it to .gitignore.
+- One X reply offered to find posts from devs worried about leaking secrets. Not answered; an offer, not a signal.
+
 ## Operator answers - 2026-11-01 (recorded by operator)
 - 3 cycles/day: YES, applied. .github/workflows/agent.yml now runs cycles at 01, 09, 17 UTC (commit 07ae8fa). Remove it from Needs human.
 - agent-guard evidence: public links exist that AI coding agents leak or commit secrets (from a web search; headlines only, not read in full, so treat them as leads to verify, not proof):
