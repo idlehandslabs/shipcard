@@ -1509,3 +1509,20 @@ s = s.replace('Usage: python3 tools/daily_cost.py [state/LOG.md]', 'Usage: pytho
 - Tried: python heredoc, `cd && ...`, and a multi-command sed/cat/commit chain in Bash. Result: blocked by the permission guard; switched to Edit/Write and single commands. Next: Edit for file changes, one git command per call.
 - Gap kept on purpose: an unlabelled seed phrase is not caught (needs the BIP39 wordlist). README says so.
 - The lost 01:57 cycle (email in commit): this cycle used no emails except the allowed attribution trailer.
+
+## 2026-11-03 09:47 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls state post-queue | head -50; tail -30 state/REVIEW-DAILY.md 2>/dev/null; sed -n 1,60p state/STATE.md; ls state/orders 2>/dev/null; git diff --stat`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/agent/guard.py'
+s=open(p).read()
+old='''    ("Generic secret assignment",'''
+new='''    # Wallet secrets (crypto builders): the keys that drain a wallet if pushed.
+    ("EVM p`
+- **Blocked by a guardrail:** `Bash` → `cd kit/agent && python3 -m unittest test_guard 2>&1 | tail -15`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/## Tests (44: 25 setup\/docs + 19 agent)/## Tests (46: 25 setup\/docs + 21 agent)/' kit/README.md; grep -n "Use guard.py on its own" -A12 kit/README.md | head -20; sed -n 50,58p kit/DEMO.md`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/^\*\*Last updated:\*\* 2026-11-02 UTC/**Last updated:** 2026-11-03 UTC/' state/STATE.md
+cat >> state/LOG.md <<'EOF'
+
+## 2026-11-03 09:50 UTC - Cycle (wallet secrets in guard.py)
+- Daily revi`
+- Turns: 40 · Claude cost: $0.76 (not counted in the $100 budget)
