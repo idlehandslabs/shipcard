@@ -1,0 +1,43 @@
+name: x-post
+
+# Posts today's article to X once, after the site has deployed it. Plain code, no agent.
+# Pause: Actions tab -> x-post -> "..." -> Disable workflow.
+on:
+  workflow_run:
+    workflows: ["deploy-shipcard"]
+    types: [completed]
+  schedule:
+    - cron: "40 8 * * *"   # fallback, in case the deploy run is skipped
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: x-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Post today's article (once)
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+          PRIVATE_TERMS: ${{ secrets.PRIVATE_TERMS }}
+        run: |
+          pip install --quiet requests-oauthlib
+          python3 agent/x_post.py
+      - name: Record the post so it never repeats
+        run: |
+          if [ -z "$(git status --porcelain state/x-posted)" ]; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/x-posted
+          git commit -m "x-post: record today's post"
+          for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 10; done
+          exit 1
