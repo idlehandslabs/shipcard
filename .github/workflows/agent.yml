@@ -84,6 +84,12 @@ jobs:
         run: |
           chmod +x agent/*.sh
           ./agent/daily-article.sh
+      - name: Publish articles to the site (plain code, after the agent)
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          pip install --quiet cairosvg || true
+          python3 agent/publish_blog.py
       - name: Guard (secrets, emails, private terms) — blocks the push if anything leaks
         env:
           PRIVATE_TERMS: ${{ secrets.PRIVATE_TERMS }}
