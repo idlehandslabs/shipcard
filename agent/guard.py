@@ -39,8 +39,8 @@ for msg in git("log", "--format=%an <%ae>%n%s%n%b", f"{base}..HEAD").splitlines(
 # Files the agent may never change. Its own brakes, the payment checker, the order inbox,
 # and the code that builds wallet transactions. A prompt-injected agent must not be able to
 # weaken any of them. Humans change these through the GitHub web UI, not through the agent.
-PROTECTED = ("agent/guard.py", "agent/orders.py", "agent/metrics.py", "agent/publish_blog.py",
-             "agent/cycle-prompt.md", "agent/daily-article-prompt.md", "cf/", ".github/",
+PROTECTED = ("agent/guard.py", "agent/orders.py", "agent/metrics.py", "agent/publish_blog.py", "agent/x_post.py",
+             "agent/cycle-prompt.md", "agent/daily-article-prompt.md", "state/x-posted/", "cf/", ".github/",
              ".claude/", "CLAUDE.md", "app/reclaim/tx.js", "app/reclaim/safety.js")
 
 problems = []
