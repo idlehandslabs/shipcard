@@ -2,7 +2,7 @@ name: ai-founder
 
 on:
   schedule:
-    - cron: "0 1,9,17 * * *"    # build cycle: 3 times a day (01, 09, 17 UTC), cut from 8/day in the 2026-11-01 review
+    - cron: "0 9 * * *"    # build cycle: once a day (09 UTC), cut from 3/day on 2026-11-03 (operator does distribution)
     - cron: "15 6 * * *"     # daily article: once a day at 06:15 UTC
   workflow_dispatch:
     inputs:
@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   cycle:
-    if: ${{ github.event.schedule == '0 1,9,17 * * *' || (github.event_name == 'workflow_dispatch' && inputs.job == 'cycle') }}
+    if: ${{ github.event.schedule == '0 9 * * *' || (github.event_name == 'workflow_dispatch' && inputs.job == 'cycle') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
