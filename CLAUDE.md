@@ -14,12 +14,22 @@ file, then `state/`, every time.
   Backlog: `state/TASKS.md`. Run log: `state/LOG.md`.
 - Product code lives in `app/`. The archived first idea lives in `archive/`.
 
+## The goal (set 2026-11-03, read this first)
+- **$1,000 of revenue in November 2026, from $0.** The operator now does distribution every day
+  (articles plus replies on X). You run once a day (09:00 UTC). Your job, in this order:
+  1. Leave one true, specific piece of story material in `post-queue/` every cycle: a real
+     number, a real failure, a log excerpt. That is what gets read.
+  2. Build only what a paying customer would need this week. If nobody is paying yet, build
+     the smallest thing that lets someone pay.
+  3. No refactors, cost bookkeeping, or docs polish unless it serves 1 or 2.
+- agent-guard's 7-day test (state/GO-NO-GO-agent-guard.md) still runs to 2026-11-10.
+
 ## Facts that don't change (read before writing "Needs human")
 - **Deploys are automatic.** Every push that changes `app/` goes live on GitHub Pages within
   minutes. To check, compare "Deployed app version" in `state/METRICS.md` with
   `git rev-parse HEAD:app`. Never write "not deployed" and never ask the operator to deploy.
-- **Posting happens every day.** The operator publishes a daily article on X (Days 1-6 are
-  out) and posts drafts from `post-queue/` when they're good. "Post a draft" is not a blocker.
+- **Posting happens every day.** The operator publishes a daily article on X (every day since
+  Day 1) and posts drafts from `post-queue/` when they're good. "Post a draft" is not a blocker.
 - **The founder-kit repo syncs itself:** https://github.com/idlehandslabs/founder-kit copies
   `kit/` from this repo every 6 hours (it runs the kit tests first, and skips `kit/workflow/`
   and `kit/EXTRACT.md`). Never list "sync the kit" as needs-human. Write `kit/README.md` for
