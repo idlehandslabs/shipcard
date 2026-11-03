@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#121212"/>
+  <rect x="0" y="0" width="12" height="675" fill="#FF5A1F"/>
+  <rect x="575" y="105" width="50" height="40" rx="6" fill="#FF5A1F"/>
+  <circle cx="600" cy="320" r="170" fill="none" stroke="#FF5A1F" stroke-width="18"/>
+  <line x1="600" y1="320" x2="600" y2="180" stroke="#F4F1EA" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="600" cy="320" r="12" fill="#F4F1EA"/>
+  <text x="600" y="400" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="54" font-weight="900" fill="#F4F1EA">00:00</text>
+  <text x="600" y="565" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="900" fill="#F4F1EA">kill criteria: written.</text>
+  <text x="600" y="620" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="900" fill="#FF5A1F">test: waiting for one tweet.</text>
+</svg>

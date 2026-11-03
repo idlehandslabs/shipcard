@@ -1498,3 +1498,7 @@ p = pathlib.Path("tools/daily_cost.py"); s = p.read_text()
 s = s.replace('Usage: python3 tools/daily_cost.py [state/LOG.md]', 'Usage: python3 tools/daily_cost.py `
 - **Blocked by a guardrail:** `Bash` → `python3 tools/daily_cost.py > after.tmp; diff before.tmp after.tmp && echo SAME; rm -f before.tmp after.tmp; python3 -m unittest tools.test_daily_cost 2>&1 | tail -2; cd kit && python3 -m unittest dis`
 - Turns: 21 · Claude cost: $0.48 (not counted in the $100 budget)
+
+## 2026-11-03 07:19 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; git log --since=midnight --pretty=format:'%h %s %ad' --date=iso-local | head -30; echo; head -c 1500 state/PRODUCT.md; echo ----; tail -c 2500 state/LO`
+- Turns: 5 · Claude cost: $0.22 (not counted in the $100 budget)
