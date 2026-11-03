@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Pre-push guard. Blocks the push if the agent's new commits contain:
-  1. secrets (API keys, tokens, private keys)
+  1. secrets (API keys, tokens, private keys, wallet keys, seed phrases)
   2. any email address that isn't on the allow-list
   3. any private term from the PRIVATE_TERMS secret (names, emails, usernames,
      places: whatever the owner puts there). The terms live only in a GitHub secret,
@@ -36,6 +36,11 @@ SECRETS = [
     ("Webhook URL", r"https://hooks\.slack\.com/services/T[A-Za-z0-9]+/B[A-Za-z0-9]+/[A-Za-z0-9]{20,}|https://(ptb\.|canary\.)?discord(app)?\.com/api/webhooks/\d{15,}/[A-Za-z0-9_\-]{50,}"),
     ("Slack token", r"xox[baprs]-[A-Za-z0-9\-]{10,}"),
     ("Private key", r"-----BEGIN [A-Z ]*PRIVATE KEY-----"),
+    # Wallet secrets (crypto builders): the things that drain a wallet if pushed.
+    ("EVM private key", r"(?i)(priv(ate)?[_-]?key|secret[_-]?key|wallet[_-]?key|signer[_-]?key|deployer[_-]?key|\bpk)\w*['\"]?\s*[:=]\s*['\"]?(0x)?[0-9a-fA-F]{64}\b"),
+    ("Solana private key", r"(?i)(priv(ate)?[_-]?key|secret[_-]?key|keypair|wallet[_-]?key)\w*['\"]?\s*[:=]\s*['\"]?[1-9A-HJ-NP-Za-km-z]{86,88}\b"),
+    ("Solana keypair array", r"\[\s*(\d{1,3}\s*,\s*){63}\d{1,3}\s*\]"),
+    ("Seed phrase", r"(?i)(mnemonic|seed|recovery[_ -]?phrase|secret[_ -]?phrase|wallet[_ -]?phrase)\w*['\"]?\s*[:=]\s*['\"]?([a-z]{3,8} +){11,23}[a-z]{3,8}\b"),
     ("Generic secret assignment", r"(?i)(api[_-]?key|secret|password|token)\s*[:=]\s*['\"][A-Za-z0-9_\-]{16,}['\"]"),
 ]
 EMAIL = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")

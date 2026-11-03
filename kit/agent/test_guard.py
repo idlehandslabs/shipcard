@@ -42,6 +42,38 @@ class GuardTest(unittest.TestCase):
         self.assertEqual(r.returncode, 1)
         self.assertIn("AWS key", r.stdout)
 
+    def test_blocks_wallet_secrets(self):
+        # fake values, built at runtime so this file never contains a key-shaped literal
+        hex64 = "ab" * 32
+        b58 = "4" + "Zx9" * 29  # 88 base58 chars
+        arr = "[" + ",".join(str(i) for i in range(64)) + "]"
+        seed = " ".join(["abandon"] * 11 + ["about"])  # the public BIP39 test vector
+        for name, text in [
+            ("EVM private key", "PRIVATE_KEY=0x" + hex64),
+            ("EVM private key", "const deployerKey = '" + hex64 + "'"),
+            ("Solana private key", "SOLANA_SECRET_KEY=" + b58),
+            ("Solana keypair array", arr),
+            ("Seed phrase", "MNEMONIC=\"" + seed + "\""),
+            ("Seed phrase", "seed_phrase: " + seed),
+        ]:
+            with self.subTest(text=text[:20]):
+                self.commit("w.txt", text + "\n")
+                r = self.guard()
+                self.assertEqual(r.returncode, 1, r.stdout)
+                self.assertIn(name, r.stdout)
+
+    def test_wallet_lookalikes_pass(self):
+        # public data crypto code is full of: tx hashes, addresses, short arrays, prose
+        for text in [
+            "txHash = 0x" + "cd" * 32,
+            "WALLET_ADDRESS=7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
+            "bytes = [1, 2, 3, 4]",
+            "Seed the database with twelve rows before the test runs",
+        ]:
+            with self.subTest(text=text[:20]):
+                self.commit("w.txt", text + "\n")
+                self.assertEqual(self.guard().returncode, 0, self.guard().stdout)
+
     def test_blocks_common_key_formats(self):
         # formats agents often paste into code; concatenated so this file stays clean
         for name, text in [

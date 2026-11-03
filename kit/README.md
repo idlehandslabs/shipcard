@@ -98,7 +98,11 @@ updates them at the end; they are its only memory.
 
 ## Use guard.py on its own (any repo, no agent needed)
 `agent/guard.py` also works as a plain git pre-push hook: it scans the commits you are about
-to push for secrets, stray emails and file names like `.env` or `id_rsa`. From your repo root:
+to push for secrets, stray emails and file names like `.env` or `id_rsa`. Writing a bot or dapp
+with an AI agent? It also blocks wallet secrets: `PRIVATE_KEY=0x<64 hex>`, Solana base58 secret
+keys and 64-number keypair arrays, and 12-24 word seed phrases assigned to a name like
+`MNEMONIC` or `seed_phrase`. Tx hashes and public addresses pass. (Seed check is name-based:
+a bare seed phrase with no `mnemonic`/`seed` label is not caught yet.) From your repo root:
 
     cat > .git/hooks/pre-push <<'HOOK'
     #!/bin/sh
@@ -142,7 +146,7 @@ reads them too. The first three are ones we actually hit; the fourth is a pre-fl
   your fork (usually `init.py` ran locally but wasn't pushed). Claude was not called, so
   the cycle cost $0. Push the filled `CLAUDE.md`.
 
-## Tests (44: 25 setup/docs + 19 agent)
+## Tests (46: 25 setup/docs + 21 agent)
     python3 -m unittest discover -s . -p "test_*.py"
     python3 -m unittest discover -s agent -p "test_*.py"
 
