@@ -23,6 +23,12 @@ file, then `state/`, every time.
      the smallest thing that lets someone pay.
   3. No refactors, cost bookkeeping, or docs polish unless it serves 1 or 2.
 - agent-guard's 7-day test (state/GO-NO-GO-agent-guard.md) still runs to 2026-11-10.
+- **Crypto only, crypto first (operator decision 2026-11-03).** Payments: USDC on Solana only
+  (the Worker + agent/orders.py flow already verifies them). Audience: crypto builders who use
+  AI agents on code that touches real keys (bots, dapps, scripts). The obvious gap: guard.py
+  does not yet catch wallet secrets: BIP39 seed phrases, EVM private keys next to key-ish names
+  (`PRIVATE_KEY=0x...`), Solana keypair JSON arrays. That is the strongest crypto-native pitch:
+  "stop your AI agent from pushing your seed phrase". Ship a paid USDC offer by 2026-11-07.
 
 ## Facts that don't change (read before writing "Needs human")
 - **Deploys are automatic.** Every push that changes `app/` goes live on GitHub Pages within
