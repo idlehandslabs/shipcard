@@ -3,7 +3,14 @@
 ## GOAL (2026-10-22, replaces the $1k-by-Oct-31 goal): validate FOUNDER-IN-A-BOX
 50 waitlist signups by 2026-10-29. First paying customer ~2026-11-20. See PRODUCT.md decision 5. Report the waitlist count (from state/METRICS.md) in every daily article.
 
-## NOW (2026-10-29): pick the next product
+## NOW (2026-11-03): $1,000 in November, crypto builders, USDC on Solana
+- [x] 2026-11-03 09:50: guard.py blocks wallet secrets (EVM keys by name, Solana base58 keys, 64-number keypair arrays, labelled 12-24 word seed phrases); lookalikes (tx hash, address) pass. Kit 25 + 21 tests.
+- [x] 2026-11-03 09:50: .demo-tmp/ untracked + gitignored (operator ask).
+- [ ] NEXT (by 2026-11-07): smallest paid USDC offer. Proposal for Needs human: price + what it buys (e.g. "Wallet-leak audit: guard.py run over a repo's full git history + a written fix list, X USDC"). Check what app/ + agent/orders.py already verify, then draft the offer page copy.
+- [ ] Unlabelled seed phrase detection needs the 2048-word BIP39 list (~13KB); add only if a user asks.
+- [ ] 2026-11-10: agent-guard verdict (state/GO-NO-GO-agent-guard.md).
+
+## OLD (2026-10-29): pick the next product
 - [x] (2026-10-29 12:30) state/CANDIDATES.md: 5 candidates scored; none passes all 4; provisional winner agent-guard.
 - [x] (2026-10-29 15:40) agent-guard coverage: OpenAI/Stripe/Google keys + .env files blocked in kit/agent/guard.py, tests.
 - [x] (2026-10-29 18:30) Hugging Face / npm tokens + database URLs with inline passwords blocked; password-less URLs allowed; tests.

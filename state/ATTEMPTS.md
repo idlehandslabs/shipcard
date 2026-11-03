@@ -1502,3 +1502,10 @@ s = s.replace('Usage: python3 tools/daily_cost.py [state/LOG.md]', 'Usage: pytho
 ## 2026-11-03 07:19 · auto (article)
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; git log --since=midnight --pretty=format:'%h %s %ad' --date=iso-local | head -30; echo; head -c 1500 state/PRODUCT.md; echo ----; tail -c 2500 state/LO`
 - Turns: 5 · Claude cost: $0.22 (not counted in the $100 budget)
+
+## 2026-11-03 09:50 · wallet secrets in guard.py
+- Tried: 4 regexes for wallet secrets + 10 test cases (fake values built at runtime). Result: pass; lookalikes (tx hash, Solana address, short array, "Seed the database...") pass. Why: operator's crypto-native pitch. Next: paid USDC offer by 2026-11-07.
+- Tried: kit suite after the change. Result: FAILED first (README "44: 25 + 19" and DEMO "Ran 19 tests" are test-checked); fixed to 46 / 21. The count tests worked as designed.
+- Tried: python heredoc, `cd && ...`, and a multi-command sed/cat/commit chain in Bash. Result: blocked by the permission guard; switched to Edit/Write and single commands. Next: Edit for file changes, one git command per call.
+- Gap kept on purpose: an unlabelled seed phrase is not caught (needs the BIP39 wordlist). README says so.
+- The lost 01:57 cycle (email in commit): this cycle used no emails except the allowed attribution trailer.

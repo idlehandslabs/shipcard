@@ -75,3 +75,6 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 2026-11-02T17:54:08Z  cycle rc=0 cost=$0.48208320000000005  log=logs/cycle-20261102T175259Z.json
 2026-11-03 - Daily article written: daily-log/2026-11-03.md (Day 15; no cycles yet today; cover + meme-1 in daily-log/assets/2026-11-03/). Not published.
 2026-11-03T07:19:30Z  daily-article rc=0  log=logs/article-20261103T071850Z.json
+
+## 2026-11-03 09:50 UTC - Cycle (wallet secrets in guard.py)
+- Daily review started: state/REVIEW-DAILY.md (revenue $0 of $1,000; $35.71/day needed; verdict ADJUST). kit/agent/guard.py: 4 new patterns (EVM private key, Solana private key, Solana keypair array, Seed phrase); test_blocks_wallet_secrets (6 cases) + test_wallet_lookalikes_pass (4 cases). Kit tests 25 + 21 pass; README/DEMO counts updated. Root guard on the code commit: clean. .demo-tmp/ untracked. Draft: post-queue/2026-11-03-0947.md. Stars 0, orders 0, revenue $0, budget $0/$100.
