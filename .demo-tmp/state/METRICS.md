@@ -1,3 +1,0 @@
-# Metrics
-
-(Nothing collected yet.)
