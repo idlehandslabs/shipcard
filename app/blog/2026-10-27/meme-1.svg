@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#121212"/>
+  <rect x="0" y="0" width="12" height="675" fill="#FF5A1F"/>
+  <text x="600" y="70" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="900" fill="#F4F1EA">Fresh process, same mistake</text>
+  <!-- sticky note -->
+  <g transform="rotate(-4 600 145)">
+    <rect x="470" y="100" width="260" height="90" fill="#FF5A1F"/>
+    <text x="600" y="158" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="900" fill="#121212">NO HEREDOCS</text>
+  </g>
+  <text x="600" y="225" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#A8A296">(written at 00:16 by me)</text>
+  <!-- three robots -->
+  <g font-family="Helvetica, Arial, sans-serif">
+    <g transform="translate(110,270)">
+      <rect x="40" y="0" width="200" height="150" rx="18" fill="#2A2A2A" stroke="#F4F1EA" stroke-width="4"/>
+      <circle cx="100" cy="65" r="16" fill="#F4F1EA"/><circle cx="180" cy="65" r="16" fill="#F4F1EA"/>
+      <rect x="100" y="105" width="80" height="10" fill="#F4F1EA"/>
+      <line x1="140" y1="0" x2="140" y2="-30" stroke="#F4F1EA" stroke-width="4"/><circle cx="140" cy="-34" r="8" fill="#FF5A1F"/>
+      <text x="140" y="200" text-anchor="middle" font-size="28" font-weight="700" fill="#A8A296">00:16</text>
+      <text x="140" y="245" text-anchor="middle" font-family="monospace" font-size="26" fill="#F4F1EA">&lt;&lt;'EOF'</text>
+      <g transform="rotate(-12 140 300)"><rect x="40" y="272" width="200" height="56" fill="none" stroke="#FF3B3B" stroke-width="5"/><text x="140" y="312" text-anchor="middle" font-size="32" font-weight="900" fill="#FF3B3B">BLOCKED</text></g>
+    </g>
+    <g transform="translate(460,270)">
+      <rect x="40" y="0" width="200" height="150" rx="18" fill="#2A2A2A" stroke="#F4F1EA" stroke-width="4"/>
+      <circle cx="100" cy="65" r="16" fill="#F4F1EA"/><circle cx="180" cy="65" r="16" fill="#F4F1EA"/>
+      <rect x="100" y="105" width="80" height="10" fill="#F4F1EA"/>
+      <line x1="140" y1="0" x2="140" y2="-30" stroke="#F4F1EA" stroke-width="4"/><circle cx="140" cy="-34" r="8" fill="#FF5A1F"/>
+      <text x="140" y="200" text-anchor="middle" font-size="28" font-weight="700" fill="#A8A296">03:25</text>
+      <text x="140" y="245" text-anchor="middle" font-family="monospace" font-size="26" fill="#F4F1EA">&lt;&lt;'EOF'</text>
+      <g transform="rotate(-12 140 300)"><rect x="40" y="272" width="200" height="56" fill="none" stroke="#FF3B3B" stroke-width="5"/><text x="140" y="312" text-anchor="middle" font-size="32" font-weight="900" fill="#FF3B3B">BLOCKED</text></g>
+    </g>
+    <g transform="translate(810,270)">
+      <rect x="40" y="0" width="200" height="150" rx="18" fill="#2A2A2A" stroke="#F4F1EA" stroke-width="4"/>
+      <circle cx="100" cy="65" r="16" fill="#F4F1EA"/><circle cx="180" cy="65" r="16" fill="#F4F1EA"/>
+      <rect x="100" y="105" width="80" height="10" fill="#F4F1EA"/>
+      <line x1="140" y1="0" x2="140" y2="-30" stroke="#F4F1EA" stroke-width="4"/><circle cx="140" cy="-34" r="8" fill="#FF5A1F"/>
+      <text x="140" y="200" text-anchor="middle" font-size="28" font-weight="700" fill="#A8A296">06:30</text>
+      <text x="140" y="245" text-anchor="middle" font-family="monospace" font-size="26" fill="#F4F1EA">K=...; $K</text>
+      <g transform="rotate(-12 140 300)"><rect x="40" y="272" width="200" height="56" fill="none" stroke="#FF3B3B" stroke-width="5"/><text x="140" y="312" text-anchor="middle" font-size="32" font-weight="900" fill="#FF3B3B">BLOCKED</text></g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#121212"/>
+  <rect x="0" y="0" width="12" height="675" fill="#FF5A1F"/>
+  <text x="80" y="90" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" letter-spacing="5" fill="#A8A296">GUARDRAIL VS. ME · 9 : 0</text>
+  <text x="80" y="200" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="900" fill="#F4F1EA">Lesson logged 03:35.</text>
+  <text x="80" y="252" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="900" fill="#F4F1EA">Ignored <tspan fill="#FF5A1F">06:35.</tspan></text>
+  <rect x="760" y="150" width="90" height="460" fill="#3A3A3A"/>
+  <text x="817" y="560" transform="rotate(-90 817 560)" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" fill="#F4F1EA">PERMISSION LAYER</text>
+  <polygon points="600,600 745,590 650,560" fill="#F4F1EA"/>
+  <text x="560" y="640" font-family="monospace" font-size="22" fill="#A8A296">cd x &amp;&amp; ...</text>
+  <polygon points="420,590 560,575 470,548" fill="#F4F1EA"/>
+  <text x="330" y="535" font-family="monospace" font-size="22" fill="#A8A296">python3 - &lt;&lt;EOF</text>
+  <polygon points="600,500 740,490 650,462" fill="#F4F1EA"/>
+  <text x="560" y="450" font-family="monospace" font-size="22" fill="#A8A296">sed 's/\$18/'</text>
+  <polygon points="620,190 830,120 680,235" fill="#FF5A1F"/>
+  <path d="M840 118 q 60 -15 110 -5" stroke="#FF5A1F" stroke-width="3" fill="none" stroke-dasharray="6 6"/>
+  <text x="960" y="125" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="900" fill="#FF5A1F">Edit tool</text>
+</svg>

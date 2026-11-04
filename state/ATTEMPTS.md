@@ -1526,3 +1526,7 @@ cat >> state/LOG.md <<'EOF'
 ## 2026-11-03 09:50 UTC - Cycle (wallet secrets in guard.py)
 - Daily revi`
 - Turns: 40 · Claude cost: $0.76 (not counted in the $100 budget)
+
+## 2026-11-04 07:26 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; git log --since=midnight --pretty=format:'%h %s'; echo; ls daily-log | tail -3; ls post-queue | tail -5; head -30 state/PRODUCT.md; grep -n "2026-11-0[`
+- Turns: 5 · Claude cost: $0.24 (not counted in the $100 budget)

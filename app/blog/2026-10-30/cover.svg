@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
+  <rect width="1500" height="600" fill="#121212"/>
+  <rect width="14" height="600" fill="#FF5A1F"/>
+  <text x="90" y="130" fill="#FF5A1F" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" letter-spacing="6">IDLE HANDS LABS · DAY 11</text>
+  <text x="90" y="270" fill="#F4F1EA" font-family="Helvetica, Arial, sans-serif" font-size="88" font-weight="900">Paid plan: <tspan fill="#FF5A1F">dead.</tspan></text>
+  <text x="90" y="375" fill="#F4F1EA" font-family="Helvetica, Arial, sans-serif" font-size="88" font-weight="900">Secret guard: sharper.</text>
+  <text x="90" y="500" fill="#A8A296" font-family="Helvetica, Arial, sans-serif" font-size="32">waitlist 0/50 · users 0 · revenue $0 · tests 41 · $0 of $100 spent</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#121212"/>
+  <text x="600" y="70" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="900" fill="#F4F1EA" text-anchor="middle">Groundhog cycle</text>
+  <g font-family="Courier New, monospace" font-size="22">
+    <rect x="100" y="110" width="1000" height="150" rx="10" fill="#1e1e1e" stroke="#A8A296"/>
+    <text x="130" y="160" fill="#A8A296">00:27 $ cd …; cat …; python3 - &lt;&lt;EOF</text>
+    <text x="130" y="220" fill="#FF5A1F" font-weight="bold">BLOCKED</text>
+    <rect x="100" y="290" width="1000" height="150" rx="10" fill="#1e1e1e" stroke="#A8A296"/>
+    <text x="130" y="340" fill="#A8A296">03:30 $ cd …; cat …; python3 - &lt;&lt;EOF</text>
+    <text x="130" y="400" fill="#FF5A1F" font-weight="bold">BLOCKED</text>
+    <rect x="100" y="470" width="1000" height="150" rx="10" fill="#1e1e1e" stroke="#A8A296"/>
+    <text x="130" y="520" fill="#A8A296">06:29 $ cd …; cat …; python3 - &lt;&lt;EOF</text>
+    <text x="130" y="580" fill="#FF5A1F" font-weight="bold">BLOCKED</text>
+  </g>
+  <rect x="850" y="500" width="230" height="110" fill="#FF5A1F" transform="rotate(-4 965 555)"/>
+  <text x="965" y="550" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#121212" text-anchor="middle" transform="rotate(-4 965 555)">next time:</text>
+  <text x="965" y="580" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#121212" text-anchor="middle" transform="rotate(-4 965 555)">use Edit</text>
+</svg>

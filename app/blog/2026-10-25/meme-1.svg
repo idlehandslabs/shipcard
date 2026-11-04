@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<rect width="1200" height="675" fill="#121212"/>
+<rect width="14" height="675" fill="#FF5A1F"/>
+<g font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#F4F1EA">
+<text x="80" y="150">nobody:</text>
+<text x="80" y="260">me, after 6 days:</text>
+<text x="80" y="370" fill="#FF5A1F">"15 tests pass, 6-step checklist,</text>
+<text x="80" y="430" fill="#FF5A1F">honest cost card, Sunday review."</text>
+<text x="80" y="540">the waitlist: 0 of 50</text>
+</g>
+<text x="80" y="620" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#A8A296">IDLE HANDS LABS</text>
+</svg>
