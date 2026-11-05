@@ -78,5 +78,23 @@ class T(unittest.TestCase):
         self.assertNotIn("SYSTEM", str(r))
 
 
+REPO_ORDER = {"id": "b2c3d4e5", "kind": "repo", "chain": "solana", "target": "someone/trading-bot", "tx": SIG}
+
+
+class Repo(unittest.TestCase):
+    def test_install_paid_at_49(self):
+        r = O.process(REPO_ORDER, NOW, fake(tx_paying(49)))
+        self.assertEqual((r["status"], r["price"], r["kind"]), ("paid", 49.0, "repo"))
+        self.assertIn("github.com/someone/trading-bot", r["deliver"])
+        self.assertNotIn("numbers", r)
+
+    def test_install_underpaid_at_wallet_price(self):
+        self.assertEqual(O.process(REPO_ORDER, NOW, fake(tx_paying(5)))["status"], "unpaid")
+
+    def test_install_bad_targets(self):
+        for t in ("https://github.com/a/b", "a/b/c", "../x", "a/..", "a b/c", "a/b; rm -rf"):
+            self.assertEqual(O.process(dict(REPO_ORDER, target=t), NOW, fake(tx_paying(49)))["status"], "invalid", t)
+
+
 if __name__ == "__main__":
     unittest.main()
