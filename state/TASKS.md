@@ -6,7 +6,10 @@
 ## NOW (2026-11-03): $1,000 in November, crypto builders, USDC on Solana
 - [x] 2026-11-03 09:50: guard.py blocks wallet secrets (EVM keys by name, Solana base58 keys, 64-number keypair arrays, labelled 12-24 word seed phrases); lookalikes (tx hash, address) pass. Kit 25 + 21 tests.
 - [x] 2026-11-03 09:50: .demo-tmp/ untracked + gitignored (operator ask).
-- [ ] NEXT (by 2026-11-07): smallest paid USDC offer. Proposal for Needs human: price + what it buys (e.g. "Wallet-leak audit: guard.py run over a repo's full git history + a written fix list, X USDC"). Check what app/ + agent/orders.py already verify, then draft the offer page copy.
+- [x] 2026-11-05: guard.py --history (keys already pushed); kit 25 + 23 tests.
+- [x] 2026-11-05: offer proposed in STATE Needs human (Wallet-leak history audit, 25 USDC).
+- [ ] NEXT on operator yes: offer page in app/ + agent report step for paid "audit" orders. If no answer by 11-07, ship an offer page that sells the audit by manual reply (still USDC verified).
+- [ ] (superseded by above) smallest paid USDC offer. Proposal for Needs human: price + what it buys (e.g. "Wallet-leak audit: guard.py run over a repo's full git history + a written fix list, X USDC"). Check what app/ + agent/orders.py already verify, then draft the offer page copy.
 - [ ] Unlabelled seed phrase detection needs the 2048-word BIP39 list (~13KB); add only if a user asks.
 - [ ] 2026-11-10: agent-guard verdict (state/GO-NO-GO-agent-guard.md).
 

@@ -1,5 +1,5 @@
 # Real-world signals
-_Collected 2026-11-04 07:25 UTC by the runner, before the agent woke up._
+_Collected 2026-11-05 06:20 UTC by the runner, before the agent woke up._
 
 ## Repo
 - Stars: **0**
@@ -8,7 +8,7 @@ _Collected 2026-11-04 07:25 UTC by the runner, before the agent woke up._
 
 ## Live site
 - URL: https://idlehandslabs.github.io/shipcard/
-- Deployed app version (tree hash): `1f0d25f62aab4d6ced6e8871a1343db896cc6f67`
+- Deployed app version (tree hash): `41feb257f886769fa6d8239de08c95dfe622183e`
 
 ## Feedback
 - Open issues: **0** (new this week: **0**)
@@ -17,13 +17,13 @@ _Collected 2026-11-04 07:25 UTC by the runner, before the agent woke up._
 ## Roast usage (last 7 days, UTC)
 | day | roasts | posted to X | downloads | links copied | deep orders |
 |---|---|---|---|---|---|
+| 2026-11-05 | 0 | 0 | 0 | 0 | 0 |
 | 2026-11-04 | 0 | 0 | 0 | 0 | 0 |
 | 2026-11-03 | 0 | 0 | 0 | 0 | 0 |
 | 2026-11-02 | 0 | 0 | 0 | 0 | 0 |
 | 2026-11-01 | 0 | 0 | 0 | 0 | 0 |
 | 2026-10-31 | 0 | 0 | 0 | 0 | 0 |
 | 2026-10-30 | 0 | 0 | 0 | 0 | 0 |
-| 2026-10-29 | 0 | 0 | 0 | 0 | 0 |
 | **total** | **0** | **0** | **0** | **0** | **0** |
 
 ## Waitlist (Founder-in-a-box)

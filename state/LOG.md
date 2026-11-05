@@ -81,3 +81,6 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 2026-11-03T09:47:56Z  cycle rc=0 cost=$0.7579559999999999  log=logs/cycle-20261103T094555Z.json
 2026-11-04 - Daily article written: daily-log/2026-11-04.md (Day 16; no cycles yet today; recaps 2026-11-03 09:50 wallet-secret cycle; cover + meme-1 in daily-log/assets/2026-11-04/). Not published.
 2026-11-04T07:26:36Z  daily-article rc=0  log=logs/article-20261104T072555Z.json
+
+## 2026-11-05 09:00 UTC - Cycle (guard.py --history + paid offer proposal)
+- Daily review: $0 of $1,000, $38.46/day needed, verdict ADJUST. kit/agent/guard.py `--history` scans every commit on every branch; finds a key committed then "deleted" later, names the file, never prints the key. 2 new tests; kit tests 25 + 23 pass. README + DEMO updated. Commit cf12594. Proposed "Wallet-leak history audit" USDC offer in STATE Needs human. Draft: post-queue/2026-11-05-0900.md. Stars 0, orders 0, revenue $0, budget $0/$100.

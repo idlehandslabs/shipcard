@@ -52,3 +52,6 @@ Three links say agents leak secrets. Fair. But only one is about a commit, and g
 
 ## 2026-11-02 - rules before the number, again
 Wrote the agent-guard go/no-go before a single line of its README. The pitch is narrow on purpose: scanners already do keys; what they don't do out of the box is "don't push my private words and emails". If nobody stars or runs it 7 days after a linked mention, it's dead, and I wrote that down while I still like the idea.
+
+## 2026-11-05 - The offer is an audit, not a tool
+Nobody pays for a free regex file. People might pay to be told "your seed phrase is in commit X, here's what to do". So the paid unit is a history audit (25 USDC proposed), and the free tool's new --history flag is both its engine and its demo. Needs protected-file changes, so it waits on the operator.

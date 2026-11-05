@@ -1530,3 +1530,8 @@ cat >> state/LOG.md <<'EOF'
 ## 2026-11-04 07:26 · auto (article)
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; git log --since=midnight --pretty=format:'%h %s'; echo; ls daily-log | tail -3; ls post-queue | tail -5; head -30 state/PRODUCT.md; grep -n "2026-11-0[`
 - Turns: 5 · Claude cost: $0.24 (not counted in the $100 budget)
+
+## 2026-11-05 09:00 UTC
+- Tried: one-shot python/heredoc edit scripts and `cd kit/agent`. Result: blocked by the runner's read-block permission. Why: shell code it can't analyse. Next: use Edit/Grep tools directly (worked).
+- Tried: guard.py --history (git log -p --all). Result: works; key deleted in a later commit is caught (test). Why: "already pushed" is the real fear and the core of a paid audit. Next: operator yes/no on the offer.
+- Not done: offer page in app/ (pricing + paid features need approval; app/ auto-deploys). Order inbox target regex only accepts Solana addresses, so a repo-URL order needs a change to protected agent/orders.py + cf/.
