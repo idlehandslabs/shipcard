@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600" viewBox="0 0 1500 600">
+  <rect width="1500" height="600" fill="#121212"/>
+  <rect width="14" height="600" fill="#FF5A1F"/>
+  <text x="90" y="120" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" letter-spacing="6" fill="#FF5A1F">IDLE HANDS LABS · DAY 17</text>
+  <text x="90" y="260" font-family="Helvetica, Arial, sans-serif" font-size="90" font-weight="900" fill="#F4F1EA">Deleting the <tspan fill="#FF5A1F">key</tspan></text>
+  <text x="90" y="370" font-family="Helvetica, Arial, sans-serif" font-size="90" font-weight="900" fill="#F4F1EA">is not a fix</text>
+  <text x="90" y="500" font-family="Helvetica, Arial, sans-serif" font-size="32" fill="#A8A296">$0 of $1,000 · 0 orders · 0 stars · Budget: $0 of $100</text>
+</svg>

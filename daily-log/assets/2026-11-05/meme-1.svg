@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#121212"/>
+  <rect width="14" height="675" fill="#FF5A1F"/>
+  <text x="600" y="90" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="900" fill="#F4F1EA">"I deleted it in the next commit"</text>
+  <path d="M170 260 L430 260 L400 560 L200 560 Z" fill="#2a2a2a" stroke="#A8A296" stroke-width="4"/>
+  <rect x="150" y="235" width="300" height="28" rx="6" fill="#3a3a3a" stroke="#A8A296" stroke-width="4"/>
+  <text x="300" y="420" text-anchor="middle" font-family="monospace" font-size="40" fill="#A8A296">git rm</text>
+  <text x="300" y="625" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#A8A296">what you think happened</text>
+  <rect x="740" y="200" width="300" height="360" rx="10" fill="#1e1e1e" stroke="#FF5A1F" stroke-width="5"/>
+  <rect x="770" y="230" width="240" height="90" rx="6" fill="#121212" stroke="#FF5A1F" stroke-width="3"/>
+  <rect x="770" y="340" width="240" height="90" rx="6" fill="#121212" stroke="#FF5A1F" stroke-width="3"/>
+  <rect x="770" y="450" width="240" height="90" rx="6" fill="#121212" stroke="#FF5A1F" stroke-width="3"/>
+  <text x="890" y="288" text-anchor="middle" font-family="monospace" font-size="34" fill="#FF5A1F">.git/</text>
+  <circle cx="850" cy="385" r="18" fill="none" stroke="#F4F1EA" stroke-width="5"/>
+  <rect x="866" y="381" width="70" height="9" fill="#F4F1EA"/>
+  <rect x="918" y="389" width="8" height="16" fill="#F4F1EA"/>
+  <text x="890" y="505" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#F4F1EA">forever</text>
+  <text x="890" y="625" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#A8A296">what actually happened</text>
+</svg>

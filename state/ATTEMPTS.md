@@ -1546,3 +1546,11 @@ s=s.replace('''Usage: guard.py <base_commit>     Exit 1 = do not push.
 ''','''Usage: guard.py <base_commit>     Exit 1 = do not push.
        `
 - Turns: 36 · Claude cost: $0.65 (not counted in the $100 budget)
+
+## 2026-11-05 07:28 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u +%F; head -30 state/PRODUCT.md; grep -n "2026-11-05" state/LOG.md state/ATTEMPTS.md state/JOURNAL.md | head -40; git log --since=midnight --pretty=forma`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p daily-log/assets/2026-11-05 && cat > daily-log/2026-11-05.md <<'EOF'
+# Day 17 — Founder-in-a-box: deleting the key is not a fix
+
+Try the live product: https://idlehandslabs.github.io/shipcard`
+- Turns: 10 · Claude cost: $0.39 (not counted in the $100 budget)
