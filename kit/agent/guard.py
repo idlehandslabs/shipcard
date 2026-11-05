@@ -7,6 +7,7 @@
      never in this public repo, and are never printed.
 Scans added lines, file names, commit messages and commit authors.
 Usage: guard.py <base_commit>     Exit 1 = do not push.
+       guard.py --history         Scan all history (every branch). Exit 1 = a secret was already pushed.
 """
 import os, re, subprocess, sys
 
@@ -48,14 +49,18 @@ ALLOWED_EMAIL_DOMAINS = ("users.noreply.github.com", "noreply@anthropic.com",  #
                          "idlehandslabs.local", "autopilot.local", "example.com")
 terms = [t.strip().lower() for t in re.split(r"[,\n]", os.environ.get("PRIVATE_TERMS", "")) if len(t.strip()) >= 3]
 
+HISTORY = base == "--history"  # scan every commit on every branch: finds keys already pushed
 added = []  # (where, text)
-for line in git("diff", "--unified=0", "--no-color", f"{base}..HEAD").splitlines():
+f = "commit"
+diff = (git("log", "-p", "--all", "--unified=0", "--no-color", "--format=") if HISTORY
+        else git("diff", "--unified=0", "--no-color", f"{base}..HEAD"))
+for line in diff.splitlines():
     if line.startswith("+++ "):
         f = line[6:] if line.startswith("+++ b/") else line[4:]
         added.append(("file name", f))
     elif line.startswith("+") and not line.startswith("+++"):
         added.append((f, line[1:]))
-for msg in git("log", "--format=%an <%ae>%n%s%n%b", f"{base}..HEAD").splitlines():
+for msg in git("log", "--format=%an <%ae>%n%s%n%b", *(["--all"] if HISTORY else [f"{base}..HEAD"])).splitlines():
     added.append(("commit message/author", msg))
 
 # Files the agent may never change. Its own brakes, the payment checker, the order inbox,
@@ -67,7 +72,7 @@ problems = []
 # Everything between base and HEAD was produced during an agent run (the agent's commits plus
 # the runner's bookkeeping commit of whatever it left behind), so ANY change to a protected path
 # in that range blocks the push, regardless of the commit author.
-for f in git("diff", "--name-only", f"{base}..HEAD").splitlines():
+for f in ([] if HISTORY else git("diff", "--name-only", f"{base}..HEAD").splitlines()):
     if f and f.startswith(PROTECTED):
         problems.append(f"agent run changed protected file {f}")
 for where, text in added:

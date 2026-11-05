@@ -42,6 +42,24 @@ class GuardTest(unittest.TestCase):
         self.assertEqual(r.returncode, 1)
         self.assertIn("AWS key", r.stdout)
 
+    def test_history_finds_key_deleted_later(self):
+        # a key committed, then "removed" in a later commit, is still in history
+        self.commit("bot.env.txt", "PRIVATE_KEY=0x" + "cd" * 32 + "\n")
+        self.commit("bot.env.txt", "PRIVATE_KEY=  # moved to a vault\n")
+        self.commit("c.txt", "clean\n")
+        self.assertEqual(self.guard().returncode, 0)  # last commit alone looks clean
+        r = run(self.tmp, "python3", str(GUARD), "--history",
+                env={**os.environ, "PRIVATE_TERMS": ""})
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("EVM private key in bot.env.txt", r.stdout)
+        self.assertNotIn("cd" * 32, r.stdout)  # never echo the key
+
+    def test_history_clean_repo_passes(self):
+        self.commit("b.txt", "nothing\n")
+        r = run(self.tmp, "python3", str(GUARD), "--history",
+                env={**os.environ, "PRIVATE_TERMS": ""})
+        self.assertEqual(r.returncode, 0, r.stdout)
+
     def test_blocks_wallet_secrets(self):
         # fake values, built at runtime so this file never contains a key-shaped literal
         hex64 = "ab" * 32
