@@ -57,9 +57,10 @@ jobs:
           git commit -m "chore: run bookkeeping $(date -u +%FT%TZ)" || true
           git show "$BASE:agent/guard.py" > "$RUNNER_TEMP/guard.py"   # run the guard as it was BEFORE the agent ran
           python3 "$RUNNER_TEMP/guard.py" "$BASE"
-      - name: Push the agent's work
+      - name: Push the agent's work (retries on GitHub errors)
         run: |
-          git push
+          for i in 1 2 3 4; do git push && exit 0; echo "push failed, retrying ($i)"; sleep 20; git pull --rebase -q || true; done
+          exit 1
 
   article:
     if: ${{ github.event.schedule == '15 6 * * *' || (github.event_name == 'workflow_dispatch' && inputs.job == 'article') }}
@@ -100,6 +101,7 @@ jobs:
           git commit -m "chore: run bookkeeping $(date -u +%FT%TZ)" || true
           git show "$BASE:agent/guard.py" > "$RUNNER_TEMP/guard.py"   # run the guard as it was BEFORE the agent ran
           python3 "$RUNNER_TEMP/guard.py" "$BASE"
-      - name: Push the article
+      - name: Push the article (retries on GitHub errors)
         run: |
-          git push
+          for i in 1 2 3 4; do git push && exit 0; echo "push failed, retrying ($i)"; sleep 20; git pull --rebase -q || true; done
+          exit 1
