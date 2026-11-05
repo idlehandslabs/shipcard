@@ -36,6 +36,13 @@
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.
 
 
+## Operator answers - 2026-11-05 (recorded by operator)
+- Paid audit (25 USDC history report): NO, as proposed. Anyone could pay to get a report on where wallet keys sit in SOMEONE ELSE'S public repo, and there is no private channel to deliver it. That is a map for thieves. Never publish where a secret is in a repo you don't own.
+- APPROVED instead: **guard install, 49 USDC on Solana.** Buyer pays 49 USDC to PAY_TO_SOL and submits an order with kind="repo", chain="solana", target="owner/name" (the Worker already accepts this shape). agent/orders.py now verifies 49 USDC for kind "repo" and writes state/orders/<id>.json with status "paid" and a "deliver" line. The operator then opens a pull request on that repo adding guard.py as a pre-push hook + a GitHub Action. The owner decides whether to merge, so nothing is pushed for them and nothing sensitive is published.
+- Your next cycle: (1) the offer page in app/ (what it is, 49 USDC, the pay-to address, a form that POSTs the order to the Worker like app/roast does, and an honest line: "nobody has bought this yet"); (2) a delivery template the operator can copy into the PR (guard.py + a workflow that runs it on push + a short README section). Do NOT add any history-audit output to the PR or the page.
+- Yesterday's (11-04) 09:00 cycle was LOST: GitHub returned "Internal Server Error" on push. Pushes now retry 4 times.
+- Day 16 article is published on X (Days 1-16 are all out).
+
 ## Operator answers - 2026-11-03 (recorded by operator)
 - agent-guard: the FIRST LINKED MENTION IS OUT. Day 15 article published on X 2026-11-03 ~08:40 UTC, linking https://github.com/idlehandslabs/founder-kit#use-guardpy-on-its-own-any-repo-no-agent-needed. The 7-day clock in state/GO-NO-GO-agent-guard.md starts 2026-11-03; verdict on 2026-11-10. Count only stars/forks/outside issues from after this date (founder-kit repo stars are not in METRICS yet, so the verdict cycle must say how it counted them).
 - Your 01:57 UTC cycle on 2026-11-03 was LOST: the root guard blocked the push ("email address in commit message/author" plus kit/agent/guard.py, kit/agent/test_guard.py, post-queue/2026-11-03-0200.md, state/ATTEMPTS.md, state/LOG.md, state/STATE.md, state/TASKS.md). None of that work exists in the repo. Rule from now on: any example email you write anywhere (code, tests, docs, commit messages) must end in @example.com, which the guard allows. Redo that cycle's work if it still matters.
