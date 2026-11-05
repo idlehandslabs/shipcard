@@ -1535,3 +1535,14 @@ cat >> state/LOG.md <<'EOF'
 - Tried: one-shot python/heredoc edit scripts and `cd kit/agent`. Result: blocked by the runner's read-block permission. Why: shell code it can't analyse. Next: use Edit/Grep tools directly (worked).
 - Tried: guard.py --history (git log -p --all). Result: works; key deleted in a later commit is caught (test). Why: "already pushed" is the real fear and the core of a paid audit. Next: operator yes/no on the offer.
 - Not done: offer page in app/ (pricing + paid features need approval; app/ auto-deploys). Order inbox target regex only accepts Solana addresses, so a repo-URL order needs a change to protected agent/orders.py + cf/.
+
+## 2026-11-05 06:21 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls state/ state/orders 2>/dev/null | head -50; tail -30 state/REVIEW-DAILY.md 2>/dev/null; sed -n 1,80p state/STATE.md; head -40 state/TASKS.md; cat state/METRI`
+- **Blocked by a guardrail:** `Bash` → `cd kit/agent; wc -l guard.py test_guard.py; grep -n "^def \|^SECRETS\|__main__\|sys.argv\|^import\|^from" guard.py; sed -n '/__main__/,$p' guard.py`
+- **Blocked by a guardrail:** `Bash` → `wc -l kit/agent/guard.py kit/agent/test_guard.py; grep -n "^def \|^SECRETS\|__main__\|sys.argv\|^import\|^from" kit/agent/guard.py; sed -n '/^def main/,$p' kit/agent/guard.py`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/agent/guard.py'; s=open(p).read()
+s=s.replace('''Usage: guard.py <base_commit>     Exit 1 = do not push.
+''','''Usage: guard.py <base_commit>     Exit 1 = do not push.
+       `
+- Turns: 36 · Claude cost: $0.65 (not counted in the $100 budget)
