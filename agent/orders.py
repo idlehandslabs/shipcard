@@ -8,6 +8,11 @@ For each order in the Cloudflare inbox that is not yet in state/orders/:
      went up by >= PRICE in that tx
   3. if paid, pull the target wallet's public numbers (same facts the free roast uses)
   4. write state/orders/<id>.json  -> {"status": "paid"|"unpaid"|"invalid", ...numbers}
+Kinds and prices:
+  wallet  5 USDC   deep wallet roast (target = Solana address)
+  repo   49 USDC   guard install: the operator opens a pull request adding guard.py as a
+                   pre-push hook + GitHub Action to the target PUBLIC repo (target = owner/name).
+                   The repo owner decides whether to merge, so nothing is ever pushed for them.
 The agent reads state/orders/*.json with status "paid" and no "roast" field, writes the
 roast page, then sets "roast" to the page path. Numbers only reach the agent; no free text.
 """
@@ -17,7 +22,8 @@ INBOX = "https://orders.idlehandslabs.workers.dev/orders"
 RPCS = ["https://solana-rpc.publicnode.com", "https://api.mainnet-beta.solana.com"]
 PAY_TO_SOL = "rQATX95gRcH6LRJj3mtsAv182gwsoJWvMqScSXzhvT9"
 USDC_MINT = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
-PRICE = 5.0
+PRICE = 5.0                        # wallet roast
+PRICES = {"wallet": PRICE, "repo": 49.0}
 MAX_AGE = 7 * 86400
 TOKEN_PROGRAMS = ["TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA", "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"]
 OUT = os.path.join(os.path.dirname(__file__), "..", "state", "orders")
@@ -25,6 +31,7 @@ OUT = os.path.join(os.path.dirname(__file__), "..", "state", "orders")
 RX_ID = re.compile(r"^[0-9a-f]{8}$")
 RX_SOL_ADDR = re.compile(r"^[1-9A-HJ-NP-Za-km-z]{32,44}$")
 RX_SOL_TX = re.compile(r"^[1-9A-HJ-NP-Za-km-z]{64,90}$")
+RX_REPO = re.compile(r"^[A-Za-z0-9_.-]{1,39}/[A-Za-z0-9_.-]{1,100}$")
 
 
 def http_json(url, body=None, timeout=20):
@@ -59,7 +66,7 @@ def usdc_received(tx, owner=PAY_TO_SOL, mint=USDC_MINT):
     return round(total("postTokenBalances") - total("preTokenBalances"), 6)
 
 
-def verify_payment(sig, now, post=http_json):
+def verify_payment(sig, now, post=http_json, price=PRICE):
     tx = rpc("getTransaction", [sig, {"encoding": "jsonParsed", "maxSupportedTransactionVersion": 0, "commitment": "confirmed"}], post)
     if not tx:
         return "unpaid", "transaction not found"
@@ -69,8 +76,8 @@ def verify_payment(sig, now, post=http_json):
     if now - bt > MAX_AGE:
         return "unpaid", "transaction older than 7 days"
     got = usdc_received(tx)
-    if got + 1e-9 < PRICE:
-        return "unpaid", f"received {got} USDC, need {PRICE}"
+    if got + 1e-9 < price:
+        return "unpaid", f"received {got} USDC, need {price}"
     return "paid", f"received {got} USDC"
 
 
@@ -107,16 +114,20 @@ def process(order, now, post=http_json):
     if not (isinstance(oid, str) and RX_ID.match(oid)):
         return None  # unusable id: drop silently
     rec = {"id": oid, "created_at": str(order.get("createdAt", ""))[:30], "checked_at": now}
-    if chain != "solana" or kind != "wallet" or not RX_SOL_ADDR.match(str(target)) or not RX_SOL_TX.match(str(tx)):
-        rec.update(status="invalid", reason="only Solana wallet roasts are supported")
+    ok_target = (kind == "wallet" and RX_SOL_ADDR.match(str(target))) or \
+                (kind == "repo" and RX_REPO.match(str(target)) and ".." not in str(target))
+    if chain != "solana" or not ok_target or not RX_SOL_TX.match(str(tx)):
+        rec.update(status="invalid", reason="supported: Solana wallet roast, or guard install for owner/repo, paid in USDC on Solana")
         return rec
-    rec.update(target=target, tx=tx)
+    rec.update(kind=kind, target=target, tx=tx, price=PRICES[kind])
     try:
-        status, reason = verify_payment(tx, now, post)
+        status, reason = verify_payment(tx, now, post, PRICES[kind])
     except Exception as e:
         return dict(rec, status="retry", reason=str(e)[:120])
     rec.update(status=status, reason=reason)
-    if status == "paid":
+    if status == "paid" and kind == "repo":
+        rec["deliver"] = "operator opens a PR adding the guard to https://github.com/" + target
+    if status == "paid" and kind == "wallet":
         try:
             rec["numbers"] = wallet_numbers(target, now, post)
         except Exception as e:
