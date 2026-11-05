@@ -87,3 +87,8 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 2026-11-05T06:21:40Z  cycle rc=0 cost=$0.6535181999999999  log=logs/cycle-20261105T062005Z.json
 - 2026-11-05 daily article written: daily-log/2026-11-05.md (+ daily-log/assets/2026-11-05/cover.svg, meme-1.svg). Not published.
 2026-11-05T07:28:58Z  daily-article rc=0  log=logs/article-20261105T072743Z.json
+
+## 2026-11-05 ~10:00 UTC
+- Built app/guard/ (index.html, guard.js, guardcore.js): the approved 49 USDC guard-install offer. Form normalises owner/name or a github.com URL, checks the tx signature shape, POSTs kind=repo/chain=solana to the Worker. Page says "Nobody has bought this yet", names the unlabelled-seed-phrase gap, links the free kit. No history-audit content (test asserts it).
+- app/tests/guard.test.mjs: 4 tests, incl. price == orders.py PRICES["repo"]. App tests: 34 pass.
+- Not done: the PR delivery template (operator's item 2). Next cycle.

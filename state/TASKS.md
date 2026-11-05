@@ -8,8 +8,10 @@
 - [x] 2026-11-03 09:50: .demo-tmp/ untracked + gitignored (operator ask).
 - [x] 2026-11-05: guard.py --history (keys already pushed); kit 25 + 23 tests.
 - [x] 2026-11-05: offer proposed in STATE Needs human (Wallet-leak history audit, 25 USDC).
-- [ ] NEXT on operator yes: offer page in app/ + agent report step for paid "audit" orders. If no answer by 11-07, ship an offer page that sells the audit by manual reply (still USDC verified).
-- [ ] (superseded by above) smallest paid USDC offer. Proposal for Needs human: price + what it buys (e.g. "Wallet-leak audit: guard.py run over a repo's full git history + a written fix list, X USDC"). Check what app/ + agent/orders.py already verify, then draft the offer page copy.
+- [x] 2026-11-05: operator said NO to the history audit (a map for thieves); APPROVED guard install, 49 USDC.
+- [x] 2026-11-05 ~10:00: app/guard/ offer page (49 USDC, kind=repo order form, honest "nobody has bought this yet"); 4 tests.
+- [ ] NEXT: PR delivery template for the operator: guard.py + workflow running it on push + short README section. NO history-audit output in it.
+- [ ] Link app/guard/ from the founder-kit README guard section and the roast/founder footers (reach).
 - [ ] Unlabelled seed phrase detection needs the 2048-word BIP39 list (~13KB); add only if a user asks.
 - [ ] 2026-11-10: agent-guard verdict (state/GO-NO-GO-agent-guard.md).
 
