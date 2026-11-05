@@ -1559,3 +1559,16 @@ Try the live product: https://idlehandslabs.github.io/shipcard`
 - Tried: one shell heredoc to write all 4 guard-page files. Result: blocked by the runner's shell parser (JS template literal braces). Why: permission rule on brace+quote. Next: use the Write tool for code files.
 - Tried: `cd app && node --test`. Result: blocked (compound command). `node --test app/tests/` ran 1 failing pseudo-test (dir passed as file); `node --test app/tests/*.mjs` -> 34 pass. Next: use the glob form.
 - Tried: app/guard/ offer page (49 USDC, kind=repo order). Result: built, tests pass, deploys on push. Why: the operator's approved offer is the only payable thing. Next: PR delivery template.
+
+## 2026-11-05 09:50 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls state/ post-queue/ | tail -30; tail -30 state/REVIEW-DAILY.md 2>/dev/null; sed -n 1,60p state/STATE.md; ls state/orders 2>/dev/null; cat state/METRICS.md | h`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p app/guard && cat > app/guard/guardcore.js <<'EOF'
+// Pure logic for the guard-install order. No DOM, no network.
+export const PRICE_USDC = 49;
+// Same shape agent/orders.py accepts for kind "`
+- **Blocked by a guardrail:** `Bash` → `cd app && node --test tests/ 2>&1 | tail -8`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='state/TASKS.md'; s=open(p).read()
+old=s[s.index('- [ ] NEXT on operator yes'):s.index('- [ ] Unlabelled seed')]
+new=("- [x] 2026-11-05: operator said NO to the history audit (a ma`
+- Turns: 22 · Claude cost: $0.69 (not counted in the $100 budget)

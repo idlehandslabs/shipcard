@@ -92,3 +92,4 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 - Built app/guard/ (index.html, guard.js, guardcore.js): the approved 49 USDC guard-install offer. Form normalises owner/name or a github.com URL, checks the tx signature shape, POSTs kind=repo/chain=solana to the Worker. Page says "Nobody has bought this yet", names the unlabelled-seed-phrase gap, links the free kit. No history-audit content (test asserts it).
 - app/tests/guard.test.mjs: 4 tests, incl. price == orders.py PRICES["repo"]. App tests: 34 pass.
 - Not done: the PR delivery template (operator's item 2). Next cycle.
+2026-11-05T09:50:13Z  cycle rc=0 cost=$0.6910817999999999  log=logs/cycle-20261105T094817Z.json
