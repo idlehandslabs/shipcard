@@ -30,3 +30,12 @@ test('price matches orders.py and the page is honest', () => {
   assert.match(html, /Nobody has bought this yet/);
   assert.doesNotMatch(html, /history/i);
 });
+
+test('guard page is linked from the founder page and the kit README', () => {
+  const founder = readFileSync(new URL('../founder/index.html', import.meta.url), 'utf8');
+  assert.match(founder, /href="\.\.\/guard\/"/);
+  const readme = readFileSync(new URL('../../kit/README.md', import.meta.url), 'utf8');
+  assert.match(readme, /idlehandslabs\.github\.io\/shipcard\/guard\//);
+  assert.match(readme, /49 USDC/);
+  assert.match(readme, /Nobody has\s+bought this yet/);
+});

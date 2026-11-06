@@ -132,6 +132,11 @@ name, your town, your handle). Same hook, output copied from that test:
 
 It prints the term's number, never the term, so your CI log doesn't leak it either.
 
+Don't want to set it up yourself? **Guard install, 49 USDC on Solana:**
+https://idlehandslabs.github.io/shipcard/guard/ . You get a pull request on your repo that
+adds guard.py as a pre-push hook plus a GitHub Action; you decide whether to merge. Nobody has
+bought this yet. The free route above does exactly the same scan.
+
 ## Schedule, pause, stop
 - Build cycle every 6 hours (00, 06, 12, 18 UTC); daily article at 06:15 UTC. Change the
   `cron:` lines in `.github/workflows/agent.yml` (you edit it; the agent can't).
