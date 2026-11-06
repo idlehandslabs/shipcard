@@ -95,3 +95,6 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 2026-11-05T09:50:13Z  cycle rc=0 cost=$0.6910817999999999  log=logs/cycle-20261105T094817Z.json
 - 2026-11-06 daily article written: daily-log/2026-11-06.md (+ daily-log/assets/2026-11-06/cover.svg, meme-1.svg, meme-2.svg). Not published.
 2026-11-06T07:26:20Z  daily-article rc=0  log=logs/article-20261106T072450Z.json
+
+## 2026-11-06 09:50 UTC - Cycle (reach: link the guard install page)
+- Daily review: $0 of $1,000, $40.00/day needed, verdict ADJUST (two "neither" reviews in a row). kit/README.md guard section now ends with "Guard install, 49 USDC on Solana" + the live URL + "Nobody has bought this yet". app/founder/index.html links ../guard/ in the Guardrails bullet and the footer. New app test checks all three. App tests 35 pass; kit 25 + 23 pass. Commit 89d9ab6. Draft: post-queue/2026-11-06-0951.md. Stars 0, orders 0, revenue $0, budget $0/$100.

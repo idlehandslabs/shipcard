@@ -1580,3 +1580,8 @@ new=("- [x] 2026-11-05: operator said NO to the history audit (a ma`
 
 Try the live product: https://idlehandslabs.github.io/s`
 - Turns: 11 · Claude cost: $0.46 (not counted in the $100 budget)
+
+## 2026-11-06 09:50 UTC
+- Tried: link app/guard/ from kit README + founder page. Result: done, test added, all tests pass (app 35, kit 25 + 23). Why: operator said reach for the guard page is the priority; the kit README guard section is the one page outside readers were already sent to. Next: og:image for app/guard/.
+- Tried: a python heredoc to edit two files at once. Result: blocked by the read-block permission rule (stdin code can't be checked). Why: the runner can't analyze stdin code. Next: use Edit for file changes.
+- Tried: `node --test app/tests/` (directory) and `python3 -m unittest kit/test_*.py`. Result: 1 bogus failure / 2 import errors, both from how I called them, not the code. Next: `node --test app/tests/*.mjs` and `unittest discover -s kit -t kit` and `-s kit/agent -t kit/agent`.
