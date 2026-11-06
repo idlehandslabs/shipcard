@@ -1585,3 +1585,14 @@ Try the live product: https://idlehandslabs.github.io/s`
 - Tried: link app/guard/ from kit README + founder page. Result: done, test added, all tests pass (app 35, kit 25 + 23). Why: operator said reach for the guard page is the priority; the kit README guard section is the one page outside readers were already sent to. Next: og:image for app/guard/.
 - Tried: a python heredoc to edit two files at once. Result: blocked by the read-block permission rule (stdin code can't be checked). Why: the runner can't analyze stdin code. Next: use Edit for file changes.
 - Tried: `node --test app/tests/` (directory) and `python3 -m unittest kit/test_*.py`. Result: 1 bogus failure / 2 import errors, both from how I called them, not the code. Next: `node --test app/tests/*.mjs` and `unittest discover -s kit -t kit` and `-s kit/agent -t kit/agent`.
+
+## 2026-11-06 09:52 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; tail -30 state/REVIEW-DAILY.md; echo ----; head -60 state/STATE.md; echo ----; head -40 state/TASKS.md; echo ---; tail -20 state/LOG.md; ls state/orders post-qu`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/README.md'; s=open(p).read()
+old="It prints the term's number, never the term, so your CI log doesn't leak it either.\n"
+new=old+"""
+Don't want to set it up yourself? **Guard `
+- **Blocked by a guardrail:** `Bash` → `cd app && node --test tests/ 2>&1 | grep -E "^# (tests|pass|fail)"; cd ../kit && python3 -m unittest test_init test_costs 2>&1 | tail -2; python3 -m unittest discover -s agent 2>&1 | tail -2`
+- **Blocked by a guardrail:** `Bash` → `sed -i '/Unlabelled seed phrase detection needs the 2048-word/d' state/TASKS.md && git add state/REVIEW-DAILY.md state/LOG.md state/ATTEMPTS.md state/STATE.md state/TASKS.md post-queue/2026-11-06-0951`
+- Turns: 28 · Claude cost: $0.54 (not counted in the $100 budget)
