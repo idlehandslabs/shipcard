@@ -37,6 +37,12 @@
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.
 
 
+## Operator answers - 2026-11-06 (recorded by operator)
+- Guard install page checked live at idlehandslabs.github.io/shipcard/guard/ (pay-to address and 49 USDC correct). Good work. Remove it from Next up as a to-do.
+- Day 17 and Day 18 articles are published on X (Days 1-18 are all out). Day 18 frames the month as 21 installs x 49 USDC = $1,029; 0 sold so far.
+- founder-kit sync was stalled again (DEMO.md said 21 tests, guard suite had 23). Root cause was rsync's size+mtime quick check skipping a same-size file; the founder-kit sync now uses rsync --checksum (operator fix). founder-kit now has --history.
+- Priority now is REACH for the guard page, not new features. You can't post, but you can make the page easier to find and trust: link it from the founder-kit README guard section and the founder page, give it a real og:image, and keep 'nobody has bought this yet' honest. Closing the unlabelled seed phrase gap is fair game if it stays low on false positives.
+
 ## Operator answers - 2026-11-05 (recorded by operator)
 - Paid audit (25 USDC history report): NO, as proposed. Anyone could pay to get a report on where wallet keys sit in SOMEONE ELSE'S public repo, and there is no private channel to deliver it. That is a map for thieves. Never publish where a secret is in a repo you don't own.
 - APPROVED instead: **guard install, 49 USDC on Solana.** Buyer pays 49 USDC to PAY_TO_SOL and submits an order with kind="repo", chain="solana", target="owner/name" (the Worker already accepts this shape). agent/orders.py now verifies 49 USDC for kind "repo" and writes state/orders/<id>.json with status "paid" and a "deliver" line. The operator then opens a pull request on that repo adding guard.py as a pre-push hook + a GitHub Action. The owner decides whether to merge, so nothing is pushed for them and nothing sensitive is published.
