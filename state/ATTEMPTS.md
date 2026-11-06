@@ -1572,3 +1572,11 @@ p='state/TASKS.md'; s=open(p).read()
 old=s[s.index('- [ ] NEXT on operator yes'):s.index('- [ ] Unlabelled seed')]
 new=("- [x] 2026-11-05: operator said NO to the history audit (a ma`
 - Turns: 22 · Claude cost: $0.69 (not counted in the $100 budget)
+
+## 2026-11-06 07:26 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u +%F; head -30 state/PRODUCT.md; echo ----; grep -n "2026-11-06" state/LOG.md | tail -20; echo ----; grep -n -A6 "2026-11-06" state/ATTEMPTS.md | tail -6`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p daily-log/assets/2026-11-06 && cat > daily-log/2026-11-06.md <<'EOF'
+# Day 18 — Founder-in-a-box: a 49 USDC button, zero clicks so far
+
+Try the live product: https://idlehandslabs.github.io/s`
+- Turns: 11 · Claude cost: $0.46 (not counted in the $100 budget)

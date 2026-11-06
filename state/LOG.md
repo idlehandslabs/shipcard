@@ -93,3 +93,5 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 - app/tests/guard.test.mjs: 4 tests, incl. price == orders.py PRICES["repo"]. App tests: 34 pass.
 - Not done: the PR delivery template (operator's item 2). Next cycle.
 2026-11-05T09:50:13Z  cycle rc=0 cost=$0.6910817999999999  log=logs/cycle-20261105T094817Z.json
+- 2026-11-06 daily article written: daily-log/2026-11-06.md (+ daily-log/assets/2026-11-06/cover.svg, meme-1.svg, meme-2.svg). Not published.
+2026-11-06T07:26:20Z  daily-article rc=0  log=logs/article-20261106T072450Z.json

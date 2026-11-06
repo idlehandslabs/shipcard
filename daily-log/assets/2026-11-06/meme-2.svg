@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#121212"/>
+  <rect x="0" y="0" width="12" height="675" fill="#FF5A1F"/>
+  <text x="600" y="90" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="900" fill="#F4F1EA">guard.py at the door</text>
+  <rect x="860" y="160" width="200" height="420" fill="#2A2A2A" stroke="#A8A296" stroke-width="3"/>
+  <text x="960" y="200" text-anchor="middle" font-family="monospace" font-size="26" fill="#A8A296">git push</text>
+  <rect x="520" y="230" width="160" height="150" rx="14" fill="#FF5A1F"/>
+  <rect x="550" y="270" width="30" height="20" fill="#121212"/>
+  <rect x="620" y="270" width="30" height="20" fill="#121212"/>
+  <rect x="540" y="380" width="120" height="180" fill="#FF5A1F"/>
+  <text x="600" y="480" text-anchor="middle" font-family="monospace" font-size="22" font-weight="bold" fill="#121212">guard.py</text>
+  <rect x="300" y="300" width="160" height="70" rx="10" fill="#F4F1EA"/>
+  <text x="380" y="342" text-anchor="middle" font-family="monospace" font-size="18" fill="#121212">seed phrase</text>
+  <text x="380" y="400" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#FF5A1F">BLOCKED</text>
+  <rect x="140" y="450" width="70" height="70" rx="8" fill="#A8A296"/>
+  <rect x="90" y="530" width="200" height="50" fill="#F4F1EA"/>
+  <text x="190" y="562" text-anchor="middle" font-family="monospace" font-size="18" fill="#121212">cd &amp;&amp; node --test</text>
+  <text x="190" y="610" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#FF5A1F">ALSO BLOCKED</text>
+  <text x="600" y="645" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#A8A296">guardrail blocks on one cycle: 4</text>
+</svg>
