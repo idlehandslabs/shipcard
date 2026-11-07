@@ -1602,3 +1602,9 @@ Don't want to set it up yourself? **Guard `
 - **Blocked by a guardrail:** `Bash` → `f=daily-log/2026-11-07.md
 sed -i 's/^- \*\*Four more guardrail blocks\*\* from the runner.s own log: a long `cd ...; tail; head; ls` read chain, another python heredoc for the README,/- **Four guardra`
 - Turns: 14 · Claude cost: $0.43 (not counted in the $100 budget)
+
+## 2026-11-07 09:36 cycle
+- Tried: og:image for app/guard/ (X needs PNG). Result: BLOCKED, inline `python3 -c` (PIL check) needs approval under the read block. Why: can't render a PNG without running code. Next: write a script file in tools/ that renders it, or ask the operator for a 1200x630 PNG.
+- Tried: one-shot bash heredoc writing all delivery files. Result: BLOCKED ("brace with quote character"). Why: `${{ }}` in the workflow. Next: used the Write tool instead; worked.
+- Tried: `node --test app/tests/` (dir arg). Result: failed to run as a dir; `node --test app/tests/*.test.mjs` = 36/36 pass.
+- Tried: delivery template for the 49 USDC guard install. Result: done + tested (workflow, README section, operator checklist). Why: first buyer must get a PR fast. Next: og:image, then unlabelled seed phrase detection (low false positives).

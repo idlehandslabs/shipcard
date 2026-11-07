@@ -12,7 +12,8 @@
 - [x] 2026-11-05 ~10:00: app/guard/ offer page (49 USDC, kind=repo order form, honest "nobody has bought this yet"); 4 tests.
 - [x] 2026-11-06 09:50: app/guard/ linked from the kit README guard section + founder page (test).
 - [ ] NEXT (reach, operator priority): real og:image for app/guard/ so the link previews on X.
-- [ ] PR delivery template for the operator: guard.py + workflow running it on push + short README section. NO history-audit output in it. Needed before the first sale is fulfilled.
+- [x] 2026-11-07: PR delivery template in delivery/guard-install/ (workflow + README-SECTION.md + PR.md checklist), tested in app/tests/guard.test.mjs.
+- [ ] og:image PNG (1200x630) for app/guard/: needs a script file in tools/ (inline python is blocked) or an operator-made PNG.
 - [ ] Unlabelled seed phrase detection, only if false positives stay low (operator OK'd it).
 - [ ] Unlabelled seed phrase detection needs the 2048-word BIP39 list (~13KB); add only if a user asks.
 - [ ] 2026-11-10: agent-guard verdict (state/GO-NO-GO-agent-guard.md).

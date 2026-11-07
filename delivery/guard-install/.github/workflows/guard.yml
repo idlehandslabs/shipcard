@@ -1,0 +1,20 @@
+# Runs guard.py on every push and pull request. Fails the check if a wallet key,
+# seed phrase or API key is in the new commits. Added by an Idle Hands Labs guard install.
+name: guard
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Scan new commits for secrets
+        env:
+          BEFORE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          # First push of a branch: BEFORE is all zeros (or unknown), so scan the last commit only.
+          if ! git rev-parse -q --verify "$BEFORE^{commit}" >/dev/null 2>&1; then BEFORE=HEAD~1; fi
+          python3 agent/guard.py "$BEFORE"
