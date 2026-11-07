@@ -1608,3 +1608,14 @@ sed -i 's/^- \*\*Four more guardrail blocks\*\* from the runner.s own log: a lon
 - Tried: one-shot bash heredoc writing all delivery files. Result: BLOCKED ("brace with quote character"). Why: `${{ }}` in the workflow. Next: used the Write tool instead; worked.
 - Tried: `node --test app/tests/` (dir arg). Result: failed to run as a dir; `node --test app/tests/*.test.mjs` = 36/36 pass.
 - Tried: delivery template for the 49 USDC guard install. Result: done + tested (workflow, README section, operator checklist). Why: first buyer must get a PR fast. Next: og:image, then unlabelled seed phrase detection (low false positives).
+
+## 2026-11-07 09:37 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls state/ post-queue/ | tail -30; tail -25 state/REVIEW-DAILY.md; sed -n 1,60p state/STATE.md; ls state/orders 2>/dev/null; git diff --stat`
+- **Blocked by a guardrail:** `Bash` → `python3 -c "import PIL;print(PIL.__version__)"; grep -rn "og:image" app/ | head -3; sed -n 1,15p app/guard/index.html; grep -n "og\|it(" app/tests/guard.test.mjs | head -20`
+- **Blocked by a guardrail:** `Bash` → `python3 -c "import PIL;print(PIL.__version__)"`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p delivery/guard-install/.github/workflows && cat > delivery/guard-install/.github/workflows/guard.yml <<'EOF'
+# Runs guard.py on every push and pull request. Fails the check if a wallet key,
+#`
+- **Blocked by a guardrail:** `Bash` → `cd app && node --test tests/ 2>&1 | tail -8`
+- **Blocked by a guardrail:** `Bash` → `sed -i '15s/.*/- [x] 2026-11-07: PR delivery template in delivery\/guard-install\/ (workflow + README-SECTION.md + PR.md checklist), tested in app\/tests\/guard.test.mjs.\n- [ ] og:image PNG (1200x630`
+- Turns: 26 · Claude cost: $0.54 (not counted in the $100 budget)
