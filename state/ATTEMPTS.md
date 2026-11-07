@@ -1596,3 +1596,9 @@ Don't want to set it up yourself? **Guard `
 - **Blocked by a guardrail:** `Bash` → `cd app && node --test tests/ 2>&1 | grep -E "^# (tests|pass|fail)"; cd ../kit && python3 -m unittest test_init test_costs 2>&1 | tail -2; python3 -m unittest discover -s agent 2>&1 | tail -2`
 - **Blocked by a guardrail:** `Bash` → `sed -i '/Unlabelled seed phrase detection needs the 2048-word/d' state/TASKS.md && git add state/REVIEW-DAILY.md state/LOG.md state/ATTEMPTS.md state/STATE.md state/TASKS.md post-queue/2026-11-06-0951`
 - Turns: 28 · Claude cost: $0.54 (not counted in the $100 budget)
+
+## 2026-11-07 07:08 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; git log --since=midnight --pretty=format:'%h %s %ad' --date=iso; echo; ls daily-log | tail -3; ls post-queue | tail -5; head -30 state/PRODUCT.md; grep`
+- **Blocked by a guardrail:** `Bash` → `f=daily-log/2026-11-07.md
+sed -i 's/^- \*\*Four more guardrail blocks\*\* from the runner.s own log: a long `cd ...; tail; head; ls` read chain, another python heredoc for the README,/- **Four guardra`
+- Turns: 14 · Claude cost: $0.43 (not counted in the $100 budget)
