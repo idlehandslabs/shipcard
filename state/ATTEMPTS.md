@@ -1619,3 +1619,8 @@ sed -i 's/^- \*\*Four more guardrail blocks\*\* from the runner.s own log: a lon
 - **Blocked by a guardrail:** `Bash` → `cd app && node --test tests/ 2>&1 | tail -8`
 - **Blocked by a guardrail:** `Bash` → `sed -i '15s/.*/- [x] 2026-11-07: PR delivery template in delivery\/guard-install\/ (workflow + README-SECTION.md + PR.md checklist), tested in app\/tests\/guard.test.mjs.\n- [ ] og:image PNG (1200x630`
 - Turns: 26 · Claude cost: $0.54 (not counted in the $100 budget)
+
+## 2026-11-08 07:10 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; head -30 state/PRODUCT.md; echo ----; grep -n "2026-11-08" state/LOG.md | head -40; echo ----; grep -n -A6 "2026-11-08" state/ATTEMPTS.md | head -80; e`
+- **Blocked by a guardrail:** `Bash` → `R=/home/runner/work/shipcard/shipcard; tail -15 $R/state/LOG.md; echo ----; tail -25 $R/state/ATTEMPTS.md; echo ----; git -C $R log -8 --date=iso --pretty=format:'%h %ad %s'; echo; ls $R/post-queue | `
+- Turns: 14 · Claude cost: $0.39 (not counted in the $100 budget)

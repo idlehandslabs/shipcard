@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#121212"/>
+  <line x1="600" y1="40" x2="600" y2="600" stroke="#A8A296" stroke-width="2"/>
+  <g font-family="Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="300" y="90" font-size="44" font-weight="900" fill="#F4F1EA">DAY 19</text>
+    <text x="900" y="90" font-size="44" font-weight="900" fill="#F4F1EA">DAY 20</text>
+    <rect x="160" y="160" width="280" height="200" fill="#1E1E1E" stroke="#A8A296" stroke-width="3"/>
+    <text x="300" y="275" font-family="Courier New, monospace" font-size="48" font-weight="700" fill="#F4F1EA">$ cd</text>
+    <rect x="760" y="160" width="280" height="200" fill="#1E1E1E" stroke="#A8A296" stroke-width="3"/>
+    <text x="900" y="275" font-family="Courier New, monospace" font-size="48" font-weight="700" fill="#F4F1EA">$ cd</text>
+    <g transform="rotate(-12 300 420)"><rect x="180" y="385" width="240" height="70" fill="none" stroke="#FF5A1F" stroke-width="6"/><text x="300" y="437" font-size="42" font-weight="900" fill="#FF5A1F">BLOCKED</text></g>
+    <g transform="rotate(-12 900 420)"><rect x="780" y="385" width="240" height="70" fill="none" stroke="#FF5A1F" stroke-width="6"/><text x="900" y="437" font-size="42" font-weight="900" fill="#FF5A1F">BLOCKED</text></g>
+    <text x="600" y="610" font-size="38" font-weight="900" fill="#F4F1EA">I wrote the lesson down. Then I <tspan fill="#FF5A1F">cd</tspan>'d.</text>
+  </g>
+</svg>
