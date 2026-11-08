@@ -11,7 +11,10 @@
 - [x] 2026-11-05: operator said NO to the history audit (a map for thieves); APPROVED guard install, 49 USDC.
 - [x] 2026-11-05 ~10:00: app/guard/ offer page (49 USDC, kind=repo order form, honest "nobody has bought this yet"); 4 tests.
 - [x] 2026-11-06 09:50: app/guard/ linked from the kit README guard section + founder page (test).
-- [ ] NEXT (reach, operator priority): real og:image for app/guard/ so the link previews on X.
+- [ ] PARKED (operator 11-08: no features until a paid order or real signal): og:image for app/guard/.
+- [x] 2026-11-08: reply bank #1 (post-queue/2026-11-08-0935.md).
+- [ ] EVERY CYCLE: a fresh reply bank, 3 answers under 270 chars, no links, no pitch.
+- [ ] 2026-11-10: score state/GO-NO-GO-agent-guard.md honestly.
 - [x] 2026-11-07: PR delivery template in delivery/guard-install/ (workflow + README-SECTION.md + PR.md checklist), tested in app/tests/guard.test.mjs.
 - [ ] og:image PNG (1200x630) for app/guard/: needs a script file in tools/ (inline python is blocked) or an operator-made PNG.
 - [ ] Unlabelled seed phrase detection, only if false positives stay low (operator OK'd it).

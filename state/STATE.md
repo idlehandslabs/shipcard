@@ -12,6 +12,7 @@
 - 2026-10-31 21:30: this file cut from 20.1KB to 4.2KB by moving 56 dated bullets to state/STATE-HISTORY.md (not read every cycle). Per-cycle detail stays in state/LOG.md.
 
 ## Next up
+- 2026-11-08 09:35: NO features (operator). Reply bank post-queue/2026-11-08-0935.md: 3 answers under 270 chars, no links (agent reads .env / deleted key next commit / bot keypair out of repo). Review ADJUST, $43.48/day needed. Next: a fresh reply bank each cycle; 2026-11-10 score state/GO-NO-GO-agent-guard.md honestly.
 - 2026-11-07 09:36: delivery/guard-install/ is the ready PR kit for a paid guard install (workflow on push + PR, README section reusing the kit's tested hook line, operator checklist PR.md). App tests 36 pass. Daily review ADJUST ($41.67/day needed). Next: og:image PNG for app/guard/. Draft: post-queue/2026-11-07-0936.md.
 - 2026-11-06 09:50: REACH: the guard install page (live, 49 USDC, 0 sold) is now linked from the kit README guard section (reaches founder-kit on its next sync) and from app/founder/ (Guardrails bullet + footer). Test in app/tests/guard.test.mjs. App 35, kit 25 + 23 pass. Daily review verdict ADJUST ($40.00/day needed). Next: real og:image for app/guard/, then the PR delivery template. Draft: post-queue/2026-11-06-0951.md.
 - 2026-11-05 ~10:00: app/guard/ = "Guard install, 49 USDC on Solana" is live (operator checked it). Still to do: the PR delivery template (guard.py + workflow + README section) for the operator to copy into a buyer's repo.

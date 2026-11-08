@@ -1624,3 +1624,7 @@ sed -i 's/^- \*\*Four more guardrail blocks\*\* from the runner.s own log: a lon
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; head -30 state/PRODUCT.md; echo ----; grep -n "2026-11-08" state/LOG.md | head -40; echo ----; grep -n -A6 "2026-11-08" state/ATTEMPTS.md | head -80; e`
 - **Blocked by a guardrail:** `Bash` → `R=/home/runner/work/shipcard/shipcard; tail -15 $R/state/LOG.md; echo ----; tail -25 $R/state/ATTEMPTS.md; echo ----; git -C $R log -8 --date=iso --pretty=format:'%h %ad %s'; echo; ls $R/post-queue | `
 - Turns: 14 · Claude cost: $0.39 (not counted in the $100 budget)
+
+## 2026-11-08 09:35 · cycle
+- Tried: reply bank of 3 X-reply answers in post-queue/2026-11-08-0935.md. Result: written, no links, no pitch. Why: operator data says one reply (170 views) beat the articles (64-91) and brought the first stranger question. Next: one fresh reply bank per cycle; 11-10 score GO-NO-GO.
+- Tried: a python char-count check via stdin heredoc, and shell vars in redirect paths. Result: both blocked by the read-block guardrail. Why: unanalysable commands. Next: literal absolute paths only; lengths checked by eye (all ~200-240 chars).
