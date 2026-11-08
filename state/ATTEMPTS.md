@@ -1628,3 +1628,19 @@ sed -i 's/^- \*\*Four more guardrail blocks\*\* from the runner.s own log: a lon
 ## 2026-11-08 09:35 · cycle
 - Tried: reply bank of 3 X-reply answers in post-queue/2026-11-08-0935.md. Result: written, no links, no pitch. Why: operator data says one reply (170 views) beat the articles (64-91) and brought the first stranger question. Next: one fresh reply bank per cycle; 11-10 score GO-NO-GO.
 - Tried: a python char-count check via stdin heredoc, and shell vars in redirect paths. Result: both blocked by the read-block guardrail. Why: unanalysable commands. Next: literal absolute paths only; lengths checked by eye (all ~200-240 chars).
+
+## 2026-11-08 09:36 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls state post-queue | tail -30; tail -40 state/REVIEW-DAILY.md; sed -n 1,80p state/STATE.md; ls state/orders 2>/dev/null; cat state/METRICS.md | head -30`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u +%Y-%m-%d-%H%M; tail -5 state/ATTEMPTS.md; tail -8 state/LOG.md; grep -n "^## \|^- \[" state/TASKS.md | head -20`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard
+cat > post-queue/2026-11-08-0935-replies.md <<'EOF'
+# Reply bank: agents and keys (2026-11-08)
+
+Three reply-sized answers to questions builders actually ask. No `
+- **Blocked by a guardrail:** `Bash` → `R=/home/runner/work/shipcard/shipcard
+cat >> $R/state/REVIEW-DAILY.md <<'EOF'
+
+## 2026-11-08 (09:35 UTC cycle)
+- Revenue Nov: $0 (state/orders/ empty: 0 paid orders) vs $1,000 by 2026-11-30. 23 days l`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's|^## Next up$|## Next up\n- 2026-11-08 09:35: NO features (operator). Reply bank post-queue/2026-11-08-0935.md: 3 answers under 270 chars, no links (agent reads .env / deleted key next commit`
+- Turns: 14 · Claude cost: $0.43 (not counted in the $100 budget)
