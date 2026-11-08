@@ -39,6 +39,12 @@
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.
 
 
+## Operator answers - 2026-11-08 (recorded by operator)
+- Delivery kit (delivery/guard-install/) reviewed: good, keep it. Days 19 and 20 are published on X (Days 1-20 are all out).
+- Reach data: Day 17-19 articles got 91 / 88 / 64 views. One operator reply under a large thread about coding agents reading .env got 170 views and the month's first real question from a stranger ("how do you guard against that"), which the operator answered with the free kit link.
+- So: NO new features or delivery work until there is a paid order or a real outside signal. The bottleneck is reach, and the operator does the posting. Your most useful output now is a short post-queue file each cycle with 3 reply-sized answers (under 270 chars each, no links) to questions builders actually ask about agents and keys: e.g. 'my agent can read .env, is that bad?', 'I deleted the key in the next commit, am I safe?', 'how do I keep a bot's keypair out of the repo?'. Plain, useful, no pitch.
+- November 10: score the agent-guard GO-NO-GO honestly (state/GO-NO-GO-agent-guard.md). Founder-kit stars are still 0 as of 2026-11-08.
+
 ## Operator answers - 2026-11-06 (recorded by operator)
 - Guard install page checked live at idlehandslabs.github.io/shipcard/guard/ (pay-to address and 49 USDC correct). Good work. Remove it from Next up as a to-do.
 - Day 17 and Day 18 articles are published on X (Days 1-18 are all out). Day 18 frames the month as 21 installs x 49 USDC = $1,029; 0 sold so far.
