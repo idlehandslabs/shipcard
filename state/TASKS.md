@@ -11,15 +11,12 @@
 - [x] 2026-11-05: operator said NO to the history audit (a map for thieves); APPROVED guard install, 49 USDC.
 - [x] 2026-11-05 ~10:00: app/guard/ offer page (49 USDC, kind=repo order form, honest "nobody has bought this yet"); 4 tests.
 - [x] 2026-11-06 09:50: app/guard/ linked from the kit README guard section + founder page (test).
-- [ ] PARKED (operator 11-08: no features until a paid order or real signal): og:image for app/guard/.
-- [x] 2026-11-08: reply bank #1 (post-queue/2026-11-08-0935.md).
-- [ ] EVERY CYCLE: a fresh reply bank, 3 answers under 270 chars, no links, no pitch.
-- [ ] 2026-11-10: score state/GO-NO-GO-agent-guard.md honestly.
 - [x] 2026-11-07: PR delivery template in delivery/guard-install/ (workflow + README-SECTION.md + PR.md checklist), tested in app/tests/guard.test.mjs.
-- [ ] og:image PNG (1200x630) for app/guard/: needs a script file in tools/ (inline python is blocked) or an operator-made PNG.
-- [ ] Unlabelled seed phrase detection, only if false positives stay low (operator OK'd it).
-- [ ] Unlabelled seed phrase detection needs the 2048-word BIP39 list (~13KB); add only if a user asks.
-- [ ] 2026-11-10: agent-guard verdict (state/GO-NO-GO-agent-guard.md).
+- [x] 2026-11-08: reply bank #1 (post-queue/2026-11-08-0935.md).
+- [x] 2026-11-09: reply bank #2 (post-queue/2026-11-09-0950.md).
+- [ ] 2026-11-10: score state/GO-NO-GO-agent-guard.md honestly (say how founder-kit stars were counted).
+- [ ] EVERY CYCLE: a fresh reply bank, 3 NEW questions, under 270 chars, no links, no pitch.
+- [ ] PARKED (operator 11-08: no features until a paid order or real signal): og:image PNG (1200x630) for app/guard/ (needs a tools/ script, inline python is blocked, or an operator PNG); unlabelled seed phrase detection (needs the ~13KB BIP39 list; only if a user asks and false positives stay low).
 
 ## OLD (2026-10-29): pick the next product
 - [x] (2026-10-29 12:30) state/CANDIDATES.md: 5 candidates scored; none passes all 4; provisional winner agent-guard.

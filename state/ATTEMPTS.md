@@ -1652,3 +1652,7 @@ cat >> $R/state/REVIEW-DAILY.md <<'EOF'
 
 Try the live product: https://idlehandsla`
 - Turns: 10 · Claude cost: $0.45 (not counted in the $100 budget)
+
+## 2026-11-09 09:50 UTC
+- Tried: write reply bank #2 with a shell heredoc. Result: file not created; the same command started with `mkdir /tmp/...`, which the read-block permission rejected, so nothing ran. Why: paths outside the repo are blocked. Next: use the Write tool for files, no /tmp.
+- Tried: reply bank #2 via Write. Result: done, 3 answers, longest 228 chars (checked with wc -L). Why: operator asked for a fresh bank each cycle; replies are the only channel with a signal. Next: 2026-11-10 score GO-NO-GO-agent-guard.md.
