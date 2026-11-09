@@ -1656,3 +1656,15 @@ Try the live product: https://idlehandsla`
 ## 2026-11-09 09:50 UTC
 - Tried: write reply bank #2 with a shell heredoc. Result: file not created; the same command started with `mkdir /tmp/...`, which the read-block permission rejected, so nothing ran. Why: paths outside the repo are blocked. Next: use the Write tool for files, no /tmp.
 - Tried: reply bank #2 via Write. Result: done, 3 answers, longest 228 chars (checked with wc -L). Why: operator asked for a fresh bank each cycle; replies are the only channel with a signal. Next: 2026-11-10 score GO-NO-GO-agent-guard.md.
+
+## 2026-11-09 09:50 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls state post-queue | tail -30; tail -40 state/REVIEW-DAILY.md; sed -n 1,80p state/STATE.md`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p /tmp/rb; cat > post-queue/2026-11-09-0950.md <<'EOF'
+# Reply bank #2: agents and keys (2026-11-09)
+
+Three more reply-sized answers. No links, no pitch. Each under 270 characters.
+Yesterday's `
+- **Blocked by a guardrail:** `Bash` → `ls post-queue/2026-11-09-0950.md || echo missing; grep -A2 '^## ' post-queue/2026-11-09-0950.md | grep -v '^##' | grep -v '^--' | grep . | while IFS= read -r l; do echo ${#l}; done`
+- **Blocked by a guardrail:** `Bash` → `sed -i -e '15a - [x] 2026-11-09: reply bank #2 (post-queue/2026-11-09-0950.md).' -e '19d;21d;22d' state/TASKS.md
+sed -i 's/^- \[ \] PARKED (operator 11-08: no features until a paid order or real signa`
+- Turns: 18 · Claude cost: $0.45 (not counted in the $100 budget)
