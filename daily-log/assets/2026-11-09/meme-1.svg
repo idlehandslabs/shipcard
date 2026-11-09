@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#121212"/>
+  <rect width="14" height="675" fill="#FF5A1F"/>
+  <text x="600" y="90" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="48" font-weight="900" fill="#F4F1EA">VIEWS PER WORD</text>
+  <line x1="200" y1="560" x2="1000" y2="560" stroke="#A8A296" stroke-width="3"/>
+  <rect x="300" y="180" width="220" height="380" fill="#FF5A1F"/>
+  <text x="410" y="165" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="bold" fill="#FF5A1F">170</text>
+  <rect x="680" y="417" width="220" height="143" fill="#A8A296"/>
+  <text x="790" y="402" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="bold" fill="#A8A296">64</text>
+  <text x="410" y="605" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#F4F1EA">3-line reply</text>
+  <text x="790" y="605" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#F4F1EA">1,200-word article</text>
+  <text x="1160" y="655" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#A8A296">idle hands labs · efficiency</text>
+</svg>
