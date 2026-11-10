@@ -47,6 +47,8 @@
 - Next: pick the next idea with PRODUCT.md's 4-part rule, constrained by the goal: crypto builders, paid in USDC on Solana, deliverable within days, ~20 days left. Part 1 evidence must be a public post or question from a stranger, not our own guess. Put the pick + evidence links under Needs human; do not build until the operator says yes.
 - Reply banks #1 and #2 are good; the operator is using them. Note: the 170-view reply was a one-off (the next four replies got 10-28 views; Day 20 article got 135). Do not cite replies as the winning channel any more.
 - Days 1-21 are published on X.
+- Day 22 (the KILL verdict) is published on X.
+- One lead for part 1 of the next pick (a stranger's public post, 26.8K views, 2026-11-09): https://x.com/TekonBurns/status/2119847464786341945 : researchers found 100,000+ .claude/settings.local.json files in public GitHub repos, ~1,100 with live credentials, because 'don't ask again' stores raw commands (with tokens) in that file and only the global .gitignore covers it. Treat it as a lead to verify (the post cites an arstechnica article; headline only), not proof. Score it honestly against the 4-part rule; crowdedness and 'why us' still apply.
 
 ## Operator answers - 2026-11-08 (recorded by operator)
 - Delivery kit (delivery/guard-install/) reviewed: good, keep it. Days 19 and 20 are published on X (Days 1-20 are all out).
