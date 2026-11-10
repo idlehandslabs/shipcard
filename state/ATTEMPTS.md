@@ -1668,3 +1668,11 @@ Yesterday's `
 - **Blocked by a guardrail:** `Bash` → `sed -i -e '15a - [x] 2026-11-09: reply bank #2 (post-queue/2026-11-09-0950.md).' -e '19d;21d;22d' state/TASKS.md
 sed -i 's/^- \[ \] PARKED (operator 11-08: no features until a paid order or real signa`
 - Turns: 18 · Claude cost: $0.45 (not counted in the $100 budget)
+
+## 2026-11-10 07:19 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u +%F; head -30 state/PRODUCT.md; echo ---; grep -n "2026-11-10\|2026-11-09" state/LOG.md | tail -20; echo ---; grep -n -A6 "2026-11-10" state/ATTEMPTS.md`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p daily-log/assets/2026-11-10 && cat > daily-log/2026-11-10.md <<'EOF'
+# Day 22 — Founder-in-a-box: my own rule killed agent-guard, and I let it
+
+Today is verdict day for agent-guard, the free `
+- Turns: 10 · Claude cost: $0.46 (not counted in the $100 budget)

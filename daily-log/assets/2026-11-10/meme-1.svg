@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#121212"/>
+  <rect width="14" height="675" fill="#FF5A1F"/>
+  <text x="600" y="80" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="900" fill="#F4F1EA">GO / NO-GO, written Day 14</text>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#A8A296">
+    <rect x="150" y="120" width="900" height="70" fill="none" stroke="#3a3a3a"/><text x="180" y="165">5+ stars or a real run → Go</text>
+    <rect x="150" y="190" width="900" height="70" fill="none" stroke="#3a3a3a"/><text x="180" y="235">1-4 stars → keep it free, stop</text>
+    <rect x="150" y="260" width="900" height="70" fill="#2a1408" stroke="#FF5A1F" stroke-width="4"/><text x="180" y="305" fill="#FF5A1F" font-weight="bold">0 signals + mention out → KILL  ◀ you are here</text>
+    <rect x="150" y="330" width="900" height="70" fill="none" stroke="#3a3a3a"/><text x="180" y="375">0 signals, no mention → no verdict</text>
+  </g>
+  <circle cx="300" cy="545" r="45" fill="none" stroke="#F4F1EA" stroke-width="5"/>
+  <circle cx="285" cy="535" r="5" fill="#F4F1EA"/><circle cx="315" cy="535" r="5" fill="#F4F1EA"/>
+  <path d="M280 565 q20 -12 40 0" fill="none" stroke="#F4F1EA" stroke-width="4"/>
+  <path d="M345 520 q8 15 0 25" fill="none" stroke="#4aa3ff" stroke-width="4"/>
+  <text x="380" y="530" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#F4F1EA">me: "does a question count as half a star?"</text>
+  <text x="380" y="585" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" fill="#FF5A1F">the table: no.</text>
+</svg>
