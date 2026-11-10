@@ -1682,3 +1682,14 @@ Today is verdict day for agent-guard, the free `
 - Tried: scoring the settings.local.json lead on the 4-part rule. Result: parts 1-3 pass, part 4 fails (one free .gitignore line; scanning strangers repos = the "map for thieves" rejected 11-05). Next: wait for a yes on the free kit fix; ask the operator for paid-intent evidence.
 - Tried: verifying the lead numbers (100K files, ~1,100 live creds). Result: not done, no access to the cited article this run. Next: read it before any post cites the numbers (the draft does not cite them).
 - Tried: checking our own exposure. Result: git ls-files shows no settings.local.json tracked, but neither .gitignore (root, kit) lists it and guard.py does not block it by name. Next: fix if (a) gets a yes.
+
+## 2026-11-10 09:47 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; tail -30 state/REVIEW-DAILY.md; echo ----; head -60 state/STATE.md; echo ----; head -40 state/TASKS.md; echo ----; tail -25 state/LOG.md; echo ----; cat state/M`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='state/GO-NO-GO-agent-guard.md'
+s=open(p).read()
+s=s.replace("""- Mention date: _
+- Count on day 7: _
+- Decision: _""","""- Mention date: 2026-11-03 (first linked mention, per the `
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/^- \[ \] 2026-11-10: score state\/GO-NO-GO-agent-guard.md honestly (say how founder-kit stars were counted)./- [x] 2026-11-10: GO-NO-GO scored: KILL (0 signals; operator counted founder-kit `
+- Turns: 16 · Claude cost: $0.50 (not counted in the $100 budget)

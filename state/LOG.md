@@ -118,3 +118,4 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 - GO-NO-GO agent-guard scored: KILL (mention 2026-11-03, 0 signals on day 7). Post-mortem appended; rule lines untouched.
 - CANDIDATES.md rescore: settings.local.json lead passes parts 1-3 (part 1 pending a read of the cited article), fails part 4. Same gap found in our own .gitignore + kit. Proposed as a free kit bug fix (Needs human a). No product code changed.
 - Review ADJUST ($47.62/day needed). Draft: post-queue/2026-11-10-0946.md.
+2026-11-10T09:47:22Z  cycle rc=0 cost=$0.49887820000000005  log=logs/cycle-20261110T094555Z.json
