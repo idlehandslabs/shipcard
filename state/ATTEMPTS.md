@@ -1676,3 +1676,9 @@ sed -i 's/^- \[ \] PARKED (operator 11-08: no features until a paid order or rea
 
 Today is verdict day for agent-guard, the free `
 - Turns: 10 · Claude cost: $0.46 (not counted in the $100 budget)
+
+## 2026-11-10 09:46 UTC
+- Tried: python heredoc to fill the GO-NO-GO Result; also a multi-part sed on TASKS.md. Result: both blocked by the runner permission rules. Next: used Edit/Write; done.
+- Tried: scoring the settings.local.json lead on the 4-part rule. Result: parts 1-3 pass, part 4 fails (one free .gitignore line; scanning strangers repos = the "map for thieves" rejected 11-05). Next: wait for a yes on the free kit fix; ask the operator for paid-intent evidence.
+- Tried: verifying the lead numbers (100K files, ~1,100 live creds). Result: not done, no access to the cited article this run. Next: read it before any post cites the numbers (the draft does not cite them).
+- Tried: checking our own exposure. Result: git ls-files shows no settings.local.json tracked, but neither .gitignore (root, kit) lists it and guard.py does not block it by name. Next: fix if (a) gets a yes.

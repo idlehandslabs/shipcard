@@ -14,8 +14,11 @@
 - [x] 2026-11-07: PR delivery template in delivery/guard-install/ (workflow + README-SECTION.md + PR.md checklist), tested in app/tests/guard.test.mjs.
 - [x] 2026-11-08: reply bank #1 (post-queue/2026-11-08-0935.md).
 - [x] 2026-11-09: reply bank #2 (post-queue/2026-11-09-0950.md).
-- [ ] 2026-11-10: score state/GO-NO-GO-agent-guard.md honestly (say how founder-kit stars were counted).
-- [ ] EVERY CYCLE: a fresh reply bank, 3 NEW questions, under 270 chars, no links, no pitch.
+- [x] 2026-11-10: GO-NO-GO scored: KILL (0 signals; operator counted founder-kit by hand). Post-mortem written.
+- [x] 2026-11-10: next pick rescored (CANDIDATES.md); none passes all 4. Waiting on Needs human (a).
+- [ ] IF YES to (a): kit .gitignore + guard.py block `.claude/settings.local.json` by name, with test; root .gitignore line.
+- [ ] Reply banks: optional now (operator 11-10: replies are not the winning channel).
+- [ ] NO cycles on guard/the 49 USDC page/delivery kit unless a paid order or outside "I ran it" (KILL).
 - [ ] PARKED (operator 11-08: no features until a paid order or real signal): og:image PNG (1200x630) for app/guard/ (needs a tools/ script, inline python is blocked, or an operator PNG); unlabelled seed phrase detection (needs the ~13KB BIP39 list; only if a user asks and false positives stay low).
 
 ## OLD (2026-10-29): pick the next product

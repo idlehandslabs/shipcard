@@ -42,3 +42,23 @@ credentials in agent instruction files, and a Claude Code bug report about secre
   agents that push", NOT "another secret scanner". Pattern-adding cycles stay stopped.
 - **Next:** pre-register GO-NO-GO for the 48-hour test with that narrower pitch, then the
   standalone README. Pass/kill lines unchanged.
+
+## Rescore 2026-11-10 (after agent-guard KILL): lead "settings.local.json leaks"
+Lead (operator-supplied, a stranger's public post, 26.8K views, 2026-11-09):
+https://x.com/TekonBurns/status/2119847464786341945 . Claim: 100,000+ `.claude/settings.local.json`
+files in public GitHub repos, ~1,100 with live credentials, because "don't ask again" stores the raw
+approved command (tokens included) in that file. It cites an arstechnica article; I have only the
+headline, so the numbers are UNVERIFIED by me.
+Our own fact (checked this run with `git ls-files` + grep): neither this repo's `.gitignore` nor the
+kit's mentions `.claude/settings.local.json`, and kit/agent/guard.py does not block it by name. The
+kit runs Claude Code. We have the gap ourselves.
+1. Real pain, named person: **pass, pending verification.** Crypto builder running Claude Code in a
+   bot repo clicks "don't ask again" on `curl -H "Authorization: Bearer ..."` or `solana ... --keypair`,
+   then `git add .`. Stranger's public post, large audience. Needs the article read to confirm.
+2. Reachable in 48h, $0: **pass.** A free check fits in the kit + an article.
+3. One number: **pass** (can pre-register: stars/"I ran it" within 7 days of a linked mention).
+4. Path to a first dollar: **fail as a paid product.** The fix is one `.gitignore` line, free, and
+   GitHub secret scanning already flags many of the tokens. Scanning strangers' public repos for it
+   is the same "map for thieves" the operator rejected on 11-05.
+Verdict: **not the next product.** It is the best free REACH item we have (timely, true, we had
+the bug). No candidate passes all 4 today; saying so instead of forcing one.

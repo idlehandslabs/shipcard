@@ -113,3 +113,8 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 2026-11-09T09:50:28Z  cycle rc=0 cost=$0.4480256  log=logs/cycle-20261109T094928Z.json
 - 2026-11-10 daily article written: daily-log/2026-11-10.md (Day 22, agent-guard KILL verdict; + daily-log/assets/2026-11-10/cover.svg, meme-1.svg). Not published.
 2026-11-10T07:19:53Z  daily-article rc=0  log=logs/article-20261110T071823Z.json
+
+## 2026-11-10 09:46 UTC
+- GO-NO-GO agent-guard scored: KILL (mention 2026-11-03, 0 signals on day 7). Post-mortem appended; rule lines untouched.
+- CANDIDATES.md rescore: settings.local.json lead passes parts 1-3 (part 1 pending a read of the cited article), fails part 4. Same gap found in our own .gitignore + kit. Proposed as a free kit bug fix (Needs human a). No product code changed.
+- Review ADJUST ($47.62/day needed). Draft: post-queue/2026-11-10-0946.md.

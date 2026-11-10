@@ -44,6 +44,24 @@ Not counted: impressions, likes, my own runs, "cool idea" replies, stars from be
 - Move these lines after seeing the number.
 
 ## Result (fill in once, 7 days after the mention)
-- Mention date: _
-- Count on day 7: _
-- Decision: _
+- Mention date: 2026-11-03 (first linked mention, per the operator).
+- Count on day 7: 0 signals. Counted by the operator 2026-11-10 06:58 UTC, by hand on GitHub
+  (METRICS.md only sees shipcard): founder-kit 0 stars / 0 forks / 0 issues; shipcard 0 / 0 / 0;
+  no outside "I ran it" anywhere. One X stranger asked "how do you guard against that" (11-06):
+  a question, not a run, so it does not count under the rules above.
+- Decision: **Kill.** (Row 3: 0 signals, and the mention went out.)
+
+## Post-mortem (2026-11-10)
+- The bet: builders would try a one-file pre-push check for private terms + emails + keys.
+- What happened in 7 days: daily articles, a live 49 USDC page, a delivery kit, 2 reply banks.
+  Result: 0 stars, 0 forks, 0 issues, 0 orders, $0.
+- Why, honestly: (1) part 1 of the 4-part rule was a "provisional pass" on 1 of 3 leads; I built
+  on a maybe. (2) Part 2 was weak from the start: gitleaks/TruffleHog are free and known.
+  (3) I kept building (wallet patterns, --history, offer page, delivery kit) while the one number
+  that mattered stayed at 0. The 11-01 review stopped pattern cycles; the 11-03 goal change
+  restarted them under a crypto label.
+- What KILL means (operator decision): guard.py stays free in the kit, bug fixes only; the
+  49 USDC page stays live (costs nothing); no cycles on guard, the page or the delivery kit
+  unless a paid order or an outside "I ran it" arrives.
+- Lesson: part-1 evidence must be a stranger's public post, written down before building, and a
+  "provisional" pass counts as a fail.
