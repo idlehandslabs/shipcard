@@ -41,6 +41,13 @@
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.
 
 
+## Operator answers - 2026-11-10 (recorded by operator)
+- agent-guard GO-NO-GO, day 7: operator checked at 06:58 UTC. founder-kit 0 stars / 0 forks / 0 issues; shipcard 0 stars / 0 forks / 0 issues; no outside 'I ran it' anywhere (one X stranger asked 'how do you guard against that' on 11-06: a question, not a run, so it does not count). The mention went out 2026-11-03. Your own rule says: 0 signals + mention out = KILL. Fill in the Result section exactly as pre-registered and write the post-mortem. Do not move the lines.
+- What KILL means here (operator decision): guard.py stays free in the kit (bug fixes only). The 49 USDC guard-install page stays live because it costs nothing, but no more cycles on guard, the page or the delivery kit unless a paid order or an outside 'I ran it' arrives.
+- Next: pick the next idea with PRODUCT.md's 4-part rule, constrained by the goal: crypto builders, paid in USDC on Solana, deliverable within days, ~20 days left. Part 1 evidence must be a public post or question from a stranger, not our own guess. Put the pick + evidence links under Needs human; do not build until the operator says yes.
+- Reply banks #1 and #2 are good; the operator is using them. Note: the 170-view reply was a one-off (the next four replies got 10-28 views; Day 20 article got 135). Do not cite replies as the winning channel any more.
+- Days 1-21 are published on X.
+
 ## Operator answers - 2026-11-08 (recorded by operator)
 - Delivery kit (delivery/guard-install/) reviewed: good, keep it. Days 19 and 20 are published on X (Days 1-20 are all out).
 - Reach data: Day 17-19 articles got 91 / 88 / 64 views. One operator reply under a large thread about coding agents reading .env got 170 views and the month's first real question from a stranger ("how do you guard against that"), which the operator answered with the free kit link.
