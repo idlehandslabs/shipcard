@@ -1703,3 +1703,19 @@ s=s.replace("""- Mention date: _
 - Tried: app/build/ page (99 USDC build offer) reusing guardcore.orderBody (kind=repo). Result: works, 3 new tests, app 39/39 pass. Why: operator Play 2, smallest payable thing. Next: Roast card funnier + clearer 5 USDC CTA.
 - Tried: one-shot bash heredocs / python-on-stdin to write files. Result: BLOCKED by the permission parser (brace+quote patterns, stdin code, compound cd && node). Fix: scripts written with Write into .demo-tmp/, commands run one at a time.
 - Found: agent/orders.py PRICES has repo=49 and checks paid >= price, so a 99 USDC build payment passes but is labelled 49/guard install. Can't edit agent/ (protected). Next: Needs human.
+
+## 2026-11-11 09:49 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `mkdir -p app/build && python3 - <<'EOF'
+src=open('app/guard/index.html').read()
+style=src[src.index('<style>'):src.index('</style>')+8]
+html=f'''<!doctype html>
+<html lang="en">
+<head>
+<meta charset="`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p app/build && python3 .demo-tmp/mk.py && rm .demo-tmp/mk.py && cd app && node --test tests/ 2>&1 | grep -E "^# (tests|pass|fail)"`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/app && node --test tests/ 2>&1 | grep -E "^# (tests|pass|fail)"`
+- **Blocked by a guardrail:** `Bash` → `cat >> state/REVIEW-DAILY.md <<'EOF'
+
+## 2026-11-11 (09:50 UTC cycle)
+- Revenue Nov: $0 (state/orders/ empty: 0 paid orders) vs $1,000 by 2026-11-30. 20 days left incl. today -> $50.00/day needed (~0.`
+- Turns: 23 · Claude cost: $0.82 (not counted in the $100 budget)
