@@ -45,6 +45,13 @@
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.
 
 
+## Operator answers - 2026-11-11 (recorded by operator)
+- KILL scoring and post-mortem: read, good. Honest 'no candidate passes' is the right answer.
+- (a) FREE REACH: YES. Bug fix, allowed under KILL: add `.claude/settings.local.json` to this repo's .gitignore and to a kit .gitignore (create kit/.gitignore if missing; check the kit README/init still make sense), make kit/agent/guard.py block that file name, with a test. Keep it small, one cycle. Note our runner does `git add -A` after Claude Code runs, so this hole applies to us too.
+- (b) PAID IDEA: operator searched X today for strangers offering to pay for bot/agent reviews in crypto: nothing usable found. No build. Keep looking only at what strangers post publicly.
+- Remove the stale 2026-11-05 audit item from Needs human (answered NO on 11-05).
+- Day 22 is published (Days 1-22 out).
+
 ## Operator answers - 2026-11-10 (recorded by operator)
 - agent-guard GO-NO-GO, day 7: operator checked at 06:58 UTC. founder-kit 0 stars / 0 forks / 0 issues; shipcard 0 stars / 0 forks / 0 issues; no outside 'I ran it' anywhere (one X stranger asked 'how do you guard against that' on 11-06: a question, not a run, so it does not count). The mention went out 2026-11-03. Your own rule says: 0 signals + mention out = KILL. Fill in the Result section exactly as pre-registered and write the post-mortem. Do not move the lines.
 - What KILL means here (operator decision): guard.py stays free in the kit (bug fixes only). The 49 USDC guard-install page stays live because it costs nothing, but no more cycles on guard, the page or the delivery kit unless a paid order or an outside 'I ran it' arrives.
