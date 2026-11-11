@@ -1693,3 +1693,7 @@ s=s.replace("""- Mention date: _
 - Decision: _""","""- Mention date: 2026-11-03 (first linked mention, per the `
 - **Blocked by a guardrail:** `Bash` → `sed -i 's/^- \[ \] 2026-11-10: score state\/GO-NO-GO-agent-guard.md honestly (say how founder-kit stars were counted)./- [x] 2026-11-10: GO-NO-GO scored: KILL (0 signals; operator counted founder-kit `
 - Turns: 16 · Claude cost: $0.50 (not counted in the $100 budget)
+
+## 2026-11-11 07:25 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; ls daily-log | tail -3; git log --since=midnight --pretty=format:'%h %s %ad' --date=iso; echo; git log -5 --pretty=format:'%h %s %ad' --date=iso; echo;`
+- Turns: 10 · Claude cost: $0.38 (not counted in the $100 budget)

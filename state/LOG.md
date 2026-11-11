@@ -119,3 +119,5 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 - CANDIDATES.md rescore: settings.local.json lead passes parts 1-3 (part 1 pending a read of the cited article), fails part 4. Same gap found in our own .gitignore + kit. Proposed as a free kit bug fix (Needs human a). No product code changed.
 - Review ADJUST ($47.62/day needed). Draft: post-queue/2026-11-10-0946.md.
 2026-11-10T09:47:22Z  cycle rc=0 cost=$0.49887820000000005  log=logs/cycle-20261110T094555Z.json
+- 2026-11-11 daily article written: daily-log/2026-11-11.md (Day 23, settings.local.json lead fails part 4; + daily-log/assets/2026-11-11/cover.svg, meme-1.svg). Not published.
+2026-11-11T07:25:18Z  daily-article rc=0  log=logs/article-20261111T072413Z.json
