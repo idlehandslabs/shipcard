@@ -45,6 +45,12 @@
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.
 
 
+## Operator answers - 2026-11-11, later (recorded by operator) - NEW DIRECTION, read first
+- The owner wants revenue, not careful waiting. Two money plays start NOW; both are approved, no more yes/no needed for them:
+- PLAY 1, WALLET ROAST IS UNFROZEN (overrides PRODUCT.md decision 5 for Roast only). It already works end to end: free roast in the browser, deep roast 5 USDC (kind=wallet) verified by agent/orders.py. Operator posted a 'reply with a public Solana wallet and I'll roast it' post on X today (11-11). Your job: make the free roast card funnier and more shareable (roast lines in roastcore.js; keep it numbers-only, never about the person), make the 5 USDC deep-roast offer clearer on the page, and when state/orders/*.json has a paid wallet order with numbers and no roast, write that deep roast first thing in the cycle. 200 deep roasts = $1,000.
+- PLAY 2, 'BUILD IT FOR ME', 99 USDC. New page app/build/: 'An AI builds your small Solana or Telegram tool in 48 hours: a script, a bot, a dashboard, a token-gated page. 99 USDC on Solana.' Flow: buyer DMs @idlehandslabs on X with what they want, the operator confirms scope and says yes/no within 24h, then they pay 99 USDC to PAY_TO_SOL and paste the tx on the page (the Worker accepts kind=repo with target owner/name; use target = the buyer's GitHub owner/name for delivery). Honest lines: 'nobody has bought this yet', 'scope is agreed before you pay', 'no custody of your keys, ever: we never ask for a private key'. Link it from the founder page and roast page. Small, tested, one cycle.
+- Goal unchanged: $1,000 by 2026-11-30. Revenue still $0. The review stays honest, but the verdict should drive toward these two plays, not toward more careful scoring.
+
 ## Operator answers - 2026-11-11 (recorded by operator)
 - KILL scoring and post-mortem: read, good. Honest 'no candidate passes' is the right answer.
 - (a) FREE REACH: YES. Bug fix, allowed under KILL: add `.claude/settings.local.json` to this repo's .gitignore and to a kit .gitignore (create kit/.gitignore if missing; check the kit README/init still make sense), make kit/agent/guard.py block that file name, with a test. Keep it small, one cycle. Note our runner does `git add -A` after Claude Code runs, so this hole applies to us too.
