@@ -1,5 +1,11 @@
 # Backlog
 
+## Now (2026-11-11, PIVOT to money plays)
+1. Every cycle: paid wallet order in state/orders/ without a roast -> write the deep roast first.
+2. Roast: funnier, more shareable free card (roastcore.js, numbers-only) + clearer 5 USDC deep-roast CTA on app/roast/.
+3. Kit bug fix (approved): .claude/settings.local.json in .gitignore (repo + kit) + guard.py blocks it, with a test.
+- DONE 2026-11-11: app/build/ 99 USDC page.
+
 ## GOAL (2026-10-22, replaces the $1k-by-Oct-31 goal): validate FOUNDER-IN-A-BOX
 50 waitlist signups by 2026-10-29. First paying customer ~2026-11-20. See PRODUCT.md decision 5. Report the waitlist count (from state/METRICS.md) in every daily article.
 
