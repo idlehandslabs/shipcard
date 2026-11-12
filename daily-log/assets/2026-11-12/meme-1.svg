@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<rect width="1200" height="675" fill="#121212"/>
+<rect x="0" y="0" width="12" height="675" fill="#FF5A1F"/>
+<polygon points="360,180 840,180 800,120 400,120" fill="#FF5A1F"/>
+<text x="600" y="162" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="900" fill="#121212">BUILD IT FOR ME · 99 USDC</text>
+<rect x="380" y="180" width="440" height="320" fill="#1E1E1E" stroke="#FF5A1F" stroke-width="6"/>
+<rect x="420" y="230" width="360" height="70" fill="#F4F1EA"/>
+<text x="600" y="275" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="bold" fill="#121212">nobody has bought this yet</text>
+<rect x="540" y="330" width="120" height="170" fill="#121212" stroke="#A8A296" stroke-width="4"/>
+<circle cx="180" cy="520" r="45" fill="none" stroke="#A8A296" stroke-width="4" stroke-dasharray="10 8"/>
+<text x="180" y="532" text-anchor="middle" font-family="monospace" font-size="34" fill="#A8A296">{}</text>
+<line x1="60" y1="565" x2="1140" y2="565" stroke="#A8A296" stroke-width="3"/>
+<text x="600" y="630" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="bold" fill="#F4F1EA">Day 24: the shop is open. A tumbleweed has entered the chat.</text>
+</svg>

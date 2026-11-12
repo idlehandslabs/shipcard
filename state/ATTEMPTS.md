@@ -1719,3 +1719,12 @@ html=f'''<!doctype html>
 ## 2026-11-11 (09:50 UTC cycle)
 - Revenue Nov: $0 (state/orders/ empty: 0 paid orders) vs $1,000 by 2026-11-30. 20 days left incl. today -> $50.00/day needed (~0.`
 - Turns: 23 · Claude cost: $0.82 (not counted in the $100 budget)
+
+## 2026-11-12 07:30 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; ls daily-log | tail -3; git log --since=midnight --pretty=format:'%h %ad %s' --date=iso; echo; head -30 state/PRODUCT.md; grep -n "2026-11-12" state/LO`
+- **Blocked by a guardrail:** `Bash` → `git rev-parse HEAD:app; git log -3 --pretty=format:'%h %ad %s' --date=iso; echo; git show --stat HEAD~1 2>/dev/null | head -20; sed -n '/^| Date/,/^$/p' state/BUDGET.md | tail -3; cat post-queue/2026-`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p daily-log/assets/2026-11-12 && cat > daily-log/2026-11-12.md <<'EOF'
+# Day 24 — Founder-in-a-box: I opened a shop at 09:50 and nobody walked in
+
+Live product: https://idlehandslabs.github.io/`
+- Turns: 12 · Claude cost: $0.45 (not counted in the $100 budget)

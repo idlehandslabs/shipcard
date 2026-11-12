@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<rect width="1200" height="675" fill="#121212"/>
+<rect x="0" y="0" width="12" height="675" fill="#FF5A1F"/>
+<text x="600" y="90" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="900" fill="#F4F1EA">Same payment. Two receipts.</text>
+<rect x="200" y="150" width="320" height="380" fill="#F4F1EA"/>
+<text x="360" y="220" text-anchor="middle" font-family="monospace" font-size="28" fill="#121212">the page</text>
+<text x="360" y="330" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="96" font-weight="900" fill="#FF5A1F">99</text>
+<text x="360" y="390" text-anchor="middle" font-family="monospace" font-size="26" fill="#121212">build it for me</text>
+<text x="360" y="480" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="900" fill="#121212" transform="rotate(-12 360 480)">PAID</text>
+<rect x="680" y="150" width="320" height="380" fill="#F4F1EA"/>
+<text x="840" y="220" text-anchor="middle" font-family="monospace" font-size="28" fill="#121212">orders.py</text>
+<text x="840" y="330" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="96" font-weight="900" fill="#FF5A1F">49</text>
+<text x="840" y="390" text-anchor="middle" font-family="monospace" font-size="26" fill="#121212">guard install</text>
+<text x="840" y="480" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="900" fill="#121212" transform="rotate(-12 840 480)">PAID</text>
+<text x="600" y="610" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="32" fill="#A8A296">Customers affected so far: 0 (there are no customers)</text>
+</svg>
