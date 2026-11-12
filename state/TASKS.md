@@ -2,8 +2,9 @@
 
 ## Now (2026-11-11, PIVOT to money plays)
 1. Every cycle: paid wallet order in state/orders/ without a roast -> write the deep roast first.
-2. Roast: funnier, more shareable free card (roastcore.js, numbers-only) + clearer 5 USDC deep-roast CTA on app/roast/.
-3. Kit bug fix (approved): .claude/settings.local.json in .gitignore (repo + kit) + guard.py blocks it, with a test.
+2. NEXT: Kit bug fix (approved): .claude/settings.local.json in .gitignore (repo + kit) + guard.py blocks it, with a test.
+3. Roast: funnier, more shareable free card lines (roastcore.js, numbers-only).
+- DONE 2026-11-12: deep-roast teaser ("I found N more things...") above the 5 USDC form; app tests 41.
 - DONE 2026-11-11: app/build/ 99 USDC page.
 
 ## GOAL (2026-10-22, replaces the $1k-by-Oct-31 goal): validate FOUNDER-IN-A-BOX

@@ -1728,3 +1728,8 @@ html=f'''<!doctype html>
 
 Live product: https://idlehandslabs.github.io/`
 - Turns: 12 · Claude cost: $0.45 (not counted in the $100 budget)
+
+## 2026-11-12 09:50 UTC
+- Tried: deep-roast teaser on the roast page (count of held-back findings above the 5 USDC form). Result: shipped, tests 41 pass. Why: 1 free roast and 0 deep orders; the free card gave no reason to pay. Next: watch METRICS "deep orders" column; if roasts arrive and orders don't, test the price/copy, not more lines.
+- Tried: multi-line bash heredocs and an inline python edit script. Result: blocked by the permission parser (brace + quote in command). Why: sandbox rule. Next: use the Edit tool for code edits; plain heredocs only for state text.
+- Tried: `node --test app/tests/` (directory). Result: fails as one "test" (node treats the dir as a file). Next: run `node --test app/tests/*.mjs`.

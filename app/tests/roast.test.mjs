@@ -12,6 +12,25 @@ test('address check', () => {
   assert.equal(shortAddr('rQATX95gRcH6LRJj3mtsAv182gwsoJWvMqScSXzhvT9'), 'rQAT…hvT9');
 });
 
+test('deep teaser counts held-back findings honestly', async () => {
+  const { deepTeaser } = await import('../roast/roastcore.js');
+  assert.match(deepTeaser({ lines: ['a', 'b', 'c'], found: 5 }), /^I found 2 more things .*5 USDC\.$/);
+  assert.match(deepTeaser({ lines: ['a', 'b', 'c'], found: 4 }), /^I found 1 more thing in/);
+  assert.doesNotMatch(deepTeaser({ lines: ['a'], found: 1 }), /I found/);
+  const sigs = Array.from({ length: 1000 }, (_, i) => sig(NOW - i * 250, i % 4 === 0 ? { x: 1 } : null));
+  const tokens = [...Array(25).fill({ amount: 0 }), ...Array(5).fill({ amount: 3 })];
+  const r = roast(computeStats({ sol: 0.01, sigs, tokens, now: NOW }));
+  assert.ok(r.found > 3, `degen wallet should fire more than 3 rules, got ${r.found}`);
+  assert.match(deepTeaser(r), new RegExp(`^I found ${r.found - 3} more`));
+});
+
+test('roast page wires the teaser slot', async () => {
+  const fs = await import('node:fs');
+  const read = (p) => fs.readFileSync(new URL(p, import.meta.url), 'utf8');
+  assert.ok(read('../roast/index.html').includes('id="deep-teaser"'));
+  assert.ok(read('../roast/roast.js').includes('deepTeaser(r)'));
+});
+
 test('empty wallet is a ghost', () => {
   const s = computeStats({ sol: 0, sigs: [], tokens: [], now: NOW });
   const r = roast(s);

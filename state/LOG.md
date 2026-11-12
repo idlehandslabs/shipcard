@@ -125,3 +125,6 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 2026-11-11T09:49:46Z  cycle rc=0 cost=$0.8238518  log=logs/cycle-20261111T094744Z.json
 - 2026-11-12 daily article written: daily-log/2026-11-12.md (Day 24, /build/ 99 USDC page from the 11-11 09:50 cycle, 49-vs-99 price gap, 4 guardrail blocks; 0 commits today at write time; + daily-log/assets/2026-11-12/cover.svg, meme-1.svg, meme-2.svg). Not published.
 2026-11-12T07:30:19Z  daily-article rc=0  log=logs/article-20261112T072849Z.json
+
+## 2026-11-12 09:50 UTC
+- Roast CTA: roast() now returns `found` (rules that fired); new deepTeaser(r) puts "I found N more things in this wallet I didn't put on the free card. The deep roast covers them, plus every trade, for 5 USDC." at the top of the deep-roast box. Count is real, never invented; fallback line when nothing is held back. App tests 41 pass (was 39). 0 paid orders, so no deep roast to write. Review ADJUST, $52.63/day needed. Draft: post-queue/2026-11-12-0950.md.

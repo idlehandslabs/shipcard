@@ -1,4 +1,4 @@
-import { SOL_ADDR, computeStats, roast, statLine, shortAddr, postText } from './roastcore.js';
+import { SOL_ADDR, computeStats, roast, statLine, shortAddr, postText, deepTeaser } from './roastcore.js';
 import { svgToPng } from '../card.js';
 
 const RPCS = ['https://solana-rpc.publicnode.com', 'https://api.mainnet-beta.solana.com'];
@@ -100,6 +100,7 @@ async function run(addr) {
     $('out').hidden = false;
     $('msg').textContent = '';
     $('deep-target').textContent = shortAddr(addr);
+    $('deep-teaser').textContent = deepTeaser(r);
     history.replaceState(null, '', `?w=${addr}`);
     track('roast');
   } catch (e) {

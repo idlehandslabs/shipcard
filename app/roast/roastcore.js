@@ -169,10 +169,18 @@ const FALLBACK = {
 
 export function roast(s) {
   const hits = RULES.filter((r) => r.when(s)).sort((a, b) => b.weight - a.weight);
-  if (!hits.length) return { ...FALLBACK, score: 10 };
+  if (!hits.length) return { ...FALLBACK, score: 10, found: 0 };
   const lines = hits.slice(0, 3).map((r) => r.line(s));
   const score = Math.min(100, Math.round(hits.reduce((a, r) => a + r.weight, 0) / 2.2));
-  return { verdict: hits[0].verdict, lines, score };
+  return { verdict: hits[0].verdict, lines, score, found: hits.length };
+}
+
+// The hook under the free card: how many findings the free roast held back.
+// Honest by construction: the count is the rules that actually fired on this wallet.
+export function deepTeaser(r) {
+  const extra = Math.max(0, (r.found || 0) - r.lines.length);
+  if (extra > 0) return `I found ${extra} more thing${extra === 1 ? '' : 's'} in this wallet I didn't put on the free card. The deep roast covers them, plus every trade, for 5 USDC.`;
+  return 'The free card is 3 lines. The deep roast reads every trade, for 5 USDC.';
 }
 
 export function statLine(s) {
