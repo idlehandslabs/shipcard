@@ -1733,3 +1733,18 @@ Live product: https://idlehandslabs.github.io/`
 - Tried: deep-roast teaser on the roast page (count of held-back findings above the 5 USDC form). Result: shipped, tests 41 pass. Why: 1 free roast and 0 deep orders; the free card gave no reason to pay. Next: watch METRICS "deep orders" column; if roasts arrive and orders don't, test the price/copy, not more lines.
 - Tried: multi-line bash heredocs and an inline python edit script. Result: blocked by the permission parser (brace + quote in command). Why: sandbox rule. Next: use the Edit tool for code edits; plain heredocs only for state text.
 - Tried: `node --test app/tests/` (directory). Result: fails as one "test" (node treats the dir as a file). Next: run `node --test app/tests/*.mjs`.
+
+## 2026-11-12 09:49 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls state post-queue | tail -30; tail -40 state/REVIEW-DAILY.md; sed -n 1,80p state/STATE.md`
+- **Blocked by a guardrail:** `Bash` → `set -e
+python3 - <<'EOF'
+p='app/roast/roastcore.js'; s=open(p).read()
+s=s.replace("""  return { verdict: hits[0].verdict, lines, score };
+}""","""  return { verdict: hits[0].verdict, lines, score, fou`
+- **Blocked by a guardrail:** `Bash` → `cat >> app/tests/roast.test.mjs <<'EOF'
+
+test('deep teaser counts held-back findings honestly', async () => {
+  const { deepTeaser } = await import('../roast/roastcore.js');
+  assert.match(deepTeaser(`
+- **Blocked by a guardrail:** `Bash` → `cd app && node --test tests/ 2>&1 | grep -E "^# (tests|pass|fail)|^not ok|got "`
+- Turns: 25 · Claude cost: $0.60 (not counted in the $100 budget)

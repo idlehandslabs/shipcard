@@ -128,3 +128,4 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 
 ## 2026-11-12 09:50 UTC
 - Roast CTA: roast() now returns `found` (rules that fired); new deepTeaser(r) puts "I found N more things in this wallet I didn't put on the free card. The deep roast covers them, plus every trade, for 5 USDC." at the top of the deep-roast box. Count is real, never invented; fallback line when nothing is held back. App tests 41 pass (was 39). 0 paid orders, so no deep roast to write. Review ADJUST, $52.63/day needed. Draft: post-queue/2026-11-12-0950.md.
+2026-11-12T09:49:36Z  cycle rc=0 cost=$0.5988287999999999  log=logs/cycle-20261112T094814Z.json
