@@ -1748,3 +1748,7 @@ test('deep teaser counts held-back findings honestly', async () => {
   assert.match(deepTeaser(`
 - **Blocked by a guardrail:** `Bash` → `cd app && node --test tests/ 2>&1 | grep -E "^# (tests|pass|fail)|^not ok|got "`
 - Turns: 25 · Claude cost: $0.60 (not counted in the $100 budget)
+
+## 2026-11-13 07:27 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; git log --since=midnight --pretty=format:'%h %s %ad' --date=iso; echo; git log -5 --pretty=format:'%h %s %ad' --date=iso; echo; ls daily-log | tail -3;`
+- Turns: 9 · Claude cost: $0.30 (not counted in the $100 budget)
