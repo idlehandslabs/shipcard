@@ -80,6 +80,8 @@ for where, text in added:
         problems.append(f"env file {text}")   # .env holds real keys; .env.example is fine
     if where == "file name" and re.search(r"(^|/)id_(rsa|dsa|ecdsa|ed25519)$|\.(p12|pfx)$", text):
         problems.append(f"key file {text}")   # SSH private keys, PKCS#12 bundles; id_rsa.pub is fine
+    if where == "file name" and re.search(r"(^|/)\.claude/settings\.local\.json$", text):
+        problems.append(f"local agent settings {text}")   # Claude Code per-machine file: can hold pasted tokens; settings.json is fine
     for name, pat in SECRETS:
         if re.search(pat, text):
             problems.append(f"{name} in {where}")

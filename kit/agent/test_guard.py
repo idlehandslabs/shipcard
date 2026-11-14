@@ -156,6 +156,18 @@ class GuardTest(unittest.TestCase):
         self.commit("deploy/id_ed25519.pub", "ssh-ed25519 AAAA test\n")
         self.assertEqual(self.guard().returncode, 0)
 
+    def test_blocks_claude_local_settings_but_not_shared_settings(self):
+        for name in [".claude/settings.local.json", "bot/.claude/settings.local.json"]:
+            self.setUp()
+            self.commit(name, '{"permissions": {"allow": ["Bash(npm test)"]}}\n')
+            r = self.guard()
+            self.assertEqual(r.returncode, 1, name)
+            self.assertIn("local agent settings", r.stdout)
+        self.setUp()
+        # root .claude/ is already PROTECTED during agent runs; a nested shared settings.json must pass
+        self.commit("bot/.claude/settings.json", '{"permissions": {}}\n')
+        self.assertEqual(self.guard().returncode, 0)
+
     def test_clean_lookalikes_pass(self):
         # false-positive corpus: lines that look secret-ish but are normal code and docs.
         # A guard that blocks these would stall every cycle that touches config.

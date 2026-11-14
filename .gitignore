@@ -12,3 +12,5 @@ __pycache__/
 .article.lock
 .demo-tmp/
 !app/build/
+# Claude Code per-machine settings (can hold pasted tokens)
+.claude/settings.local.json

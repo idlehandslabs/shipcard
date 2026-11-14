@@ -52,7 +52,7 @@ read every byte of its memory in `git log`.
     Ran 25 tests in 0.043s
     OK
     $ python3 -m unittest discover -s agent -p "test_*.py"
-    Ran 23 tests in 2.476s
+    Ran 24 tests in 2.935s
     OK
 
 The 25 check init.py, the cost math, and that these docs match the code (one fails if
