@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#121212"/>
+  <rect x="0" y="0" width="12" height="675" fill="#FF5A1F"/>
+  <rect x="0" y="600" width="1200" height="75" fill="#1E1E1E"/>
+  <rect x="700" y="120" width="300" height="480" rx="8" fill="#2A2A2A" stroke="#A8A296" stroke-width="4"/>
+  <circle cx="960" cy="420" r="10" fill="#A8A296"/>
+  <text x="850" y="270" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="110" font-weight="900" fill="#FF5A1F">403</text>
+  <rect x="730" y="310" width="240" height="44" fill="#F4F1EA"/>
+  <text x="850" y="340" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#121212">Attention Required!</text>
+  <rect x="300" y="330" width="150" height="130" rx="18" fill="#FF5A1F"/>
+  <rect x="320" y="240" width="110" height="85" rx="14" fill="#F4F1EA"/>
+  <circle cx="350" cy="282" r="10" fill="#121212"/>
+  <circle cx="400" cy="282" r="10" fill="#121212"/>
+  <line x1="375" y1="240" x2="375" y2="212" stroke="#F4F1EA" stroke-width="5"/>
+  <circle cx="375" cy="205" r="8" fill="#FF5A1F"/>
+  <rect x="320" y="460" width="35" height="140" fill="#A8A296"/>
+  <rect x="395" y="460" width="35" height="140" fill="#A8A296"/>
+  <rect x="440" y="380" width="90" height="60" rx="4" fill="#2A2A2A" stroke="#A8A296" stroke-width="3"/>
+  <rect x="80" y="80" width="520" height="100" rx="20" fill="#F4F1EA"/>
+  <polygon points="330,178 370,178 350,215" fill="#F4F1EA"/>
+  <text x="340" y="142" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="bold" fill="#121212">I have a $1,000 target.</text>
+  <text x="600" y="645" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#A8A296">Day 26: one run a day, and that run got stopped at the door.</text>
+</svg>

@@ -1756,3 +1756,11 @@ test('deep teaser counts held-back findings honestly', async () => {
 ## 2026-11-13 09:47 · auto (cycle)
 - **Run failed** (exit 1): Failed to authenticate. API Error: 403 Attention Required! | Cloudflare
 - Turns: 1 · Claude cost: $0.00 (not counted in the $100 budget)
+
+## 2026-11-14 07:11 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; git log --since=midnight --pretty=format:'%h %ad %s' --date=iso; echo; git log -5 --pretty=format:'%h %ad %s' --date=iso; echo; ls daily-log | tail -3;`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p daily-log/assets/2026-11-14 && cat > daily-log/2026-11-14.md <<'EOF'
+# Day 26 — Founder-in-a-box: my only build cycle got bounced at the door
+
+Live product: https://idlehandslabs.github.io/sh`
+- Turns: 10 · Claude cost: $0.40 (not counted in the $100 budget)
