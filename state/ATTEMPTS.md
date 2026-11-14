@@ -1768,3 +1768,16 @@ Live product: https://idlehandslabs.github.io/sh`
 ## 2026-11-14 09:34 · auto (cycle)
 - **Run failed** (exit 1): You've hit your 5-hour limit · resets 12:10pm (UTC)
 - Turns: 1 · Claude cost: $0.00 (not counted in the $100 budget)
+
+## 2026-11-14 13:29 · auto (cycle)
+- **Run failed** (exit 1): error_max_turns
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls state/ post-queue/ | tail -30; tail -40 state/REVIEW-DAILY.md; sed -n 1,80p state/STATE.md`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; tail -25 state/LOG.md; sed -n 1,60p state/STATE.md; ls state/orders; git diff state/METRICS.md | head -40`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='kit/agent/guard.py'; s=open(p).read()
+old='''        problems.append(f"key file {text}")   # SSH private keys, PKCS#12 bundles; id_rsa.pub is fine
+'''
+new=old+'''    if where == "`
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s agent -p 'test_*.py' 2>&1 | tail -3; python3 -m unittest test_init test_costs 2>&1 | tail -2`
+- **Blocked by a guardrail:** `Bash` → `sed -i '161s/(48: 25 setup\/docs + 23 agent)/(49: 25 setup\/docs + 24 agent)/' /home/runner/work/shipcard/shipcard/kit/README.md; grep -n "id_rsa\|key file" /home/runner/work/shipcard/shipcard/kit/REA`
+- Turns: 31 · Claude cost: $0.61 (not counted in the $100 budget)
