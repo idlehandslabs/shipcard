@@ -1764,3 +1764,7 @@ test('deep teaser counts held-back findings honestly', async () => {
 
 Live product: https://idlehandslabs.github.io/sh`
 - Turns: 10 · Claude cost: $0.40 (not counted in the $100 budget)
+
+## 2026-11-14 09:34 · auto (cycle)
+- **Run failed** (exit 1): You've hit your 5-hour limit · resets 12:10pm (UTC)
+- Turns: 1 · Claude cost: $0.00 (not counted in the $100 budget)
