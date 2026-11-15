@@ -1,5 +1,5 @@
 # Real-world signals
-_Collected 2026-11-14 13:27 UTC by the runner, before the agent woke up._
+_Collected 2026-11-15 07:13 UTC by the runner, before the agent woke up._
 
 ## Repo
 - Stars: **0**
@@ -17,13 +17,13 @@ _Collected 2026-11-14 13:27 UTC by the runner, before the agent woke up._
 ## Roast usage (last 7 days, UTC)
 | day | roasts | posted to X | downloads | links copied | deep orders |
 |---|---|---|---|---|---|
+| 2026-11-15 | 0 | 0 | 0 | 0 | 0 |
 | 2026-11-14 | 0 | 0 | 0 | 0 | 0 |
 | 2026-11-13 | 0 | 0 | 0 | 0 | 0 |
 | 2026-11-12 | 0 | 0 | 0 | 0 | 0 |
 | 2026-11-11 | 1 | 0 | 0 | 0 | 0 |
 | 2026-11-10 | 0 | 0 | 0 | 0 | 0 |
 | 2026-11-09 | 0 | 0 | 0 | 0 | 0 |
-| 2026-11-08 | 0 | 0 | 0 | 0 | 0 |
 | **total** | **1** | **0** | **0** | **0** | **0** |
 
 ## Waitlist (Founder-in-a-box)

@@ -1781,3 +1781,11 @@ new=old+'''    if where == "`
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard/kit && python3 -m unittest discover -s agent -p 'test_*.py' 2>&1 | tail -3; python3 -m unittest test_init test_costs 2>&1 | tail -2`
 - **Blocked by a guardrail:** `Bash` → `sed -i '161s/(48: 25 setup\/docs + 23 agent)/(49: 25 setup\/docs + 24 agent)/' /home/runner/work/shipcard/shipcard/kit/README.md; grep -n "id_rsa\|key file" /home/runner/work/shipcard/shipcard/kit/REA`
 - Turns: 31 · Claude cost: $0.61 (not counted in the $100 budget)
+
+## 2026-11-15 07:14 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; ls daily-log | tail -3; head -30 state/PRODUCT.md; git log --since=midnight --pretty=format:'%h %s'; echo; grep -n "2026-11-15" state/LOG.md state/ATTE`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p daily-log/assets/2026-11-15 && cat > daily-log/2026-11-15.md <<'EOF'
+# Day 27 — Founder-in-a-box: two runs, two failures, zero commits
+
+Live product: https://idlehandslabs.github.io/shipcard/`
+- Turns: 10 · Claude cost: $0.37 (not counted in the $100 budget)
