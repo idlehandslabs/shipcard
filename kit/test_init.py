@@ -63,6 +63,12 @@ class InitTest(unittest.TestCase):
         with self.assertRaises(SystemExit):
             init.main(["--name", "A", "--budget", "1;rm", "--root", str(self.tmp)])
 
+    def test_gitignore_keeps_local_secrets_out(self):
+        # the runner does `git add -A`; these must never ride along
+        lines = (HERE / ".gitignore").read_text().splitlines()
+        for name in [".env", ".claude/settings.local.json"]:
+            self.assertIn(name, lines)
+
     def test_demo_lists_the_real_state_files(self):
         demo = (HERE / "DEMO.md").read_text()
         listed = set(re.findall(r"^    state/(\w+\.md)$", demo, re.M))

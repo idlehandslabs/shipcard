@@ -1,0 +1,9 @@
+# The workflow commits with `git add -A`, so anything here stays off GitHub.
+# Real keys
+.env
+.env.*
+!.env.example
+# Claude Code per-machine settings: can hold pasted tokens and allowed commands
+.claude/settings.local.json
+# Python
+__pycache__/

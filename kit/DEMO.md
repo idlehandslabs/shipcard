@@ -49,7 +49,7 @@ read every byte of its memory in `git log`.
 ## 3. Run the tests
 
     $ python3 -m unittest discover -s . -p "test_*.py"
-    Ran 25 tests in 0.043s
+    Ran 26 tests in 0.043s
     OK
     $ python3 -m unittest discover -s agent -p "test_*.py"
     Ran 24 tests in 2.935s
