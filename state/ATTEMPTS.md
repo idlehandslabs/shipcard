@@ -1789,3 +1789,8 @@ new=old+'''    if where == "`
 
 Live product: https://idlehandslabs.github.io/shipcard/`
 - Turns: 10 · Claude cost: $0.37 (not counted in the $100 budget)
+
+## 2026-11-15 09:35 · cycle
+- Tried: finish approved kit fix (.claude/settings.local.json). Result: guard.py part was already in 0b5b7b4 from the failed 11-14 run; added kit/.gitignore + test. Kit 26 + 24 pass. Why: approved, half-done, small. Next: roast lines.
+- Tried: compound `cd kit && ... | tail` and `sed -i && python` Bash lines. Result: blocked (multi-op needs approval). Why: guardrail. Next: one command per call, Edit tool for edits.
+- Tried: new test first run. Result: FAILED test_readme_test_count_is_real twice (README 49 then DEMO 25 stale). Why: the count guard works. Fixed both.

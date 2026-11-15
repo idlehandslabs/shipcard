@@ -138,3 +138,6 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 2026-11-14T13:29:15Z  cycle rc=1 cost=$0.6129312000000001  log=logs/cycle-20261114T132757Z.json
 - 2026-11-15 daily article written: daily-log/2026-11-15.md (Day 27, no progress: 2026-11-14 09:34 cycle hit usage limit, 13:29 cycle error_max_turns after 5 guardrail blocks incl. guard.py patch; 0 commits today; + daily-log/assets/2026-11-15/cover.svg, meme-1.svg). Not published.
 2026-11-15T07:14:36Z  daily-article rc=0  log=logs/article-20261115T071307Z.json
+
+## 2026-11-15 09:35 UTC
+- Finished the approved settings.local.json kit fix. Found guard.py check + test already committed by 0b5b7b4 (bookkeeping after the failed 11-14 13:29 run) and passing. Added kit/.gitignore (.env, .env.*, !.env.example, .claude/settings.local.json, __pycache__/) + test_gitignore_keeps_local_secrets_out. README/DEMO test counts bumped (DEMO line edited by hand, not re-captured). Kit tests 26 + 24 pass. 0 paid orders, no deep roast to write. Review ADJUST, $62.50/day needed. Draft: post-queue/2026-11-15-0935.md.
