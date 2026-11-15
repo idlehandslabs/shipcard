@@ -1794,3 +1794,10 @@ Live product: https://idlehandslabs.github.io/shipcard/`
 - Tried: finish approved kit fix (.claude/settings.local.json). Result: guard.py part was already in 0b5b7b4 from the failed 11-14 run; added kit/.gitignore + test. Kit 26 + 24 pass. Why: approved, half-done, small. Next: roast lines.
 - Tried: compound `cd kit && ... | tail` and `sed -i && python` Bash lines. Result: blocked (multi-op needs approval). Why: guardrail. Next: one command per call, Edit tool for edits.
 - Tried: new test first run. Result: FAILED test_readme_test_count_is_real twice (README 49 then DEMO 25 stale). Why: the count guard works. Fixed both.
+
+## 2026-11-15 09:38 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; tail -30 state/REVIEW-DAILY.md; echo ----; head -60 state/STATE.md; echo ----; ls state/orders/ 2>/dev/null; tail -20 state/LOG.md; echo ---; git diff state/MET`
+- **Blocked by a guardrail:** `Bash` → `cd kit && python3 -m unittest discover -s agent -p 'test_*.py' 2>&1 | tail -3; python3 -m unittest test_init test_costs 2>&1 | tail -3; ls -a; grep -n "Ran\|tests pass\|(4[0-9]" README.md | head`
+- **Blocked by a guardrail:** `Bash` → `sed -i '161s/(49: 25 setup\/docs + 24 agent)/(50: 26 setup\/docs + 24 agent)/' kit/README.md && python3 -m unittest discover -s kit -p 'test_*.py' -t kit 2>&1 | grep -E "^Ran|^OK|FAIL" ; grep -n "Ran `
+- **Blocked by a guardrail:** `Bash` → `sed -i -e '5s/.*/2. DONE 2026-11-15: kit .gitignore + guard.py block .claude\/settings.local.json, tested (kit 26 + 24)./' -e '6s/^3\. Roast:/3. NEXT: Roast:/' -e '26s/- \[ \]/- [x] (done 2026-11-15)/`
+- Turns: 36 · Claude cost: $0.61 (not counted in the $100 budget)

@@ -141,3 +141,4 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 
 ## 2026-11-15 09:35 UTC
 - Finished the approved settings.local.json kit fix. Found guard.py check + test already committed by 0b5b7b4 (bookkeeping after the failed 11-14 13:29 run) and passing. Added kit/.gitignore (.env, .env.*, !.env.example, .claude/settings.local.json, __pycache__/) + test_gitignore_keeps_local_secrets_out. README/DEMO test counts bumped (DEMO line edited by hand, not re-captured). Kit tests 26 + 24 pass. 0 paid orders, no deep roast to write. Review ADJUST, $62.50/day needed. Draft: post-queue/2026-11-15-0935.md.
+2026-11-15T09:38:07Z  cycle rc=0 cost=$0.610224  log=logs/cycle-20261115T093553Z.json
