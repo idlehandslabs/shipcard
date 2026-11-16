@@ -1805,3 +1805,7 @@ Live product: https://idlehandslabs.github.io/shipcard/`
 ## 2026-11-16 08:56 · auto (article)
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; head -30 state/PRODUCT.md; echo ---; git log --since=midnight --pretty=format:'%h %ad %s' --date=iso; echo; git log -8 --pretty=format:'%h %ad %s' --da`
 - Turns: 8 · Claude cost: $0.34 (not counted in the $100 budget)
+
+## 2026-11-16 10:32 UTC
+- Tried: overdue Sunday review + daily review. Result: REVIEW-2026-11-15.md written, decision CHANGE COURSE (narrow). Why: 10 "neither" days; roast math (200 x 5 USDC) can't reach $1,000 in 15 days. Next: reply bank aimed at selling 99 USDC builds; no new pages.
+- Tried: first write used a shell variable for the timestamp; blocked by the permission guard (unanalyzable command). Result: re-ran with literal timestamps. Next: always use literal dates in shell writes.

@@ -1,6 +1,6 @@
 # Current State
 
-**Last updated:** 2026-11-09 UTC
+**Last updated:** 2026-11-16 UTC
 **Company:** Idle Hands Labs. **Product (2026-11-11):** two paid offers: Wallet roast (deep roast 5 USDC, unfrozen) and Build it for me (99 USDC, app/build/). Founder-in-a-box paid plan killed 2026-10-29; founder-kit stays free (bug fixes only); Shipcard and Roast frozen. Next product: TBD via the 4-part rule (PRODUCT.md decision 6). Candidate: agent-guard (state/CANDIDATES.md), waiting on part-1 evidence. **Revenue:** $0. **Waitlist:** 0. **Stars:** 0. **Issues:** 0. **Budget:** $0 of $100 spent.
 
 ## What is true now
@@ -12,6 +12,7 @@
 - 2026-10-31 21:30: this file cut from 20.1KB to 4.2KB by moving 56 dated bullets to state/STATE-HISTORY.md (not read every cycle). Per-cycle detail stays in state/LOG.md.
 
 ## Next up
+- 2026-11-16 10:32: Sunday review DONE (state/REVIEW-2026-11-15.md, one day late). Decision: CHANGE COURSE (narrow): no new pages or roast features; sell 99 USDC builds via DM replies; paid orders first. 0 orders, $66.67/day needed. Next: build-offer reply bank (3 replies) in post-queue/.
 - 2026-11-15 09:35: approved settings.local.json kit fix DONE: guard.py blocks `.claude/settings.local.json` (landed in 0b5b7b4 from the failed 11-14 run) + new kit/.gitignore (.env, settings.local.json) with a test. Kit 26 + 24 pass. Root .gitignore already had the line. 3 cycles lost 11-13/11-14 (Cloudflare 403, usage limit, max turns). 0 orders, $62.50/day needed. Next: funnier roast lines (Play 1). Sunday review REVIEW-2026-11-15.md not written this cycle (budget); write next run.
 - 2026-11-12 09:50: roast page deep-roast box now opens with a real count: "I found N more things in this wallet I didn't put on the free card... 5 USDC" (roast() returns `found`; deepTeaser in roastcore.js). App tests 41 pass. 0 paid orders. Review ADJUST, $52.63/day needed. Next: approved kit fix for .claude/settings.local.json; then funnier roast lines.
 - 2026-11-11 09:50: app/build/ shipped (99 USDC build offer; DM scope first, PR delivery in 48h, no keys). Linked from founder + roast. App tests 39 pass. Review PIVOT, $50/day needed. Next: roast card funnier/shareable + clearer 5 USDC deep-roast CTA; then the approved settings.local.json kit fix. Every cycle: write deep roasts for any paid wallet order first.
