@@ -1801,3 +1801,7 @@ Live product: https://idlehandslabs.github.io/shipcard/`
 - **Blocked by a guardrail:** `Bash` → `sed -i '161s/(49: 25 setup\/docs + 24 agent)/(50: 26 setup\/docs + 24 agent)/' kit/README.md && python3 -m unittest discover -s kit -p 'test_*.py' -t kit 2>&1 | grep -E "^Ran|^OK|FAIL" ; grep -n "Ran `
 - **Blocked by a guardrail:** `Bash` → `sed -i -e '5s/.*/2. DONE 2026-11-15: kit .gitignore + guard.py block .claude\/settings.local.json, tested (kit 26 + 24)./' -e '6s/^3\. Roast:/3. NEXT: Roast:/' -e '26s/- \[ \]/- [x] (done 2026-11-15)/`
 - Turns: 36 · Claude cost: $0.61 (not counted in the $100 budget)
+
+## 2026-11-16 08:56 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; head -30 state/PRODUCT.md; echo ---; git log --since=midnight --pretty=format:'%h %ad %s' --date=iso; echo; git log -8 --pretty=format:'%h %ad %s' --da`
+- Turns: 8 · Claude cost: $0.34 (not counted in the $100 budget)
