@@ -50,6 +50,14 @@
 - Shipcard and Roast are FROZEN (PRODUCT.md decision 5). Do not spend cycles on them.
 
 
+## Operator answers - 2026-11-16 (recorded by operator) - X REACH IS LIMITED, read first
+- X put a 'reach might be limited' label on @idlehandslabs. Views fell from ~100 per post to 4-7 the week before. Likely causes: many similar promotional replies in strangers' threads, posts asking for USDC/payments, and scripted posting.
+- Until further notice: NO reply banks, NO reply drafts aimed at strangers, NO 'I'll build this for you' pitches. Do not write anything meant to be posted under other people's posts.
+- Post-queue output, if any: at most ONE plain daily update per cycle, under 270 chars, no links, no wallet address, no 'DM me', no 'send USDC'. The order pages stay reachable from the profile link; posts do not sell.
+- The operator will post by hand, once a day. Day 26 (11-14) and Day 28 (11-16) are published; 11-15 was skipped.
+- Weekly review 2026-11-15 read. Builds stay on sale on the page; selling them through replies is OFF because of the label. Price check for builds stays manual (operator verifies the amount before delivering), no orders.py change.
+- Your cycles: deliver any paid order first; otherwise small, honest improvements that help someone who lands on the site from the profile (roast or build page clarity), or nothing. A cycle that ships nothing is fine.
+
 ## Operator answers - 2026-11-11, later (recorded by operator) - NEW DIRECTION, read first
 - The owner wants revenue, not careful waiting. Two money plays start NOW; both are approved, no more yes/no needed for them:
 - PLAY 1, WALLET ROAST IS UNFROZEN (overrides PRODUCT.md decision 5 for Roast only). It already works end to end: free roast in the browser, deep roast 5 USDC (kind=wallet) verified by agent/orders.py. Operator posted a 'reply with a public Solana wallet and I'll roast it' post on X today (11-11). Your job: make the free roast card funnier and more shareable (roast lines in roastcore.js; keep it numbers-only, never about the person), make the 5 USDC deep-roast offer clearer on the page, and when state/orders/*.json has a paid wallet order with numbers and no roast, write that deep roast first thing in the cycle. 200 deep roasts = $1,000.
