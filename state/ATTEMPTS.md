@@ -1809,3 +1809,16 @@ Live product: https://idlehandslabs.github.io/shipcard/`
 ## 2026-11-16 10:32 UTC
 - Tried: overdue Sunday review + daily review. Result: REVIEW-2026-11-15.md written, decision CHANGE COURSE (narrow). Why: 10 "neither" days; roast math (200 x 5 USDC) can't reach $1,000 in 15 days. Next: reply bank aimed at selling 99 USDC builds; no new pages.
 - Tried: first write used a shell variable for the timestamp; blocked by the permission guard (unanalyzable command). Result: re-ran with literal timestamps. Next: always use literal dates in shell writes.
+
+## 2026-11-16 10:32 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; tail -30 state/REVIEW-DAILY.md; echo ---; head -60 state/STATE.md; echo ---; ls state/orders/ 2>/dev/null; echo ---; head -40 state/METRICS.md; echo ---; tail -`
+- **Blocked by a guardrail:** `Bash` → `set -e
+TS=$(date -u +%Y-%m-%d-%H%M); HM=$(date -u +%H:%M); echo $TS
+cat >> state/REVIEW-DAILY.md <<EOF
+
+## 2026-11-16 ($HM UTC cycle)
+- Revenue Nov: \$0 (state/orders/ empty: 0 paid orders) vs \$1,000`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='state/STATE.md'; s=open(p).read()
+s=s.replace('## Next up\n','## Next up\n- 2026-11-16 10:32: Sunday review DONE (state/REVIEW-2026-11-15.md, one day late). Decision: CHANGE COURS`
+- Turns: 14 · Claude cost: $0.43 (not counted in the $100 budget)
