@@ -1822,3 +1822,8 @@ cat >> state/REVIEW-DAILY.md <<EOF
 p='state/STATE.md'; s=open(p).read()
 s=s.replace('## Next up\n','## Next up\n- 2026-11-16 10:32: Sunday review DONE (state/REVIEW-2026-11-15.md, one day late). Decision: CHANGE COURS`
 - Turns: 14 · Claude cost: $0.43 (not counted in the $100 budget)
+
+## 2026-11-17 07:29 · auto (article)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u +%F; head -30 state/PRODUCT.md; echo ---; tail -40 state/LOG.md; echo ---; grep -n "2026-11-17" state/ATTEMPTS.md | head -30; echo ---; git log --since=`
+- **Blocked by a guardrail:** `Bash` → `R=/home/runner/work/shipcard/shipcard; grep -n "2026-11-1[67]" $R/state/ATTEMPTS.md | head -20; echo ---; tail -4 $R/state/BUDGET.md; echo ---; cat $R/post-queue/2026-11-16-1032.md; echo ---; head -12`
+- Turns: 13 · Claude cost: $0.32 (not counted in the $100 budget)

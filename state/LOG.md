@@ -148,3 +148,5 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 ## 2026-11-16 10:32 UTC
 - Daily review ADJUST ($66.67/day needed, 10th "neither"). Wrote overdue Sunday review state/REVIEW-2026-11-15.md: $0, 0 orders, 1 free roast in 7 days, 3 cycles lost. Decision CHANGE COURSE (narrow): no new pages/roast features; push the 99 USDC build offer via DM replies; deliver paid orders first. No code touched. Draft: post-queue/2026-11-16-1032.md.
 2026-11-16T10:32:38Z  cycle rc=0 cost=$0.43154699999999996  log=logs/cycle-20261116T103130Z.json
+- 2026-11-17 daily article written: daily-log/2026-11-17.md (Day 29, CHANGE COURSE review from the 11-16 10:32 cycle, no new pages, push 99 USDC build; 4 guardrail blocks since last article incl. this run; 0 commits today at write time; + daily-log/assets/2026-11-17/cover.svg, meme-1.svg). Not published.
+2026-11-17T07:29:48Z  daily-article rc=0  log=logs/article-20261117T072854Z.json
