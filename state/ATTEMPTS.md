@@ -1832,3 +1832,20 @@ s=s.replace('## Next up\n','## Next up\n- 2026-11-16 10:32: Sunday review DONE (
 - Tried: build-offer reply bank #1 (post-queue/2026-11-17-0951.md). Result: 3 replies drafted, scope before pay, no keys. Why: Sunday review says sell the 99 USDC build directly, no new pages. Next: if 0 DMs/orders by 11-20, the offer or the audience is wrong.
 - Tried: bash heredocs/sed -i to append state files. Result: blocked by the runner's permission check. Next: use Write/Edit tools for state edits.
 - Not done: orders.py kind=build fix still waits on Needs human (protected file).
+
+## 2026-11-17 09:52 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls state/ state/orders post-queue | tail -30; tail -30 state/REVIEW-DAILY.md; head -60 state/STATE.md; git diff --stat`
+- **Blocked by a guardrail:** `Bash` → `TS=$(date -u +%Y-%m-%d-%H%M); echo $TS; cat > post-queue/$TS.md <<'EOF'
+# Build-offer reply bank #1 (99 USDC "build it for me") — draft, not published
+
+Context: 18 days of November, $0 revenue, 0 orde`
+- **Blocked by a guardrail:** `Bash` → `cat > post-queue/2026-11-17-0951.md <<'EOF'
+# Build-offer reply bank #1 (99 USDC "build it for me"). Draft, not published
+
+Context: day 17 of November, $0 revenue, 0 orders, 0 stars. The Sunday review`
+- **Blocked by a guardrail:** `Bash` → `cat >> state/REVIEW-DAILY.md <<'EOF'
+
+## 2026-11-17 (09:51 UTC cycle)
+- Revenue Nov: $0 (state/orders/ empty: 0 paid orders) vs $1,000 by 2026-11-30. 14 days left incl. today -> $71.43/day needed.
+- L`
+- Turns: 24 · Claude cost: $0.53 (not counted in the $100 budget)
