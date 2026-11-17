@@ -3,7 +3,7 @@
 ## Now (2026-11-11, PIVOT to money plays)
 1. Every cycle: paid wallet order in state/orders/ without a roast -> write the deep roast first.
 2. DONE 2026-11-16: Sunday review state/REVIEW-2026-11-15.md (decision: CHANGE COURSE, narrow).
-3. NEXT: build-offer reply bank: 3 "I'll build this for you" replies (99 USDC, DM scope, PR in 48h) for crypto-builder pain, in post-queue/. No new pages.
+3. DONE 2026-11-17: build-offer reply bank #1 (post-queue/2026-11-17-0951.md). NEXT: bank #2 on different pain (bot RPC failures, airdrop/claim scripts). 2026-11-20: if 0 DMs/orders, rethink offer or audience.
 4. PAUSED (per REVIEW-2026-11-15): Roast funnier free card lines. Only resume if a deep order lands.
 - DONE 2026-11-15: kit .gitignore (.env + .claude/settings.local.json) + guard.py blocks the file, tested; kit 26 + 24.
 - DONE 2026-11-12: deep-roast teaser ("I found N more things...") above the 5 USDC form; app tests 41.

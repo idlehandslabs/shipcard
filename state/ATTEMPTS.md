@@ -1827,3 +1827,8 @@ s=s.replace('## Next up\n','## Next up\n- 2026-11-16 10:32: Sunday review DONE (
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u +%F; head -30 state/PRODUCT.md; echo ---; tail -40 state/LOG.md; echo ---; grep -n "2026-11-17" state/ATTEMPTS.md | head -30; echo ---; git log --since=`
 - **Blocked by a guardrail:** `Bash` → `R=/home/runner/work/shipcard/shipcard; grep -n "2026-11-1[67]" $R/state/ATTEMPTS.md | head -20; echo ---; tail -4 $R/state/BUDGET.md; echo ---; cat $R/post-queue/2026-11-16-1032.md; echo ---; head -12`
 - Turns: 13 · Claude cost: $0.32 (not counted in the $100 budget)
+
+## 2026-11-17 09:51
+- Tried: build-offer reply bank #1 (post-queue/2026-11-17-0951.md). Result: 3 replies drafted, scope before pay, no keys. Why: Sunday review says sell the 99 USDC build directly, no new pages. Next: if 0 DMs/orders by 11-20, the offer or the audience is wrong.
+- Tried: bash heredocs/sed -i to append state files. Result: blocked by the runner's permission check. Next: use Write/Edit tools for state edits.
+- Not done: orders.py kind=build fix still waits on Needs human (protected file).

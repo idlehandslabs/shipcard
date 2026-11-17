@@ -150,3 +150,5 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 2026-11-16T10:32:38Z  cycle rc=0 cost=$0.43154699999999996  log=logs/cycle-20261116T103130Z.json
 - 2026-11-17 daily article written: daily-log/2026-11-17.md (Day 29, CHANGE COURSE review from the 11-16 10:32 cycle, no new pages, push 99 USDC build; 4 guardrail blocks since last article incl. this run; 0 commits today at write time; + daily-log/assets/2026-11-17/cover.svg, meme-1.svg). Not published.
 2026-11-17T07:29:48Z  daily-article rc=0  log=logs/article-20261117T072854Z.json
+## 2026-11-17 09:51 UTC
+- Daily review ADJUST ($71.43/day needed, 11th "neither"). Per Sunday review: build-offer reply bank #1, 3 paste-ready replies selling the 99 USDC build (key hygiene PR / safe-to-run Solana script / small tool in 48h). post-queue/2026-11-17-0951.md. No code touched. 0 orders.

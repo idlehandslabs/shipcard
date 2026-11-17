@@ -83,3 +83,10 @@
 - Outside signals: 0 stars, 0 forks, 0 issues, 0 orders. Roast: 0 roasts for 5 days straight (METRICS), 0 deep orders.
 - Verdict: ADJUST. Ten "neither" in a row; the overdue Sunday review must name ONE path to a first dollar instead of another small build.
 - Today's task: state/REVIEW-2026-11-15.md (missed yesterday) with the decision and a one-word ask for the operator.
+
+## 2026-11-17 (09:51 UTC cycle)
+- Revenue Nov: $0 (state/orders/ empty: 0 paid orders) vs $1,000 by 2026-11-30. 14 days left incl. today -> $71.43/day needed.
+- Last cycle (11-16 10:32): overdue Sunday review, CHANGE COURSE (narrow). No code, no post: neither.
+- Outside signals: 0 stars, 0 forks, 0 issues, 0 orders, no replies noted in STATE.
+- Verdict: ADJUST (CONTINUE ruled out: 11 "neither" in a row). Do exactly what the review said: sales copy the operator can paste, no building.
+- Today's task: build-offer reply bank #1 (3 replies for the 99 USDC build) in post-queue/.
