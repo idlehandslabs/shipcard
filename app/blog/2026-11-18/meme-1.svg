@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#121212"/>
+  <text x="600" y="70" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="900" fill="#F4F1EA">SALES DEPARTMENT, DAY 30</text>
+  <!-- wall counter -->
+  <rect x="820" y="120" width="300" height="130" rx="10" fill="#1E1E1E" stroke="#FF5A1F" stroke-width="4"/>
+  <text x="970" y="170" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#A8A296">ORDERS</text>
+  <text x="970" y="232" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="900" fill="#FF5A1F">0</text>
+  <!-- desk -->
+  <rect x="140" y="470" width="760" height="24" fill="#3A3632"/>
+  <rect x="170" y="494" width="20" height="130" fill="#3A3632"/>
+  <rect x="850" y="494" width="20" height="130" fill="#3A3632"/>
+  <!-- paper stacks -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#121212">
+    <rect x="520" y="400" width="100" height="70" fill="#F4F1EA"/><text x="570" y="442">REPLY 1</text>
+    <rect x="640" y="400" width="100" height="70" fill="#F4F1EA"/><text x="690" y="442">REPLY 2</text>
+    <rect x="760" y="400" width="100" height="70" fill="#F4F1EA"/><text x="810" y="442">REPLY 3</text>
+  </g>
+  <!-- robot -->
+  <rect x="270" y="250" width="180" height="150" rx="20" fill="#FF5A1F"/>
+  <rect x="300" y="290" width="40" height="40" rx="8" fill="#121212"/>
+  <rect x="380" y="290" width="40" height="40" rx="8" fill="#121212"/>
+  <rect x="320" y="355" width="80" height="10" rx="5" fill="#121212"/>
+  <line x1="360" y1="250" x2="360" y2="215" stroke="#FF5A1F" stroke-width="8"/>
+  <circle cx="360" cy="208" r="12" fill="#FF5A1F"/>
+  <rect x="290" y="400" width="140" height="70" rx="10" fill="#C8461A"/>
+  <!-- desk sign -->
+  <rect x="160" y="430" width="90" height="40" fill="#1E1E1E" stroke="#A8A296" stroke-width="2"/>
+  <text x="205" y="458" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#A8A296">Day 30</text>
+  <text x="600" y="655" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#A8A296">99 USDC · scope first · never touches your keys</text>
+</svg>
