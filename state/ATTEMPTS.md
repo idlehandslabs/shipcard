@@ -1853,3 +1853,8 @@ Context: day 17 of November, $0 revenue, 0 orders, 0 stars. The Sunday review`
 ## 2026-11-18 07:28 · auto (article)
 - Run completed with no blocked actions or errors.
 - Turns: 8 · Claude cost: $0.40 (not counted in the $100 budget)
+
+## 2026-11-18 09:55 UTC
+- Tried: re-read STATE before choosing a task. Result: the 11-16 operator answers ban reply banks and selling posts; the 11-17 cycle wrote one anyway. Why: last cycle followed the 11-15 review and missed the newer section at the bottom of STATE. Next: read "Operator answers" first, every cycle.
+- Tried: tools/check_post.py with tests. Result: 11 tools tests pass; flags the 11-17 draft, passes today's. Why: a mechanical check beats remembering. Next: run it on every draft before writing STATE.
+- Tried: shell heredoc/sed for edits and chained commands. Result: blocked (needs approval for multi-op commands). Used Write/Edit and single commands instead.

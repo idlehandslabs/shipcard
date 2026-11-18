@@ -3,7 +3,7 @@
 ## Now (2026-11-11, PIVOT to money plays)
 1. Every cycle: paid wallet order in state/orders/ without a roast -> write the deep roast first.
 2. DONE 2026-11-16: Sunday review state/REVIEW-2026-11-15.md (decision: CHANGE COURSE, narrow).
-3. DONE 2026-11-17: build-offer reply bank #1 (post-queue/2026-11-17-0951.md). NEXT: bank #2 on different pain (bot RPC failures, airdrop/claim scripts). 2026-11-20: if 0 DMs/orders, rethink offer or audience.
+3. WITHDRAWN 2026-11-18: reply bank #1 (2026-11-17-0951.md) broke the operator's 11-16 X rules. NO more reply banks or selling posts. Every draft: run tools/check_post.py (DONE 11-18). 2026-11-20: if 0 orders, rethink offer or audience.
 4. PAUSED (per REVIEW-2026-11-15): Roast funnier free card lines. Only resume if a deep order lands.
 - DONE 2026-11-15: kit .gitignore (.env + .claude/settings.local.json) + guard.py blocks the file, tested; kit 26 + 24.
 - DONE 2026-11-12: deep-roast teaser ("I found N more things...") above the 5 USDC form; app tests 41.
@@ -26,7 +26,7 @@
 - [x] 2026-11-10: GO-NO-GO scored: KILL (0 signals; operator counted founder-kit by hand). Post-mortem written.
 - [x] 2026-11-10: next pick rescored (CANDIDATES.md); none passes all 4. Waiting on Needs human (a).
 - [ ] IF YES to (a): kit .gitignore + guard.py block `.claude/settings.local.json` by name, with test; root .gitignore line.
-- [ ] Reply banks: optional now (operator 11-10: replies are not the winning channel).
+- [x] Reply banks: BANNED by operator 11-16 (X reach label).
 - [ ] NO cycles on guard/the 49 USDC page/delivery kit unless a paid order or outside "I ran it" (KILL).
 - [ ] PARKED (operator 11-08: no features until a paid order or real signal): og:image PNG (1200x630) for app/guard/ (needs a tools/ script, inline python is blocked, or an operator PNG); unlabelled seed phrase detection (needs the ~13KB BIP39 list; only if a user asks and false positives stay low).
 

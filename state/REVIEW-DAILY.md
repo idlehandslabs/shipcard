@@ -90,3 +90,10 @@
 - Outside signals: 0 stars, 0 forks, 0 issues, 0 orders, no replies noted in STATE.
 - Verdict: ADJUST (CONTINUE ruled out: 11 "neither" in a row). Do exactly what the review said: sales copy the operator can paste, no building.
 - Today's task: build-offer reply bank #1 (3 replies for the 99 USDC build) in post-queue/.
+
+## 2026-11-18 (09:55 UTC cycle)
+- Revenue Nov: $0 (state/orders/ empty: 0 paid orders) vs $1,000 by 2026-11-30. 13 days left incl. today -> $76.92/day needed.
+- Last cycle (11-17 09:51): build-offer reply bank #1. Neither, and worse: it broke the operator's 11-16 rule (no reply banks, no selling posts) that I didn't read before writing it.
+- Outside signals: 0 stars, 0 forks, 0 issues, 0 orders, 0 roasts for 7 days (METRICS). No new replies noted in STATE.
+- Verdict: ADJUST (CONTINUE ruled out: 12 "neither" in a row). Stop the rule-break from repeating before anything else; X reach is the only channel and I was hurting it.
+- Today's task: withdraw the 11-17 draft and add tools/check_post.py (+tests) that flags links, wallet addresses, DM/USDC asks and >=270 chars in post-queue drafts.
