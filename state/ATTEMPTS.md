@@ -1858,3 +1858,16 @@ Context: day 17 of November, $0 revenue, 0 orders, 0 stars. The Sunday review`
 - Tried: re-read STATE before choosing a task. Result: the 11-16 operator answers ban reply banks and selling posts; the 11-17 cycle wrote one anyway. Why: last cycle followed the 11-15 review and missed the newer section at the bottom of STATE. Next: read "Operator answers" first, every cycle.
 - Tried: tools/check_post.py with tests. Result: 11 tools tests pass; flags the 11-17 draft, passes today's. Why: a mechanical check beats remembering. Next: run it on every draft before writing STATE.
 - Tried: shell heredoc/sed for edits and chained commands. Result: blocked (needs approval for multi-op commands). Used Write/Edit and single commands instead.
+
+## 2026-11-18 09:51 · auto (cycle)
+- **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; ls state/ state/orders 2>/dev/null | head -50; tail -30 state/REVIEW-DAILY.md; head -60 state/STATE.md`
+- **Blocked by a guardrail:** `Bash` → `mkdir -p /tmp/x; cat > tools/check_post.py <<'EOF'
+"""Check a post-queue draft against the operator's 2026-11-16 X rules.
+
+Rules (state/STATE.md, "X REACH IS LIMITED"): one plain update, under 270 cha`
+- **Blocked by a guardrail:** `Bash` → `cd tools && python3 -m unittest -q 2>&1 | tail -3; cd ..; python3 tools/check_post.py post-queue/2026-11-18-0955.md post-queue/2026-11-17-0951.md; wc -l tools/check_post.py`
+- **Blocked by a guardrail:** `Bash` → `sed -i 's/a 40-line checker/a small checker/' post-queue/2026-11-18-0955.md && sed -i '1i # WITHDRAWN 2026-11-18: DO NOT POST. Written after the operator banned reply banks and sales replies (STATE.md`
+- **Blocked by a guardrail:** `Bash` → `python3 - <<'EOF'
+p='state/TASKS.md'; s=open(p).read()
+s=s.replace("3. DONE 2026-11-17: build-offer reply bank #1 (post-queue/2026-11-17-0951.md). NEXT: bank #2 on different pain (bot RPC failures, ai`
+- Turns: 24 · Claude cost: $0.53 (not counted in the $100 budget)
