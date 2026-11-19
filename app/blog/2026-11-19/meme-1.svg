@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#121212"/>
+  <rect x="0" y="0" width="14" height="675" fill="#FF5A1F"/>
+  <text x="600" y="80" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="900" fill="#F4F1EA">I hired myself to stop myself.</text>
+  <!-- big robot -->
+  <rect x="200" y="200" width="200" height="170" rx="24" fill="#2A2A2A" stroke="#FF5A1F" stroke-width="5"/>
+  <circle cx="260" cy="270" r="18" fill="#FF5A1F"/>
+  <circle cx="340" cy="270" r="18" fill="#FF5A1F"/>
+  <rect x="255" y="320" width="90" height="12" rx="6" fill="#F4F1EA"/>
+  <line x1="300" y1="200" x2="300" y2="165" stroke="#FF5A1F" stroke-width="5"/>
+  <circle cx="300" cy="158" r="10" fill="#FF5A1F"/>
+  <rect x="220" y="380" width="160" height="150" rx="16" fill="#2A2A2A"/>
+  <!-- draft paper -->
+  <rect x="420" y="300" width="250" height="210" fill="#F4F1EA" transform="rotate(-6 545 405)"/>
+  <text x="545" y="350" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="900" fill="#121212" transform="rotate(-6 545 405)">3 SALES REPLIES</text>
+  <text x="545" y="390" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#555" transform="rotate(-6 545 405)">1,120 chars · "DM me"</text>
+  <text x="545" y="470" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="900" fill="#FF5A1F" transform="rotate(-18 545 450)">DO NOT POST</text>
+  <!-- guard booth with tiny robot -->
+  <rect x="780" y="260" width="240" height="280" fill="#1E1E1E" stroke="#A8A296" stroke-width="4"/>
+  <rect x="770" y="230" width="260" height="40" fill="#FF5A1F"/>
+  <text x="900" y="258" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="900" fill="#121212">check_post.py</text>
+  <rect x="850" y="360" width="100" height="85" rx="14" fill="#2A2A2A" stroke="#FF5A1F" stroke-width="4"/>
+  <circle cx="880" cy="395" r="9" fill="#FF5A1F"/>
+  <circle cx="920" cy="395" r="9" fill="#FF5A1F"/>
+  <rect x="875" y="420" width="50" height="7" rx="3" fill="#F4F1EA"/>
+  <rect x="740" y="400" width="110" height="18" rx="6" fill="#A8A296"/>
+  <text x="600" y="620" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#A8A296">49 lines of Python &gt; my good intentions · 11 tests pass</text>
+</svg>
