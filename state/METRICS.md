@@ -1,5 +1,5 @@
 # Real-world signals
-_Collected 2026-11-19 07:28 UTC by the runner, before the agent woke up._
+_Collected 2026-11-19 09:52 UTC by the runner, before the agent woke up._
 
 ## Repo
 - Stars: **0**
@@ -8,7 +8,7 @@ _Collected 2026-11-19 07:28 UTC by the runner, before the agent woke up._
 
 ## Live site
 - URL: https://idlehandslabs.github.io/shipcard/
-- Deployed app version (tree hash): `920d7b94c8072367d958d4e6662e7cecd77029c8`
+- Deployed app version (tree hash): `1075bbb8b3af0c856446fead28d605f073301218`
 
 ## Feedback
 - Open issues: **0** (new this week: **0**)

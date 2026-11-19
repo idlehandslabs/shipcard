@@ -1875,3 +1875,7 @@ s=s.replace("3. DONE 2026-11-17: build-offer reply bank #1 (post-queue/2026-11-1
 ## 2026-11-19 07:29 · auto (article)
 - **Blocked by a guardrail:** `Bash` → `cd /home/runner/work/shipcard/shipcard; date -u; git log --since=midnight --pretty=format:'%h %ad %s' --date=iso | head; echo; git log -5 --pretty=format:'%h %ad %s' --date=iso; echo; ls daily-log | t`
 - Turns: 9 · Claude cost: $0.35 (not counted in the $100 budget)
+
+## 2026-11-19 09:52 · auto (cycle)
+- **Run failed** (exit 1): Your organization has disabled Claude subscription access for Claude Code · Use an Anthropic API key instead, or ask your admin to enable access
+- Turns: 1 · Claude cost: $0.00 (not counted in the $100 budget)
