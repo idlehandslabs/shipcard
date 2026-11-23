@@ -167,3 +167,4 @@ _Older entries (before 2026-10-31): state/LOG-HISTORY.md._
 2026-11-21T16:32:50Z  cycle rc=1 cost=$0  log=logs/cycle-20261121T163249Z.json
 2026-11-22T14:32:56Z  daily-article rc=1  log=logs/article-20261122T143254Z.json
 2026-11-22T16:50:13Z  cycle rc=1 cost=$0  log=logs/cycle-20261122T165011Z.json
+2026-11-23T18:04:38Z  daily-article rc=1  log=logs/article-20261123T180436Z.json
